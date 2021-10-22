@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "discordAIO", "discordAIO\discordAIO.csproj", "{5B966870-3C23-47BF-9C27-7EDC1E7FDB26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B966870-3C23-47BF-9C27-7EDC1E7FDB26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B966870-3C23-47BF-9C27-7EDC1E7FDB26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B966870-3C23-47BF-9C27-7EDC1E7FDB26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B966870-3C23-47BF-9C27-7EDC1E7FDB26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50FD9FDE-5833-4211-BAC6-D0A94F044016}
+	EndGlobalSection
+EndGlobal

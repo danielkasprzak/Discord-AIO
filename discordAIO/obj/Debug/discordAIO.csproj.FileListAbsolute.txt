@@ -1,0 +1,10 @@
+C:\Sources\discordAIO\discordAIO\bin\Debug\discordAIO.exe.config
+C:\Sources\discordAIO\discordAIO\bin\Debug\discordAIO.exe
+C:\Sources\discordAIO\discordAIO\bin\Debug\discordAIO.pdb
+C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.csproj.AssemblyReference.cache
+C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.main.resources
+C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.Properties.Resources.resources
+C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.csproj.GenerateResource.cache
+C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.csproj.CoreCompileInputs.cache
+C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.exe
+C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.pdb
