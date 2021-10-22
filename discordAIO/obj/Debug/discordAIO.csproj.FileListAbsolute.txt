@@ -15,3 +15,5 @@ C:\Sources\discordAIO\discordAIO\bin\Debug\DiscordRPC.xml
 C:\Sources\discordAIO\discordAIO\bin\Debug\Newtonsoft.Json.xml
 C:\Sources\discordAIO\discordAIO\bin\Debug\ScintillaNET.dll
 C:\Sources\discordAIO\discordAIO\bin\Debug\ScintillaNET.xml
+C:\Sources\discordAIO\discordAIO\bin\Debug\Leaf.xNet.dll
+C:\Sources\discordAIO\discordAIO\bin\Debug\Leaf.xNet.xml
