@@ -1,6 +1,12 @@
 <div align="center">
 
 # Discord-AIO
+  
+<p align="center">
+  <a href="https://discord.gg/qjrDprutvg">
+    <img src="https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png" width="240" height="240" />
+  </a>
+</p>
 
 ## Disclaimer
 
