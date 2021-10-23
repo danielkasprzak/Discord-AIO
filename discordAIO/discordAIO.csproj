@@ -114,6 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="daioRPC2.ico" />
+    <EmbeddedResource Include="Resources\stub.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

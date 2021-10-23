@@ -79,5 +79,32 @@ namespace discordAIO.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu using System.Reflection;
+        ///using System.Runtime.InteropServices;
+        ///using System;
+        ///using System.Net;
+        ///using System.Collections.Specialized;
+        ///using System.IO;
+        ///using System.Collections.Generic;
+        ///using System.Windows.Forms;
+        ///using System.Threading.Tasks;
+        ///using System.Diagnostics;
+        ///using Microsoft.VisualBasic;
+        ///using Microsoft.Win32;
+        ///using System.Net.NetworkInformation;
+        ///using System.Text;
+        ///using System.Threading;
+        ///using System.Drawing;
+        ///using System.Drawing.Imaging;
+        ///using System.Runtime.CompilerServices;
+        ///using System.Text.Reg [obcięto pozostałą część ciągu]&quot;;.
+        /// </summary>
+        internal static string stub {
+            get {
+                return ResourceManager.GetString("stub", resourceCulture);
+            }
+        }
     }
 }

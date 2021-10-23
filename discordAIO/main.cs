@@ -27,7 +27,7 @@ namespace discordAIO
     public partial class main : Form
     {
 
-        private string version = "v0.3";
+        private string version = "v0.3.1";
         private protected string email = "fmediolanek@gmail.com";
         private protected static string dAIOPass = "ceDUsRGbwAdcjUqHWkMLgARDrkx4hNJ28WbS6fPjr7cYQ87BKJTRFcUKRbJMMxeWDTEy3k9jsLSVFFV9heDeuWYfECHDzpmgYrttCMuLZRBtuPzuSJ846YBZhCa88Qj2fAaNJuuw6fhZBZfANEbRkXvaupN8rtDQVqrvLKnKW5ESAueQ2pz4QJnTdkDdM3rapFk9mU5DNP9MGAX8zymZW2MxLfj5C4p7PkPRYBxbTyawuQR9uaJZCr4bsSDhnCh2XT5CSUzHBFcVgWS7W5W9Z7SkUe4ehtymPawpwg58mpnN36sgWVSGeFXVzbQcXjfqjcUFcR8T2gBc6Ajm9wMjhCMgMNbmCMBjHKhcLghkeGWhw5wHWNZXhnDDFxnA8U4SzqdMkfTZCeaqTBaTASzKsRmGzeBGpdA9CHkLLxtJfxwj9LQ4vafzercmLJWPWGjpyeuM7CyN7ZgRbP9J6w4wzT3bxdtQXtm8RPVq5AKA6y66pSt5rdBaGbZxUjAHD2se";
 
@@ -587,7 +587,7 @@ namespace discordAIO
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             label26.Text = "Creating file...";
-                            string text = "x";//Properties.Resources.stub;
+                            string text = Properties.Resources.stub;
                             text = text.Replace("DiscordAIO", _randomChars.getRandomCharacters(_random.Next(10, 20)));
                             text = text.Replace("%Title%", Title);
                             text = text.Replace("%Description%", Description);
@@ -1075,6 +1075,11 @@ namespace discordAIO
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             Process.Start("https://discord.gg/qjrDprutvg");
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
