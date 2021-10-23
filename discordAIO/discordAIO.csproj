@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>daioRPC2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DiscordRPC, Version=1.0.175.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DiscordRichPresence.1.0.175\lib\net35\DiscordRPC.dll</HintPath>
@@ -43,6 +46,9 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.12.0\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="ScintillaNET, Version=5.1.0.0, Culture=neutral, PublicKeyToken=186712faa6314cea, processorArchitecture=MSIL">
       <HintPath>..\packages\Scintilla.NET.5.1.0\lib\net45\ScintillaNET.dll</HintPath>
     </Reference>
@@ -105,6 +111,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\daioRPC2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="daioRPC2.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
