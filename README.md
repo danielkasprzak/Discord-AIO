@@ -3,7 +3,9 @@
 # Discord-AIO
   
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png" alt="https://discord.gg/qjrDprutvg" width="100" height="100" />
+  <a href="https://www.qries.com/">
+    <img src="https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png" alt="https://discord.gg/qjrDprutvg" width="100" height="100" />
+  </a>
 </p>
 
 ## Disclaimer
