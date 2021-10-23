@@ -15,4 +15,3 @@ C:\Sources\discordAIO\discordAIO\obj\Release\discordAIO.pdb
 C:\Sources\discordAIO\discordAIO\bin\Release\System.Diagnostics.DiagnosticSource.xml
 C:\Sources\discordAIO\discordAIO\obj\Release\discordAIO.csproj.AssemblyReference.cache
 C:\Sources\discordAIO\discordAIO\obj\Release\discordAIO.csproj.Fody.CopyLocal.cache
-C:\Sources\discordAIO\discordAIO\obj\Release\discordAIO.csproj.CopyComplete

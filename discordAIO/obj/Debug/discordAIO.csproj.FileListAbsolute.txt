@@ -15,4 +15,3 @@ C:\Sources\discordAIO\discordAIO\bin\Debug\Leaf.xNet.xml
 C:\Sources\discordAIO\discordAIO\bin\Debug\RestSharp.xml
 C:\Sources\discordAIO\discordAIO\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.csproj.Fody.CopyLocal.cache
-C:\Sources\discordAIO\discordAIO\obj\Debug\discordAIO.csproj.CopyComplete
