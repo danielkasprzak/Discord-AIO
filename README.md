@@ -113,6 +113,8 @@ Try to change your VPN connection.
 ![daioinspector](https://user-images.githubusercontent.com/45857590/138570501-94b9ffc8-6915-49f7-b767-8f0e26a7efb2.png)
 #### Credentials page after upload
 ![daiocredentials](https://user-images.githubusercontent.com/45857590/138570625-e2260cb0-f2af-4d72-8322-73c91062e16a.png)
+#### Tokens page after upload
+![daiotokens](https://user-images.githubusercontent.com/45857590/138572769-43b2f8b8-504c-4bb8-bb08-7a141ca7ea5f.png)
 
 ## Credits
 Discord AIO made by [Nyxon](https://github.com/Nyxonn)
