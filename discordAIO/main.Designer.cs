@@ -1344,9 +1344,11 @@ namespace discordAIO
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::discordAIO.Properties.Resources.daioLOGO;
             this.pictureBox3.Location = new System.Drawing.Point(10, 36);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
@@ -1404,9 +1406,11 @@ namespace discordAIO
             this.button17.TabIndex = 47;
             this.button17.Text = "Select";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.DarkRed;
             this.pictureBox4.Location = new System.Drawing.Point(136, 36);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(120, 120);

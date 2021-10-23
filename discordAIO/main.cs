@@ -18,6 +18,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Imaging;
 
+// Made by Nyxon
+// Featuring yunglean_ and dv0l
+
 namespace discordAIO
 {
     public partial class main : Form
@@ -797,17 +800,28 @@ namespace discordAIO
             try
             {
                 OpenFileDialog icOpen = new OpenFileDialog();
+                icOpen.Title = "Select stealer icon";
                 icOpen.Filter = "Icon (*.ico)|*.ico";
 
-                if (icOpen.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                if (icOpen.ShowDialog() == DialogResult.OK)
                 {
                     pictureBox3.Image = new Bitmap(icOpen.FileName);
                     label33.Text = icOpen.FileName;
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
+        // Color picker
+        private void button17_Click(object sender, EventArgs e)
+        {
+            ColorDialog dlg = new ColorDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox4.BackColor = Color.FromArgb(dlg.Color.A, dlg.Color.R, dlg.Color.G, dlg.Color.B);
             }
         }
     }
