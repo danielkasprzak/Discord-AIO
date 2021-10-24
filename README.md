@@ -14,6 +14,18 @@ This program is for educational purposes only.<br />
 How you use this program is your responsibility.<br />
 <br />
 I will not be held accountable for any illegal activities.
+  
+## Contents Page
+  
+[Main features](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#main-features)<br/>
+[Stealer features](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#stealer-features)<br/>
+[Optional features](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#optional-stealer-features)<br/>
+[Additional features](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#additional)<br/>
+[Upcoming features](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#coming-soon)<br/>
+[Versions](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#versions)<br/>
+[FAQ](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#faq)<br/>
+[Showcase](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#showcase)<br/>
+[Credits](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#credits)<br/>
 
 ## Features of Discord AIO
 
