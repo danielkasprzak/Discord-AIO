@@ -107,6 +107,17 @@ I will not be held accountable for any illegal activities.
 - Fixed not launching issue
 - Do not support ip check
 
+<div align="center">
+  
+**0.4.0**
+  
+</div>
+
+- Changed startup function
+- Added stealer obfuscation option
+- Fixed error when no icon uploaded
+- Do not support ip check
+
 
 <div align="center">
 
