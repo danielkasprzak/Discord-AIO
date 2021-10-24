@@ -46,13 +46,13 @@ I will not be held accountable for any illegal activities.
 - Stealing **Windows Product Key**
 - Stealing browser history
 - Stealing **WiFi credentials**
-- Taking desktop screenshot (*may not work 0.3.2*)
+- Taking desktop screenshot (*may not work 0.3.3*)
 - Disabling Windows Defender
 - Disabling Task Manager
 - Disabling Mouse and Keyboard
 - Blocking websites
 - Showing fake error
-- Disabling internet connection (!)
+- Disabling internet connection (! Can cause serious damage)
 - Showing BSOD (Blue Screen)
 - Automatically startup
 - Showing jumpscare
@@ -120,5 +120,10 @@ Try to change your VPN connection.
 Discord AIO made by [Nyxon](https://github.com/Nyxonn)
 <br />
 Featuring [yunglean_](https://github.com/yunglean4171) and dv0l
+  
+<br/>
+<br/>
+  
+If you like this project give it a star ⭐
 
 </div>
