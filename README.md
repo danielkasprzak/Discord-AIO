@@ -63,10 +63,38 @@ I will not be held accountable for any illegal activities.
 - Customizable embed color
 - Stealer info generator and **cloner**
 
+#### Additional
+
+- Checking if your IP is protected (*If you want to use it download supported version and change email string*)
+
 
 ### Coming soon
 
 - Crypto miner
+
+<div align="center">
+  
+## Versions 
+  
+</div>
+<div align="center">
+  
+**0.3.3**
+  
+</div>
+
+- First stable release
+- Supports ip check
+
+<div align="center">
+  
+**0.3.4**
+  
+</div>
+
+- Fixed not launching issue
+- Do not support ip check
+
 
 <div align="center">
 
