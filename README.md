@@ -89,7 +89,7 @@ Program contains the stub file which is necessary to make stealer work, it's all
 - Will it be supported in the future?<br />
 Yes, i'm planning the support for long period of time, mainly on Null Community [discord](https://discord.gg/qjrDprutvg).
 
-- Not lauching. <br />
+- Not launching. <br />
 Try to change your VPN connection.
 
 <div align="center">
