@@ -31,11 +31,74 @@ namespace discordAIO
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button22 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.credentialsPage = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listboxpanel1 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ssPage = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.daioPage = new System.Windows.Forms.Panel();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.builderPage = new System.Windows.Forms.Panel();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.label24 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.button17 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.button16 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.scintilla1 = new ScintillaNET.Scintilla();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.tokensPage = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
@@ -46,6 +109,7 @@ namespace discordAIO
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -71,6 +135,7 @@ namespace discordAIO
             this.button6 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.mainPage = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -100,97 +165,32 @@ namespace discordAIO
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.scintilla1 = new ScintillaNET.Scintilla();
-            this.label30 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.button17 = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
-            this.daioPage = new System.Windows.Forms.Panel();
-            this.label34 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.ssPage = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.credentialsPage = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listboxpanel1 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.listBox6 = new System.Windows.Forms.ListBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button22 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.builderPage.SuspendLayout();
-            this.tokensPage.SuspendLayout();
-            this.webhooksPage.SuspendLayout();
-            this.mainPage.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.daioPage.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.ssPage.SuspendLayout();
-            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.credentialsPage.SuspendLayout();
-            this.listboxpanel1.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.listboxpanel1.SuspendLayout();
+            this.ssPage.SuspendLayout();
+            this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.daioPage.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.builderPage.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tokensPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.webhooksPage.SuspendLayout();
+            this.mainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -220,6 +220,558 @@ namespace discordAIO
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Solid_Paint);
             // 
+            // button22
+            // 
+            this.button22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button22.ForeColor = System.Drawing.Color.DarkRed;
+            this.button22.Location = new System.Drawing.Point(13, 71);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(20, 20);
+            this.button22.TabIndex = 42;
+            this.button22.Text = "X";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::discordAIO.Properties.Resources.daioLOGO;
+            this.pictureBox6.Location = new System.Drawing.Point(76, 38);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(65, 52);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 41;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.BackColor = System.Drawing.Color.Black;
+            this.label47.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label47.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label47.ForeColor = System.Drawing.Color.DarkRed;
+            this.label47.Location = new System.Drawing.Point(64, 406);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(87, 20);
+            this.label47.TabIndex = 40;
+            this.label47.Text = "Discord AIO";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.Black;
+            this.label46.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label46.ForeColor = System.Drawing.Color.DarkRed;
+            this.label46.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label46.Location = new System.Drawing.Point(176, 356);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(26, 13);
+            this.label46.TabIndex = 39;
+            this.label46.Text = "v0.0";
+            // 
+            // credentialsPage
+            // 
+            this.credentialsPage.Controls.Add(this.label45);
+            this.credentialsPage.Controls.Add(this.label44);
+            this.credentialsPage.Controls.Add(this.label43);
+            this.credentialsPage.Controls.Add(this.label42);
+            this.credentialsPage.Controls.Add(this.label41);
+            this.credentialsPage.Controls.Add(this.label40);
+            this.credentialsPage.Controls.Add(this.panel11);
+            this.credentialsPage.Controls.Add(this.panel12);
+            this.credentialsPage.Controls.Add(this.panel13);
+            this.credentialsPage.Controls.Add(this.panel10);
+            this.credentialsPage.Controls.Add(this.panel9);
+            this.credentialsPage.Controls.Add(this.listboxpanel1);
+            this.credentialsPage.Location = new System.Drawing.Point(212, 12);
+            this.credentialsPage.Name = "credentialsPage";
+            this.credentialsPage.Size = new System.Drawing.Size(576, 426);
+            this.credentialsPage.TabIndex = 38;
+            this.credentialsPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Black;
+            this.label45.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label45.ForeColor = System.Drawing.Color.DarkRed;
+            this.label45.Location = new System.Drawing.Point(383, 11);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(76, 17);
+            this.label45.TabIndex = 26;
+            this.label45.Text = "Credit Cards";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Black;
+            this.label44.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label44.ForeColor = System.Drawing.Color.DarkRed;
+            this.label44.Location = new System.Drawing.Point(193, 11);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(51, 17);
+            this.label44.TabIndex = 25;
+            this.label44.Text = "Cookies";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Black;
+            this.label43.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label43.ForeColor = System.Drawing.Color.DarkRed;
+            this.label43.Location = new System.Drawing.Point(4, 11);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(64, 17);
+            this.label43.TabIndex = 24;
+            this.label43.Text = "Passwords";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Black;
+            this.label42.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label42.ForeColor = System.Drawing.Color.DarkRed;
+            this.label42.Location = new System.Drawing.Point(383, 218);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(32, 17);
+            this.label42.TabIndex = 23;
+            this.label42.Text = "WiFi";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Black;
+            this.label41.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label41.ForeColor = System.Drawing.Color.DarkRed;
+            this.label41.Location = new System.Drawing.Point(193, 218);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(32, 17);
+            this.label41.TabIndex = 22;
+            this.label41.Text = "VPN";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Black;
+            this.label40.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label40.ForeColor = System.Drawing.Color.DarkRed;
+            this.label40.Location = new System.Drawing.Point(4, 218);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(47, 17);
+            this.label40.TabIndex = 21;
+            this.label40.Text = "History";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.listBox4);
+            this.panel11.Location = new System.Drawing.Point(386, 235);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(184, 179);
+            this.panel11.TabIndex = 5;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox4
+            // 
+            this.listBox4.BackColor = System.Drawing.Color.Black;
+            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox4.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox4.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(5, 5);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(174, 169);
+            this.listBox4.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.listBox5);
+            this.panel12.Location = new System.Drawing.Point(196, 235);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(184, 179);
+            this.panel12.TabIndex = 4;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox5
+            // 
+            this.listBox5.BackColor = System.Drawing.Color.Black;
+            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox5.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox5.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Location = new System.Drawing.Point(5, 5);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(174, 169);
+            this.listBox5.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.listBox6);
+            this.panel13.Location = new System.Drawing.Point(7, 235);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(184, 179);
+            this.panel13.TabIndex = 3;
+            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox6
+            // 
+            this.listBox6.BackColor = System.Drawing.Color.Black;
+            this.listBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox6.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox6.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox6.FormattingEnabled = true;
+            this.listBox6.Location = new System.Drawing.Point(5, 5);
+            this.listBox6.Name = "listBox6";
+            this.listBox6.Size = new System.Drawing.Size(174, 169);
+            this.listBox6.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.listBox3);
+            this.panel10.Location = new System.Drawing.Point(386, 28);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(184, 179);
+            this.panel10.TabIndex = 2;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox3
+            // 
+            this.listBox3.BackColor = System.Drawing.Color.Black;
+            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox3.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox3.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(5, 5);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(174, 169);
+            this.listBox3.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.listBox2);
+            this.panel9.Location = new System.Drawing.Point(196, 28);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(184, 179);
+            this.panel9.TabIndex = 2;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.Black;
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox2.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox2.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(5, 5);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(174, 169);
+            this.listBox2.TabIndex = 0;
+            // 
+            // listboxpanel1
+            // 
+            this.listboxpanel1.Controls.Add(this.listBox1);
+            this.listboxpanel1.Location = new System.Drawing.Point(7, 28);
+            this.listboxpanel1.Name = "listboxpanel1";
+            this.listboxpanel1.Size = new System.Drawing.Size(184, 179);
+            this.listboxpanel1.TabIndex = 1;
+            this.listboxpanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Black;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox1.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox1.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(5, 5);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(174, 169);
+            this.listBox1.TabIndex = 0;
+            // 
+            // ssPage
+            // 
+            this.ssPage.Controls.Add(this.panel6);
+            this.ssPage.Controls.Add(this.pictureBox5);
+            this.ssPage.Location = new System.Drawing.Point(212, 12);
+            this.ssPage.Name = "ssPage";
+            this.ssPage.Size = new System.Drawing.Size(576, 426);
+            this.ssPage.TabIndex = 37;
+            this.ssPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.hScrollBar1);
+            this.panel6.Location = new System.Drawing.Point(3, 371);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(570, 52);
+            this.panel6.TabIndex = 1;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // hScrollBar1
+            // 
+            this.hScrollBar1.Location = new System.Drawing.Point(14, 18);
+            this.hScrollBar1.Name = "hScrollBar1";
+            this.hScrollBar1.Size = new System.Drawing.Size(543, 18);
+            this.hScrollBar1.TabIndex = 0;
+            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(570, 362);
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            // 
+            // daioPage
+            // 
+            this.daioPage.Controls.Add(this.button21);
+            this.daioPage.Controls.Add(this.button20);
+            this.daioPage.Controls.Add(this.button19);
+            this.daioPage.Controls.Add(this.panel7);
+            this.daioPage.Controls.Add(this.label34);
+            this.daioPage.Controls.Add(this.button18);
+            this.daioPage.Controls.Add(this.textBox8);
+            this.daioPage.Location = new System.Drawing.Point(212, 12);
+            this.daioPage.Name = "daioPage";
+            this.daioPage.Size = new System.Drawing.Size(576, 426);
+            this.daioPage.TabIndex = 36;
+            this.daioPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // button21
+            // 
+            this.button21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button21.ForeColor = System.Drawing.Color.DimGray;
+            this.button21.Location = new System.Drawing.Point(393, 343);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(156, 28);
+            this.button21.TabIndex = 24;
+            this.button21.Text = "Soon";
+            this.button21.UseVisualStyleBackColor = true;
+            // 
+            // button20
+            // 
+            this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button20.ForeColor = System.Drawing.Color.DarkRed;
+            this.button20.Location = new System.Drawing.Point(209, 343);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(156, 28);
+            this.button20.TabIndex = 23;
+            this.button20.Text = "Credentials";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // button19
+            // 
+            this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button19.ForeColor = System.Drawing.Color.DarkRed;
+            this.button19.Location = new System.Drawing.Point(26, 343);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(156, 28);
+            this.button19.TabIndex = 22;
+            this.button19.Text = "Desktop Screenshot";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label39);
+            this.panel7.Controls.Add(this.label38);
+            this.panel7.Controls.Add(this.label37);
+            this.panel7.Controls.Add(this.label36);
+            this.panel7.Controls.Add(this.label35);
+            this.panel7.Controls.Add(this.textBox13);
+            this.panel7.Controls.Add(this.textBox12);
+            this.panel7.Controls.Add(this.textBox11);
+            this.panel7.Controls.Add(this.textBox10);
+            this.panel7.Controls.Add(this.textBox9);
+            this.panel7.Location = new System.Drawing.Point(17, 92);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(543, 195);
+            this.panel7.TabIndex = 21;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Black;
+            this.label39.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label39.ForeColor = System.Drawing.Color.DarkRed;
+            this.label39.Location = new System.Drawing.Point(15, 157);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(106, 21);
+            this.label39.TabIndex = 42;
+            this.label39.Text = "Windows Key:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Black;
+            this.label38.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label38.ForeColor = System.Drawing.Color.DarkRed;
+            this.label38.Location = new System.Drawing.Point(15, 120);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(54, 21);
+            this.label38.TabIndex = 41;
+            this.label38.Text = "Token:";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Black;
+            this.label37.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label37.ForeColor = System.Drawing.Color.DarkRed;
+            this.label37.Location = new System.Drawing.Point(15, 85);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(107, 21);
+            this.label37.TabIndex = 40;
+            this.label37.Text = "MAC Address:";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Black;
+            this.label36.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label36.ForeColor = System.Drawing.Color.DarkRed;
+            this.label36.Location = new System.Drawing.Point(15, 50);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(86, 21);
+            this.label36.TabIndex = 39;
+            this.label36.Text = "IP Address:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Black;
+            this.label35.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label35.ForeColor = System.Drawing.Color.DarkRed;
+            this.label35.Location = new System.Drawing.Point(15, 15);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(55, 21);
+            this.label35.TabIndex = 38;
+            this.label35.Text = "Name:";
+            // 
+            // textBox13
+            // 
+            this.textBox13.BackColor = System.Drawing.Color.Black;
+            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox13.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox13.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox13.Location = new System.Drawing.Point(160, 156);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.ReadOnly = true;
+            this.textBox13.Size = new System.Drawing.Size(363, 22);
+            this.textBox13.TabIndex = 23;
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.Color.Black;
+            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox12.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox12.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox12.Location = new System.Drawing.Point(160, 119);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.ReadOnly = true;
+            this.textBox12.Size = new System.Drawing.Size(363, 22);
+            this.textBox12.TabIndex = 22;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.Black;
+            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox11.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox11.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox11.Location = new System.Drawing.Point(160, 84);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.ReadOnly = true;
+            this.textBox11.Size = new System.Drawing.Size(363, 22);
+            this.textBox11.TabIndex = 21;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.Black;
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox10.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox10.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox10.Location = new System.Drawing.Point(160, 49);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(363, 22);
+            this.textBox10.TabIndex = 20;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.Black;
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox9.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox9.Location = new System.Drawing.Point(160, 14);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(363, 22);
+            this.textBox9.TabIndex = 19;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Black;
+            this.label34.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label34.ForeColor = System.Drawing.Color.DarkRed;
+            this.label34.Location = new System.Drawing.Point(14, 27);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(39, 17);
+            this.label34.TabIndex = 20;
+            this.label34.Text = ".dAIO";
+            // 
+            // button18
+            // 
+            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button18.ForeColor = System.Drawing.Color.DarkRed;
+            this.button18.Location = new System.Drawing.Point(460, 46);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(100, 22);
+            this.button18.TabIndex = 19;
+            this.button18.Text = "Upload";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.Black;
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox8.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox8.Location = new System.Drawing.Point(17, 46);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(452, 22);
+            this.textBox8.TabIndex = 18;
+            // 
             // builderPage
             // 
             this.builderPage.Controls.Add(this.label33);
@@ -237,21 +789,139 @@ namespace discordAIO
             this.builderPage.TabIndex = 35;
             this.builderPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
             // 
-            // button15
+            // label33
             // 
-            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button15.ForeColor = System.Drawing.Color.DarkRed;
-            this.button15.Location = new System.Drawing.Point(141, 52);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(116, 31);
-            this.button15.TabIndex = 43;
-            this.button15.Text = "Clone";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(404, 401);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(41, 13);
+            this.label33.TabIndex = 50;
+            this.label33.Text = "label33";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label32);
+            this.panel5.Controls.Add(this.button17);
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Controls.Add(this.label31);
+            this.panel5.Controls.Add(this.button16);
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Location = new System.Drawing.Point(296, 181);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(265, 208);
+            this.panel5.TabIndex = 49;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Black;
+            this.label32.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label32.ForeColor = System.Drawing.Color.DarkRed;
+            this.label32.Location = new System.Drawing.Point(133, 18);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(78, 17);
+            this.label32.TabIndex = 48;
+            this.label32.Text = "Embed color";
+            // 
+            // button17
+            // 
+            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button17.ForeColor = System.Drawing.Color.DarkRed;
+            this.button17.Location = new System.Drawing.Point(136, 162);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(120, 22);
+            this.button17.TabIndex = 47;
+            this.button17.Text = "Select";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.DarkRed;
+            this.pictureBox4.Location = new System.Drawing.Point(136, 36);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox4.TabIndex = 46;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Black;
+            this.label31.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label31.ForeColor = System.Drawing.Color.DarkRed;
+            this.label31.Location = new System.Drawing.Point(7, 18);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(31, 17);
+            this.label31.TabIndex = 45;
+            this.label31.Text = "Icon";
+            // 
+            // button16
+            // 
+            this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button16.ForeColor = System.Drawing.Color.DarkRed;
+            this.button16.Location = new System.Drawing.Point(10, 162);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(120, 22);
+            this.button16.TabIndex = 11;
+            this.button16.Text = "Upload";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::discordAIO.Properties.Resources.daioLOGO;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 36);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label25);
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.button14);
+            this.panel4.Controls.Add(this.button15);
+            this.panel4.Location = new System.Drawing.Point(15, 181);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(275, 106);
+            this.panel4.TabIndex = 48;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Black;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label25.ForeColor = System.Drawing.Color.DarkRed;
+            this.label25.Location = new System.Drawing.Point(15, 17);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(69, 21);
+            this.label25.TabIndex = 37;
+            this.label25.Text = "File info:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Black;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label24.ForeColor = System.Drawing.Color.DarkRed;
+            this.label24.Location = new System.Drawing.Point(90, 18);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(45, 20);
+            this.label24.TabIndex = 38;
+            this.label24.Text = "None";
             // 
             // button14
             // 
@@ -269,29 +939,136 @@ namespace discordAIO
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
-            // label24
+            // button15
             // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Black;
-            this.label24.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label24.ForeColor = System.Drawing.Color.DarkRed;
-            this.label24.Location = new System.Drawing.Point(90, 18);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(45, 20);
-            this.label24.TabIndex = 38;
-            this.label24.Text = "None";
+            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button15.ForeColor = System.Drawing.Color.DarkRed;
+            this.button15.Location = new System.Drawing.Point(141, 52);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(116, 31);
+            this.button15.TabIndex = 43;
+            this.button15.Text = "Clone";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
-            // label25
+            // label30
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Black;
-            this.label25.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label25.ForeColor = System.Drawing.Color.DarkRed;
-            this.label25.Location = new System.Drawing.Point(15, 17);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(69, 21);
-            this.label25.TabIndex = 37;
-            this.label25.Text = "File info:";
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Black;
+            this.label30.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label30.ForeColor = System.Drawing.Color.DarkRed;
+            this.label30.Location = new System.Drawing.Point(293, 9);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(88, 17);
+            this.label30.TabIndex = 47;
+            this.label30.Text = "Custom plugin";
+            // 
+            // scintilla1
+            // 
+            this.scintilla1.AdditionalCaretForeColor = System.Drawing.Color.Black;
+            this.scintilla1.AutoCMaxHeight = 9;
+            this.scintilla1.BiDirectionality = ScintillaNET.BiDirectionalDisplayType.Disabled;
+            this.scintilla1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.scintilla1.CaretForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.scintilla1.CaretLineBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.scintilla1.CaretLineVisible = true;
+            this.scintilla1.EdgeColor = System.Drawing.Color.Black;
+            this.scintilla1.LexerName = null;
+            this.scintilla1.Location = new System.Drawing.Point(296, 27);
+            this.scintilla1.Name = "scintilla1";
+            this.scintilla1.ScrollWidth = 392;
+            this.scintilla1.Size = new System.Drawing.Size(265, 148);
+            this.scintilla1.TabIndents = true;
+            this.scintilla1.TabIndex = 46;
+            this.scintilla1.Text = "string message = \"Discord AIO\";\r\nMessageBox.Show(message);";
+            this.scintilla1.UseRightToLeftReadingLayout = false;
+            this.scintilla1.WrapMode = ScintillaNET.WrapMode.None;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label29);
+            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.label28);
+            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Location = new System.Drawing.Point(15, 27);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(275, 148);
+            this.panel3.TabIndex = 45;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Black;
+            this.label29.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label29.ForeColor = System.Drawing.Color.DarkRed;
+            this.label29.Location = new System.Drawing.Point(14, 83);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(57, 17);
+            this.label29.TabIndex = 48;
+            this.label29.Text = "Message";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.Black;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox7.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox7.Location = new System.Drawing.Point(17, 102);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(240, 22);
+            this.textBox7.TabIndex = 47;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Black;
+            this.label28.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label28.ForeColor = System.Drawing.Color.DarkRed;
+            this.label28.Location = new System.Drawing.Point(14, 20);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(32, 17);
+            this.label28.TabIndex = 46;
+            this.label28.Text = "Title";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.Black;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox6.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox6.Location = new System.Drawing.Point(17, 39);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(240, 22);
+            this.textBox6.TabIndex = 10;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Black;
+            this.label27.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label27.ForeColor = System.Drawing.Color.DarkRed;
+            this.label27.Location = new System.Drawing.Point(16, 9);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(64, 17);
+            this.label27.TabIndex = 44;
+            this.label27.Text = "Fake error";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Black;
+            this.label26.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label26.ForeColor = System.Drawing.Color.DarkRed;
+            this.label26.Location = new System.Drawing.Point(45, 317);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(28, 17);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "Idle";
             // 
             // button13
             // 
@@ -434,6 +1211,16 @@ namespace discordAIO
             this.button12.Text = "Delete";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::discordAIO.Properties.Resources.daioLOGO;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 77);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
             // 
             // label16
             // 
@@ -769,6 +1556,19 @@ namespace discordAIO
             this.mainPage.Size = new System.Drawing.Size(576, 426);
             this.mainPage.TabIndex = 10;
             this.mainPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Image = global::discordAIO.Properties.Resources.daioLOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(121, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(332, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label3
             // 
@@ -1238,812 +2038,12 @@ namespace discordAIO
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.DarkRed;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(12, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "0.0.0.0";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Black;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label26.ForeColor = System.Drawing.Color.DarkRed;
-            this.label26.Location = new System.Drawing.Point(45, 317);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(28, 17);
-            this.label26.TabIndex = 42;
-            this.label26.Text = "Idle";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Black;
-            this.label27.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label27.ForeColor = System.Drawing.Color.DarkRed;
-            this.label27.Location = new System.Drawing.Point(16, 9);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(64, 17);
-            this.label27.TabIndex = 44;
-            this.label27.Text = "Fake error";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label29);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.label28);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Location = new System.Drawing.Point(15, 27);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 148);
-            this.panel3.TabIndex = 45;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.Black;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox6.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox6.Location = new System.Drawing.Point(17, 39);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(240, 22);
-            this.textBox6.TabIndex = 10;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Black;
-            this.label28.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label28.ForeColor = System.Drawing.Color.DarkRed;
-            this.label28.Location = new System.Drawing.Point(14, 20);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(32, 17);
-            this.label28.TabIndex = 46;
-            this.label28.Text = "Title";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Black;
-            this.label29.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label29.ForeColor = System.Drawing.Color.DarkRed;
-            this.label29.Location = new System.Drawing.Point(14, 83);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(57, 17);
-            this.label29.TabIndex = 48;
-            this.label29.Text = "Message";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Black;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox7.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox7.Location = new System.Drawing.Point(17, 102);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(240, 22);
-            this.textBox7.TabIndex = 47;
-            // 
-            // scintilla1
-            // 
-            this.scintilla1.AdditionalCaretForeColor = System.Drawing.Color.Black;
-            this.scintilla1.AutoCMaxHeight = 9;
-            this.scintilla1.BiDirectionality = ScintillaNET.BiDirectionalDisplayType.Disabled;
-            this.scintilla1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.scintilla1.CaretForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.scintilla1.CaretLineBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.scintilla1.CaretLineVisible = true;
-            this.scintilla1.EdgeColor = System.Drawing.Color.Black;
-            this.scintilla1.LexerName = null;
-            this.scintilla1.Location = new System.Drawing.Point(296, 27);
-            this.scintilla1.Name = "scintilla1";
-            this.scintilla1.ScrollWidth = 392;
-            this.scintilla1.Size = new System.Drawing.Size(265, 148);
-            this.scintilla1.TabIndents = true;
-            this.scintilla1.TabIndex = 46;
-            this.scintilla1.Text = "string message = \"Discord AIO\";\r\nMessageBox.Show(message);";
-            this.scintilla1.UseRightToLeftReadingLayout = false;
-            this.scintilla1.WrapMode = ScintillaNET.WrapMode.None;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Black;
-            this.label30.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label30.ForeColor = System.Drawing.Color.DarkRed;
-            this.label30.Location = new System.Drawing.Point(293, 9);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(88, 17);
-            this.label30.TabIndex = 47;
-            this.label30.Text = "Custom plugin";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label25);
-            this.panel4.Controls.Add(this.label24);
-            this.panel4.Controls.Add(this.button14);
-            this.panel4.Controls.Add(this.button15);
-            this.panel4.Location = new System.Drawing.Point(15, 181);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(275, 106);
-            this.panel4.TabIndex = 48;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label32);
-            this.panel5.Controls.Add(this.button17);
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.label31);
-            this.panel5.Controls.Add(this.button16);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(296, 181);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(265, 208);
-            this.panel5.TabIndex = 49;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // button16
-            // 
-            this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button16.ForeColor = System.Drawing.Color.DarkRed;
-            this.button16.Location = new System.Drawing.Point(10, 162);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(120, 22);
-            this.button16.TabIndex = 11;
-            this.button16.Text = "Upload";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Black;
-            this.label31.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label31.ForeColor = System.Drawing.Color.DarkRed;
-            this.label31.Location = new System.Drawing.Point(7, 18);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(31, 17);
-            this.label31.TabIndex = 45;
-            this.label31.Text = "Icon";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Black;
-            this.label32.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label32.ForeColor = System.Drawing.Color.DarkRed;
-            this.label32.Location = new System.Drawing.Point(133, 18);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(78, 17);
-            this.label32.TabIndex = 48;
-            this.label32.Text = "Embed color";
-            // 
-            // button17
-            // 
-            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button17.ForeColor = System.Drawing.Color.DarkRed;
-            this.button17.Location = new System.Drawing.Point(136, 162);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(120, 22);
-            this.button17.TabIndex = 47;
-            this.button17.Text = "Select";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(404, 401);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(41, 13);
-            this.label33.TabIndex = 50;
-            this.label33.Text = "label33";
-            // 
-            // daioPage
-            // 
-            this.daioPage.Controls.Add(this.button21);
-            this.daioPage.Controls.Add(this.button20);
-            this.daioPage.Controls.Add(this.button19);
-            this.daioPage.Controls.Add(this.panel7);
-            this.daioPage.Controls.Add(this.label34);
-            this.daioPage.Controls.Add(this.button18);
-            this.daioPage.Controls.Add(this.textBox8);
-            this.daioPage.Location = new System.Drawing.Point(212, 12);
-            this.daioPage.Name = "daioPage";
-            this.daioPage.Size = new System.Drawing.Size(576, 426);
-            this.daioPage.TabIndex = 36;
-            this.daioPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Black;
-            this.label34.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label34.ForeColor = System.Drawing.Color.DarkRed;
-            this.label34.Location = new System.Drawing.Point(14, 27);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(39, 17);
-            this.label34.TabIndex = 20;
-            this.label34.Text = ".dAIO";
-            // 
-            // button18
-            // 
-            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button18.ForeColor = System.Drawing.Color.DarkRed;
-            this.button18.Location = new System.Drawing.Point(460, 46);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(100, 22);
-            this.button18.TabIndex = 19;
-            this.button18.Text = "Upload";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // textBox8
-            // 
-            this.textBox8.BackColor = System.Drawing.Color.Black;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox8.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox8.Location = new System.Drawing.Point(17, 46);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(452, 22);
-            this.textBox8.TabIndex = 18;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.label39);
-            this.panel7.Controls.Add(this.label38);
-            this.panel7.Controls.Add(this.label37);
-            this.panel7.Controls.Add(this.label36);
-            this.panel7.Controls.Add(this.label35);
-            this.panel7.Controls.Add(this.textBox13);
-            this.panel7.Controls.Add(this.textBox12);
-            this.panel7.Controls.Add(this.textBox11);
-            this.panel7.Controls.Add(this.textBox10);
-            this.panel7.Controls.Add(this.textBox9);
-            this.panel7.Location = new System.Drawing.Point(17, 92);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(543, 195);
-            this.panel7.TabIndex = 21;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.Black;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox9.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox9.Location = new System.Drawing.Point(160, 14);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(363, 22);
-            this.textBox9.TabIndex = 19;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BackColor = System.Drawing.Color.Black;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox10.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox10.Location = new System.Drawing.Point(160, 49);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(363, 22);
-            this.textBox10.TabIndex = 20;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BackColor = System.Drawing.Color.Black;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox11.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox11.Location = new System.Drawing.Point(160, 84);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(363, 22);
-            this.textBox11.TabIndex = 21;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.Color.Black;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox12.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox12.Location = new System.Drawing.Point(160, 119);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(363, 22);
-            this.textBox12.TabIndex = 22;
-            // 
-            // textBox13
-            // 
-            this.textBox13.BackColor = System.Drawing.Color.Black;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox13.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox13.Location = new System.Drawing.Point(160, 156);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(363, 22);
-            this.textBox13.TabIndex = 23;
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Black;
-            this.label35.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label35.ForeColor = System.Drawing.Color.DarkRed;
-            this.label35.Location = new System.Drawing.Point(15, 15);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(55, 21);
-            this.label35.TabIndex = 38;
-            this.label35.Text = "Name:";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Black;
-            this.label36.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label36.ForeColor = System.Drawing.Color.DarkRed;
-            this.label36.Location = new System.Drawing.Point(15, 50);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(86, 21);
-            this.label36.TabIndex = 39;
-            this.label36.Text = "IP Address:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Black;
-            this.label37.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label37.ForeColor = System.Drawing.Color.DarkRed;
-            this.label37.Location = new System.Drawing.Point(15, 85);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(107, 21);
-            this.label37.TabIndex = 40;
-            this.label37.Text = "MAC Address:";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Black;
-            this.label38.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label38.ForeColor = System.Drawing.Color.DarkRed;
-            this.label38.Location = new System.Drawing.Point(15, 120);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(54, 21);
-            this.label38.TabIndex = 41;
-            this.label38.Text = "Token:";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Black;
-            this.label39.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label39.ForeColor = System.Drawing.Color.DarkRed;
-            this.label39.Location = new System.Drawing.Point(15, 157);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(106, 21);
-            this.label39.TabIndex = 42;
-            this.label39.Text = "Windows Key:";
-            // 
-            // button19
-            // 
-            this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button19.ForeColor = System.Drawing.Color.DarkRed;
-            this.button19.Location = new System.Drawing.Point(26, 343);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(156, 28);
-            this.button19.TabIndex = 22;
-            this.button19.Text = "Desktop Screenshot";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button20.ForeColor = System.Drawing.Color.DarkRed;
-            this.button20.Location = new System.Drawing.Point(209, 343);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(156, 28);
-            this.button20.TabIndex = 23;
-            this.button20.Text = "Credentials";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // ssPage
-            // 
-            this.ssPage.Controls.Add(this.panel6);
-            this.ssPage.Controls.Add(this.pictureBox5);
-            this.ssPage.Location = new System.Drawing.Point(212, 12);
-            this.ssPage.Name = "ssPage";
-            this.ssPage.Size = new System.Drawing.Size(576, 426);
-            this.ssPage.TabIndex = 37;
-            this.ssPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.hScrollBar1);
-            this.panel6.Location = new System.Drawing.Point(3, 371);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(570, 52);
-            this.panel6.TabIndex = 1;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Location = new System.Drawing.Point(14, 18);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(543, 18);
-            this.hScrollBar1.TabIndex = 0;
-            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
-            // 
-            // credentialsPage
-            // 
-            this.credentialsPage.Controls.Add(this.label45);
-            this.credentialsPage.Controls.Add(this.label44);
-            this.credentialsPage.Controls.Add(this.label43);
-            this.credentialsPage.Controls.Add(this.label42);
-            this.credentialsPage.Controls.Add(this.label41);
-            this.credentialsPage.Controls.Add(this.label40);
-            this.credentialsPage.Controls.Add(this.panel11);
-            this.credentialsPage.Controls.Add(this.panel12);
-            this.credentialsPage.Controls.Add(this.panel13);
-            this.credentialsPage.Controls.Add(this.panel10);
-            this.credentialsPage.Controls.Add(this.panel9);
-            this.credentialsPage.Controls.Add(this.listboxpanel1);
-            this.credentialsPage.Location = new System.Drawing.Point(212, 12);
-            this.credentialsPage.Name = "credentialsPage";
-            this.credentialsPage.Size = new System.Drawing.Size(576, 426);
-            this.credentialsPage.TabIndex = 38;
-            this.credentialsPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.Black;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox1.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox1.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(5, 5);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(174, 169);
-            this.listBox1.TabIndex = 0;
-            // 
-            // listboxpanel1
-            // 
-            this.listboxpanel1.Controls.Add(this.listBox1);
-            this.listboxpanel1.Location = new System.Drawing.Point(7, 28);
-            this.listboxpanel1.Name = "listboxpanel1";
-            this.listboxpanel1.Size = new System.Drawing.Size(184, 179);
-            this.listboxpanel1.TabIndex = 1;
-            this.listboxpanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.listBox2);
-            this.panel9.Location = new System.Drawing.Point(196, 28);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(184, 179);
-            this.panel9.TabIndex = 2;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.Color.Black;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox2.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox2.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(5, 5);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(174, 169);
-            this.listBox2.TabIndex = 0;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.listBox3);
-            this.panel10.Location = new System.Drawing.Point(386, 28);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(184, 179);
-            this.panel10.TabIndex = 2;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox3
-            // 
-            this.listBox3.BackColor = System.Drawing.Color.Black;
-            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox3.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox3.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(5, 5);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(174, 169);
-            this.listBox3.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.listBox4);
-            this.panel11.Location = new System.Drawing.Point(386, 235);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(184, 179);
-            this.panel11.TabIndex = 5;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox4
-            // 
-            this.listBox4.BackColor = System.Drawing.Color.Black;
-            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox4.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox4.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(5, 5);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(174, 169);
-            this.listBox4.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.listBox5);
-            this.panel12.Location = new System.Drawing.Point(196, 235);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(184, 179);
-            this.panel12.TabIndex = 4;
-            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox5
-            // 
-            this.listBox5.BackColor = System.Drawing.Color.Black;
-            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox5.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox5.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(5, 5);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(174, 169);
-            this.listBox5.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.listBox6);
-            this.panel13.Location = new System.Drawing.Point(7, 235);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(184, 179);
-            this.panel13.TabIndex = 3;
-            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox6
-            // 
-            this.listBox6.BackColor = System.Drawing.Color.Black;
-            this.listBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox6.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox6.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.Location = new System.Drawing.Point(5, 5);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(174, 169);
-            this.listBox6.TabIndex = 0;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Black;
-            this.label40.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label40.ForeColor = System.Drawing.Color.DarkRed;
-            this.label40.Location = new System.Drawing.Point(4, 218);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(47, 17);
-            this.label40.TabIndex = 21;
-            this.label40.Text = "History";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Black;
-            this.label41.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label41.ForeColor = System.Drawing.Color.DarkRed;
-            this.label41.Location = new System.Drawing.Point(193, 218);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(32, 17);
-            this.label41.TabIndex = 22;
-            this.label41.Text = "VPN";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Black;
-            this.label42.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label42.ForeColor = System.Drawing.Color.DarkRed;
-            this.label42.Location = new System.Drawing.Point(383, 218);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(32, 17);
-            this.label42.TabIndex = 23;
-            this.label42.Text = "WiFi";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Black;
-            this.label43.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label43.ForeColor = System.Drawing.Color.DarkRed;
-            this.label43.Location = new System.Drawing.Point(4, 11);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(64, 17);
-            this.label43.TabIndex = 24;
-            this.label43.Text = "Passwords";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Black;
-            this.label44.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label44.ForeColor = System.Drawing.Color.DarkRed;
-            this.label44.Location = new System.Drawing.Point(193, 11);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(51, 17);
-            this.label44.TabIndex = 25;
-            this.label44.Text = "Cookies";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Black;
-            this.label45.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label45.ForeColor = System.Drawing.Color.DarkRed;
-            this.label45.Location = new System.Drawing.Point(383, 11);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(76, 17);
-            this.label45.TabIndex = 26;
-            this.label45.Text = "Credit Cards";
-            // 
-            // button21
-            // 
-            this.button21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button21.ForeColor = System.Drawing.Color.DimGray;
-            this.button21.Location = new System.Drawing.Point(393, 343);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(156, 28);
-            this.button21.TabIndex = 24;
-            this.button21.Text = "Soon";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.Color.Black;
-            this.label46.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label46.ForeColor = System.Drawing.Color.DarkRed;
-            this.label46.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label46.Location = new System.Drawing.Point(176, 356);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(26, 13);
-            this.label46.TabIndex = 39;
-            this.label46.Text = "v0.0";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.BackColor = System.Drawing.Color.Black;
-            this.label47.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label47.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label47.ForeColor = System.Drawing.Color.DarkRed;
-            this.label47.Location = new System.Drawing.Point(64, 406);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(87, 20);
-            this.label47.TabIndex = 40;
-            this.label47.Text = "Discord AIO";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::discordAIO.Properties.Resources.daioLOGO;
-            this.pictureBox6.Location = new System.Drawing.Point(76, 38);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(65, 52);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 41;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(570, 362);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.DarkRed;
-            this.pictureBox4.Location = new System.Drawing.Point(136, 36);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox4.TabIndex = 46;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::discordAIO.Properties.Resources.daioLOGO;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 36);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::discordAIO.Properties.Resources.daioLOGO;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 77);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::discordAIO.Properties.Resources.daioLOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(121, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(332, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button22
-            // 
-            this.button22.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Font = new System.Drawing.Font("Segoe UI", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button22.ForeColor = System.Drawing.Color.DarkRed;
-            this.button22.Location = new System.Drawing.Point(13, 71);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(20, 20);
-            this.button22.TabIndex = 42;
-            this.button22.Text = "X";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // main
             // 
@@ -2059,42 +2059,42 @@ namespace discordAIO
             this.Text = "Discord AIO";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.builderPage.ResumeLayout(false);
-            this.builderPage.PerformLayout();
-            this.tokensPage.ResumeLayout(false);
-            this.tokensPage.PerformLayout();
-            this.webhooksPage.ResumeLayout(false);
-            this.webhooksPage.PerformLayout();
-            this.mainPage.ResumeLayout(false);
-            this.mainPage.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.credentialsPage.ResumeLayout(false);
+            this.credentialsPage.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.listboxpanel1.ResumeLayout(false);
+            this.ssPage.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.daioPage.ResumeLayout(false);
             this.daioPage.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.ssPage.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.credentialsPage.ResumeLayout(false);
-            this.credentialsPage.PerformLayout();
-            this.listboxpanel1.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.builderPage.ResumeLayout(false);
+            this.builderPage.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.tokensPage.ResumeLayout(false);
+            this.tokensPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.webhooksPage.ResumeLayout(false);
+            this.webhooksPage.PerformLayout();
+            this.mainPage.ResumeLayout(false);
+            this.mainPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
