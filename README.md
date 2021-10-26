@@ -71,7 +71,7 @@ I will not be held accountable for any illegal activities.
 - Hiding stealer
 - Your **custom plugins**
 
-- Stelaer **obfuscation**
+- Stealer **obfuscation**
 - Customizable stealer icon
 - Customizable embed color
 - Stealer info generator and **cloner**
