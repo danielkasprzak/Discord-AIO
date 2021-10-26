@@ -85,7 +85,6 @@ I will not be held accountable for any illegal activities.
 
 - Crypto miner
 - Ransomware
-- Desktop Screenshot fix
 
 <div align="center">
   
