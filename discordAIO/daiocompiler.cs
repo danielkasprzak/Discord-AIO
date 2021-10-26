@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using System.IO;
 using Microsoft.VisualBasic;
 using System.IO.Compression;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace discordAIO
 {
