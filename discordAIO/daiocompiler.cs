@@ -9,8 +9,6 @@ using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using RestSharp;
-using Newtonsoft.Json.Linq;
 using Microsoft.VisualBasic;
 using System.IO.Compression;
 
@@ -103,9 +101,7 @@ namespace discordAIO
 			  "System.Core.dll",
 			  "System.Security.dll",
 			  "System.Net.Http.dll",
-			  "System.Xml.dll",
-			  "RestSharp.dll",
-			  "Newtonsoft.Json.dll"
+			  "System.Xml.dll"
 		};
 	}
 }

@@ -34,11 +34,32 @@ namespace discordAIO
             this.button22 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label47 = new System.Windows.Forms.Label();
+            this.daioPage = new System.Windows.Forms.Panel();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.button18 = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.mainPage = new System.Windows.Forms.Panel();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.checkBox20 = new System.Windows.Forms.CheckBox();
+            this.checkBox21 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox23 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -60,48 +81,6 @@ namespace discordAIO
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.credentialsPage = new System.Windows.Forms.Panel();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.listBox6 = new System.Windows.Forms.ListBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listboxpanel1 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.ssPage = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.daioPage = new System.Windows.Forms.Panel();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.builderPage = new System.Windows.Forms.Panel();
             this.label33 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -126,6 +105,26 @@ namespace discordAIO
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
+            this.label46 = new System.Windows.Forms.Label();
+            this.credentialsPage = new System.Windows.Forms.Panel();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listboxpanel1 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tokensPage = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -168,9 +167,17 @@ namespace discordAIO
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.daioPage.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.mainPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.builderPage.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.credentialsPage.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -178,17 +185,6 @@ namespace discordAIO
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.listboxpanel1.SuspendLayout();
-            this.ssPage.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.daioPage.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.builderPage.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.tokensPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.webhooksPage.SuspendLayout();
@@ -200,11 +196,10 @@ namespace discordAIO
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.label47);
             this.panel1.Controls.Add(this.mainPage);
+            this.panel1.Controls.Add(this.daioPage);
             this.panel1.Controls.Add(this.builderPage);
             this.panel1.Controls.Add(this.label46);
             this.panel1.Controls.Add(this.credentialsPage);
-            this.panel1.Controls.Add(this.ssPage);
-            this.panel1.Controls.Add(this.daioPage);
             this.panel1.Controls.Add(this.tokensPage);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.webhooksPage);
@@ -240,7 +235,7 @@ namespace discordAIO
             // pictureBox6
             // 
             this.pictureBox6.Image = global::discordAIO.Properties.Resources.daioLOGO;
-            this.pictureBox6.Location = new System.Drawing.Point(76, 38);
+            this.pictureBox6.Location = new System.Drawing.Point(76, 21);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(65, 52);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -261,706 +256,6 @@ namespace discordAIO
             this.label47.TabIndex = 40;
             this.label47.Text = "Discord AIO";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // mainPage
-            // 
-            this.mainPage.Controls.Add(this.checkBox18);
-            this.mainPage.Controls.Add(this.pictureBox1);
-            this.mainPage.Controls.Add(this.label3);
-            this.mainPage.Controls.Add(this.panel2);
-            this.mainPage.Controls.Add(this.label1);
-            this.mainPage.Controls.Add(this.button7);
-            this.mainPage.Controls.Add(this.textBox2);
-            this.mainPage.Location = new System.Drawing.Point(212, 12);
-            this.mainPage.Name = "mainPage";
-            this.mainPage.Size = new System.Drawing.Size(576, 426);
-            this.mainPage.TabIndex = 10;
-            this.mainPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // checkBox18
-            // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox18.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox18.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox18.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox18.Location = new System.Drawing.Point(495, 225);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(70, 17);
-            this.checkBox18.TabIndex = 33;
-            this.checkBox18.Text = "Obfuscate";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::discordAIO.Properties.Resources.daioLOGO;
-            this.pictureBox1.Location = new System.Drawing.Point(121, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(332, 106);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(14, 224);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 17);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Additional";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.checkBox23);
-            this.panel2.Controls.Add(this.checkBox2);
-            this.panel2.Controls.Add(this.checkBox24);
-            this.panel2.Controls.Add(this.checkBox3);
-            this.panel2.Controls.Add(this.checkBox9);
-            this.panel2.Controls.Add(this.checkBox4);
-            this.panel2.Controls.Add(this.checkBox10);
-            this.panel2.Controls.Add(this.checkBox5);
-            this.panel2.Controls.Add(this.checkBox11);
-            this.panel2.Controls.Add(this.checkBox6);
-            this.panel2.Controls.Add(this.checkBox12);
-            this.panel2.Controls.Add(this.checkBox7);
-            this.panel2.Controls.Add(this.checkBox13);
-            this.panel2.Controls.Add(this.checkBox8);
-            this.panel2.Controls.Add(this.checkBox14);
-            this.panel2.Controls.Add(this.checkBox16);
-            this.panel2.Controls.Add(this.checkBox15);
-            this.panel2.Location = new System.Drawing.Point(17, 243);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(543, 165);
-            this.panel2.TabIndex = 30;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox1.Location = new System.Drawing.Point(34, 17);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(93, 17);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Run on Startup";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox23
-            // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox23.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox23.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox23.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox23.Location = new System.Drawing.Point(198, 86);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(81, 17);
-            this.checkBox23.TabIndex = 29;
-            this.checkBox23.Text = "Hide Stealer";
-            this.checkBox23.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox2.Location = new System.Drawing.Point(34, 40);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(150, 17);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.Text = "Disable Windows Defender";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox24
-            // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox24.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox24.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox24.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox24.Location = new System.Drawing.Point(198, 132);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(161, 17);
-            this.checkBox24.TabIndex = 28;
-            this.checkBox24.Text = "Disable Mouse and Keyboard";
-            this.checkBox24.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox3.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox3.Location = new System.Drawing.Point(34, 63);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(127, 17);
-            this.checkBox3.TabIndex = 14;
-            this.checkBox3.Text = "Disable Task Manager";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox9.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox9.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox9.Location = new System.Drawing.Point(198, 109);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(150, 17);
-            this.checkBox9.TabIndex = 27;
-            this.checkBox9.Text = "Steal Windows Product Key";
-            this.checkBox9.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox4.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox4.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox4.Location = new System.Drawing.Point(34, 86);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(153, 17);
-            this.checkBox4.TabIndex = 15;
-            this.checkBox4.Text = "Disable Internet Connection";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox10
-            // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox10.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox10.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox10.Location = new System.Drawing.Point(370, 132);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(121, 17);
-            this.checkBox10.TabIndex = 26;
-            this.checkBox10.Text = "Steal WIFI Passwords";
-            this.checkBox10.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox5.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox5.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox5.Location = new System.Drawing.Point(34, 109);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(72, 17);
-            this.checkBox5.TabIndex = 16;
-            this.checkBox5.Text = "Fake Error";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox11
-            // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox11.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox11.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox11.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox11.Location = new System.Drawing.Point(370, 109);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(134, 17);
-            this.checkBox11.TabIndex = 25;
-            this.checkBox11.Text = "Steal Browser History (!)";
-            this.checkBox11.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox6.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox6.Location = new System.Drawing.Point(34, 132);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(79, 17);
-            this.checkBox6.TabIndex = 17;
-            this.checkBox6.Text = "Blue Screen";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox12.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox12.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox12.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox12.Location = new System.Drawing.Point(370, 86);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(107, 17);
-            this.checkBox12.TabIndex = 24;
-            this.checkBox12.Text = "Steal Credit Cards";
-            this.checkBox12.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox7.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox7.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox7.Location = new System.Drawing.Point(198, 40);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(101, 17);
-            this.checkBox7.TabIndex = 18;
-            this.checkBox7.Text = "Websites Blocker";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox13
-            // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox13.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox13.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox13.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox13.Location = new System.Drawing.Point(370, 63);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(125, 17);
-            this.checkBox13.TabIndex = 23;
-            this.checkBox13.Text = "Steal VPN Credentials";
-            this.checkBox13.UseVisualStyleBackColor = true;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox8.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox8.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox8.Location = new System.Drawing.Point(198, 63);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(73, 17);
-            this.checkBox8.TabIndex = 19;
-            this.checkBox8.Text = "Jumpscare";
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // checkBox14
-            // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox14.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox14.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox14.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox14.Location = new System.Drawing.Point(370, 40);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(126, 17);
-            this.checkBox14.TabIndex = 22;
-            this.checkBox14.Text = "Steal Browser Cookies";
-            this.checkBox14.UseVisualStyleBackColor = true;
-            // 
-            // checkBox16
-            // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox16.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox16.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox16.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox16.Location = new System.Drawing.Point(198, 17);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(89, 17);
-            this.checkBox16.TabIndex = 20;
-            this.checkBox16.Text = "Custom Plugin";
-            this.checkBox16.UseVisualStyleBackColor = true;
-            // 
-            // checkBox15
-            // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox15.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox15.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox15.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox15.Location = new System.Drawing.Point(370, 17);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(138, 17);
-            this.checkBox15.TabIndex = 21;
-            this.checkBox15.Text = "Steal Browser Passwords";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(14, 165);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Webhook";
-            // 
-            // button7
-            // 
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button7.ForeColor = System.Drawing.Color.DarkRed;
-            this.button7.Location = new System.Drawing.Point(460, 184);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 22);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "Check";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.Black;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox2.Location = new System.Drawing.Point(17, 184);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(452, 22);
-            this.textBox2.TabIndex = 9;
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.BackColor = System.Drawing.Color.Black;
-            this.label46.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label46.ForeColor = System.Drawing.Color.DarkRed;
-            this.label46.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label46.Location = new System.Drawing.Point(173, 356);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(26, 13);
-            this.label46.TabIndex = 39;
-            this.label46.Text = "v0.0";
-            // 
-            // credentialsPage
-            // 
-            this.credentialsPage.Controls.Add(this.label45);
-            this.credentialsPage.Controls.Add(this.label44);
-            this.credentialsPage.Controls.Add(this.label43);
-            this.credentialsPage.Controls.Add(this.label42);
-            this.credentialsPage.Controls.Add(this.label41);
-            this.credentialsPage.Controls.Add(this.label40);
-            this.credentialsPage.Controls.Add(this.panel11);
-            this.credentialsPage.Controls.Add(this.panel12);
-            this.credentialsPage.Controls.Add(this.panel13);
-            this.credentialsPage.Controls.Add(this.panel10);
-            this.credentialsPage.Controls.Add(this.panel9);
-            this.credentialsPage.Controls.Add(this.listboxpanel1);
-            this.credentialsPage.Location = new System.Drawing.Point(212, 12);
-            this.credentialsPage.Name = "credentialsPage";
-            this.credentialsPage.Size = new System.Drawing.Size(576, 426);
-            this.credentialsPage.TabIndex = 38;
-            this.credentialsPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Black;
-            this.label45.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label45.ForeColor = System.Drawing.Color.DarkRed;
-            this.label45.Location = new System.Drawing.Point(383, 11);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(76, 17);
-            this.label45.TabIndex = 26;
-            this.label45.Text = "Credit Cards";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.BackColor = System.Drawing.Color.Black;
-            this.label44.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label44.ForeColor = System.Drawing.Color.DarkRed;
-            this.label44.Location = new System.Drawing.Point(193, 11);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(51, 17);
-            this.label44.TabIndex = 25;
-            this.label44.Text = "Cookies";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.BackColor = System.Drawing.Color.Black;
-            this.label43.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label43.ForeColor = System.Drawing.Color.DarkRed;
-            this.label43.Location = new System.Drawing.Point(4, 11);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(64, 17);
-            this.label43.TabIndex = 24;
-            this.label43.Text = "Passwords";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Black;
-            this.label42.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label42.ForeColor = System.Drawing.Color.DarkRed;
-            this.label42.Location = new System.Drawing.Point(383, 218);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(32, 17);
-            this.label42.TabIndex = 23;
-            this.label42.Text = "WiFi";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Black;
-            this.label41.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label41.ForeColor = System.Drawing.Color.DarkRed;
-            this.label41.Location = new System.Drawing.Point(193, 218);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(32, 17);
-            this.label41.TabIndex = 22;
-            this.label41.Text = "VPN";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Black;
-            this.label40.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label40.ForeColor = System.Drawing.Color.DarkRed;
-            this.label40.Location = new System.Drawing.Point(4, 218);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(47, 17);
-            this.label40.TabIndex = 21;
-            this.label40.Text = "History";
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.listBox4);
-            this.panel11.Location = new System.Drawing.Point(386, 235);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(184, 179);
-            this.panel11.TabIndex = 5;
-            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox4
-            // 
-            this.listBox4.BackColor = System.Drawing.Color.Black;
-            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox4.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox4.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(5, 5);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(174, 169);
-            this.listBox4.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.listBox5);
-            this.panel12.Location = new System.Drawing.Point(196, 235);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(184, 179);
-            this.panel12.TabIndex = 4;
-            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox5
-            // 
-            this.listBox5.BackColor = System.Drawing.Color.Black;
-            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox5.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox5.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(5, 5);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(174, 169);
-            this.listBox5.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.listBox6);
-            this.panel13.Location = new System.Drawing.Point(7, 235);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(184, 179);
-            this.panel13.TabIndex = 3;
-            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox6
-            // 
-            this.listBox6.BackColor = System.Drawing.Color.Black;
-            this.listBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox6.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox6.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.Location = new System.Drawing.Point(5, 5);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(174, 169);
-            this.listBox6.TabIndex = 0;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.listBox3);
-            this.panel10.Location = new System.Drawing.Point(386, 28);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(184, 179);
-            this.panel10.TabIndex = 2;
-            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox3
-            // 
-            this.listBox3.BackColor = System.Drawing.Color.Black;
-            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox3.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox3.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(5, 5);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(174, 169);
-            this.listBox3.TabIndex = 0;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.listBox2);
-            this.panel9.Location = new System.Drawing.Point(196, 28);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(184, 179);
-            this.panel9.TabIndex = 2;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.Color.Black;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox2.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox2.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(5, 5);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(174, 169);
-            this.listBox2.TabIndex = 0;
-            // 
-            // listboxpanel1
-            // 
-            this.listboxpanel1.Controls.Add(this.listBox1);
-            this.listboxpanel1.Location = new System.Drawing.Point(7, 28);
-            this.listboxpanel1.Name = "listboxpanel1";
-            this.listboxpanel1.Size = new System.Drawing.Size(184, 179);
-            this.listboxpanel1.TabIndex = 1;
-            this.listboxpanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.Black;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.listBox1.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.listBox1.ForeColor = System.Drawing.Color.DarkRed;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(5, 5);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(174, 169);
-            this.listBox1.TabIndex = 0;
-            // 
-            // ssPage
-            // 
-            this.ssPage.Controls.Add(this.panel6);
-            this.ssPage.Controls.Add(this.pictureBox5);
-            this.ssPage.Location = new System.Drawing.Point(212, 12);
-            this.ssPage.Name = "ssPage";
-            this.ssPage.Size = new System.Drawing.Size(576, 426);
-            this.ssPage.TabIndex = 37;
-            this.ssPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.hScrollBar1);
-            this.panel6.Location = new System.Drawing.Point(3, 371);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(570, 52);
-            this.panel6.TabIndex = 1;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // hScrollBar1
-            // 
-            this.hScrollBar1.Location = new System.Drawing.Point(14, 18);
-            this.hScrollBar1.Name = "hScrollBar1";
-            this.hScrollBar1.Size = new System.Drawing.Size(543, 18);
-            this.hScrollBar1.TabIndex = 0;
-            this.hScrollBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.hScrollBar1_Scroll);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(570, 362);
-            this.pictureBox5.TabIndex = 0;
-            this.pictureBox5.TabStop = false;
             // 
             // daioPage
             // 
@@ -1015,14 +310,13 @@ namespace discordAIO
             this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button19.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button19.ForeColor = System.Drawing.Color.DarkRed;
+            this.button19.ForeColor = System.Drawing.Color.DimGray;
             this.button19.Location = new System.Drawing.Point(26, 343);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(156, 28);
             this.button19.TabIndex = 22;
-            this.button19.Text = "Desktop Screenshot";
+            this.button19.Text = "Soon";
             this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // panel7
             // 
@@ -1200,6 +494,488 @@ namespace discordAIO
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(452, 22);
             this.textBox8.TabIndex = 18;
+            // 
+            // mainPage
+            // 
+            this.mainPage.Controls.Add(this.checkBox18);
+            this.mainPage.Controls.Add(this.pictureBox1);
+            this.mainPage.Controls.Add(this.label3);
+            this.mainPage.Controls.Add(this.panel2);
+            this.mainPage.Controls.Add(this.label1);
+            this.mainPage.Controls.Add(this.button7);
+            this.mainPage.Controls.Add(this.textBox2);
+            this.mainPage.Location = new System.Drawing.Point(212, 12);
+            this.mainPage.Name = "mainPage";
+            this.mainPage.Size = new System.Drawing.Size(576, 426);
+            this.mainPage.TabIndex = 10;
+            this.mainPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // checkBox18
+            // 
+            this.checkBox18.AutoSize = true;
+            this.checkBox18.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox18.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox18.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox18.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox18.Location = new System.Drawing.Point(495, 225);
+            this.checkBox18.Name = "checkBox18";
+            this.checkBox18.Size = new System.Drawing.Size(70, 17);
+            this.checkBox18.TabIndex = 33;
+            this.checkBox18.Text = "Obfuscate";
+            this.checkBox18.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Image = global::discordAIO.Properties.Resources.daioLOGO;
+            this.pictureBox1.Location = new System.Drawing.Point(121, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(332, 106);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.Location = new System.Drawing.Point(14, 224);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(64, 17);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Additional";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.checkBox19);
+            this.panel2.Controls.Add(this.checkBox20);
+            this.panel2.Controls.Add(this.checkBox21);
+            this.panel2.Controls.Add(this.checkBox1);
+            this.panel2.Controls.Add(this.checkBox23);
+            this.panel2.Controls.Add(this.checkBox2);
+            this.panel2.Controls.Add(this.checkBox24);
+            this.panel2.Controls.Add(this.checkBox3);
+            this.panel2.Controls.Add(this.checkBox9);
+            this.panel2.Controls.Add(this.checkBox4);
+            this.panel2.Controls.Add(this.checkBox10);
+            this.panel2.Controls.Add(this.checkBox5);
+            this.panel2.Controls.Add(this.checkBox11);
+            this.panel2.Controls.Add(this.checkBox6);
+            this.panel2.Controls.Add(this.checkBox12);
+            this.panel2.Controls.Add(this.checkBox7);
+            this.panel2.Controls.Add(this.checkBox13);
+            this.panel2.Controls.Add(this.checkBox8);
+            this.panel2.Controls.Add(this.checkBox14);
+            this.panel2.Controls.Add(this.checkBox16);
+            this.panel2.Controls.Add(this.checkBox15);
+            this.panel2.Location = new System.Drawing.Point(17, 243);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(543, 177);
+            this.panel2.TabIndex = 30;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // checkBox19
+            // 
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox19.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox19.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox19.ForeColor = System.Drawing.Color.DimGray;
+            this.checkBox19.Location = new System.Drawing.Point(198, 149);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(85, 17);
+            this.checkBox19.TabIndex = 32;
+            this.checkBox19.Text = "Crypto Miner";
+            this.checkBox19.UseVisualStyleBackColor = true;
+            // 
+            // checkBox20
+            // 
+            this.checkBox20.AutoSize = true;
+            this.checkBox20.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox20.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox20.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox20.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox20.ForeColor = System.Drawing.Color.DimGray;
+            this.checkBox20.Location = new System.Drawing.Point(370, 149);
+            this.checkBox20.Name = "checkBox20";
+            this.checkBox20.Size = new System.Drawing.Size(96, 17);
+            this.checkBox20.TabIndex = 31;
+            this.checkBox20.Text = "Ransomware (!)";
+            this.checkBox20.UseVisualStyleBackColor = true;
+            // 
+            // checkBox21
+            // 
+            this.checkBox21.AutoSize = true;
+            this.checkBox21.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox21.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox21.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox21.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox21.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox21.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox21.Location = new System.Drawing.Point(34, 149);
+            this.checkBox21.Name = "checkBox21";
+            this.checkBox21.Size = new System.Drawing.Size(116, 17);
+            this.checkBox21.TabIndex = 30;
+            this.checkBox21.Text = "Desktop Screenshot";
+            this.checkBox21.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox1.Location = new System.Drawing.Point(34, 11);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(93, 17);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "Run on Startup";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox23
+            // 
+            this.checkBox23.AutoSize = true;
+            this.checkBox23.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox23.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox23.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox23.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox23.Location = new System.Drawing.Point(198, 80);
+            this.checkBox23.Name = "checkBox23";
+            this.checkBox23.Size = new System.Drawing.Size(81, 17);
+            this.checkBox23.TabIndex = 29;
+            this.checkBox23.Text = "Hide Stealer";
+            this.checkBox23.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox2.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox2.Location = new System.Drawing.Point(34, 34);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(150, 17);
+            this.checkBox2.TabIndex = 13;
+            this.checkBox2.Text = "Disable Windows Defender";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox24
+            // 
+            this.checkBox24.AutoSize = true;
+            this.checkBox24.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox24.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox24.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox24.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox24.Location = new System.Drawing.Point(198, 126);
+            this.checkBox24.Name = "checkBox24";
+            this.checkBox24.Size = new System.Drawing.Size(161, 17);
+            this.checkBox24.TabIndex = 28;
+            this.checkBox24.Text = "Disable Mouse and Keyboard";
+            this.checkBox24.UseVisualStyleBackColor = true;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox3.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox3.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox3.Location = new System.Drawing.Point(34, 57);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(127, 17);
+            this.checkBox3.TabIndex = 14;
+            this.checkBox3.Text = "Disable Task Manager";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox9.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox9.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox9.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox9.Location = new System.Drawing.Point(198, 103);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(150, 17);
+            this.checkBox9.TabIndex = 27;
+            this.checkBox9.Text = "Steal Windows Product Key";
+            this.checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox4.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox4.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox4.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox4.Location = new System.Drawing.Point(34, 80);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(153, 17);
+            this.checkBox4.TabIndex = 15;
+            this.checkBox4.Text = "Disable Internet Connection";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox10.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox10.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox10.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox10.Location = new System.Drawing.Point(370, 126);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(121, 17);
+            this.checkBox10.TabIndex = 26;
+            this.checkBox10.Text = "Steal WIFI Passwords";
+            this.checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox5.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox5.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox5.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox5.Location = new System.Drawing.Point(34, 103);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(72, 17);
+            this.checkBox5.TabIndex = 16;
+            this.checkBox5.Text = "Fake Error";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox11.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox11.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox11.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox11.Location = new System.Drawing.Point(370, 103);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(134, 17);
+            this.checkBox11.TabIndex = 25;
+            this.checkBox11.Text = "Steal Browser History (!)";
+            this.checkBox11.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox6.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox6.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox6.Location = new System.Drawing.Point(34, 126);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(79, 17);
+            this.checkBox6.TabIndex = 17;
+            this.checkBox6.Text = "Blue Screen";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox12.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox12.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox12.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox12.Location = new System.Drawing.Point(370, 80);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(107, 17);
+            this.checkBox12.TabIndex = 24;
+            this.checkBox12.Text = "Steal Credit Cards";
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox7.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox7.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox7.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox7.Location = new System.Drawing.Point(198, 34);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(101, 17);
+            this.checkBox7.TabIndex = 18;
+            this.checkBox7.Text = "Websites Blocker";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox13.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox13.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox13.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox13.Location = new System.Drawing.Point(370, 57);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(125, 17);
+            this.checkBox13.TabIndex = 23;
+            this.checkBox13.Text = "Steal VPN Credentials";
+            this.checkBox13.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox8.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox8.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox8.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox8.Location = new System.Drawing.Point(198, 57);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(73, 17);
+            this.checkBox8.TabIndex = 19;
+            this.checkBox8.Text = "Jumpscare";
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox14.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox14.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox14.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox14.Location = new System.Drawing.Point(370, 34);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(126, 17);
+            this.checkBox14.TabIndex = 22;
+            this.checkBox14.Text = "Steal Browser Cookies";
+            this.checkBox14.UseVisualStyleBackColor = true;
+            // 
+            // checkBox16
+            // 
+            this.checkBox16.AutoSize = true;
+            this.checkBox16.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox16.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox16.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox16.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox16.Location = new System.Drawing.Point(198, 11);
+            this.checkBox16.Name = "checkBox16";
+            this.checkBox16.Size = new System.Drawing.Size(89, 17);
+            this.checkBox16.TabIndex = 20;
+            this.checkBox16.Text = "Custom Plugin";
+            this.checkBox16.UseVisualStyleBackColor = true;
+            // 
+            // checkBox15
+            // 
+            this.checkBox15.AutoSize = true;
+            this.checkBox15.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox15.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox15.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox15.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox15.Location = new System.Drawing.Point(370, 11);
+            this.checkBox15.Name = "checkBox15";
+            this.checkBox15.Size = new System.Drawing.Size(138, 17);
+            this.checkBox15.TabIndex = 21;
+            this.checkBox15.Text = "Steal Browser Passwords";
+            this.checkBox15.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(14, 165);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 17);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Webhook";
+            // 
+            // button7
+            // 
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button7.ForeColor = System.Drawing.Color.DarkRed;
+            this.button7.Location = new System.Drawing.Point(460, 184);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 22);
+            this.button7.TabIndex = 10;
+            this.button7.Text = "Check";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Black;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox2.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox2.Location = new System.Drawing.Point(17, 184);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(452, 22);
+            this.textBox2.TabIndex = 9;
             // 
             // builderPage
             // 
@@ -1513,6 +1289,243 @@ namespace discordAIO
             this.button13.Text = "Build";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.builderButton_Click);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.BackColor = System.Drawing.Color.Black;
+            this.label46.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label46.ForeColor = System.Drawing.Color.DarkRed;
+            this.label46.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label46.Location = new System.Drawing.Point(173, 356);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(26, 13);
+            this.label46.TabIndex = 39;
+            this.label46.Text = "v0.0";
+            // 
+            // credentialsPage
+            // 
+            this.credentialsPage.Controls.Add(this.label45);
+            this.credentialsPage.Controls.Add(this.label44);
+            this.credentialsPage.Controls.Add(this.label43);
+            this.credentialsPage.Controls.Add(this.label42);
+            this.credentialsPage.Controls.Add(this.label41);
+            this.credentialsPage.Controls.Add(this.label40);
+            this.credentialsPage.Controls.Add(this.panel11);
+            this.credentialsPage.Controls.Add(this.panel12);
+            this.credentialsPage.Controls.Add(this.panel13);
+            this.credentialsPage.Controls.Add(this.panel10);
+            this.credentialsPage.Controls.Add(this.panel9);
+            this.credentialsPage.Controls.Add(this.listboxpanel1);
+            this.credentialsPage.Location = new System.Drawing.Point(212, 12);
+            this.credentialsPage.Name = "credentialsPage";
+            this.credentialsPage.Size = new System.Drawing.Size(576, 426);
+            this.credentialsPage.TabIndex = 38;
+            this.credentialsPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Black;
+            this.label45.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label45.ForeColor = System.Drawing.Color.DarkRed;
+            this.label45.Location = new System.Drawing.Point(383, 11);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(76, 17);
+            this.label45.TabIndex = 26;
+            this.label45.Text = "Credit Cards";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BackColor = System.Drawing.Color.Black;
+            this.label44.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label44.ForeColor = System.Drawing.Color.DarkRed;
+            this.label44.Location = new System.Drawing.Point(193, 11);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(51, 17);
+            this.label44.TabIndex = 25;
+            this.label44.Text = "Cookies";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.BackColor = System.Drawing.Color.Black;
+            this.label43.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label43.ForeColor = System.Drawing.Color.DarkRed;
+            this.label43.Location = new System.Drawing.Point(4, 11);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(64, 17);
+            this.label43.TabIndex = 24;
+            this.label43.Text = "Passwords";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Black;
+            this.label42.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label42.ForeColor = System.Drawing.Color.DarkRed;
+            this.label42.Location = new System.Drawing.Point(383, 218);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(32, 17);
+            this.label42.TabIndex = 23;
+            this.label42.Text = "WiFi";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Black;
+            this.label41.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label41.ForeColor = System.Drawing.Color.DarkRed;
+            this.label41.Location = new System.Drawing.Point(193, 218);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(32, 17);
+            this.label41.TabIndex = 22;
+            this.label41.Text = "VPN";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Black;
+            this.label40.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label40.ForeColor = System.Drawing.Color.DarkRed;
+            this.label40.Location = new System.Drawing.Point(4, 218);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(47, 17);
+            this.label40.TabIndex = 21;
+            this.label40.Text = "History";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.listBox4);
+            this.panel11.Location = new System.Drawing.Point(386, 235);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(184, 179);
+            this.panel11.TabIndex = 5;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox4
+            // 
+            this.listBox4.BackColor = System.Drawing.Color.Black;
+            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox4.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox4.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.Location = new System.Drawing.Point(5, 5);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(174, 169);
+            this.listBox4.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.listBox5);
+            this.panel12.Location = new System.Drawing.Point(196, 235);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(184, 179);
+            this.panel12.TabIndex = 4;
+            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox5
+            // 
+            this.listBox5.BackColor = System.Drawing.Color.Black;
+            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox5.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox5.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Location = new System.Drawing.Point(5, 5);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(174, 169);
+            this.listBox5.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.listBox6);
+            this.panel13.Location = new System.Drawing.Point(7, 235);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(184, 179);
+            this.panel13.TabIndex = 3;
+            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox6
+            // 
+            this.listBox6.BackColor = System.Drawing.Color.Black;
+            this.listBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox6.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox6.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox6.FormattingEnabled = true;
+            this.listBox6.Location = new System.Drawing.Point(5, 5);
+            this.listBox6.Name = "listBox6";
+            this.listBox6.Size = new System.Drawing.Size(174, 169);
+            this.listBox6.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.listBox3);
+            this.panel10.Location = new System.Drawing.Point(386, 28);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(184, 179);
+            this.panel10.TabIndex = 2;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox3
+            // 
+            this.listBox3.BackColor = System.Drawing.Color.Black;
+            this.listBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox3.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox3.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.Location = new System.Drawing.Point(5, 5);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(174, 169);
+            this.listBox3.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.listBox2);
+            this.panel9.Location = new System.Drawing.Point(196, 28);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(184, 179);
+            this.panel9.TabIndex = 2;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.Black;
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox2.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox2.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(5, 5);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(174, 169);
+            this.listBox2.TabIndex = 0;
+            // 
+            // listboxpanel1
+            // 
+            this.listboxpanel1.Controls.Add(this.listBox1);
+            this.listboxpanel1.Location = new System.Drawing.Point(7, 28);
+            this.listboxpanel1.Name = "listboxpanel1";
+            this.listboxpanel1.Size = new System.Drawing.Size(184, 179);
+            this.listboxpanel1.TabIndex = 1;
+            this.listboxpanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Black;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.listBox1.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox1.ForeColor = System.Drawing.Color.DarkRed;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(5, 5);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(174, 169);
+            this.listBox1.TabIndex = 0;
             // 
             // tokensPage
             // 
@@ -2078,26 +2091,15 @@ namespace discordAIO
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.daioPage.ResumeLayout(false);
+            this.daioPage.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.mainPage.ResumeLayout(false);
             this.mainPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.credentialsPage.ResumeLayout(false);
-            this.credentialsPage.PerformLayout();
-            this.panel11.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.listboxpanel1.ResumeLayout(false);
-            this.ssPage.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.daioPage.ResumeLayout(false);
-            this.daioPage.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.builderPage.ResumeLayout(false);
             this.builderPage.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -2108,6 +2110,14 @@ namespace discordAIO
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.credentialsPage.ResumeLayout(false);
+            this.credentialsPage.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.listboxpanel1.ResumeLayout(false);
             this.tokensPage.ResumeLayout(false);
             this.tokensPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -2226,10 +2236,6 @@ namespace discordAIO
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Panel ssPage;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.HScrollBar hScrollBar1;
         private System.Windows.Forms.Panel credentialsPage;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel listboxpanel1;
@@ -2255,6 +2261,9 @@ namespace discordAIO
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.CheckBox checkBox18;
+        private System.Windows.Forms.CheckBox checkBox19;
+        private System.Windows.Forms.CheckBox checkBox20;
+        private System.Windows.Forms.CheckBox checkBox21;
     }
 }
 

