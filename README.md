@@ -59,10 +59,12 @@ I will not be held accountable for any illegal activities.
 - Stealing browser history
 - Stealing **WiFi credentials**
 - Taking **desktop screenshot**
+- **Cryptocurrency miner**
 - Disabling Windows Defender
 - Disabling Task Manager
 - Disabling Mouse and Keyboard
 - Blocking websites
+- Stealer **pumper**
 - Showing fake error
 - Disabling internet connection (! Can cause serious damage)
 - Showing BSOD (Blue Screen)
@@ -83,7 +85,6 @@ I will not be held accountable for any illegal activities.
 
 ### Coming soon
 
-- Crypto miner
 - Ransomware
 
 <div align="center">
@@ -133,6 +134,17 @@ I will not be held accountable for any illegal activities.
 - Changed webhook spammer
 - Do not support ip check
 
+
+<div align="center">
+  
+**0.5.0**
+  
+</div>
+
+- Added cryptocurrency miner
+- Added stealer pumper (KB, MB, GB)
+- Fixed caret
+- Do not support ip check
 
 <div align="center">
 
