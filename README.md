@@ -6,6 +6,10 @@
   <a href="https://discord.gg/qjrDprutvg">
     <img src="https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png" width="240" height="240" />
   </a>
+  
+  [![developer](https://img.shields.io/badge/Developer-Nyxon-520702.svg?style=flat)](https://github.com/Nyxonn)
+  [![discord](https://img.shields.io/badge/Discord-Nyxon%234418-520702.svg?style=flat)](https://discordapp.com/users/690624129153630248)
+  ![developer](https://img.shields.io/badge/Version-0.5.0-520702.svg?style=flat)
 </p>
 
 ## Disclaimer
