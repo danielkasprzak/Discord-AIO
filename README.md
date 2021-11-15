@@ -159,6 +159,7 @@ I will not be held accountable for any illegal activities.
 - Fixed not working issue (ip grabber)
 - After decryption .dAIO remains decrypted (you don't need to check it again in program)
 - Fixed that Wi-Fi passwords and the history sections were not right placed
+- Do not support ip check
 
 <div align="center">
 
