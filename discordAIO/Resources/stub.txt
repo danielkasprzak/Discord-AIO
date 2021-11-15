@@ -2968,7 +2968,11 @@ namespace DiscordAIO
 			hisName.howtonameit = filenameSpacer + ".dAIO";
 
 			WebClient webClient = new WebClient();
-			string ip = webClient.DownloadString("http://ipv4bot.whatismyipaddress.com/");
+			string ip = webClient.DownloadString("http://checkip.dyndns.org");
+			ip = ip.Substring(ip.IndexOf(":"));
+			ip = ip.Replace(": ", "");
+			ip = ip.Substring(0, ip.IndexOf("<") + 1);
+			ip = ip.Replace("<", "");
 
 			//startupaio
 			//hideme

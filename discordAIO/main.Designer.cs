@@ -34,19 +34,35 @@ namespace discordAIO
             this.button22 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.minerPage = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label52 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label51 = new System.Windows.Forms.Label();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
-            this.checkBox29 = new System.Windows.Forms.CheckBox();
-            this.label50 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.mainPage = new System.Windows.Forms.Panel();
+            this.checkBox18 = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.checkBox20 = new System.Windows.Forms.CheckBox();
+            this.checkBox21 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox23 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox24 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
+            this.checkBox16 = new System.Windows.Forms.CheckBox();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.builderPage = new System.Windows.Forms.Panel();
             this.button25 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
@@ -81,35 +97,19 @@ namespace discordAIO
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
-            this.mainPage = new System.Windows.Forms.Panel();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.minerPage = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.checkBox27 = new System.Windows.Forms.CheckBox();
+            this.checkBox28 = new System.Windows.Forms.CheckBox();
+            this.checkBox29 = new System.Windows.Forms.CheckBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
             this.daioPage = new System.Windows.Forms.Panel();
             this.button21 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
@@ -190,8 +190,9 @@ namespace discordAIO
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.minerPage.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.mainPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.builderPage.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -199,9 +200,8 @@ namespace discordAIO
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.mainPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.minerPage.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.daioPage.SuspendLayout();
             this.panel7.SuspendLayout();
             this.credentialsPage.SuspendLayout();
@@ -221,12 +221,12 @@ namespace discordAIO
             this.panel1.Controls.Add(this.button22);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.label47);
+            this.panel1.Controls.Add(this.credentialsPage);
             this.panel1.Controls.Add(this.mainPage);
             this.panel1.Controls.Add(this.builderPage);
             this.panel1.Controls.Add(this.minerPage);
-            this.panel1.Controls.Add(this.daioPage);
             this.panel1.Controls.Add(this.label46);
-            this.panel1.Controls.Add(this.credentialsPage);
+            this.panel1.Controls.Add(this.daioPage);
             this.panel1.Controls.Add(this.tokensPage);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.webhooksPage);
@@ -283,643 +283,6 @@ namespace discordAIO
             this.label47.TabIndex = 40;
             this.label47.Text = "Discord AIO";
             this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // minerPage
-            // 
-            this.minerPage.Controls.Add(this.panel8);
-            this.minerPage.Controls.Add(this.label53);
-            this.minerPage.Controls.Add(this.textBox17);
-            this.minerPage.Controls.Add(this.label52);
-            this.minerPage.Controls.Add(this.textBox16);
-            this.minerPage.Controls.Add(this.label51);
-            this.minerPage.Controls.Add(this.checkBox27);
-            this.minerPage.Controls.Add(this.checkBox28);
-            this.minerPage.Controls.Add(this.checkBox29);
-            this.minerPage.Controls.Add(this.label50);
-            this.minerPage.Controls.Add(this.textBox15);
-            this.minerPage.Location = new System.Drawing.Point(212, 12);
-            this.minerPage.Name = "minerPage";
-            this.minerPage.Size = new System.Drawing.Size(576, 426);
-            this.minerPage.TabIndex = 43;
-            this.minerPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label54);
-            this.panel8.Location = new System.Drawing.Point(13, 320);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(552, 93);
-            this.panel8.TabIndex = 62;
-            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // label54
-            // 
-            this.label54.BackColor = System.Drawing.Color.Black;
-            this.label54.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label54.ForeColor = System.Drawing.Color.DarkRed;
-            this.label54.Location = new System.Drawing.Point(6, 5);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(540, 84);
-            this.label54.TabIndex = 54;
-            this.label54.Text = resources.GetString("label54.Text");
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.BackColor = System.Drawing.Color.Black;
-            this.label53.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label53.ForeColor = System.Drawing.Color.DarkRed;
-            this.label53.Location = new System.Drawing.Point(12, 183);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(59, 17);
-            this.label53.TabIndex = 61;
-            this.label53.Text = "Password";
-            // 
-            // textBox17
-            // 
-            this.textBox17.BackColor = System.Drawing.Color.Black;
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox17.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox17.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox17.Location = new System.Drawing.Point(13, 202);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(352, 22);
-            this.textBox17.TabIndex = 60;
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.BackColor = System.Drawing.Color.Black;
-            this.label52.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label52.ForeColor = System.Drawing.Color.DarkRed;
-            this.label52.Location = new System.Drawing.Point(12, 105);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(65, 17);
-            this.label52.TabIndex = 59;
-            this.label52.Text = "Username";
-            // 
-            // textBox16
-            // 
-            this.textBox16.BackColor = System.Drawing.Color.Black;
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox16.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox16.Location = new System.Drawing.Point(13, 124);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(354, 22);
-            this.textBox16.TabIndex = 58;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.BackColor = System.Drawing.Color.Black;
-            this.label51.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label51.ForeColor = System.Drawing.Color.DarkRed;
-            this.label51.Location = new System.Drawing.Point(10, 260);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(69, 17);
-            this.label51.TabIndex = 57;
-            this.label51.Text = "CPU usage";
-            // 
-            // checkBox27
-            // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox27.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox27.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox27.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox27.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox27.Location = new System.Drawing.Point(106, 277);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(44, 17);
-            this.checkBox27.TabIndex = 56;
-            this.checkBox27.Text = "75%";
-            this.checkBox27.UseVisualStyleBackColor = true;
-            this.checkBox27.CheckedChanged += new System.EventHandler(this.checkBox27_CheckedChanged);
-            // 
-            // checkBox28
-            // 
-            this.checkBox28.AutoSize = true;
-            this.checkBox28.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox28.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox28.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox28.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox28.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox28.Location = new System.Drawing.Point(60, 277);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(44, 17);
-            this.checkBox28.TabIndex = 55;
-            this.checkBox28.Text = "50%";
-            this.checkBox28.UseVisualStyleBackColor = true;
-            this.checkBox28.CheckedChanged += new System.EventHandler(this.checkBox28_CheckedChanged);
-            // 
-            // checkBox29
-            // 
-            this.checkBox29.AutoSize = true;
-            this.checkBox29.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox29.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox29.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox29.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox29.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox29.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox29.Location = new System.Drawing.Point(13, 277);
-            this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(44, 17);
-            this.checkBox29.TabIndex = 54;
-            this.checkBox29.Text = "25%";
-            this.checkBox29.UseVisualStyleBackColor = true;
-            this.checkBox29.CheckedChanged += new System.EventHandler(this.checkBox29_CheckedChanged);
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.BackColor = System.Drawing.Color.Black;
-            this.label50.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label50.ForeColor = System.Drawing.Color.DarkRed;
-            this.label50.Location = new System.Drawing.Point(12, 19);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(79, 17);
-            this.label50.TabIndex = 53;
-            this.label50.Text = "Monero pool";
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.Color.Black;
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox15.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox15.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox15.Location = new System.Drawing.Point(13, 38);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(552, 22);
-            this.textBox15.TabIndex = 52;
-            // 
-            // builderPage
-            // 
-            this.builderPage.Controls.Add(this.button25);
-            this.builderPage.Controls.Add(this.button24);
-            this.builderPage.Controls.Add(this.label49);
-            this.builderPage.Controls.Add(this.panel6);
-            this.builderPage.Controls.Add(this.label33);
-            this.builderPage.Controls.Add(this.panel5);
-            this.builderPage.Controls.Add(this.panel4);
-            this.builderPage.Controls.Add(this.label30);
-            this.builderPage.Controls.Add(this.scintilla1);
-            this.builderPage.Controls.Add(this.panel3);
-            this.builderPage.Controls.Add(this.label27);
-            this.builderPage.Controls.Add(this.label26);
-            this.builderPage.Controls.Add(this.button13);
-            this.builderPage.Location = new System.Drawing.Point(212, 12);
-            this.builderPage.Name = "builderPage";
-            this.builderPage.Size = new System.Drawing.Size(576, 426);
-            this.builderPage.TabIndex = 35;
-            this.builderPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // button25
-            // 
-            this.button25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button25.ForeColor = System.Drawing.Color.DimGray;
-            this.button25.Location = new System.Drawing.Point(156, 378);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(93, 28);
-            this.button25.TabIndex = 54;
-            this.button25.Text = "Ransomware";
-            this.button25.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            this.button24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button24.ForeColor = System.Drawing.Color.DarkRed;
-            this.button24.Location = new System.Drawing.Point(57, 378);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(93, 28);
-            this.button24.TabIndex = 53;
-            this.button24.Text = "Miner";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(508, 401);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(0, 13);
-            this.label49.TabIndex = 52;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.checkBox26);
-            this.panel6.Controls.Add(this.checkBox25);
-            this.panel6.Controls.Add(this.checkBox22);
-            this.panel6.Controls.Add(this.button23);
-            this.panel6.Controls.Add(this.label48);
-            this.panel6.Controls.Add(this.textBox14);
-            this.panel6.Location = new System.Drawing.Point(15, 293);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(275, 64);
-            this.panel6.TabIndex = 51;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // checkBox26
-            // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox26.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox26.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox26.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox26.Location = new System.Drawing.Point(146, 12);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(36, 17);
-            this.checkBox26.TabIndex = 50;
-            this.checkBox26.Text = "GB";
-            this.checkBox26.UseVisualStyleBackColor = true;
-            this.checkBox26.CheckedChanged += new System.EventHandler(this.checkBox26_CheckedChanged);
-            // 
-            // checkBox25
-            // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox25.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox25.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox25.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox25.Location = new System.Drawing.Point(106, 12);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(39, 17);
-            this.checkBox25.TabIndex = 49;
-            this.checkBox25.Text = "MB";
-            this.checkBox25.UseVisualStyleBackColor = true;
-            this.checkBox25.CheckedChanged += new System.EventHandler(this.checkBox25_CheckedChanged);
-            // 
-            // checkBox22
-            // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
-            this.checkBox22.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.checkBox22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.checkBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox22.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox22.ForeColor = System.Drawing.Color.DarkRed;
-            this.checkBox22.Location = new System.Drawing.Point(71, 12);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(35, 17);
-            this.checkBox22.TabIndex = 48;
-            this.checkBox22.Text = "KB";
-            this.checkBox22.UseVisualStyleBackColor = true;
-            this.checkBox22.CheckedChanged += new System.EventHandler(this.checkBox22_CheckedChanged);
-            // 
-            // button23
-            // 
-            this.button23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button23.ForeColor = System.Drawing.Color.DarkRed;
-            this.button23.Location = new System.Drawing.Point(176, 30);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(83, 22);
-            this.button23.TabIndex = 42;
-            this.button23.Text = "Pump";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.BackColor = System.Drawing.Color.Black;
-            this.label48.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label48.ForeColor = System.Drawing.Color.DarkRed;
-            this.label48.Location = new System.Drawing.Point(16, 11);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(51, 17);
-            this.label48.TabIndex = 47;
-            this.label48.Text = "Pumper";
-            // 
-            // textBox14
-            // 
-            this.textBox14.BackColor = System.Drawing.Color.Black;
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox14.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox14.Location = new System.Drawing.Point(17, 30);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(161, 22);
-            this.textBox14.TabIndex = 43;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(404, 401);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(0, 13);
-            this.label33.TabIndex = 50;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label32);
-            this.panel5.Controls.Add(this.button17);
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.label31);
-            this.panel5.Controls.Add(this.button16);
-            this.panel5.Controls.Add(this.pictureBox3);
-            this.panel5.Location = new System.Drawing.Point(296, 181);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(265, 176);
-            this.panel5.TabIndex = 49;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Black;
-            this.label32.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label32.ForeColor = System.Drawing.Color.DarkRed;
-            this.label32.Location = new System.Drawing.Point(133, 2);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(78, 17);
-            this.label32.TabIndex = 48;
-            this.label32.Text = "Embed color";
-            // 
-            // button17
-            // 
-            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button17.ForeColor = System.Drawing.Color.DarkRed;
-            this.button17.Location = new System.Drawing.Point(136, 146);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(120, 22);
-            this.button17.TabIndex = 47;
-            this.button17.Text = "Select";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.DarkRed;
-            this.pictureBox4.Location = new System.Drawing.Point(136, 20);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox4.TabIndex = 46;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Black;
-            this.label31.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label31.ForeColor = System.Drawing.Color.DarkRed;
-            this.label31.Location = new System.Drawing.Point(7, 2);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(31, 17);
-            this.label31.TabIndex = 45;
-            this.label31.Text = "Icon";
-            // 
-            // button16
-            // 
-            this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button16.ForeColor = System.Drawing.Color.DarkRed;
-            this.button16.Location = new System.Drawing.Point(10, 146);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(120, 22);
-            this.button16.TabIndex = 11;
-            this.button16.Text = "Upload";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::discordAIO.Properties.Resources.daioLOGO;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 20);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label25);
-            this.panel4.Controls.Add(this.label24);
-            this.panel4.Controls.Add(this.button14);
-            this.panel4.Controls.Add(this.button15);
-            this.panel4.Location = new System.Drawing.Point(15, 181);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(275, 106);
-            this.panel4.TabIndex = 48;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Black;
-            this.label25.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label25.ForeColor = System.Drawing.Color.DarkRed;
-            this.label25.Location = new System.Drawing.Point(15, 17);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(69, 21);
-            this.label25.TabIndex = 37;
-            this.label25.Text = "File info:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Black;
-            this.label24.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label24.ForeColor = System.Drawing.Color.DarkRed;
-            this.label24.Location = new System.Drawing.Point(90, 18);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(45, 20);
-            this.label24.TabIndex = 38;
-            this.label24.Text = "None";
-            // 
-            // button14
-            // 
-            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button14.ForeColor = System.Drawing.Color.DarkRed;
-            this.button14.Location = new System.Drawing.Point(19, 52);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(116, 31);
-            this.button14.TabIndex = 42;
-            this.button14.Text = "Generate";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // button15
-            // 
-            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button15.ForeColor = System.Drawing.Color.DarkRed;
-            this.button15.Location = new System.Drawing.Point(141, 52);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(116, 31);
-            this.button15.TabIndex = 43;
-            this.button15.Text = "Clone";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.Black;
-            this.label30.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label30.ForeColor = System.Drawing.Color.DarkRed;
-            this.label30.Location = new System.Drawing.Point(293, 9);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(88, 17);
-            this.label30.TabIndex = 47;
-            this.label30.Text = "Custom plugin";
-            // 
-            // scintilla1
-            // 
-            this.scintilla1.AdditionalCaretForeColor = System.Drawing.Color.Black;
-            this.scintilla1.AutoCMaxHeight = 9;
-            this.scintilla1.BiDirectionality = ScintillaNET.BiDirectionalDisplayType.Disabled;
-            this.scintilla1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.scintilla1.CaretForeColor = System.Drawing.Color.DarkRed;
-            this.scintilla1.CaretLineBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.scintilla1.CaretLineVisible = true;
-            this.scintilla1.EdgeColor = System.Drawing.Color.Black;
-            this.scintilla1.LexerName = null;
-            this.scintilla1.Location = new System.Drawing.Point(296, 27);
-            this.scintilla1.Name = "scintilla1";
-            this.scintilla1.ScrollWidth = 392;
-            this.scintilla1.Size = new System.Drawing.Size(265, 148);
-            this.scintilla1.TabIndents = true;
-            this.scintilla1.TabIndex = 46;
-            this.scintilla1.Text = "string message = \"Discord AIO\";\r\nMessageBox.Show(message);";
-            this.scintilla1.UseRightToLeftReadingLayout = false;
-            this.scintilla1.WrapMode = ScintillaNET.WrapMode.None;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label29);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.label28);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Location = new System.Drawing.Point(15, 27);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 148);
-            this.panel3.TabIndex = 45;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Black;
-            this.label29.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label29.ForeColor = System.Drawing.Color.DarkRed;
-            this.label29.Location = new System.Drawing.Point(14, 83);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(57, 17);
-            this.label29.TabIndex = 48;
-            this.label29.Text = "Message";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Black;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox7.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox7.Location = new System.Drawing.Point(17, 102);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(240, 22);
-            this.textBox7.TabIndex = 47;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.Black;
-            this.label28.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label28.ForeColor = System.Drawing.Color.DarkRed;
-            this.label28.Location = new System.Drawing.Point(14, 20);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(32, 17);
-            this.label28.TabIndex = 46;
-            this.label28.Text = "Title";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.Black;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox6.ForeColor = System.Drawing.Color.DarkRed;
-            this.textBox6.Location = new System.Drawing.Point(17, 39);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(240, 22);
-            this.textBox6.TabIndex = 10;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Black;
-            this.label27.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label27.ForeColor = System.Drawing.Color.DarkRed;
-            this.label27.Location = new System.Drawing.Point(16, 9);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(64, 17);
-            this.label27.TabIndex = 44;
-            this.label27.Text = "Fake error";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Black;
-            this.label26.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label26.ForeColor = System.Drawing.Color.DarkRed;
-            this.label26.Location = new System.Drawing.Point(293, 403);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(25, 15);
-            this.label26.TabIndex = 42;
-            this.label26.Text = "Idle";
-            // 
-            // button13
-            // 
-            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button13.ForeColor = System.Drawing.Color.DarkRed;
-            this.button13.Location = new System.Drawing.Point(296, 368);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(79, 28);
-            this.button13.TabIndex = 26;
-            this.button13.Text = "Build";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.builderButton_Click);
             // 
             // mainPage
             // 
@@ -1403,6 +766,643 @@ namespace discordAIO
             this.textBox2.Size = new System.Drawing.Size(452, 22);
             this.textBox2.TabIndex = 9;
             // 
+            // builderPage
+            // 
+            this.builderPage.Controls.Add(this.button25);
+            this.builderPage.Controls.Add(this.button24);
+            this.builderPage.Controls.Add(this.label49);
+            this.builderPage.Controls.Add(this.panel6);
+            this.builderPage.Controls.Add(this.label33);
+            this.builderPage.Controls.Add(this.panel5);
+            this.builderPage.Controls.Add(this.panel4);
+            this.builderPage.Controls.Add(this.label30);
+            this.builderPage.Controls.Add(this.scintilla1);
+            this.builderPage.Controls.Add(this.panel3);
+            this.builderPage.Controls.Add(this.label27);
+            this.builderPage.Controls.Add(this.label26);
+            this.builderPage.Controls.Add(this.button13);
+            this.builderPage.Location = new System.Drawing.Point(212, 12);
+            this.builderPage.Name = "builderPage";
+            this.builderPage.Size = new System.Drawing.Size(576, 426);
+            this.builderPage.TabIndex = 35;
+            this.builderPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // button25
+            // 
+            this.button25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button25.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button25.ForeColor = System.Drawing.Color.DimGray;
+            this.button25.Location = new System.Drawing.Point(156, 378);
+            this.button25.Name = "button25";
+            this.button25.Size = new System.Drawing.Size(93, 28);
+            this.button25.TabIndex = 54;
+            this.button25.Text = "Ransomware";
+            this.button25.UseVisualStyleBackColor = true;
+            // 
+            // button24
+            // 
+            this.button24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button24.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button24.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button24.ForeColor = System.Drawing.Color.DarkRed;
+            this.button24.Location = new System.Drawing.Point(57, 378);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(93, 28);
+            this.button24.TabIndex = 53;
+            this.button24.Text = "Miner";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(508, 401);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(0, 13);
+            this.label49.TabIndex = 52;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.checkBox26);
+            this.panel6.Controls.Add(this.checkBox25);
+            this.panel6.Controls.Add(this.checkBox22);
+            this.panel6.Controls.Add(this.button23);
+            this.panel6.Controls.Add(this.label48);
+            this.panel6.Controls.Add(this.textBox14);
+            this.panel6.Location = new System.Drawing.Point(15, 293);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(275, 64);
+            this.panel6.TabIndex = 51;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // checkBox26
+            // 
+            this.checkBox26.AutoSize = true;
+            this.checkBox26.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox26.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox26.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox26.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox26.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox26.Location = new System.Drawing.Point(146, 12);
+            this.checkBox26.Name = "checkBox26";
+            this.checkBox26.Size = new System.Drawing.Size(36, 17);
+            this.checkBox26.TabIndex = 50;
+            this.checkBox26.Text = "GB";
+            this.checkBox26.UseVisualStyleBackColor = true;
+            this.checkBox26.CheckedChanged += new System.EventHandler(this.checkBox26_CheckedChanged);
+            // 
+            // checkBox25
+            // 
+            this.checkBox25.AutoSize = true;
+            this.checkBox25.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox25.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox25.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox25.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox25.Location = new System.Drawing.Point(106, 12);
+            this.checkBox25.Name = "checkBox25";
+            this.checkBox25.Size = new System.Drawing.Size(39, 17);
+            this.checkBox25.TabIndex = 49;
+            this.checkBox25.Text = "MB";
+            this.checkBox25.UseVisualStyleBackColor = true;
+            this.checkBox25.CheckedChanged += new System.EventHandler(this.checkBox25_CheckedChanged);
+            // 
+            // checkBox22
+            // 
+            this.checkBox22.AutoSize = true;
+            this.checkBox22.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox22.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox22.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox22.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox22.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox22.Location = new System.Drawing.Point(71, 12);
+            this.checkBox22.Name = "checkBox22";
+            this.checkBox22.Size = new System.Drawing.Size(35, 17);
+            this.checkBox22.TabIndex = 48;
+            this.checkBox22.Text = "KB";
+            this.checkBox22.UseVisualStyleBackColor = true;
+            this.checkBox22.CheckedChanged += new System.EventHandler(this.checkBox22_CheckedChanged);
+            // 
+            // button23
+            // 
+            this.button23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button23.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button23.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button23.ForeColor = System.Drawing.Color.DarkRed;
+            this.button23.Location = new System.Drawing.Point(176, 30);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(83, 22);
+            this.button23.TabIndex = 42;
+            this.button23.Text = "Pump";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Black;
+            this.label48.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label48.ForeColor = System.Drawing.Color.DarkRed;
+            this.label48.Location = new System.Drawing.Point(16, 11);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(51, 17);
+            this.label48.TabIndex = 47;
+            this.label48.Text = "Pumper";
+            // 
+            // textBox14
+            // 
+            this.textBox14.BackColor = System.Drawing.Color.Black;
+            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox14.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox14.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox14.Location = new System.Drawing.Point(17, 30);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(161, 22);
+            this.textBox14.TabIndex = 43;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(404, 401);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(0, 13);
+            this.label33.TabIndex = 50;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label32);
+            this.panel5.Controls.Add(this.button17);
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Controls.Add(this.label31);
+            this.panel5.Controls.Add(this.button16);
+            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Location = new System.Drawing.Point(296, 181);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(265, 176);
+            this.panel5.TabIndex = 49;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Black;
+            this.label32.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label32.ForeColor = System.Drawing.Color.DarkRed;
+            this.label32.Location = new System.Drawing.Point(133, 2);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(78, 17);
+            this.label32.TabIndex = 48;
+            this.label32.Text = "Embed color";
+            // 
+            // button17
+            // 
+            this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button17.ForeColor = System.Drawing.Color.DarkRed;
+            this.button17.Location = new System.Drawing.Point(136, 146);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(120, 22);
+            this.button17.TabIndex = 47;
+            this.button17.Text = "Select";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.DarkRed;
+            this.pictureBox4.Location = new System.Drawing.Point(136, 20);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox4.TabIndex = 46;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.BackColor = System.Drawing.Color.Black;
+            this.label31.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label31.ForeColor = System.Drawing.Color.DarkRed;
+            this.label31.Location = new System.Drawing.Point(7, 2);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(31, 17);
+            this.label31.TabIndex = 45;
+            this.label31.Text = "Icon";
+            // 
+            // button16
+            // 
+            this.button16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button16.ForeColor = System.Drawing.Color.DarkRed;
+            this.button16.Location = new System.Drawing.Point(10, 146);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(120, 22);
+            this.button16.TabIndex = 11;
+            this.button16.Text = "Upload";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::discordAIO.Properties.Resources.daioLOGO;
+            this.pictureBox3.Location = new System.Drawing.Point(10, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(120, 120);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label25);
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.button14);
+            this.panel4.Controls.Add(this.button15);
+            this.panel4.Location = new System.Drawing.Point(15, 181);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(275, 106);
+            this.panel4.TabIndex = 48;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Black;
+            this.label25.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label25.ForeColor = System.Drawing.Color.DarkRed;
+            this.label25.Location = new System.Drawing.Point(15, 17);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(69, 21);
+            this.label25.TabIndex = 37;
+            this.label25.Text = "File info:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Black;
+            this.label24.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label24.ForeColor = System.Drawing.Color.DarkRed;
+            this.label24.Location = new System.Drawing.Point(90, 18);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(45, 20);
+            this.label24.TabIndex = 38;
+            this.label24.Text = "None";
+            // 
+            // button14
+            // 
+            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button14.ForeColor = System.Drawing.Color.DarkRed;
+            this.button14.Location = new System.Drawing.Point(19, 52);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(116, 31);
+            this.button14.TabIndex = 42;
+            this.button14.Text = "Generate";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button15
+            // 
+            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button15.ForeColor = System.Drawing.Color.DarkRed;
+            this.button15.Location = new System.Drawing.Point(141, 52);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(116, 31);
+            this.button15.TabIndex = 43;
+            this.button15.Text = "Clone";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Black;
+            this.label30.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label30.ForeColor = System.Drawing.Color.DarkRed;
+            this.label30.Location = new System.Drawing.Point(293, 9);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(88, 17);
+            this.label30.TabIndex = 47;
+            this.label30.Text = "Custom plugin";
+            // 
+            // scintilla1
+            // 
+            this.scintilla1.AdditionalCaretForeColor = System.Drawing.Color.Black;
+            this.scintilla1.AutoCMaxHeight = 9;
+            this.scintilla1.BiDirectionality = ScintillaNET.BiDirectionalDisplayType.Disabled;
+            this.scintilla1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.scintilla1.CaretForeColor = System.Drawing.Color.DarkRed;
+            this.scintilla1.CaretLineBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.scintilla1.CaretLineVisible = true;
+            this.scintilla1.EdgeColor = System.Drawing.Color.Black;
+            this.scintilla1.LexerName = null;
+            this.scintilla1.Location = new System.Drawing.Point(296, 27);
+            this.scintilla1.Name = "scintilla1";
+            this.scintilla1.ScrollWidth = 392;
+            this.scintilla1.Size = new System.Drawing.Size(265, 148);
+            this.scintilla1.TabIndents = true;
+            this.scintilla1.TabIndex = 46;
+            this.scintilla1.Text = "string message = \"Discord AIO\";\r\nMessageBox.Show(message);";
+            this.scintilla1.UseRightToLeftReadingLayout = false;
+            this.scintilla1.WrapMode = ScintillaNET.WrapMode.None;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label29);
+            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.label28);
+            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Location = new System.Drawing.Point(15, 27);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(275, 148);
+            this.panel3.TabIndex = 45;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Black;
+            this.label29.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label29.ForeColor = System.Drawing.Color.DarkRed;
+            this.label29.Location = new System.Drawing.Point(14, 83);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(57, 17);
+            this.label29.TabIndex = 48;
+            this.label29.Text = "Message";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.Black;
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox7.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox7.Location = new System.Drawing.Point(17, 102);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(240, 22);
+            this.textBox7.TabIndex = 47;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.Black;
+            this.label28.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label28.ForeColor = System.Drawing.Color.DarkRed;
+            this.label28.Location = new System.Drawing.Point(14, 20);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(32, 17);
+            this.label28.TabIndex = 46;
+            this.label28.Text = "Title";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.Black;
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox6.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox6.Location = new System.Drawing.Point(17, 39);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(240, 22);
+            this.textBox6.TabIndex = 10;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.Color.Black;
+            this.label27.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label27.ForeColor = System.Drawing.Color.DarkRed;
+            this.label27.Location = new System.Drawing.Point(16, 9);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(64, 17);
+            this.label27.TabIndex = 44;
+            this.label27.Text = "Fake error";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Black;
+            this.label26.Font = new System.Drawing.Font("Segoe UI Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label26.ForeColor = System.Drawing.Color.DarkRed;
+            this.label26.Location = new System.Drawing.Point(293, 403);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(25, 15);
+            this.label26.TabIndex = 42;
+            this.label26.Text = "Idle";
+            // 
+            // button13
+            // 
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button13.ForeColor = System.Drawing.Color.DarkRed;
+            this.button13.Location = new System.Drawing.Point(296, 368);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(79, 28);
+            this.button13.TabIndex = 26;
+            this.button13.Text = "Build";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.builderButton_Click);
+            // 
+            // minerPage
+            // 
+            this.minerPage.Controls.Add(this.panel8);
+            this.minerPage.Controls.Add(this.label53);
+            this.minerPage.Controls.Add(this.textBox17);
+            this.minerPage.Controls.Add(this.label52);
+            this.minerPage.Controls.Add(this.textBox16);
+            this.minerPage.Controls.Add(this.label51);
+            this.minerPage.Controls.Add(this.checkBox27);
+            this.minerPage.Controls.Add(this.checkBox28);
+            this.minerPage.Controls.Add(this.checkBox29);
+            this.minerPage.Controls.Add(this.label50);
+            this.minerPage.Controls.Add(this.textBox15);
+            this.minerPage.Location = new System.Drawing.Point(212, 12);
+            this.minerPage.Name = "minerPage";
+            this.minerPage.Size = new System.Drawing.Size(576, 426);
+            this.minerPage.TabIndex = 43;
+            this.minerPage.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label54);
+            this.panel8.Location = new System.Drawing.Point(13, 320);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(552, 93);
+            this.panel8.TabIndex = 62;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.Dot_Paint);
+            // 
+            // label54
+            // 
+            this.label54.BackColor = System.Drawing.Color.Black;
+            this.label54.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label54.ForeColor = System.Drawing.Color.DarkRed;
+            this.label54.Location = new System.Drawing.Point(6, 5);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(540, 84);
+            this.label54.TabIndex = 54;
+            this.label54.Text = resources.GetString("label54.Text");
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.Color.Black;
+            this.label53.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label53.ForeColor = System.Drawing.Color.DarkRed;
+            this.label53.Location = new System.Drawing.Point(12, 183);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(59, 17);
+            this.label53.TabIndex = 61;
+            this.label53.Text = "Password";
+            // 
+            // textBox17
+            // 
+            this.textBox17.BackColor = System.Drawing.Color.Black;
+            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox17.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox17.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox17.Location = new System.Drawing.Point(13, 202);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(352, 22);
+            this.textBox17.TabIndex = 60;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.BackColor = System.Drawing.Color.Black;
+            this.label52.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label52.ForeColor = System.Drawing.Color.DarkRed;
+            this.label52.Location = new System.Drawing.Point(12, 105);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(65, 17);
+            this.label52.TabIndex = 59;
+            this.label52.Text = "Username";
+            // 
+            // textBox16
+            // 
+            this.textBox16.BackColor = System.Drawing.Color.Black;
+            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox16.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox16.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox16.Location = new System.Drawing.Point(13, 124);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(354, 22);
+            this.textBox16.TabIndex = 58;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.Black;
+            this.label51.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label51.ForeColor = System.Drawing.Color.DarkRed;
+            this.label51.Location = new System.Drawing.Point(10, 260);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(69, 17);
+            this.label51.TabIndex = 57;
+            this.label51.Text = "CPU usage";
+            // 
+            // checkBox27
+            // 
+            this.checkBox27.AutoSize = true;
+            this.checkBox27.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox27.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox27.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox27.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox27.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox27.Location = new System.Drawing.Point(106, 277);
+            this.checkBox27.Name = "checkBox27";
+            this.checkBox27.Size = new System.Drawing.Size(44, 17);
+            this.checkBox27.TabIndex = 56;
+            this.checkBox27.Text = "75%";
+            this.checkBox27.UseVisualStyleBackColor = true;
+            this.checkBox27.CheckedChanged += new System.EventHandler(this.checkBox27_CheckedChanged);
+            // 
+            // checkBox28
+            // 
+            this.checkBox28.AutoSize = true;
+            this.checkBox28.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox28.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox28.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox28.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox28.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox28.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox28.Location = new System.Drawing.Point(60, 277);
+            this.checkBox28.Name = "checkBox28";
+            this.checkBox28.Size = new System.Drawing.Size(44, 17);
+            this.checkBox28.TabIndex = 55;
+            this.checkBox28.Text = "50%";
+            this.checkBox28.UseVisualStyleBackColor = true;
+            this.checkBox28.CheckedChanged += new System.EventHandler(this.checkBox28_CheckedChanged);
+            // 
+            // checkBox29
+            // 
+            this.checkBox29.AutoSize = true;
+            this.checkBox29.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
+            this.checkBox29.FlatAppearance.CheckedBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox29.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.checkBox29.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.checkBox29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox29.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox29.ForeColor = System.Drawing.Color.DarkRed;
+            this.checkBox29.Location = new System.Drawing.Point(13, 277);
+            this.checkBox29.Name = "checkBox29";
+            this.checkBox29.Size = new System.Drawing.Size(44, 17);
+            this.checkBox29.TabIndex = 54;
+            this.checkBox29.Text = "25%";
+            this.checkBox29.UseVisualStyleBackColor = true;
+            this.checkBox29.CheckedChanged += new System.EventHandler(this.checkBox29_CheckedChanged);
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.Color.Black;
+            this.label50.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label50.ForeColor = System.Drawing.Color.DarkRed;
+            this.label50.Location = new System.Drawing.Point(12, 19);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(79, 17);
+            this.label50.TabIndex = 53;
+            this.label50.Text = "Monero pool";
+            // 
+            // textBox15
+            // 
+            this.textBox15.BackColor = System.Drawing.Color.Black;
+            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox15.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox15.ForeColor = System.Drawing.Color.DarkRed;
+            this.textBox15.Location = new System.Drawing.Point(13, 38);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(552, 22);
+            this.textBox15.TabIndex = 52;
+            // 
             // daioPage
             // 
             this.daioPage.Controls.Add(this.button21);
@@ -1626,7 +1626,7 @@ namespace discordAIO
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(100, 22);
             this.button18.TabIndex = 19;
-            this.button18.Text = "Upload";
+            this.button18.Text = "Decrypt";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
@@ -2443,9 +2443,11 @@ namespace discordAIO
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.minerPage.ResumeLayout(false);
-            this.minerPage.PerformLayout();
-            this.panel8.ResumeLayout(false);
+            this.mainPage.ResumeLayout(false);
+            this.mainPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.builderPage.ResumeLayout(false);
             this.builderPage.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -2458,11 +2460,9 @@ namespace discordAIO
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.mainPage.ResumeLayout(false);
-            this.mainPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.minerPage.ResumeLayout(false);
+            this.minerPage.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.daioPage.ResumeLayout(false);
             this.daioPage.PerformLayout();
             this.panel7.ResumeLayout(false);

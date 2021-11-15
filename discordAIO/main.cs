@@ -27,7 +27,7 @@ namespace discordAIO
     public partial class main : Form
     {
 
-        private string version = "v0.5.0";
+        private string version = "v0.5.1";
         private protected string email = ""; // Your email goes here
 
         // Do not touch
@@ -911,6 +911,7 @@ namespace discordAIO
                         string directoryPath = Path.GetDirectoryName(open.FileName);
                         textBox8.Text = directoryPath;
 
+
                         creText = creText.Replace(creText, decryptedText);
                         File.WriteAllText(open.FileName, creText);
 
@@ -927,9 +928,10 @@ namespace discordAIO
                             }
                         }
 
-                        string encryptedText = Encrypt(creText);
-                        creText = creText.Replace(creText, encryptedText);
-                        File.WriteAllText(open.FileName, creText);
+                    // .dAIO encryption
+                    //    string encryptedText = Encrypt(creText);
+                    //    creText = creText.Replace(creText, encryptedText);
+                    //    File.WriteAllText(open.FileName, creText);
 
                         if (decryptedText.Contains("# Windows"))
                         {
@@ -982,15 +984,15 @@ namespace discordAIO
                         if (decryptedText.Contains("# History"))
                         {
                             hisData = getBetween(decryptedText, "History", "# End of History");
-                            listBox4.Items.Clear();
+                            listBox6.Items.Clear();
 
                             foreach (string s in Regex.Split(hisData, "\n"))
-                                listBox4.Items.Add(s);
+                                listBox6.Items.Add(s);
                         }
                         else
                         {
-                            listBox4.Items.Clear();
-                            listBox4.Items.Add(hisData);
+                            listBox6.Items.Clear();
+                            listBox6.Items.Add(hisData);
                         }
 
 
@@ -1012,15 +1014,15 @@ namespace discordAIO
                         if (decryptedText.Contains("# Wifi Network"))
                         {
                             wnData = getBetween(decryptedText, "Wifi Network", "# End of Wifi Network");
-                            listBox6.Items.Clear();
+                            listBox4.Items.Clear();
 
                             foreach (string s in Regex.Split(wnData, "\n"))
-                                listBox6.Items.Add(s);
+                                listBox4.Items.Add(s);
                         }
                         else
                         {
-                            listBox6.Items.Clear();
-                            listBox6.Items.Add(wnData);
+                            listBox4.Items.Clear();
+                            listBox4.Items.Add(wnData);
                         }
 
 
