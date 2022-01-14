@@ -223,6 +223,8 @@ Try to change your VPN connection.
 Discord AIO made by [Nyxon](https://github.com/Nyxonn)
 <br />
 Featuring [yunglean_](https://github.com/yunglean4171) and dv0l
+
+[![paypal](https://www.paypalobjects.com/en_US/PL/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=LHX286XBZ5BZS)
   
 <br/>
 <br/>
