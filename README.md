@@ -159,6 +159,18 @@ Try to change your VPN connection.
 #### Settings page
 ![obraz](https://user-images.githubusercontent.com/45857590/156887035-3e024ce7-ea93-4085-8025-2519fc27a861.png)
 
+## Needed packages
+
+</div>
+
+- Leaf.xNet
+- DiscordRPC
+- Costura.Fody
+- ScintillaNET
+- Newtonsoft.Json
+
+<div align="center">
+
 ## Credits
 Discord AIO made by [Nyxon](https://github.com/Nyxonn)
 <br />
