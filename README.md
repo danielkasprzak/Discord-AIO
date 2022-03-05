@@ -9,7 +9,7 @@
   
   [![developer](https://img.shields.io/badge/Developer-Nyxon-520702.svg?style=flat)](https://github.com/Nyxonn)
   [![discord](https://img.shields.io/badge/Discord-Nyxon%234418-520702.svg?style=flat)](https://discordapp.com/users/690624129153630248)
-  ![developer](https://img.shields.io/badge/Version-0.5.2-520702.svg?style=flat)
+  ![developer](https://img.shields.io/badge/Version-0.6.0-520702.svg?style=flat)
 </p>
 
 ## Disclaimer
@@ -84,7 +84,8 @@ I will not be held accountable for any illegal activities.
 
 #### Additional
 
-- Checking if your IP is protected (*If you want to use it download supported version and change email string*)
+- Multi-language support
+- Customizable color of UI
 
 
 ### Coming soon
@@ -98,78 +99,24 @@ I will not be held accountable for any illegal activities.
 </div>
 <div align="center">
   
-**0.3.3**
+**< 0.6.0**
   
 </div>
 
-- First stable release
-- Supports ip check
+Old branch.
 
 <div align="center">
   
-**0.3.4**
+**0.6.0**
   
 </div>
 
-- Fixed not launching issue
-- Do not support ip check
-
-<div align="center">
-  
-**0.4.0**
-  
-</div>
-
-- Changed startup function
-- Added stealer obfuscation option
-- Fixed error when no icon uploaded
-- Do not support ip check
-
-
-<div align="center">
-  
-**0.4.1**
-  
-</div>
-
-- Fixed desktop screenshot
-- Fixed custom plugin
-- Changed webhook report
-- Changed webhook spammer
-- Do not support ip check
-
-
-<div align="center">
-  
-**0.5.0**
-  
-</div>
-
-- Added cryptocurrency miner
-- Added stealer pumper (KB, MB, GB)
-- Fixed caret
-- Do not support ip check
-
-<div align="center">
-  
-**0.5.1**
-  
-</div>
-
-- Fixed not working issue (ip grabber)
-- After decryption .dAIO remains decrypted (you don't need to check it again in program)
-- Fixed that Wi-Fi passwords and the history sections were not right placed
-- Do not support ip check
-
-<div align="center">
-  
-**0.5.2**
-  
-</div>
-
-- Updated vulnerabilities of main program
-- Minor changes
-- Minor bug fixes
+- Complete rework of UI
+- Settings
+- Version checks
+- Multi-language support
+- Customizable UI
+- Minor stub fixes
 
 <div align="center">
 
@@ -200,24 +147,17 @@ Try to change your VPN connection.
 ## Showcase
 
 #### Main page
-![obraz](https://user-images.githubusercontent.com/45857590/138570289-cbd91d6f-a2f4-4c2e-b8b5-afa9f4618649.png)
-#### Builder page
-![obraz](https://user-images.githubusercontent.com/45857590/138570298-406a54f8-50cc-4fbc-9d96-853006875fef.png)
-#### Inspection page
-![obraz](https://user-images.githubusercontent.com/45857590/138570313-d74cb4a0-774c-48ae-b398-465dd241cef7.png)
-#### Credentials page
-![obraz](https://user-images.githubusercontent.com/45857590/138570319-f8c3840f-e44d-4523-974c-dc753890d6a9.png)
-#### Webhooks page
-![obraz](https://user-images.githubusercontent.com/45857590/138570328-c75a23dd-0091-4357-8a4a-08dda81ac92e.png)
-#### Tokens page
-![obraz](https://user-images.githubusercontent.com/45857590/138570343-5271c9ad-5c7d-417b-b20d-b47b846dd5c4.png)
-<br/>  
-#### Inspection page after upload
-![daioinspector](https://user-images.githubusercontent.com/45857590/138570501-94b9ffc8-6915-49f7-b767-8f0e26a7efb2.png)
-#### Credentials page after upload
-![daiocredentials](https://user-images.githubusercontent.com/45857590/138570625-e2260cb0-f2af-4d72-8322-73c91062e16a.png)
-#### Tokens page after upload
-![daiotokens](https://user-images.githubusercontent.com/45857590/138572769-43b2f8b8-504c-4bb8-bb08-7a141ca7ea5f.png)
+![obraz](https://user-images.githubusercontent.com/45857590/156886961-df9f1f2c-8df4-43de-95b6-845eaa405bb8.png)
+#### Additional page
+![obraz](https://user-images.githubusercontent.com/45857590/156886971-eacabb04-7ce4-4a23-91d4-1d7c71399ee8.png)
+#### Inspector page
+![obraz](https://user-images.githubusercontent.com/45857590/156887001-7ade9039-6668-480c-ae51-ac289001dac5.png)
+#### Misc page
+![obraz](https://user-images.githubusercontent.com/45857590/156887018-8427e3b4-811e-4efd-a2b0-35e8cec43ec5.png)
+#### Miner page
+![obraz](https://user-images.githubusercontent.com/45857590/156887025-0ab94b5b-e5d4-4566-b8a6-ea0067b821e5.png)
+#### Settings page
+![obraz](https://user-images.githubusercontent.com/45857590/156887035-3e024ce7-ea93-4085-8025-2519fc27a861.png)
 
 ## Credits
 Discord AIO made by [Nyxon](https://github.com/Nyxonn)
