@@ -1,0 +1,17 @@
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\bin\Debug\discordAIO6.exe.config
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\bin\Debug\discordAIO6.exe
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\bin\Debug\discordAIO6.pdb
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.csproj.AssemblyReference.cache
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.Properties.Resources.resources
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.csproj.GenerateResource.cache
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.csproj.CoreCompileInputs.cache
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.exe
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.pdb
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.dAIOmain.resources
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.notify.resources
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\bin\Debug\ScintillaNET.xml
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\bin\Debug\Leaf.xNet.xml
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\bin\Debug\DiscordRPC.xml
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\bin\Debug\Newtonsoft.Json.xml
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\danio\Desktop\discordAIO6\discordAIO6\obj\Debug\discordAIO6.csproj.Fody.CopyLocal.cache
