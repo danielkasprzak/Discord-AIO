@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>daioRPC2.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\daioRPC2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -252,6 +252,7 @@
   <ItemGroup>
     <Content Include="daioRPC2.ico" />
     <Content Include="Image1.png" />
+    <None Include="Resources\daioRPC2.ico" />
     <EmbeddedResource Include="Resources\stub.txt" />
     <None Include="Resources\ConfuserEx.zip" />
     <None Include="Resources\none4.png" />
