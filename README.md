@@ -64,6 +64,7 @@ I will not be held accountable for any illegal activities.
 - Stealing **WiFi credentials**
 - Taking **desktop screenshot**
 - **Cryptocurrency miner**
+- Discord **RAT**
 - Disabling Windows Defender
 - Disabling Task Manager
 - Disabling Mouse and Keyboard
