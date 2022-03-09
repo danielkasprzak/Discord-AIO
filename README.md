@@ -37,61 +37,60 @@ I will not be held accountable for any illegal activities.
 
 #### Main features
 
-- **Stealer** builder/compiler
-- Webhook checker
-- Webhook spammer
-- Webhook deleter
-- Token checker
-- Token deleter
-
-### Stealer
+- [x] **Stealer** builder/compiler
+- [x] Webhook checker
+- [x] Webhook spammer
+- [x] Webhook deleter
+- [x] Token checker
+- [x] Token deleter
 
 #### Stealer features
 
-- Stealing **discord token**
-- Stealing **IP address**
-- Stealing MAC Address
-- Stealing Desktop username
+- [x] Stealing **discord token**
+- [x] Stealing **IP address**
+- [x] Stealing MAC Address
+- [x] Stealing Desktop username
 
 #### Optional stealer features
 
-- Stealing **passwords**
-- Stealing **cookies**
-- Stealing **credit cards**
-- Stealing **VPN's**
-- Stealing **Windows Product Key**
-- Stealing browser history
-- Stealing **WiFi credentials**
-- Taking **desktop screenshot**
-- **Cryptocurrency miner**
-- Discord **RAT**
-- Disabling Windows Defender
-- Disabling Task Manager
-- Disabling Mouse and Keyboard
-- Blocking websites
-- Stealer **pumper**
-- Showing fake error
-- Disabling internet connection (! Can cause serious damage)
-- Showing BSOD (Blue Screen)
-- Automatically startup
-- Showing jumpscare
-- Hiding stealer
-- Your **custom plugins**
-
-- Stealer **obfuscation**
-- Customizable stealer icon
-- Customizable embed color
-- Stealer info generator and **cloner**
+- [x] Stealing **passwords**
+- [x] Stealing **cookies**
+- [x] Stealing **credit cards**
+- [x] Stealing **VPN's**
+- [x] Stealing **Windows Product Key**
+- [x] Stealing browser history
+- [x] Stealing **WiFi credentials**
+- [x] Taking **desktop screenshot**
+- [x] **Cryptocurrency miner**
+- [x] Discord **RAT**
+- [x] Disabling Windows Defender
+- [x] Disabling Task Manager
+- [x] Disabling Mouse and Keyboard
+- [x] Blocking websites
+- [x] Stealer **pumper**
+- [x] Showing fake error
+- [x] Disabling internet connection (! Can cause serious damage)
+- [x] Showing BSOD (Blue Screen)
+- [x] Automatically startup
+- [x] Showing jumpscare
+- [x] Hiding stealer
+- [x] Your **custom plugins**
+- [x] Fake windows cmd
+- [x] Fake discord nitro generator
+- [x] Stealer **obfuscation**
+- [x] Customizable stealer icon
+- [x] Customizable embed color
+- [x] Stealer metadata generator and **cloner**
 
 #### Additional
 
-- Multi-language support
-- Customizable color of UI
+- [x] Multi-language support
+- [x] Customizable color of UI
 
 
 ### Coming soon
 
-- Ransomware
+- [ ] Ransomware
 
 <div align="center">
   
