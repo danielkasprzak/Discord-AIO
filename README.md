@@ -9,7 +9,7 @@
   
   [![developer](https://img.shields.io/badge/Developer-Nyxon-520702.svg?style=flat)](https://github.com/Nyxonn)
   [![discord](https://img.shields.io/badge/Discord-Nyxon%234418-520702.svg?style=flat)](https://discordapp.com/users/690624129153630248)
-  ![developer](https://img.shields.io/badge/Version-0.6.2-520702.svg?style=flat)
+  ![developer](https://img.shields.io/badge/Version-0.6.3-520702.svg?style=flat)
 </p>
 
 ## Disclaimer
@@ -61,6 +61,7 @@ I will not be held accountable for any illegal activities.
 - [x] Stealing browser history
 - [x] Stealing **WiFi credentials**
 - [x] Taking **desktop screenshot**
+- [x] Discord **QR Token Grabber**
 - [x] **Cryptocurrency miner**
 - [x] Discord **RAT**
 - [x] Disabling Windows Defender
@@ -141,6 +142,21 @@ Old branch.
 - Fixed webhook spammer error
 - Deleted .dAIO encryption
 - Major bugs fixed
+  
+<div align="center">
+  
+**0.6.3**
+  
+</div>
+
+- Added QR Code grabber
+- Discord AIO is now see-through while dragging
+- Fake discord tools setup wizard
+- Added save popup
+- Added save translation
+- Added navbar pages
+- Added minimize button
+- Added AppData fix button
 
 <div align="center">
 
@@ -183,9 +199,11 @@ Try to change your VPN connection.
 #### Settings page
 ![obraz](https://user-images.githubusercontent.com/45857590/156887035-3e024ce7-ea93-4085-8025-2519fc27a861.png)
 
-## Needed packages
+## Packages
 
 </div>
+
+<br/>
 
 - Leaf.xNet
 - DiscordRPC
