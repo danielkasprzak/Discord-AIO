@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?><span>
+<doc>
+  <assembly>
+    <name>System.Text.Encodings.Web</name>
+  </assembly>
+  <members>
+    <member name="T:System.Text.Encodings.Web.HtmlEncoder">
+      <summary>Represents an HTML character encoding.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.HtmlEncoder.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Text.Encodings.Web.HtmlEncoder"></see> class.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.HtmlEncoder.Create(System.Text.Encodings.Web.TextEncoderSettings)">
+      <summary>Creates a new instance of the HtmlEncoder class with the specified settings.</summary>
+      <param name="settings">Settings that control how the <see cref="T:System.Text.Encodings.Web.HtmlEncoder"></see> instance encodes, primarily which characters to encode.</param>
+      <returns>A new instance of the <see cref="T:System.Text.Encodings.Web.HtmlEncoder"></see> class.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="settings">settings</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.HtmlEncoder.Create(System.Text.Unicode.UnicodeRange[])">
+      <summary>Creates a new instance of the HtmlEncoder class that specifies characters the encoder is allowed to not encode.</summary>
+      <param name="allowedRanges">The set of characters that the encoder is allowed to not encode.</param>
+      <returns>A new instance of the <see cref="T:System.Text.Encodings.Web.HtmlEncoder"></see> class.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="allowedRanges">allowedRanges</paramref> is null.</exception>
+    </member>
+    <member name="P:System.Text.Encodings.Web.HtmlEncoder.Default">
+      <summary>Gets a built-in instance of the <see cref="T:System.Text.Encodings.Web.HtmlEncoder"></see> class.</summary>
+      <returns>A built-in instance of the <see cref="T:System.Text.Encodings.Web.HtmlEncoder"></see> class.</returns>
+    </member>
+    <member name="T:System.Text.Encodings.Web.JavaScriptEncoder">
+      <summary>Represents a JavaScript character encoding.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.JavaScriptEncoder.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder"></see> class.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.JavaScriptEncoder.Create(System.Text.Encodings.Web.TextEncoderSettings)">
+      <summary>Creates a new instance of JavaScriptEncoder class with the specified settings.</summary>
+      <param name="settings">Settings that control how the <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder"></see> instance encodes, primarily which characters to encode.</param>
+      <returns>A new instance of the <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder"></see> class.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="settings">settings</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.JavaScriptEncoder.Create(System.Text.Unicode.UnicodeRange[])">
+      <summary>Creates a new instance of the JavaScriptEncoder class that specifies characters the encoder is allowed to not encode.</summary>
+      <param name="allowedRanges">The set of characters that the encoder is allowed to not encode.</param>
+      <returns>A new instance of the <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder"></see> class.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="allowedRanges">allowedRanges</paramref> is null.</exception>
+    </member>
+    <member name="P:System.Text.Encodings.Web.JavaScriptEncoder.Default">
+      <summary>Gets a built-in instance of the <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder"></see> class.</summary>
+      <returns>A built-in instance of the <see cref="T:System.Text.Encodings.Web.JavaScriptEncoder"></see> class.</returns>
+    </member>
+    <member name="T:System.Text.Encodings.Web.TextEncoder">
+      <summary>The base class of web encoders.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoder.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Text.Encodings.Web.TextEncoder"></see> class.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoder.Encode(System.String)">
+      <summary>Encodes the supplied string and returns the encoded text as a new string.</summary>
+      <param name="value">The string to encode.</param>
+      <returns>The encoded string.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="value">value</paramref> is null.</exception>
+      <exception cref="T:System.ArgumentException">The <see cref="M:System.Text.Encodings.Web.TextEncoder.TryEncodeUnicodeScalar(System.Int32,System.Char*,System.Int32,System.Int32@)"></see> method failed. The encoder does not implement <see cref="P:System.Text.Encodings.Web.TextEncoder.MaxOutputCharactersPerInputCharacter"></see> correctly.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoder.Encode(System.IO.TextWriter,System.String)">
+      <summary>Encodes the specified string to a <see cref="T:System.IO.TextWriter"></see> object.</summary>
+      <param name="output">The stream to which to write the encoded text.</param>
+      <param name="value">The string to encode.</param>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoder.Encode(System.IO.TextWriter,System.Char[],System.Int32,System.Int32)">
+      <summary>Encodes characters from an array and writes them to a <see cref="T:System.IO.TextWriter"></see> object.</summary>
+      <param name="output">The stream to which to write the encoded text.</param>
+      <param name="value">The array of characters to encode.</param>
+      <param name="startIndex">The array index of the first character to encode.</param>
+      <param name="characterCount">The number of characters in the array to encode.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="output">output</paramref> is null.</exception>
+      <exception cref="T:System.ArgumentException">The <see cref="M:System.Text.Encodings.Web.TextEncoder.TryEncodeUnicodeScalar(System.Int32,System.Char*,System.Int32,System.Int32@)"></see> method failed. The encoder does not implement <see cref="P:System.Text.Encodings.Web.TextEncoder.MaxOutputCharactersPerInputCharacter"></see> correctly.</exception>
+      <exception cref="T:System.ArgumentNullException"><paramref name="value">value</paramref> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="startIndex">startIndex</paramref> is out of range.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="characterCount">characterCount</paramref> is out of range.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoder.Encode(System.IO.TextWriter,System.String,System.Int32,System.Int32)">
+      <summary>Encodes a substring and writes it to a <see cref="T:System.IO.TextWriter"></see> object.</summary>
+      <param name="output">The stream to which to write the encoded text.</param>
+      <param name="value">The string whose substring is to be encoded.</param>
+      <param name="startIndex">The index where the substring starts.</param>
+      <param name="characterCount">The number of characters in the substring.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="output">output</paramref> is null.</exception>
+      <exception cref="T:System.ArgumentException">The <see cref="M:System.Text.Encodings.Web.TextEncoder.TryEncodeUnicodeScalar(System.Int32,System.Char*,System.Int32,System.Int32@)"></see> method failed. The encoder does not implement <see cref="P:System.Text.Encodings.Web.TextEncoder.MaxOutputCharactersPerInputCharacter"></see> correctly.</exception>
+      <exception cref="T:System.ArgumentNullException"><paramref name="value">value</paramref> is null.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="startIndex">startIndex</paramref> is out of range.</exception>
+      <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="characterCount">characterCount</paramref> is out of range.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoder.FindFirstCharacterToEncode(System.Char*,System.Int32)">
+      <summary>Finds the index of the first character to encode.</summary>
+      <param name="text">The text buffer to search.</param>
+      <param name="textLength">The number of characters in <paramref name="text">text</paramref>.</param>
+      <returns>The index of the first character to encode.</returns>
+    </member>
+    <member name="P:System.Text.Encodings.Web.TextEncoder.MaxOutputCharactersPerInputCharacter">
+      <summary>Gets the maximum number of characters that this encoder can generate for each input code point.</summary>
+      <returns>The maximum number of characters.</returns>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoder.TryEncodeUnicodeScalar(System.Int32,System.Char*,System.Int32,System.Int32@)">
+      <summary>Encodes a Unicode scalar value and writes it to a buffer.</summary>
+      <param name="unicodeScalar">A Unicode scalar value.</param>
+      <param name="buffer">A pointer to the buffer to which to write the encoded text.</param>
+      <param name="bufferLength">The length of the destination <paramref name="buffer">buffer</paramref> in characters.</param>
+      <param name="numberOfCharactersWritten">When the method returns, indicates the number of characters written to the <paramref name="buffer">buffer</paramref>.</param>
+      <returns>false if <paramref name="bufferLength">bufferLength</paramref> is too small to fit the encoded text; otherwise, returns true.</returns>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoder.WillEncode(System.Int32)">
+      <summary>Determines if a given Unicode scalar value will be encoded.</summary>
+      <param name="unicodeScalar">A Unicode scalar value.</param>
+      <returns>true if the <paramref name="unicodeScalar">unicodeScalar</paramref> value will be encoded by this encoder; otherwise, returns false.</returns>
+    </member>
+    <member name="T:System.Text.Encodings.Web.TextEncoderSettings">
+      <summary>Represents a filter that allows only certain Unicode code points.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.#ctor">
+      <summary>Instantiates an empty filter (allows no code points through by default).</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.#ctor(System.Text.Encodings.Web.TextEncoderSettings)">
+      <summary>Instantiates a filter by cloning the allowed list of another <see cref="T:System.Text.Encodings.Web.TextEncoderSettings"></see> object.</summary>
+      <param name="other">The other <see cref="T:System.Text.Encodings.Web.TextEncoderSettings"></see> object to be cloned.</param>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.#ctor(System.Text.Unicode.UnicodeRange[])">
+      <summary>Instantiates a filter where only the character ranges specified by <paramref name="allowedRanges">allowedRanges</paramref> are allowed by the filter.</summary>
+      <param name="allowedRanges">The allowed character ranges.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="allowedRanges">allowedRanges</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.AllowCharacter(System.Char)">
+      <summary>Allows the character specified by <paramref name="character">character</paramref> through the filter.</summary>
+      <param name="character">The allowed character.</param>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.AllowCharacters(System.Char[])">
+      <summary>Allows all characters specified by <paramref name="characters">characters</paramref> through the filter.</summary>
+      <param name="characters">The allowed characters.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="characters">characters</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.AllowCodePoints(System.Collections.Generic.IEnumerable{System.Int32})">
+      <summary>Allows all code points specified by <paramref name="codePoints">codePoints</paramref>.</summary>
+      <param name="codePoints">The allowed code points.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="codePoints">codePoints</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.AllowRange(System.Text.Unicode.UnicodeRange)">
+      <summary>Allows all characters specified by <paramref name="range">range</paramref> through the filter.</summary>
+      <param name="range">The range of characters to be allowed.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="range">range</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.AllowRanges(System.Text.Unicode.UnicodeRange[])">
+      <summary>Allows all characters specified by <paramref name="ranges">ranges</paramref> through the filter.</summary>
+      <param name="ranges">The ranges of characters to be allowed.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="ranges">ranges</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.Clear">
+      <summary>Resets this object by disallowing all characters.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.ForbidCharacter(System.Char)">
+      <summary>Disallows the character <paramref name="character">character</paramref> through the filter.</summary>
+      <param name="character">The disallowed character.</param>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.ForbidCharacters(System.Char[])">
+      <summary>Disallows all characters specified by <paramref name="characters">characters</paramref> through the filter.</summary>
+      <param name="characters">The disallowed characters.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="characters">characters</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.ForbidRange(System.Text.Unicode.UnicodeRange)">
+      <summary>Disallows all characters specified by <paramref name="range">range</paramref> through the filter.</summary>
+      <param name="range">The range of characters to be disallowed.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="range">range</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.ForbidRanges(System.Text.Unicode.UnicodeRange[])">
+      <summary>Disallows all characters specified by <paramref name="ranges">ranges</paramref> through the filter.</summary>
+      <param name="ranges">The ranges of characters to be disallowed.</param>
+      <exception cref="T:System.ArgumentNullException"><paramref name="ranges">ranges</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.TextEncoderSettings.GetAllowedCodePoints">
+      <summary>Gets an enumerator of all allowed code points.</summary>
+      <returns>The enumerator of allowed code points.</returns>
+    </member>
+    <member name="T:System.Text.Encodings.Web.UrlEncoder">
+      <summary>Represents a URL character encoding.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.UrlEncoder.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:System.Text.Encodings.Web.UrlEncoder"></see> class.</summary>
+    </member>
+    <member name="M:System.Text.Encodings.Web.UrlEncoder.Create(System.Text.Encodings.Web.TextEncoderSettings)">
+      <summary>Creates a new instance of UrlEncoder class with the specified settings.</summary>
+      <param name="settings">Settings that control how the <see cref="T:System.Text.Encodings.Web.UrlEncoder"></see> instance encodes, primarily which characters to encode.</param>
+      <returns>A new instance of the <see cref="T:System.Text.Encodings.Web.UrlEncoder"></see> class.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="settings">settings</paramref> is null.</exception>
+    </member>
+    <member name="M:System.Text.Encodings.Web.UrlEncoder.Create(System.Text.Unicode.UnicodeRange[])">
+      <summary>Creates a new instance of the UrlEncoder class that specifies characters the encoder is allowed to not encode.</summary>
+      <param name="allowedRanges">The set of characters that the encoder is allowed to not encode.</param>
+      <returns>A new instance of the <see cref="T:System.Text.Encodings.Web.UrlEncoder"></see> class.</returns>
+      <exception cref="T:System.ArgumentNullException"><paramref name="allowedRanges">allowedRanges</paramref>is null.</exception>
+    </member>
+    <member name="P:System.Text.Encodings.Web.UrlEncoder.Default">
+      <summary>Gets a built-in instance of the <see cref="T:System.Text.Encodings.Web.UrlEncoder"></see> class.</summary>
+      <returns>A built-in instance of the <see cref="T:System.Text.Encodings.Web.UrlEncoder"></see> class.</returns>
+    </member>
+    <member name="T:System.Text.Unicode.UnicodeRange">
+      
+    </member>
+    <member name="M:System.Text.Unicode.UnicodeRange.#ctor(System.Int32,System.Int32)">
+      <param name="firstCodePoint"></param>
+      <param name="length"></param>
+    </member>
+    <member name="M:System.Text.Unicode.UnicodeRange.Create(System.Char,System.Char)">
+      <param name="firstCharacter"></param>
+      <param name="lastCharacter"></param>
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRange.FirstCodePoint">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRange.Length">
+      <returns></returns>
+    </member>
+    <member name="T:System.Text.Unicode.UnicodeRanges">
+      
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.All">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.AlphabeticPresentationForms">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Arabic">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.ArabicExtendedA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.ArabicPresentationFormsA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.ArabicPresentationFormsB">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.ArabicSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Armenian">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Arrows">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Balinese">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Bamum">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.BasicLatin">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Batak">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Bengali">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.BlockElements">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Bopomofo">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.BopomofoExtended">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.BoxDrawing">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.BraillePatterns">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Buginese">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Buhid">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Cham">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Cherokee">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CherokeeSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CjkCompatibility">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CjkCompatibilityForms">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CjkCompatibilityIdeographs">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CjkRadicalsSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CjkStrokes">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CjkSymbolsandPunctuation">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CjkUnifiedIdeographs">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CjkUnifiedIdeographsExtensionA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CombiningDiacriticalMarks">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CombiningDiacriticalMarksExtended">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CombiningDiacriticalMarksforSymbols">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CombiningDiacriticalMarksSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CombiningHalfMarks">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CommonIndicNumberForms">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.ControlPictures">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Coptic">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CurrencySymbols">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Cyrillic">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CyrillicExtendedA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CyrillicExtendedB">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.CyrillicSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Devanagari">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.DevanagariExtended">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Dingbats">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.EnclosedAlphanumerics">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.EnclosedCjkLettersandMonths">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Ethiopic">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.EthiopicExtended">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.EthiopicExtendedA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.EthiopicSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.GeneralPunctuation">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.GeometricShapes">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Georgian">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.GeorgianSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Glagolitic">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.GreekandCoptic">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.GreekExtended">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Gujarati">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Gurmukhi">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.HalfwidthandFullwidthForms">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.HangulCompatibilityJamo">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.HangulJamo">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.HangulJamoExtendedA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.HangulJamoExtendedB">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.HangulSyllables">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Hanunoo">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Hebrew">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Hiragana">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.IdeographicDescriptionCharacters">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.IpaExtensions">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Javanese">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Kanbun">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.KangxiRadicals">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Kannada">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Katakana">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.KatakanaPhoneticExtensions">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.KayahLi">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Khmer">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.KhmerSymbols">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Lao">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Latin1Supplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.LatinExtendedA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.LatinExtendedAdditional">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.LatinExtendedB">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.LatinExtendedC">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.LatinExtendedD">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.LatinExtendedE">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Lepcha">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.LetterlikeSymbols">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Limbu">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Lisu">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Malayalam">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Mandaic">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MathematicalOperators">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MeeteiMayek">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MeeteiMayekExtensions">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MiscellaneousMathematicalSymbolsA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MiscellaneousMathematicalSymbolsB">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MiscellaneousSymbols">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MiscellaneousSymbolsandArrows">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MiscellaneousTechnical">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.ModifierToneLetters">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Mongolian">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Myanmar">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MyanmarExtendedA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.MyanmarExtendedB">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.NewTaiLue">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.NKo">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.None">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.NumberForms">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Ogham">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.OlChiki">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.OpticalCharacterRecognition">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Oriya">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Phagspa">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.PhoneticExtensions">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.PhoneticExtensionsSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Rejang">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Runic">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Samaritan">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Saurashtra">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Sinhala">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SmallFormVariants">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SpacingModifierLetters">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Specials">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Sundanese">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SundaneseSupplement">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SuperscriptsandSubscripts">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SupplementalArrowsA">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SupplementalArrowsB">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SupplementalMathematicalOperators">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SupplementalPunctuation">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.SylotiNagri">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Syriac">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Tagalog">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Tagbanwa">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.TaiLe">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.TaiTham">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.TaiViet">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Tamil">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Telugu">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Thaana">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Thai">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Tibetan">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Tifinagh">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.UnifiedCanadianAboriginalSyllabics">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.UnifiedCanadianAboriginalSyllabicsExtended">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.Vai">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.VariationSelectors">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.VedicExtensions">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.VerticalForms">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.YijingHexagramSymbols">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.YiRadicals">
+      <returns></returns>
+    </member>
+    <member name="P:System.Text.Unicode.UnicodeRanges.YiSyllables">
+      <returns></returns>
+    </member>
+  </members>
+</doc></span>

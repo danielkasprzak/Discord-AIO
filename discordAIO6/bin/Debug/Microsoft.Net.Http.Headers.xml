@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Net.Http.Headers</name>
+    </assembly>
+    <members>
+        <member name="M:Microsoft.Net.Http.Headers.ContentDispositionHeaderValue.SetHttpFileName(Microsoft.Extensions.Primitives.StringSegment)">
+            <summary>
+            Sets both FileName and FileNameStar using encodings appropriate for HTTP headers.
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.ContentDispositionHeaderValue.SetMimeFileName(Microsoft.Extensions.Primitives.StringSegment)">
+            <summary>
+            Sets the FileName parameter using encodings appropriate for MIME headers.
+            The FileNameStar paraemter is removed.
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="T:Microsoft.Net.Http.Headers.ContentDispositionHeaderValueIdentityExtensions">
+            <summary>
+            Various extension methods for <see cref="T:Microsoft.Net.Http.Headers.ContentDispositionHeaderValue"/> for identifying the type of the disposition header
+            </summary>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.ContentDispositionHeaderValueIdentityExtensions.IsFileDisposition(Microsoft.Net.Http.Headers.ContentDispositionHeaderValue)">
+            <summary>
+            Checks if the content disposition header is a file disposition
+            </summary>
+            <param name="header">The header to check</param>
+            <returns>True if the header is file disposition, false otherwise</returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.ContentDispositionHeaderValueIdentityExtensions.IsFormDisposition(Microsoft.Net.Http.Headers.ContentDispositionHeaderValue)">
+            <summary>
+            Checks if the content disposition header is a form disposition
+            </summary>
+            <param name="header">The header to check</param>
+            <returns>True if the header is form disposition, false otherwise</returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.EntityTagHeaderValue.Equals(System.Object)">
+            <summary>
+            Check against another <see cref="T:Microsoft.Net.Http.Headers.EntityTagHeaderValue"/> for equality.
+            This equality check should not be used to determine if two values match under the RFC specifications (https://tools.ietf.org/html/rfc7232#section-2.3.2).
+            </summary>
+            <param name="obj">The other value to check against for equality.</param>
+            <returns>
+            <c>true</c> if the strength and tag of the two values match,
+            <c>false</c> if the other value is null, is not an <see cref="T:Microsoft.Net.Http.Headers.EntityTagHeaderValue"/>, or if there is a mismatch of strength or tag between the two values.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.EntityTagHeaderValue.Compare(Microsoft.Net.Http.Headers.EntityTagHeaderValue,System.Boolean)">
+            <summary>
+            Compares against another <see cref="T:Microsoft.Net.Http.Headers.EntityTagHeaderValue"/> to see if they match under the RFC specifications (https://tools.ietf.org/html/rfc7232#section-2.3.2).
+            </summary>
+            <param name="other">The other <see cref="T:Microsoft.Net.Http.Headers.EntityTagHeaderValue"/> to compare against.</param>
+            <param name="useStrongComparison"><c>true</c> to use a strong comparison, <c>false</c> to use a weak comparison</param>
+            <returns>
+            <c>true</c> if the <see cref="T:Microsoft.Net.Http.Headers.EntityTagHeaderValue"/> match for the given comparison type,
+            <c>false</c> if the other value is null or the comparison failed.
+            </returns>
+        </member>
+        <member name="F:Microsoft.Net.Http.Headers.HeaderQuality.Match">
+            <summary>
+            Quality factor to indicate a perfect match.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Net.Http.Headers.HeaderQuality.NoMatch">
+            <summary>
+            Quality factor to indicate no match.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.HeaderUtilities.TryParseSeconds(Microsoft.Extensions.Primitives.StringValues,System.String,System.Nullable{System.TimeSpan}@)">
+            <summary>
+            Try to find a target header value among the set of given header values and parse it as a
+            <see cref="T:System.TimeSpan"/>.
+            </summary>
+            <param name="headerValues">
+            The <see cref="T:Microsoft.Extensions.Primitives.StringValues"/> containing the set of header values to search.
+            </param>
+            <param name="targetValue">
+            The target header value to look for.
+            </param>
+            <param name="value">
+            When this method returns, contains the parsed <see cref="T:System.TimeSpan"/>, if the parsing succeeded, or
+            null if the parsing failed. The conversion fails if the <paramref name="targetValue"/> was not
+            found or could not be parsed as a <see cref="T:System.TimeSpan"/>. This parameter is passed uninitialized;
+            any value originally supplied in result will be overwritten.
+            </param>
+            <returns>
+            <code>true</code> if <paramref name="targetValue"/> is found and successfully parsed; otherwise,
+            <code>false</code>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.HeaderUtilities.ContainsCacheDirective(Microsoft.Extensions.Primitives.StringValues,System.String)">
+            <summary>
+            Check if a target directive exists among the set of given cache control directives.
+            </summary>
+            <param name="cacheControlDirectives">
+            The <see cref="T:Microsoft.Extensions.Primitives.StringValues"/> containing the set of cache control directives.
+            </param>
+            <param name="targetDirectives">
+            The target cache control directives to look for.
+            </param>
+            <returns>
+            <code>true</code> if <paramref name="targetDirectives"/> is contained in <paramref name="cacheControlDirectives"/>;
+            otherwise, <code>false</code>.
+            </returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.HeaderUtilities.TryParseNonNegativeInt32(Microsoft.Extensions.Primitives.StringSegment,System.Int32@)">
+            <summary>
+            Try to convert a string representation of a positive number to its 64-bit signed integer equivalent.
+            A return value indicates whether the conversion succeeded or failed.
+            </summary>
+            <param name="value">
+            A string containing a number to convert.
+            </param>
+            <param name="result">
+            When this method returns, contains the 64-bit signed integer value equivalent of the number contained
+            in the string, if the conversion succeeded, or zero if the conversion failed. The conversion fails if
+            the string is null or String.Empty, is not of the correct format, is negative, or represents a number
+            greater than Int64.MaxValue. This parameter is passed uninitialized; any value originally supplied in
+            result will be overwritten.
+            </param>
+            <returns><code>true</code> if parsing succeeded; otherwise, <code>false</code>.</returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.HeaderUtilities.TryParseNonNegativeInt64(Microsoft.Extensions.Primitives.StringSegment,System.Int64@)">
+            <summary>
+            Try to convert a <see cref="T:Microsoft.Extensions.Primitives.StringSegment"/> representation of a positive number to its 64-bit signed
+            integer equivalent. A return value indicates whether the conversion succeeded or failed.
+            </summary>
+            <param name="value">
+            A <see cref="T:Microsoft.Extensions.Primitives.StringSegment"/> containing a number to convert.
+            </param>
+            <param name="result">
+            When this method returns, contains the 64-bit signed integer value equivalent of the number contained
+            in the string, if the conversion succeeded, or zero if the conversion failed. The conversion fails if
+            the <see cref="T:Microsoft.Extensions.Primitives.StringSegment"/> is null or String.Empty, is not of the correct format, is negative, or
+            represents a number greater than Int64.MaxValue. This parameter is passed uninitialized; any value
+            originally supplied in result will be overwritten.
+            </param>
+            <returns><code>true</code> if parsing succeeded; otherwise, <code>false</code>.</returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.HeaderUtilities.FormatNonNegativeInt64(System.Int64)">
+            <summary>
+            Converts the non-negative 64-bit numeric value to its equivalent string representation.
+            </summary>
+            <param name="value">
+            The number to convert.
+            </param>
+            <returns>
+            The string representation of the value of this instance, consisting of a sequence of digits ranging from 0 to 9 with no leading zeroes.
+            </returns>
+        </member>
+        <member name="P:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.MatchesAllTypes">
+            <summary>
+            MediaType = "*/*"
+            </summary>
+        </member>
+        <member name="P:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.MatchesAllSubTypes">
+            <summary>
+            SubType = "*"
+            </summary>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.IsSubsetOf(Microsoft.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValue"/> is a subset of
+            <paramref name="otherMediaType"/>. A "subset" is defined as the same or a more specific media type
+            according to the precedence described in https://www.ietf.org/rfc/rfc2068.txt section 14.1, Accept.
+            </summary>
+            <param name="otherMediaType">The <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValue"/> to compare.</param>
+            <returns>
+            A value indicating whether this <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValue"/> is a subset of
+            <paramref name="otherMediaType"/>.
+            </returns>
+            <remarks>
+            For example "multipart/mixed; boundary=1234" is a subset of "multipart/mixed; boundary=1234",
+            "multipart/mixed", "multipart/*", and "*/*" but not "multipart/mixed; boundary=2345" or
+            "multipart/message; boundary=1234".
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.Copy">
+            <summary>
+            Performs a deep copy of this object and all of it's NameValueHeaderValue sub components,
+            while avoiding the cost of revalidating the components.
+            </summary>
+            <returns>A deep copy.</returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.MediaTypeHeaderValue.CopyAsReadOnly">
+            <summary>
+            Performs a deep copy of this object and all of it's NameValueHeaderValue sub components,
+            while avoiding the cost of revalidating the components. This copy is read-only.
+            </summary>
+            <returns>A deep, read-only, copy.</returns>
+        </member>
+        <member name="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValueComparer">
+            <summary>
+            Implementation of <see cref="T:System.Collections.Generic.IComparer`1"/> that can compare accept media type header fields
+            based on their quality values (a.k.a q-values).
+            </summary>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.MediaTypeHeaderValueComparer.Compare(Microsoft.Net.Http.Headers.MediaTypeHeaderValue,Microsoft.Net.Http.Headers.MediaTypeHeaderValue)">
+            <inheritdoc />
+            <remarks>
+            Performs comparisons based on the arguments' quality values
+            (aka their "q-value"). Values with identical q-values are considered equal (i.e. the result is 0)
+            with the exception that subtype wildcards are considered less than specific media types and full
+            wildcards are considered less than subtype wildcards. This allows callers to sort a sequence of
+            <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValue"/> following their q-values in the order of specific
+            media types, subtype wildcards, and last any full wildcards.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.NameValueHeaderValue.Copy">
+            <summary>
+            Provides a copy of this object without the cost of re-validating the values.
+            </summary>
+            <returns>A copy.</returns>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.SetCookieHeaderValue.AppendToStringBuilder(System.Text.StringBuilder)">
+            <summary>
+            Append string representation of this <see cref="T:Microsoft.Net.Http.Headers.SetCookieHeaderValue"/> to given
+            <paramref name="builder"/>.
+            </summary>
+            <param name="builder">
+            The <see cref="T:System.Text.StringBuilder"/> to receive the string representation of this
+            <see cref="T:Microsoft.Net.Http.Headers.SetCookieHeaderValue"/>.
+            </param>
+        </member>
+        <member name="T:Microsoft.Net.Http.Headers.StringWithQualityHeaderValueComparer">
+            <summary>
+            Implementation of <see cref="T:System.Collections.Generic.IComparer`1"/> that can compare content negotiation header fields
+            based on their quality values (a.k.a q-values). This applies to values used in accept-charset,
+            accept-encoding, accept-language and related header fields with similar syntax rules. See
+            <see cref="T:Microsoft.Net.Http.Headers.MediaTypeHeaderValueComparer"/> for a comparer for media type
+            q-values.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Net.Http.Headers.StringWithQualityHeaderValueComparer.Compare(Microsoft.Net.Http.Headers.StringWithQualityHeaderValue,Microsoft.Net.Http.Headers.StringWithQualityHeaderValue)">
+            <summary>
+            Compares two <see cref="T:Microsoft.Net.Http.Headers.StringWithQualityHeaderValue"/> based on their quality value
+            (a.k.a their "q-value").
+            Values with identical q-values are considered equal (i.e the result is 0) with the exception of wild-card
+            values (i.e. a value of "*") which are considered less than non-wild-card values. This allows to sort
+            a sequence of <see cref="T:Microsoft.Net.Http.Headers.StringWithQualityHeaderValue"/> following their q-values ending up with any
+            wild-cards at the end.
+            </summary>
+            <param name="stringWithQuality1">The first value to compare.</param>
+            <param name="stringWithQuality2">The second value to compare</param>
+            <returns>The result of the comparison.</returns>
+        </member>
+    </members>
+</doc>

