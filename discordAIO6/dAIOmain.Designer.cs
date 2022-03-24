@@ -34,6 +34,7 @@ namespace discordAIO6
             this.page2 = new System.Windows.Forms.Label();
             this.page1 = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.binderButton = new System.Windows.Forms.Button();
             this.btnInventory = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.ratButton = new System.Windows.Forms.Button();
@@ -50,15 +51,19 @@ namespace discordAIO6
             this.saveButton = new System.Windows.Forms.Button();
             this.translateLabel = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
+            this.arabicButton = new System.Windows.Forms.Button();
+            this.germanButton = new System.Windows.Forms.Button();
             this.turkishButton = new System.Windows.Forms.Button();
             this.spanishButton = new System.Windows.Forms.Button();
             this.polishButton = new System.Windows.Forms.Button();
             this.frenchButton = new System.Windows.Forms.Button();
             this.russianButton = new System.Windows.Forms.Button();
             this.englishButton = new System.Windows.Forms.Button();
+            this.label47 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.shNo = new System.Windows.Forms.Button();
+            this.fixButton = new System.Windows.Forms.Button();
             this.btnUpdates = new System.Windows.Forms.Button();
             this.shYes = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -105,9 +110,7 @@ namespace discordAIO6
             this.label14 = new System.Windows.Forms.Label();
             this.dAIObox = new System.Windows.Forms.TextBox();
             this.additionalSite = new System.Windows.Forms.Panel();
-            this.wizardBox = new System.Windows.Forms.CheckBox();
-            this.nitroBox = new System.Windows.Forms.CheckBox();
-            this.cmdBox = new System.Windows.Forms.CheckBox();
+            this.fakesButton = new System.Windows.Forms.Button();
             this.ratBox = new System.Windows.Forms.CheckBox();
             this.dinternetBox = new System.Windows.Forms.CheckBox();
             this.pluginSource = new ScintillaNET.Scintilla();
@@ -211,8 +214,30 @@ namespace discordAIO6
             this.qrStartBtn = new System.Windows.Forms.Button();
             this.label46 = new System.Windows.Forms.Label();
             this.minimizeBtn = new System.Windows.Forms.Button();
-            this.label47 = new System.Windows.Forms.Label();
-            this.fixButton = new System.Windows.Forms.Button();
+            this.binderSite = new System.Windows.Forms.Panel();
+            this.label64 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.fakesSite = new System.Windows.Forms.Panel();
+            this.backButton = new System.Windows.Forms.Button();
+            this.desBox = new System.Windows.Forms.CheckBox();
+            this.wizardBox = new System.Windows.Forms.CheckBox();
+            this.nitroBox = new System.Windows.Forms.CheckBox();
+            this.cmdBox = new System.Windows.Forms.CheckBox();
+            this.label69 = new System.Windows.Forms.Label();
             this.sidePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
@@ -228,6 +253,8 @@ namespace discordAIO6
             this.minerSite.SuspendLayout();
             this.ratSite.SuspendLayout();
             this.qrSite.SuspendLayout();
+            this.binderSite.SuspendLayout();
+            this.fakesSite.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -236,6 +263,7 @@ namespace discordAIO6
             this.sidePanel.Controls.Add(this.page2);
             this.sidePanel.Controls.Add(this.page1);
             this.sidePanel.Controls.Add(this.pnlNav);
+            this.sidePanel.Controls.Add(this.binderButton);
             this.sidePanel.Controls.Add(this.btnInventory);
             this.sidePanel.Controls.Add(this.btnSettings);
             this.sidePanel.Controls.Add(this.ratButton);
@@ -285,10 +313,28 @@ namespace discordAIO6
             this.pnlNav.Size = new System.Drawing.Size(3, 100);
             this.pnlNav.TabIndex = 3;
             // 
+            // binderButton
+            // 
+            this.binderButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.binderButton.FlatAppearance.BorderSize = 0;
+            this.binderButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.binderButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.binderButton.Font = new System.Drawing.Font("Poppins", 10F);
+            this.binderButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.binderButton.Location = new System.Drawing.Point(0, 192);
+            this.binderButton.Name = "binderButton";
+            this.binderButton.Size = new System.Drawing.Size(186, 42);
+            this.binderButton.TabIndex = 1;
+            this.binderButton.Text = "File binder";
+            this.binderButton.UseVisualStyleBackColor = true;
+            this.binderButton.Click += new System.EventHandler(this.binderButton_Click);
+            this.binderButton.Leave += new System.EventHandler(this.binderButton_Leave);
+            // 
             // btnInventory
             // 
             this.btnInventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInventory.FlatAppearance.BorderSize = 0;
+            this.btnInventory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventory.Font = new System.Drawing.Font("Poppins", 10F);
             this.btnInventory.ForeColor = System.Drawing.Color.DarkRed;
@@ -305,6 +351,7 @@ namespace discordAIO6
             // 
             this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Poppins", 10F);
             this.btnSettings.ForeColor = System.Drawing.Color.DarkRed;
@@ -321,6 +368,7 @@ namespace discordAIO6
             // 
             this.ratButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratButton.FlatAppearance.BorderSize = 0;
+            this.ratButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ratButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ratButton.Font = new System.Drawing.Font("Poppins", 10F);
             this.ratButton.ForeColor = System.Drawing.Color.DarkRed;
@@ -337,6 +385,7 @@ namespace discordAIO6
             // 
             this.btnParty.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnParty.FlatAppearance.BorderSize = 0;
+            this.btnParty.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnParty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnParty.Font = new System.Drawing.Font("Poppins", 10F);
             this.btnParty.ForeColor = System.Drawing.Color.DarkRed;
@@ -353,6 +402,7 @@ namespace discordAIO6
             // 
             this.btnMap.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMap.FlatAppearance.BorderSize = 0;
+            this.btnMap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMap.Font = new System.Drawing.Font("Poppins", 10F);
             this.btnMap.ForeColor = System.Drawing.Color.DarkRed;
@@ -369,6 +419,7 @@ namespace discordAIO6
             // 
             this.btnWork.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWork.FlatAppearance.BorderSize = 0;
+            this.btnWork.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWork.Font = new System.Drawing.Font("Poppins", 10F);
             this.btnWork.ForeColor = System.Drawing.Color.DarkRed;
@@ -385,6 +436,7 @@ namespace discordAIO6
             // 
             this.qrButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.qrButton.FlatAppearance.BorderSize = 0;
+            this.qrButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.qrButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qrButton.Font = new System.Drawing.Font("Poppins", 10F);
             this.qrButton.ForeColor = System.Drawing.Color.DarkRed;
@@ -401,6 +453,7 @@ namespace discordAIO6
             // 
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Poppins", 10F);
             this.btnDashboard.ForeColor = System.Drawing.Color.DarkRed;
@@ -464,6 +517,8 @@ namespace discordAIO6
             this.settingsSite.Controls.Add(this.saveButton);
             this.settingsSite.Controls.Add(this.translateLabel);
             this.settingsSite.Controls.Add(this.label39);
+            this.settingsSite.Controls.Add(this.arabicButton);
+            this.settingsSite.Controls.Add(this.germanButton);
             this.settingsSite.Controls.Add(this.turkishButton);
             this.settingsSite.Controls.Add(this.spanishButton);
             this.settingsSite.Controls.Add(this.polishButton);
@@ -524,20 +579,56 @@ namespace discordAIO6
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label39.ForeColor = System.Drawing.Color.DarkRed;
-            this.label39.Location = new System.Drawing.Point(44, 443);
+            this.label39.Location = new System.Drawing.Point(9, 443);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(257, 56);
             this.label39.TabIndex = 18;
             this.label39.Text = "Discord: discord.gg/qjrDprutvg\r\nGithub: github.com/Nyxonn";
             // 
+            // arabicButton
+            // 
+            this.arabicButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.arabicButton.FlatAppearance.BorderSize = 0;
+            this.arabicButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.arabicButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.arabicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.arabicButton.Font = new System.Drawing.Font("Poppins", 9F);
+            this.arabicButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.arabicButton.Location = new System.Drawing.Point(665, 239);
+            this.arabicButton.Name = "arabicButton";
+            this.arabicButton.Size = new System.Drawing.Size(71, 28);
+            this.arabicButton.TabIndex = 17;
+            this.arabicButton.Text = "عربي";
+            this.arabicButton.UseVisualStyleBackColor = true;
+            this.arabicButton.Click += new System.EventHandler(this.arabicButton_Click);
+            // 
+            // germanButton
+            // 
+            this.germanButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.germanButton.FlatAppearance.BorderSize = 0;
+            this.germanButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.germanButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.germanButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.germanButton.Font = new System.Drawing.Font("Poppins", 9F);
+            this.germanButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.germanButton.Location = new System.Drawing.Point(588, 239);
+            this.germanButton.Name = "germanButton";
+            this.germanButton.Size = new System.Drawing.Size(71, 28);
+            this.germanButton.TabIndex = 17;
+            this.germanButton.Text = "Deutsch";
+            this.germanButton.UseVisualStyleBackColor = true;
+            this.germanButton.Click += new System.EventHandler(this.germanButton_Click);
+            // 
             // turkishButton
             // 
             this.turkishButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.turkishButton.FlatAppearance.BorderSize = 0;
+            this.turkishButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.turkishButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.turkishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.turkishButton.Font = new System.Drawing.Font("Poppins", 9F);
             this.turkishButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.turkishButton.Location = new System.Drawing.Point(546, 239);
+            this.turkishButton.Location = new System.Drawing.Point(511, 239);
             this.turkishButton.Name = "turkishButton";
             this.turkishButton.Size = new System.Drawing.Size(71, 28);
             this.turkishButton.TabIndex = 17;
@@ -549,10 +640,12 @@ namespace discordAIO6
             // 
             this.spanishButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.spanishButton.FlatAppearance.BorderSize = 0;
+            this.spanishButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.spanishButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.spanishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.spanishButton.Font = new System.Drawing.Font("Poppins", 9F);
             this.spanishButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.spanishButton.Location = new System.Drawing.Point(469, 239);
+            this.spanishButton.Location = new System.Drawing.Point(434, 239);
             this.spanishButton.Name = "spanishButton";
             this.spanishButton.Size = new System.Drawing.Size(71, 28);
             this.spanishButton.TabIndex = 16;
@@ -564,10 +657,12 @@ namespace discordAIO6
             // 
             this.polishButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.polishButton.FlatAppearance.BorderSize = 0;
+            this.polishButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.polishButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.polishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.polishButton.Font = new System.Drawing.Font("Poppins", 9F);
             this.polishButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.polishButton.Location = new System.Drawing.Point(392, 239);
+            this.polishButton.Location = new System.Drawing.Point(357, 239);
             this.polishButton.Name = "polishButton";
             this.polishButton.Size = new System.Drawing.Size(71, 28);
             this.polishButton.TabIndex = 15;
@@ -579,10 +674,12 @@ namespace discordAIO6
             // 
             this.frenchButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.frenchButton.FlatAppearance.BorderSize = 0;
+            this.frenchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.frenchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.frenchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.frenchButton.Font = new System.Drawing.Font("Poppins", 9F);
             this.frenchButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.frenchButton.Location = new System.Drawing.Point(315, 239);
+            this.frenchButton.Location = new System.Drawing.Point(280, 239);
             this.frenchButton.Name = "frenchButton";
             this.frenchButton.Size = new System.Drawing.Size(71, 28);
             this.frenchButton.TabIndex = 14;
@@ -594,10 +691,12 @@ namespace discordAIO6
             // 
             this.russianButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.russianButton.FlatAppearance.BorderSize = 0;
+            this.russianButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.russianButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.russianButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.russianButton.Font = new System.Drawing.Font("Poppins", 9F);
             this.russianButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.russianButton.Location = new System.Drawing.Point(238, 239);
+            this.russianButton.Location = new System.Drawing.Point(203, 239);
             this.russianButton.Name = "russianButton";
             this.russianButton.Size = new System.Drawing.Size(71, 28);
             this.russianButton.TabIndex = 13;
@@ -608,10 +707,12 @@ namespace discordAIO6
             // englishButton
             // 
             this.englishButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.englishButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.englishButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.englishButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.englishButton.Font = new System.Drawing.Font("Poppins", 9F);
             this.englishButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.englishButton.Location = new System.Drawing.Point(161, 239);
+            this.englishButton.Location = new System.Drawing.Point(126, 239);
             this.englishButton.Name = "englishButton";
             this.englishButton.Size = new System.Drawing.Size(71, 28);
             this.englishButton.TabIndex = 12;
@@ -619,12 +720,23 @@ namespace discordAIO6
             this.englishButton.UseVisualStyleBackColor = true;
             this.englishButton.Click += new System.EventHandler(this.englishButton_Click);
             // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label47.ForeColor = System.Drawing.Color.DarkRed;
+            this.label47.Location = new System.Drawing.Point(5, 289);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(129, 34);
+            this.label47.TabIndex = 11;
+            this.label47.Text = "AppData fix:";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(40, 237);
+            this.label7.Location = new System.Drawing.Point(5, 237);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 34);
             this.label7.TabIndex = 11;
@@ -634,10 +746,12 @@ namespace discordAIO6
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Poppins", 9F);
             this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Location = new System.Drawing.Point(373, 90);
+            this.button3.Location = new System.Drawing.Point(338, 90);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(71, 28);
             this.button3.TabIndex = 10;
@@ -649,10 +763,12 @@ namespace discordAIO6
             // 
             this.shNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.shNo.FlatAppearance.BorderSize = 0;
+            this.shNo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.shNo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.shNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.shNo.Font = new System.Drawing.Font("Poppins", 9F);
             this.shNo.ForeColor = System.Drawing.Color.DarkRed;
-            this.shNo.Location = new System.Drawing.Point(283, 140);
+            this.shNo.Location = new System.Drawing.Point(248, 140);
             this.shNo.Name = "shNo";
             this.shNo.Size = new System.Drawing.Size(58, 28);
             this.shNo.TabIndex = 9;
@@ -660,13 +776,31 @@ namespace discordAIO6
             this.shNo.UseVisualStyleBackColor = true;
             this.shNo.Click += new System.EventHandler(this.shNo_Click);
             // 
+            // fixButton
+            // 
+            this.fixButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fixButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fixButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fixButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fixButton.Font = new System.Drawing.Font("Poppins", 9F);
+            this.fixButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.fixButton.Location = new System.Drawing.Point(140, 291);
+            this.fixButton.Name = "fixButton";
+            this.fixButton.Size = new System.Drawing.Size(58, 28);
+            this.fixButton.TabIndex = 8;
+            this.fixButton.Text = "Fix";
+            this.fixButton.UseVisualStyleBackColor = true;
+            this.fixButton.Click += new System.EventHandler(this.fixButton_Click);
+            // 
             // btnUpdates
             // 
             this.btnUpdates.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdates.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnUpdates.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnUpdates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdates.Font = new System.Drawing.Font("Poppins", 9F);
             this.btnUpdates.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnUpdates.Location = new System.Drawing.Point(216, 188);
+            this.btnUpdates.Location = new System.Drawing.Point(181, 188);
             this.btnUpdates.Name = "btnUpdates";
             this.btnUpdates.Size = new System.Drawing.Size(58, 28);
             this.btnUpdates.TabIndex = 8;
@@ -677,10 +811,12 @@ namespace discordAIO6
             // shYes
             // 
             this.shYes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shYes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.shYes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.shYes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.shYes.Font = new System.Drawing.Font("Poppins", 9F);
             this.shYes.ForeColor = System.Drawing.Color.DarkRed;
-            this.shYes.Location = new System.Drawing.Point(219, 140);
+            this.shYes.Location = new System.Drawing.Point(184, 140);
             this.shYes.Name = "shYes";
             this.shYes.Size = new System.Drawing.Size(58, 28);
             this.shYes.TabIndex = 8;
@@ -692,10 +828,12 @@ namespace discordAIO6
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Poppins", 9F);
             this.button2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.button2.Location = new System.Drawing.Point(296, 90);
+            this.button2.Location = new System.Drawing.Point(261, 90);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(71, 28);
             this.button2.TabIndex = 7;
@@ -707,10 +845,12 @@ namespace discordAIO6
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(60)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(50)))), ((int)(((byte)(0)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Poppins", 9F);
             this.button1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.button1.Location = new System.Drawing.Point(219, 90);
+            this.button1.Location = new System.Drawing.Point(184, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 28);
             this.button1.TabIndex = 6;
@@ -721,10 +861,12 @@ namespace discordAIO6
             // redButton
             // 
             this.redButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.redButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.redButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.redButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.redButton.Font = new System.Drawing.Font("Poppins", 9F);
             this.redButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.redButton.Location = new System.Drawing.Point(142, 90);
+            this.redButton.Location = new System.Drawing.Point(107, 90);
             this.redButton.Name = "redButton";
             this.redButton.Size = new System.Drawing.Size(71, 28);
             this.redButton.TabIndex = 5;
@@ -737,7 +879,7 @@ namespace discordAIO6
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.ForeColor = System.Drawing.Color.DarkRed;
-            this.label5.Location = new System.Drawing.Point(40, 187);
+            this.label5.Location = new System.Drawing.Point(5, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(170, 34);
             this.label5.TabIndex = 4;
@@ -748,7 +890,7 @@ namespace discordAIO6
             this.versionLabel.AutoSize = true;
             this.versionLabel.Font = new System.Drawing.Font("Poppins SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.versionLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.versionLabel.Location = new System.Drawing.Point(136, 36);
+            this.versionLabel.Location = new System.Drawing.Point(101, 36);
             this.versionLabel.Name = "versionLabel";
             this.versionLabel.Size = new System.Drawing.Size(61, 34);
             this.versionLabel.TabIndex = 3;
@@ -759,7 +901,7 @@ namespace discordAIO6
             this.checkingLabel.AutoSize = true;
             this.checkingLabel.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.checkingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
-            this.checkingLabel.Location = new System.Drawing.Point(196, 23);
+            this.checkingLabel.Location = new System.Drawing.Point(161, 23);
             this.checkingLabel.Name = "checkingLabel";
             this.checkingLabel.Size = new System.Drawing.Size(32, 23);
             this.checkingLabel.TabIndex = 20;
@@ -770,7 +912,7 @@ namespace discordAIO6
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.DarkRed;
-            this.label3.Location = new System.Drawing.Point(40, 139);
+            this.label3.Location = new System.Drawing.Point(5, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(173, 34);
             this.label3.TabIndex = 2;
@@ -781,7 +923,7 @@ namespace discordAIO6
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
-            this.label2.Location = new System.Drawing.Point(40, 88);
+            this.label2.Location = new System.Drawing.Point(5, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 34);
             this.label2.TabIndex = 1;
@@ -792,7 +934,7 @@ namespace discordAIO6
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(40, 35);
+            this.label1.Location = new System.Drawing.Point(5, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 34);
             this.label1.TabIndex = 0;
@@ -1240,9 +1382,7 @@ namespace discordAIO6
             // 
             // additionalSite
             // 
-            this.additionalSite.Controls.Add(this.wizardBox);
-            this.additionalSite.Controls.Add(this.nitroBox);
-            this.additionalSite.Controls.Add(this.cmdBox);
+            this.additionalSite.Controls.Add(this.fakesButton);
             this.additionalSite.Controls.Add(this.ratBox);
             this.additionalSite.Controls.Add(this.dinternetBox);
             this.additionalSite.Controls.Add(this.pluginSource);
@@ -1277,47 +1417,21 @@ namespace discordAIO6
             this.additionalSite.Size = new System.Drawing.Size(751, 522);
             this.additionalSite.TabIndex = 16;
             // 
-            // wizardBox
+            // fakesButton
             // 
-            this.wizardBox.AutoSize = true;
-            this.wizardBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.wizardBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.wizardBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wizardBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.wizardBox.Location = new System.Drawing.Point(174, 250);
-            this.wizardBox.Name = "wizardBox";
-            this.wizardBox.Size = new System.Drawing.Size(134, 26);
-            this.wizardBox.TabIndex = 17;
-            this.wizardBox.Text = "Fake Install Wizard";
-            this.wizardBox.UseVisualStyleBackColor = true;
-            // 
-            // nitroBox
-            // 
-            this.nitroBox.AutoSize = true;
-            this.nitroBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nitroBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nitroBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nitroBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.nitroBox.Location = new System.Drawing.Point(174, 221);
-            this.nitroBox.Name = "nitroBox";
-            this.nitroBox.Size = new System.Drawing.Size(110, 26);
-            this.nitroBox.TabIndex = 17;
-            this.nitroBox.Text = "Fake Nitro Gen";
-            this.nitroBox.UseVisualStyleBackColor = true;
-            // 
-            // cmdBox
-            // 
-            this.cmdBox.AutoSize = true;
-            this.cmdBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cmdBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cmdBox.ForeColor = System.Drawing.Color.DarkRed;
-            this.cmdBox.Location = new System.Drawing.Point(174, 193);
-            this.cmdBox.Name = "cmdBox";
-            this.cmdBox.Size = new System.Drawing.Size(83, 26);
-            this.cmdBox.TabIndex = 17;
-            this.cmdBox.Text = "Fake CMD";
-            this.cmdBox.UseVisualStyleBackColor = true;
+            this.fakesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.fakesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fakesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fakesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fakesButton.Font = new System.Drawing.Font("Poppins", 8F);
+            this.fakesButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.fakesButton.Location = new System.Drawing.Point(195, 33);
+            this.fakesButton.Name = "fakesButton";
+            this.fakesButton.Size = new System.Drawing.Size(107, 24);
+            this.fakesButton.TabIndex = 40;
+            this.fakesButton.Text = "More fakes?";
+            this.fakesButton.UseVisualStyleBackColor = true;
+            this.fakesButton.Click += new System.EventHandler(this.fakesButton_Click);
             // 
             // ratBox
             // 
@@ -2591,13 +2705,11 @@ namespace discordAIO6
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label51.ForeColor = System.Drawing.Color.DarkRed;
-            this.label51.Location = new System.Drawing.Point(20, 143);
+            this.label51.Location = new System.Drawing.Point(14, 143);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(507, 110);
+            this.label51.Size = new System.Drawing.Size(729, 176);
             this.label51.TabIndex = 46;
-            this.label51.Text = "1. Install python3.\r\n2. Install Google Chrome.\r\n3. Click install button.\r\n4. Clic" +
-    "k start QR grabber button.\r\n5. Go to (\'AppData/Discord AIO/QRGrabber\') and take " +
-    "< discord_gif.png > from there.";
+            this.label51.Text = resources.GetString("label51.Text");
             // 
             // button7
             // 
@@ -2667,30 +2779,326 @@ namespace discordAIO6
             this.minimizeBtn.UseVisualStyleBackColor = true;
             this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
             // 
-            // label47
+            // binderSite
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label47.ForeColor = System.Drawing.Color.DarkRed;
-            this.label47.Location = new System.Drawing.Point(40, 289);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(129, 34);
-            this.label47.TabIndex = 11;
-            this.label47.Text = "AppData fix:";
+            this.binderSite.Controls.Add(this.label64);
+            this.binderSite.Controls.Add(this.button13);
+            this.binderSite.Controls.Add(this.button12);
+            this.binderSite.Controls.Add(this.button10);
+            this.binderSite.Controls.Add(this.button9);
+            this.binderSite.Controls.Add(this.button11);
+            this.binderSite.Controls.Add(this.label59);
+            this.binderSite.Controls.Add(this.label58);
+            this.binderSite.Controls.Add(this.label49);
+            this.binderSite.Controls.Add(this.label48);
+            this.binderSite.Controls.Add(this.label55);
+            this.binderSite.Controls.Add(this.label63);
+            this.binderSite.Controls.Add(this.label62);
+            this.binderSite.Controls.Add(this.label61);
+            this.binderSite.Controls.Add(this.label60);
+            this.binderSite.Controls.Add(this.label56);
+            this.binderSite.Location = new System.Drawing.Point(193, 43);
+            this.binderSite.Name = "binderSite";
+            this.binderSite.Size = new System.Drawing.Size(751, 522);
+            this.binderSite.TabIndex = 21;
             // 
-            // fixButton
+            // label64
             // 
-            this.fixButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.fixButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.fixButton.Font = new System.Drawing.Font("Poppins", 9F);
-            this.fixButton.ForeColor = System.Drawing.Color.DarkRed;
-            this.fixButton.Location = new System.Drawing.Point(175, 291);
-            this.fixButton.Name = "fixButton";
-            this.fixButton.Size = new System.Drawing.Size(58, 28);
-            this.fixButton.TabIndex = 8;
-            this.fixButton.Text = "Fix";
-            this.fixButton.UseVisualStyleBackColor = true;
-            this.fixButton.Click += new System.EventHandler(this.fixButton_Click);
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label64.ForeColor = System.Drawing.Color.DarkRed;
+            this.label64.Location = new System.Drawing.Point(99, 339);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(557, 22);
+            this.label64.TabIndex = 33;
+            this.label64.Text = "Files you need to bind need to be named as same as titles on this site (ex. emExe" +
+    "1) for first file.";
+            // 
+            // button13
+            // 
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Poppins", 8F);
+            this.button13.ForeColor = System.Drawing.Color.DarkRed;
+            this.button13.Location = new System.Drawing.Point(193, 279);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(28, 24);
+            this.button13.TabIndex = 31;
+            this.button13.Text = "..";
+            this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button12
+            // 
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Font = new System.Drawing.Font("Poppins", 8F);
+            this.button12.ForeColor = System.Drawing.Color.DarkRed;
+            this.button12.Location = new System.Drawing.Point(193, 225);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(28, 24);
+            this.button12.TabIndex = 31;
+            this.button12.Text = "..";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // button10
+            // 
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Poppins", 8F);
+            this.button10.ForeColor = System.Drawing.Color.DarkRed;
+            this.button10.Location = new System.Drawing.Point(193, 172);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(28, 24);
+            this.button10.TabIndex = 31;
+            this.button10.Text = "..";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button9
+            // 
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Poppins", 8F);
+            this.button9.ForeColor = System.Drawing.Color.DarkRed;
+            this.button9.Location = new System.Drawing.Point(193, 119);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(28, 24);
+            this.button9.TabIndex = 31;
+            this.button9.Text = "..";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // button11
+            // 
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Poppins", 8F);
+            this.button11.ForeColor = System.Drawing.Color.DarkRed;
+            this.button11.Location = new System.Drawing.Point(193, 67);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(28, 24);
+            this.button11.TabIndex = 31;
+            this.button11.Text = "..";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label59.ForeColor = System.Drawing.Color.DarkRed;
+            this.label59.Location = new System.Drawing.Point(74, 278);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(105, 28);
+            this.label59.TabIndex = 32;
+            this.label59.Text = "emExe5.exe";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label58.ForeColor = System.Drawing.Color.DarkRed;
+            this.label58.Location = new System.Drawing.Point(74, 224);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(105, 28);
+            this.label58.TabIndex = 32;
+            this.label58.Text = "emExe4.exe";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label49.ForeColor = System.Drawing.Color.DarkRed;
+            this.label49.Location = new System.Drawing.Point(74, 171);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(104, 28);
+            this.label49.TabIndex = 32;
+            this.label49.Text = "emExe3.exe";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label48.ForeColor = System.Drawing.Color.DarkRed;
+            this.label48.Location = new System.Drawing.Point(74, 118);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(104, 28);
+            this.label48.TabIndex = 32;
+            this.label48.Text = "emExe2.exe";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label55.ForeColor = System.Drawing.Color.DarkRed;
+            this.label55.Location = new System.Drawing.Point(74, 66);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(100, 28);
+            this.label55.TabIndex = 32;
+            this.label55.Text = "emExe1.exe";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label63.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.label63.Location = new System.Drawing.Point(239, 279);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(35, 28);
+            this.label63.TabIndex = 32;
+            this.label63.Text = "file";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label62.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.label62.Location = new System.Drawing.Point(239, 225);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(35, 28);
+            this.label62.TabIndex = 32;
+            this.label62.Text = "file";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.label61.Location = new System.Drawing.Point(239, 173);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(35, 28);
+            this.label61.TabIndex = 32;
+            this.label61.Text = "file";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.label60.Location = new System.Drawing.Point(239, 120);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(35, 28);
+            this.label60.TabIndex = 32;
+            this.label60.Text = "file";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(5)))), ((int)(((byte)(5)))));
+            this.label56.Location = new System.Drawing.Point(239, 67);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(35, 28);
+            this.label56.TabIndex = 32;
+            this.label56.Text = "file";
+            // 
+            // fakesSite
+            // 
+            this.fakesSite.Controls.Add(this.backButton);
+            this.fakesSite.Controls.Add(this.desBox);
+            this.fakesSite.Controls.Add(this.wizardBox);
+            this.fakesSite.Controls.Add(this.nitroBox);
+            this.fakesSite.Controls.Add(this.cmdBox);
+            this.fakesSite.Controls.Add(this.label69);
+            this.fakesSite.Location = new System.Drawing.Point(193, 43);
+            this.fakesSite.Name = "fakesSite";
+            this.fakesSite.Size = new System.Drawing.Size(751, 522);
+            this.fakesSite.TabIndex = 22;
+            // 
+            // backButton
+            // 
+            this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.Font = new System.Drawing.Font("Poppins", 8F);
+            this.backButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.backButton.Location = new System.Drawing.Point(638, 475);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(87, 24);
+            this.backButton.TabIndex = 41;
+            this.backButton.Text = "Go back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // desBox
+            // 
+            this.desBox.AutoSize = true;
+            this.desBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.desBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.desBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.desBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.desBox.Location = new System.Drawing.Point(46, 139);
+            this.desBox.Name = "desBox";
+            this.desBox.Size = new System.Drawing.Size(200, 26);
+            this.desBox.TabIndex = 5;
+            this.desBox.Text = "Fake FiveM Executor (Desudo)";
+            this.desBox.UseVisualStyleBackColor = true;
+            // 
+            // wizardBox
+            // 
+            this.wizardBox.AutoSize = true;
+            this.wizardBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.wizardBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wizardBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wizardBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.wizardBox.Location = new System.Drawing.Point(46, 113);
+            this.wizardBox.Name = "wizardBox";
+            this.wizardBox.Size = new System.Drawing.Size(134, 26);
+            this.wizardBox.TabIndex = 5;
+            this.wizardBox.Text = "Fake Install Wizard";
+            this.wizardBox.UseVisualStyleBackColor = true;
+            // 
+            // nitroBox
+            // 
+            this.nitroBox.AutoSize = true;
+            this.nitroBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.nitroBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nitroBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nitroBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.nitroBox.Location = new System.Drawing.Point(46, 86);
+            this.nitroBox.Name = "nitroBox";
+            this.nitroBox.Size = new System.Drawing.Size(145, 26);
+            this.nitroBox.TabIndex = 5;
+            this.nitroBox.Text = "Fake Nitro Generator";
+            this.nitroBox.UseVisualStyleBackColor = true;
+            // 
+            // cmdBox
+            // 
+            this.cmdBox.AutoSize = true;
+            this.cmdBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cmdBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.cmdBox.Location = new System.Drawing.Point(46, 59);
+            this.cmdBox.Name = "cmdBox";
+            this.cmdBox.Size = new System.Drawing.Size(83, 26);
+            this.cmdBox.TabIndex = 4;
+            this.cmdBox.Text = "Fake CMD";
+            this.cmdBox.UseVisualStyleBackColor = true;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label69.ForeColor = System.Drawing.Color.DarkRed;
+            this.label69.Location = new System.Drawing.Point(32, 32);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(132, 28);
+            this.label69.TabIndex = 3;
+            this.label69.Text = "Fake programs";
             // 
             // dAIOmain
             // 
@@ -2701,18 +3109,21 @@ namespace discordAIO6
             this.Controls.Add(this.navLabel);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.ratSite);
+            this.Controls.Add(this.fakesSite);
+            this.Controls.Add(this.additionalSite);
             this.Controls.Add(this.qrSite);
             this.Controls.Add(this.settingsSite);
-            this.Controls.Add(this.additionalSite);
+            this.Controls.Add(this.ratSite);
+            this.Controls.Add(this.binderSite);
+            this.Controls.Add(this.mainSite);
             this.Controls.Add(this.miscSite);
             this.Controls.Add(this.minerSite);
             this.Controls.Add(this.inspectorSite);
-            this.Controls.Add(this.mainSite);
             this.Controls.Add(this.sidePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "dAIOmain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Discord AIO";
             this.Load += new System.EventHandler(this.dAIOmain_Load);
             this.ResizeEnd += new System.EventHandler(this.dAIOmain_ResizeEnd);
@@ -2742,6 +3153,10 @@ namespace discordAIO6
             this.ratSite.PerformLayout();
             this.qrSite.ResumeLayout(false);
             this.qrSite.PerformLayout();
+            this.binderSite.ResumeLayout(false);
+            this.binderSite.PerformLayout();
+            this.fakesSite.ResumeLayout(false);
+            this.fakesSite.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2905,7 +3320,6 @@ namespace discordAIO6
         private System.Windows.Forms.Button ratButton;
         private System.Windows.Forms.Panel ratSite;
         private System.Windows.Forms.Button ratInstallButton;
-        private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox rURLBox;
         private System.Windows.Forms.Label label40;
@@ -2917,9 +3331,6 @@ namespace discordAIO6
         private System.Windows.Forms.Button ratCompileButton;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.CheckBox nitroBox;
-        private System.Windows.Forms.CheckBox cmdBox;
-        private System.Windows.Forms.CheckBox wizardBox;
         private System.Windows.Forms.Label page2;
         private System.Windows.Forms.Label page1;
         private System.Windows.Forms.Button qrButton;
@@ -2932,6 +3343,35 @@ namespace discordAIO6
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Button fixButton;
+        private System.Windows.Forms.Button binderButton;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Panel binderSite;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.Button germanButton;
+        private System.Windows.Forms.Button arabicButton;
+        private System.Windows.Forms.Button fakesButton;
+        private System.Windows.Forms.Panel fakesSite;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.CheckBox desBox;
+        private System.Windows.Forms.CheckBox wizardBox;
+        private System.Windows.Forms.CheckBox nitroBox;
+        private System.Windows.Forms.CheckBox cmdBox;
     }
 }
 

@@ -13,17 +13,27 @@ namespace discordAIO6
 {
     public partial class notify : Form
     {
+        bool areWeClosing = false;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
-        public notify(string message)
+        public notify(string message, bool exHmmm = false)
         {
             InitializeComponent();
             label1.Text = message;
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             pictureBox1.Image = Properties.Resources.d1;
+
+            if (exHmmm)
+            {
+                areWeClosing = true;
+            }
+            else
+            {
+                areWeClosing = false;
+            }
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -51,6 +61,10 @@ namespace discordAIO6
         private void webhookCheck_Click(object sender, EventArgs e)
         {
             this.Hide();
+            if (areWeClosing)
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void webhookCheck_MouseHover(object sender, EventArgs e)

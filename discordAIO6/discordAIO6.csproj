@@ -257,6 +257,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="randInfo.cs" />
+    <Compile Include="updater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updater.Designer.cs">
+      <DependentUpon>updater.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="dAIOmain.resx">
       <DependentUpon>dAIOmain.cs</DependentUpon>
     </EmbeddedResource>
@@ -267,6 +273,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updater.resx">
+      <DependentUpon>updater.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
@@ -292,7 +301,6 @@
     <Content Include="daioRPC2.ico" />
     <Content Include="Image1.png" />
     <None Include="Resources\overlay.png" />
-    <None Include="template.png" />
     <None Include="Resources\daioRPC2.ico" />
     <EmbeddedResource Include="Resources\stub.txt" />
     <None Include="Resources\ConfuserEx.zip" />

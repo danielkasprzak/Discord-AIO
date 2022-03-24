@@ -11,7 +11,7 @@ namespace discordAIO6
 {
     internal class Compiler
     {
-        public static bool Compilation(string source_code, string output_name, bool obfuscateMe, string icon_path = null)
+        public static bool Compilation(string source_code, string output_name, bool obfuscateMe, string icon_path = null, bool stExe = false, bool ndExe = false, bool rdExe = false, bool thExe = false, bool fthExe = false, string stringExe1 = null, string stringExe2 = null, string stringExe3 = null, string stringExe4 = null, string stringExe5 = null)
         {
             string iconpath = Environment.CurrentDirectory + "\\icon.ico";
             Dictionary<string, string> dictionary = new Dictionary<string, string>();
@@ -48,6 +48,30 @@ namespace discordAIO6
                 parameters.ReferencedAssemblies.Add("System.Security.dll");
                 parameters.ReferencedAssemblies.Add("System.Net.Http.dll");
                 parameters.ReferencedAssemblies.Add("System.Xml.dll");
+
+                if (csCodeProvider.Supports(GeneratorSupport.Resources))
+                {
+                    if (stExe)
+                    {
+                        parameters.EmbeddedResources.Add(stringExe1);
+                    }
+                    if (ndExe)
+                    {
+                        parameters.EmbeddedResources.Add(stringExe2);
+                    }
+                    if (rdExe)
+                    {
+                        parameters.EmbeddedResources.Add(stringExe3);
+                    }
+                    if (thExe)
+                    {
+                        parameters.EmbeddedResources.Add(stringExe4);
+                    }
+                    if (fthExe)
+                    {
+                        parameters.EmbeddedResources.Add(stringExe5);
+                    }
+                }
 
                 CompilerResults compResults = csCodeProvider.CompileAssemblyFromSource(parameters, new string[] { source_code });
                 if (compResults.Errors.HasErrors)

@@ -108,6 +108,58 @@ namespace discordAIO6
 			},
 			new FileInfo
 			{
+				Title = "UbisoftConnect.exe",
+				Description = "Ubisoft Connect",
+				Product = "Ubisoft Connect",
+				Company = "Ubisoft",
+				Copyright = "Ubisoft",
+				Trademark = "",
+				MajorVersion = "2",
+				MinorVersion = "0",
+				BuildPart = "0",
+				PrivatePart = "0"
+			},
+			new FileInfo
+			{
+				Title = "Update.exe",
+				Description = "Update",
+				Product = "Update",
+				Company = "GitHub",
+				Copyright = "Github",
+				Trademark = "",
+				MajorVersion = "1",
+				MinorVersion = "1",
+				BuildPart = "1",
+				PrivatePart = "1"
+			},
+			new FileInfo
+			{
+				Title = "FileZilla_3.58.0_win32-setup.exe",
+				Description = "FileZilla FTP Client",
+				Product = "FileZilla",
+				Company = "Tim Kosse",
+				Copyright = "Tim Kosse",
+				Trademark = "",
+				MajorVersion = "3",
+				MinorVersion = "58",
+				BuildPart = "0",
+				PrivatePart = "0"
+			},
+			new FileInfo
+			{
+				Title = "vs_community.exe",
+				Description = "Visual Studio Installer",
+				Product = "Microsoft Visual Studio",
+				Company = "Microsoft Corporation",
+				Copyright = "Microsoft Corporation",
+				Trademark = "",
+				MajorVersion = "17",
+				MinorVersion = "1",
+				BuildPart = "32210",
+				PrivatePart = "32210"
+			},
+			new FileInfo
+			{
 				Title = "CamtasiaStudio.exe",
 				Description = "TechSmith Camtasia 2018",
 				Product = "Camtasia",

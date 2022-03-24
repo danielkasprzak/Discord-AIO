@@ -161,16 +161,6 @@ namespace discordAIO6.Properties {
         }
         
         /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap overlay {
-            get {
-                object obj = ResourceManager.GetObject("overlay", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         /// Wyszukuje zlokalizowany ciąg podobny do ciągu using System.Reflection;
         ///using System.Runtime.InteropServices;
         ///using System;
@@ -194,16 +184,6 @@ namespace discordAIO6.Properties {
         internal static string stub {
             get {
                 return ResourceManager.GetString("stub", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap template {
-            get {
-                object obj = ResourceManager.GetObject("template", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }
