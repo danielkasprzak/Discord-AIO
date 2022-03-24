@@ -1,15 +1,8 @@
 <div align="center">
 
-# Discord-AIO
-  
-<p align="center">
-  <a href="https://discord.gg/qjrDprutvg">
-    <img src="https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png" width="240" height="240" />
-  </a>
-  
-  [![developer](https://img.shields.io/badge/Developer-Nyxon-520702.svg?style=flat)](https://github.com/Nyxonn)
-  ![developer](https://img.shields.io/badge/Version-0.7.0-520702.svg?style=flat)
-</p>
+<a href="https://discord.gg/qjrDprutvg">
+  <img src="https://user-images.githubusercontent.com/45857590/159925161-9649a671-fc31-469d-b809-b9decf895a42.png" width="600" height="240" />
+</a>
 
 ## Disclaimer
 
