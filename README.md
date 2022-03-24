@@ -8,7 +8,6 @@
   </a>
   
   [![developer](https://img.shields.io/badge/Developer-Nyxon-520702.svg?style=flat)](https://github.com/Nyxonn)
-  [![discord](https://img.shields.io/badge/Discord-Nyxon%234418-520702.svg?style=flat)](https://discordapp.com/users/690624129153630248)
   ![developer](https://img.shields.io/badge/Version-0.7.0-520702.svg?style=flat)
 </p>
 
