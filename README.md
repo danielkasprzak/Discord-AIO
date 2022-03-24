@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://discord.gg/qjrDprutvg">
-  <img src="https://user-images.githubusercontent.com/45857590/159925161-9649a671-fc31-469d-b809-b9decf895a42.png" width="600" height="240" />
+  <img src="https://user-images.githubusercontent.com/45857590/159925161-9649a671-fc31-469d-b809-b9decf895a42.png" width="500" height="200" />
 </a>
 
 ## Disclaimer
@@ -24,7 +24,7 @@ I will not be held accountable for any illegal activities.
 [Credits](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#credits)<br/>
   
 <a href="https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.0/Discord.AIO.exe">
-  <img src="https://user-images.githubusercontent.com/45857590/159923803-401ed8b8-44f6-4553-8d8f-ee5d2522353f.png" width="600" height="240" />
+  <img src="https://user-images.githubusercontent.com/45857590/159923803-401ed8b8-44f6-4553-8d8f-ee5d2522353f.png" width="400" height="160" />
 </a>
 
 ## Features of Discord AIO
