@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://discord.gg/qjrDprutvg">
+<a href="https://discord.gg/C8zauKSBR2">
   <img src="https://user-images.githubusercontent.com/45857590/159925161-9649a671-fc31-469d-b809-b9decf895a42.png" width="500" height="200" />
 </a>
 
@@ -192,7 +192,7 @@ Old branch.
 Yes, the program is 100% free and open source.
 
 - Where can i get help?<br />
-On Null Community [discord](https://discord.gg/qjrDprutvg).
+On our [discord](https://discord.gg/C8zauKSBR2).
 
 - How to use it?<br />
 You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.0/Discord.AIO.exe) or discord above.
@@ -237,7 +237,6 @@ Yes, i'm planning the support for long period of time, mainly on Null Community 
 ## Credits
 Discord AIO made by [Nyxon](https://github.com/Nyxonn)
 <br />
-Featuring [yunglean_](https://github.com/yunglean4171) and dv0l
 
 [![paypal](https://www.paypalobjects.com/en_US/PL/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=LHX286XBZ5BZS)
   
