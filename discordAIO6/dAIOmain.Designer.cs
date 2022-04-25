@@ -121,6 +121,11 @@ namespace discordAIO6
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.ransomBox = new System.Windows.Forms.CheckBox();
+            this.emuBox = new System.Windows.Forms.CheckBox();
+            this.sandboxBox = new System.Windows.Forms.CheckBox();
+            this.vmBox = new System.Windows.Forms.CheckBox();
+            this.debugBox = new System.Windows.Forms.CheckBox();
+            this.sniffersBox = new System.Windows.Forms.CheckBox();
             this.cryptoBox = new System.Windows.Forms.CheckBox();
             this.sbrhisBox = new System.Windows.Forms.CheckBox();
             this.swifiBox = new System.Windows.Forms.CheckBox();
@@ -233,6 +238,7 @@ namespace discordAIO6
             this.label56 = new System.Windows.Forms.Label();
             this.fakesSite = new System.Windows.Forms.Panel();
             this.backButton = new System.Windows.Forms.Button();
+            this.mercurialBox = new System.Windows.Forms.CheckBox();
             this.desBox = new System.Windows.Forms.CheckBox();
             this.wizardBox = new System.Windows.Forms.CheckBox();
             this.nitroBox = new System.Windows.Forms.CheckBox();
@@ -581,9 +587,9 @@ namespace discordAIO6
             this.label39.ForeColor = System.Drawing.Color.DarkRed;
             this.label39.Location = new System.Drawing.Point(9, 443);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(257, 56);
+            this.label39.Size = new System.Drawing.Size(270, 56);
             this.label39.TabIndex = 18;
-            this.label39.Text = "Discord: discord.gg/qjrDprutvg\r\nGithub: github.com/Nyxonn";
+            this.label39.Text = "Discord: discord.gg/C8zauKSBR2\r\nGithub: github.com/Nyxonn";
             // 
             // arabicButton
             // 
@@ -1393,6 +1399,11 @@ namespace discordAIO6
             this.additionalSite.Controls.Add(this.label19);
             this.additionalSite.Controls.Add(this.label18);
             this.additionalSite.Controls.Add(this.ransomBox);
+            this.additionalSite.Controls.Add(this.emuBox);
+            this.additionalSite.Controls.Add(this.sandboxBox);
+            this.additionalSite.Controls.Add(this.vmBox);
+            this.additionalSite.Controls.Add(this.debugBox);
+            this.additionalSite.Controls.Add(this.sniffersBox);
             this.additionalSite.Controls.Add(this.cryptoBox);
             this.additionalSite.Controls.Add(this.sbrhisBox);
             this.additionalSite.Controls.Add(this.swifiBox);
@@ -1549,6 +1560,76 @@ namespace discordAIO6
             this.ransomBox.TabIndex = 8;
             this.ransomBox.Text = "Ransomware";
             this.ransomBox.UseVisualStyleBackColor = true;
+            // 
+            // emuBox
+            // 
+            this.emuBox.AutoSize = true;
+            this.emuBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.emuBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.emuBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.emuBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.emuBox.Location = new System.Drawing.Point(174, 307);
+            this.emuBox.Name = "emuBox";
+            this.emuBox.Size = new System.Drawing.Size(113, 26);
+            this.emuBox.TabIndex = 7;
+            this.emuBox.Text = "Anti emulation";
+            this.emuBox.UseVisualStyleBackColor = true;
+            // 
+            // sandboxBox
+            // 
+            this.sandboxBox.AutoSize = true;
+            this.sandboxBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sandboxBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sandboxBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sandboxBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.sandboxBox.Location = new System.Drawing.Point(174, 278);
+            this.sandboxBox.Name = "sandboxBox";
+            this.sandboxBox.Size = new System.Drawing.Size(104, 26);
+            this.sandboxBox.TabIndex = 7;
+            this.sandboxBox.Text = "Anti sandbox";
+            this.sandboxBox.UseVisualStyleBackColor = true;
+            // 
+            // vmBox
+            // 
+            this.vmBox.AutoSize = true;
+            this.vmBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.vmBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.vmBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.vmBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.vmBox.Location = new System.Drawing.Point(174, 250);
+            this.vmBox.Name = "vmBox";
+            this.vmBox.Size = new System.Drawing.Size(70, 26);
+            this.vmBox.TabIndex = 7;
+            this.vmBox.Text = "Anti VM";
+            this.vmBox.UseVisualStyleBackColor = true;
+            // 
+            // debugBox
+            // 
+            this.debugBox.AutoSize = true;
+            this.debugBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.debugBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.debugBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.debugBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.debugBox.Location = new System.Drawing.Point(174, 221);
+            this.debugBox.Name = "debugBox";
+            this.debugBox.Size = new System.Drawing.Size(91, 26);
+            this.debugBox.TabIndex = 7;
+            this.debugBox.Text = "Anti debug";
+            this.debugBox.UseVisualStyleBackColor = true;
+            // 
+            // sniffersBox
+            // 
+            this.sniffersBox.AutoSize = true;
+            this.sniffersBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sniffersBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sniffersBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sniffersBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.sniffersBox.Location = new System.Drawing.Point(174, 193);
+            this.sniffersBox.Name = "sniffersBox";
+            this.sniffersBox.Size = new System.Drawing.Size(122, 26);
+            this.sniffersBox.TabIndex = 7;
+            this.sniffersBox.Text = "Anti web sniffers";
+            this.sniffersBox.UseVisualStyleBackColor = true;
             // 
             // cryptoBox
             // 
@@ -3007,6 +3088,7 @@ namespace discordAIO6
             // fakesSite
             // 
             this.fakesSite.Controls.Add(this.backButton);
+            this.fakesSite.Controls.Add(this.mercurialBox);
             this.fakesSite.Controls.Add(this.desBox);
             this.fakesSite.Controls.Add(this.wizardBox);
             this.fakesSite.Controls.Add(this.nitroBox);
@@ -3032,6 +3114,20 @@ namespace discordAIO6
             this.backButton.Text = "Go back";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // mercurialBox
+            // 
+            this.mercurialBox.AutoSize = true;
+            this.mercurialBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mercurialBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mercurialBox.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.mercurialBox.ForeColor = System.Drawing.Color.DarkRed;
+            this.mercurialBox.Location = new System.Drawing.Point(46, 165);
+            this.mercurialBox.Name = "mercurialBox";
+            this.mercurialBox.Size = new System.Drawing.Size(161, 26);
+            this.mercurialBox.TabIndex = 5;
+            this.mercurialBox.Text = "Fake Mercurial Grabber";
+            this.mercurialBox.UseVisualStyleBackColor = true;
             // 
             // desBox
             // 
@@ -3109,10 +3205,10 @@ namespace discordAIO6
             this.Controls.Add(this.navLabel);
             this.Controls.Add(this.minimizeBtn);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.settingsSite);
             this.Controls.Add(this.fakesSite);
             this.Controls.Add(this.additionalSite);
             this.Controls.Add(this.qrSite);
-            this.Controls.Add(this.settingsSite);
             this.Controls.Add(this.ratSite);
             this.Controls.Add(this.binderSite);
             this.Controls.Add(this.mainSite);
@@ -3372,6 +3468,12 @@ namespace discordAIO6
         private System.Windows.Forms.CheckBox wizardBox;
         private System.Windows.Forms.CheckBox nitroBox;
         private System.Windows.Forms.CheckBox cmdBox;
+        private System.Windows.Forms.CheckBox emuBox;
+        private System.Windows.Forms.CheckBox sandboxBox;
+        private System.Windows.Forms.CheckBox vmBox;
+        private System.Windows.Forms.CheckBox debugBox;
+        private System.Windows.Forms.CheckBox sniffersBox;
+        private System.Windows.Forms.CheckBox mercurialBox;
     }
 }
 

