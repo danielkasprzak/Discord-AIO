@@ -46,6 +46,8 @@ I will not be held accountable for any illegal activities.
 - [x] Stealing **IP address**
 - [x] Stealing MAC Address
 - [x] Stealing Desktop username
+- [x] Token Protectors bypass
+- [x] Self-updating, built-in updater
 
 #### Optional stealer features
 
