@@ -1,0 +1,25 @@
+﻿<Window x:Class="discord_aio_release.UpdaterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:discord_aio_release"
+        mc:Ignorable="d"
+        Title="Discord AIO - Updater" Height="400" Width="340"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent" MouseDown="Window_MouseDown" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/aionew.png">
+    <Grid x:Name="updaterGrid" Margin="20">
+        <Grid.Effect>
+            <DropShadowEffect BlurRadius="20" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
+        </Grid.Effect>
+        <Border x:Name="updaterLayout" Background="#101010" CornerRadius="0, 0, 0, 0">
+            <StackPanel>
+                <Image x:Name="updater_logo" Source="/aiooo.png" Height="172" Width="331"/>
+                <Label x:Name="updaterLabel" Foreground="#FF05FFAA" FontFamily="Inter" FontWeight="Normal" FontSize="12" HorizontalAlignment="Center" Margin="0,30,0,0">ESTABLISHING CONNECTION</Label>
+                <ProgressBar x:Name="updaterBar" Height="3" Width="201" BorderThickness="0" Foreground="#FF05FFAA" Background="#FF2B2B2B" Margin="0,3,0,0"/>
+                <Image x:Name="telegram_image" Height="22" Width="22" Source="{StaticResource icon_telegram_gray}" Cursor="Hand" MouseEnter="telegram_image_MouseEnter" MouseLeave="telegram_image_MouseLeave" Margin="0,80,0,0" MouseDown="telegram_image_MouseDown"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
