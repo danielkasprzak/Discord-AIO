@@ -50,7 +50,7 @@ The program utilizes dynamic compilation of files and also downloads necessary c
 Yes, i'm planning the support for long period of time, mainly on our [telegram](https://t.me/+fwzBhvxr1a0zOTU8).
 
 - Why the font looks different in my application?<br />
-You may need to download the Inter font and install it on your Windows.
+You may need to download the [Inter](https://rsms.me/inter/download/) font and install it on your Windows.
 
 <br /><br />
 <div align="center">
