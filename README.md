@@ -24,7 +24,7 @@ I will not be held accountable for any illegal activities.
 - [x] C# 6 compiler (Roslyn)
 - [x] API-connected
 - [x] Output metadata generating and **cloning**
-- [x] Webhook checker
+- [x] Webhook validity checking
 - [x] Customizable output icon
 
 <br /><br />
