@@ -26,11 +26,11 @@ I will not be held accountable for any illegal activities.
 - [x] Output metadata generating and **cloning**
 - [x] Webhook validity checking
 - [x] Customizable output icon
-- [ ] Webhook deleting
-- [ ] Webhook messaging
-- [ ] Webhook massive messaging
-- [ ] Local avatar system
-- [ ] Avatar changing
+- [x] Webhook deleting
+- [x] Webhook messaging
+- [x] Webhook massive messaging
+- [x] Local avatar system
+- [x] Avatar changing
 
 <br /><br />
 <div align="center">
