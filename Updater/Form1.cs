@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,18 +28,16 @@ namespace daioUpdater
             string _DP = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Discord AIO");
             string correctPath = Path.Combine(app_path, "Discord AIO.exe");
             string tempPath = Path.Combine(Path.GetTempPath(), "Discord.AIO.exe");
-            if (File.Exists(Path.Combine(_DP, "daioCompiler.exe")))
-                File.Delete(Path.Combine(_DP, "daioCompiler.exe"));
-
-            if (File.Exists(tempPath))
+            try
             {
-                if (File.Exists(correctPath))
-                    File.Delete(correctPath);
-
-                File.Copy(tempPath, correctPath);
-                File.Delete(tempPath);
-                MessageBox.Show("Application has been updated.\nPlease restart the application.", "Discord AIO");
+                if (File.Exists(tempPath))
+                {
+                    File.Copy(tempPath, correctPath, true);
+                    File.Delete(tempPath);
+                    MessageBox.Show("Application has been updated.\nPlease restart the application.", "Discord AIO");
+                }
             }
+            catch {}
             Environment.Exit(0);
         }
     }

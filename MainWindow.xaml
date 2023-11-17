@@ -17,7 +17,7 @@
             <StackPanel x:Name="side_panel" Margin="0,0,1060,0" Background="#FF131313">
                 <Ellipse Height="50" Stroke="Black" StrokeThickness="0" Width="50" HorizontalAlignment="Center" Margin="0,20,0,20">
                     <Ellipse.Fill>
-                        <ImageBrush x:Name="user_avatar" ImageSource="aiot.png"/>
+                        <ImageBrush x:Name="user_avatar" ImageSource="/defAvatar.png"/>
                     </Ellipse.Fill>
                 </Ellipse>
                 <Button x:Name="dashboard_button" Height="50" FontFamily="Inter" FontWeight="Normal" FontSize="14" Cursor="Hand" Click="dashboard_button_Click" Width="48" HorizontalAlignment="Center">
@@ -76,7 +76,35 @@
                         <Image x:Name="builder_image" Height="28" Width="28" Source="{StaticResource dToolDrawingImageEEE}"/>
                     </Border>
                 </Button>
-                <Button x:Name="settings_button" Height="50" FontFamily="Inter" FontWeight="Normal" FontSize="14" Cursor="Hand" Width="48" VerticalAlignment="Bottom" Margin="0,380,0,0" Click="settings_button_Click">
+                <Button x:Name="webhooks_button" Height="50" FontFamily="Inter" FontWeight="Normal" FontSize="14" Cursor="Hand" Click="webhooks_button_Click" Width="48" Margin="0,10,0,0">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="2"/>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                    <Border BorderThickness="0">
+                        <Border.Effect>
+                            <DropShadowEffect x:Name="webhooks_shadow" BlurRadius="40" Direction="-90" Color="#FF05FFAA" RenderingBias="Quality" ShadowDepth="0"/>
+                        </Border.Effect>
+                        <Image x:Name="webhooks_image" Height="28" Width="28" Source="{StaticResource webhook_ncolored}"/>
+                    </Border>
+                </Button>
+                <Button x:Name="settings_button" Height="50" FontFamily="Inter" FontWeight="Normal" FontSize="14" Cursor="Hand" Width="48" VerticalAlignment="Bottom" Margin="0,320,0,0" Click="settings_button_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="2"/>
@@ -306,6 +334,158 @@
                 </Button.Style>
             </Button>
         </Grid>
+        <Grid x:Name="webhooks_site" Margin="110,28,10,28" d:IsHidden="True">
+            <Button x:Name="webhook_button2"  Content="C H E C K" BorderThickness="0" Margin="280,131,280,448" Cursor="Hand" FontFamily="Inter" Click="webhook_button2_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF05FFAA"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF00AB71"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Border x:Name="webhook_back2" BorderThickness="1" Margin="23,100,23,462" CornerRadius="5,5,5,5" Background="#FF131313">
+                <TextBox x:Name="webhook_input2" TextWrapping="Wrap" Foreground="#FF05FFAA" CaretBrush="#FF05FFAA" SelectionBrush="#FF00AB71" FontFamily="Inter" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Width="978"/>
+            </Border>
+            <Label x:Name="webhooks_site_title" Content="Webhook" FontFamily="Inter" FontSize="28" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Foreground="#FF05FFAA" FontWeight="Bold"/>
+            <Label x:Name="webhook_label2" Content="WEBHOOK URL" FontFamily="Inter" FontSize="16" Foreground="#FF2B2B2B" Margin="23,73,804,503" FontWeight="Heavy"/>
+            <Button x:Name="delete_wb_button"  Content="D E L E T E" BorderThickness="0" Margin="615,468,25,94" Cursor="Hand" FontFamily="Inter" FontSize="18" Click="webhook_delete">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF05FFAA"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF00AB71"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Border x:Name="msg_title_back" BorderThickness="1" Margin="23,228,537,334" CornerRadius="5,5,5,5" Background="#FF131313">
+                <TextBox x:Name="msg_title_input" TextWrapping="Wrap" Foreground="#FF05FFAA" CaretBrush="#FF05FFAA" SelectionBrush="#FF00AB71" FontFamily="Inter" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Width="460"/>
+            </Border>
+            <Label x:Name="msg_title_label" Content="MESSAGE TITLE" FontFamily="Inter" FontSize="16" Foreground="#FF2B2B2B" Margin="23,201,804,375" FontWeight="Heavy"/>
+            <Border x:Name="msg_desc_back" BorderThickness="1" Margin="23,348,537,214" CornerRadius="5,5,5,5" Background="#FF131313">
+                <TextBox x:Name="msg_desc_input" TextWrapping="Wrap" Foreground="#FF05FFAA" CaretBrush="#FF05FFAA" SelectionBrush="#FF00AB71" FontFamily="Inter" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Width="460"/>
+            </Border>
+            <Label x:Name="msg_desc_label" Content="MESSAGE DESCRIPTION" FontFamily="Inter" FontSize="16" Foreground="#FF2B2B2B" Margin="23,321,804,255" FontWeight="Heavy"/>
+            <Border x:Name="msg_user_back" BorderThickness="1" Margin="23,468,537,94" CornerRadius="5,5,5,5" Background="#FF131313">
+                <TextBox x:Name="msg_user_input" TextWrapping="Wrap" Foreground="#FF05FFAA" CaretBrush="#FF05FFAA" SelectionBrush="#FF00AB71" FontFamily="Inter" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0,0,0" Width="460"/>
+            </Border>
+            <Label x:Name="msg_user_label" Content="MESSAGE USERNAME" FontFamily="Inter" FontSize="16" Foreground="#FF2B2B2B" Margin="23,441,804,135" FontWeight="Heavy"/>
+            <Button x:Name="send_wb_button"  Content="S E N D" BorderThickness="0" Margin="615,348,25,214" Cursor="Hand" FontFamily="Inter" FontSize="18" Click="webhook_send_msg">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF05FFAA"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF00AB71"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="start_wb_button"  Content="S T A R T" BorderThickness="0" Margin="615,228,235,334" Cursor="Hand" FontFamily="Inter" FontSize="18" Click="webhook_send_massive_msg">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF05FFAA"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF00AB71"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="stop_wb_button"  Content="S T O P P E D" BorderThickness="0" Margin="825,228,25,334" Cursor="Hand" FontFamily="Inter" FontSize="18" Click="webhook_stop_massive_msg">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="#FF05FFAA"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FF00AB71"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Label x:Name="mas_msg_title" Content="MASSIVE MESSAGE" FontFamily="Inter" FontSize="16" Foreground="#FF2B2B2B" Margin="615,200,212,376" FontWeight="Heavy"/>
+            <Label x:Name="send_msg_title" Content="SEND MESSAGE" FontFamily="Inter" FontSize="16" Foreground="#FF2B2B2B" Margin="615,321,212,255" FontWeight="Heavy"/>
+            <Label x:Name="delete_wh_title" Content="DELETE WEBHOOK" FontFamily="Inter" FontSize="16" Foreground="#FF2B2B2B" Margin="615,441,212,135" FontWeight="Heavy"/>
+        </Grid>
         <Label x:Name="version_label" Content="b1.0.0 A4316134HFJ151264" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,40,0" FontFamily="Inter" FontStyle="Italic" FontWeight="Regular" Foreground="#FF1F1F1F"/>
         <Button x:Name="exit_button" Content="X" HorizontalAlignment="Right" Cursor="Hand" BorderThickness="1" BorderBrush="#FF131313" Foreground="#FF05FFAA" Height="20" VerticalAlignment="Top" Width="20" Margin="0,1,1,0" Click="exit_button_Click">
             <Button.Style>
@@ -328,5 +508,10 @@
                 </Style>
             </Button.Style>
         </Button>
+        <Ellipse x:Name="hover_elipse" Height="50" Stroke="Black" StrokeThickness="0" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,20,0,0" MouseEnter="hover_elipse_MouseEnter" MouseLeave="hover_elipse_MouseLeave" MouseLeftButtonDown="hover_elipse_MouseLeftButtonDown">
+            <Ellipse.Fill>
+                <ImageBrush x:Name="avatar_hover" ImageSource="avatarhover.png"/>
+            </Ellipse.Fill>
+        </Ellipse>
     </Grid>
 </Window>

