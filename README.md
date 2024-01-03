@@ -46,7 +46,7 @@ Yes, the program is 100% free and open source.
 On our [telegram](https://t.me/+fwzBhvxr1a0zOTU8).
 
 - How to use it?<br />
-You need to compile open source files or download released stable program from [here](https://github.com/Nyxonn/Discord-AIO/releases/download/b1.0.0/Discord.AIO.exe).
+You need to compile open source files or download released stable program from [here](https://github.com/szajjch/Discord-AIO/releases/download/b1.1.0/Discord.AIO.exe).
 
 - Antivirus reports program as malicious!<br />
 The program utilizes dynamic compilation of files and also downloads necessary components for the proper functioning of the program. Therefore, antivirus software may inadvertently flag it.
