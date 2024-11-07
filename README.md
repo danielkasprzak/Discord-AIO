@@ -66,8 +66,6 @@ You may need to download the [Inter](https://rsms.me/inter/download/) font and i
 ![image (52)](https://github.com/szajjch/Discord-AIO/assets/45857590/ad703f10-c30a-46e6-8ece-a8dcaccac726)
 #### Builder page
 ![image (53)](https://github.com/szajjch/Discord-AIO/assets/45857590/b8b405c3-0099-4b79-883e-c27eb0e0ca81)
-#### Discord report
-![image_39](https://github.com/szajjch/Discord-AIO/assets/45857590/e97a94ea-76a8-4e70-b047-e892e0f55ece)
 
 <br /><br />
 <div align="center">
