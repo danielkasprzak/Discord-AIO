@@ -1,9 +1,6 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Text;
-using System.Windows.Documents;
 
 namespace discord_aio_release
 {
@@ -151,20 +148,19 @@ namespace discord_aio_release
             return stringBuilder.ToString();
         }
         private readonly Random _random = new Random();
-        private const string string_0 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     }
 
     public class FileMetadata
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Product { get; set; }
-        public string Company { get; set; }
-        public string Copyright { get; set; }
-        public string Trademark { get; set; }
-        public string MajorVersion { get; set; }
-        public string MinorVersion { get; set; }
-        public string BuildPart { get; set; }
-        public string PrivatePart { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string Product { get; set; } = string.Empty;
+        public string Company { get; set; } = string.Empty;
+        public string Copyright { get; set; } = string.Empty;
+        public string Trademark { get; set; } = string.Empty;
+        public string MajorVersion { get; set; } = string.Empty;
+        public string MinorVersion { get; set; } = string.Empty;
+        public string BuildPart { get; set; } = string.Empty;
+        public string PrivatePart { get; set; } = string.Empty;
     }
 }

@@ -1,33 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net.Http;
 using System.IO;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using System.Net;
-using System.Net.Sockets;
 using Newtonsoft.Json.Linq;
-using System.Net.Http.Json;
-using System.Security.Cryptography;
-using Microsoft.IdentityModel.Tokens;
-using System.Configuration;
-using System.Security.Claims;
-using System.IdentityModel.Tokens.Jwt;
-using System.Net.Http.Headers;
-using System.Windows.Markup;
-using System.Reflection;
-using System.Windows.Shell;
 using System.IO.Compression;
 
 namespace discord_aio_release
@@ -36,16 +18,18 @@ namespace discord_aio_release
     {
         private protected string _HWID { get; set; }
         private protected string _DAIO { get; set; }
-        private protected string _V = "b1.1.0";
+        private protected string _V = "b1.1.1";
         private protected string _P = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         private protected string _T = System.IO.Path.GetTempPath();
-        private protected string _ST { get; set; }
         private protected string daio_path { get; set; }
 
         public UpdaterWindow()
         {
             InitializeComponent();
-            performMainCheck();
+            _HWID = string.Empty;
+            _DAIO = string.Empty;
+            daio_path = string.Empty;
+            performMainCheck().ConfigureAwait(false);
         }
 
         private async Task performMainCheck()
@@ -62,19 +46,20 @@ namespace discord_aio_release
 
             _DAIO = System.IO.Path.Combine(_P, "Discord AIO");
             if (!Directory.Exists(_DAIO)) { Directory.CreateDirectory(_DAIO); }
-            if (!File.Exists(_DAIO + "\\daioHandler.exe"))
-            {
-                WebClient client = new WebClient();
-                client.DownloadFile("HANDLER", _DAIO + "\\daioHandler.exe");
-            }
+
             if (!File.Exists(_DAIO + "\\daioCompiler.exe") || !Directory.Exists(System.IO.Path.Combine(_DAIO, "roslyn")))
             {
-                WebClient client = new WebClient();
-                client.DownloadFile("COMPILER", _DAIO + "\\compiler.zip");
+                using (HttpClient client = new HttpClient())
+                {
+                    var response = await client.GetAsync("http://162.19.227.17/daio/compiler/compiler.zip");
+                    var fileBytes = await response.Content.ReadAsByteArrayAsync();
+                    await File.WriteAllBytesAsync(_DAIO + "\\compiler.zip", fileBytes);
+                }
 
                 ZipFile.ExtractToDirectory(_DAIO + "\\compiler.zip", _DAIO);
                 File.Delete(_DAIO + "\\compiler.zip");
             }
+
             daio_path = AppDomain.CurrentDomain.BaseDirectory;
             if (daio_path == null)
             {
@@ -86,40 +71,52 @@ namespace discord_aio_release
                 Application.Current.Shutdown();
 
             bool vIsOk = true;
-            string dVersion = "x";
-            string url = "VERSION";
+            string url = "https://pastebin.com/raw/KZq5X31D";
             using (HttpClient client = new HttpClient())
             {
                 try
                 {
                     HttpResponseMessage response = await client.GetAsync(url);
                     string responseString = await response.Content.ReadAsStringAsync();
-                    dVersion = responseString;
                     updaterLabel.Content = "CONNECTION ESTABLISHED";
                     updaterBar.Value = 10;
                     updaterLabel.Content = "CHECKING FOR UPDATES";
-                    if (dVersion != _V) 
+                    if (responseString != _V) 
                     {
                         vIsOk = false;
                         updaterBar.Value = 20;
                         updaterLabel.Content = "DOWNLOADING NEW VERSION";
 
-                        string durl = "https://github.com/szajjch/Discord-AIO/releases/download/" + dVersion + "/Discord.AIO.exe";
-                        string tempPath = System.IO.Path.Combine(_T, "Discord.AIO.exe");
-                        string daioUpdaterPath = System.IO.Path.Combine(_DAIO, "daioUpdater.exe");
+                        string durl = "https://github.com/szajjch/Discord-AIO/releases/download/" + responseString + "/Discord.AIO.exe";
+                        string tempPath = Path.Combine(_T, "Discord.AIO.exe");
+                        string daioUpdaterPath = Path.Combine(_DAIO, "daioUpdater.exe");
 
-                        using (WebClient updaterClient = new WebClient()) 
+                        using (HttpClient downloadClient = new HttpClient())
                         {
-                            updaterClient.DownloadFile(durl, tempPath);
+                            var downloadResponse = await downloadClient.GetAsync(durl);
+                            var fileBytes = await downloadResponse.Content.ReadAsByteArrayAsync();
+                            await File.WriteAllBytesAsync(tempPath, fileBytes);
 
                             if (!File.Exists(daioUpdaterPath))
-                                updaterClient.DownloadFile("UPDATER", daioUpdaterPath);
+                            {
+                                var updaterResponse = await downloadClient.GetAsync("http://162.19.227.17/daio/updater/daioUpdater.exe");
+                                var updaterBytes = await updaterResponse.Content.ReadAsByteArrayAsync();
+                                await File.WriteAllBytesAsync(daioUpdaterPath, updaterBytes);
+                            }
                         }
 
                         if (File.Exists(daioUpdaterPath))
                         {
-                            Process.Start(daioUpdaterPath, daio_path);
-                            Application.Current.Shutdown();
+                            if (!string.IsNullOrEmpty(daio_path))
+                            {
+                                Process.Start(daioUpdaterPath, daio_path);
+                                Application.Current.Shutdown();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Updater couldn't find your application path.\nPlease download the new version manually.", "Discord AIO");
+                                Application.Current.Shutdown();
+                            }
                         }
                         else
                             Application.Current.Shutdown();
@@ -136,37 +133,14 @@ namespace discord_aio_release
             {
                 if (vIsOk)
                 {
-                    var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("KEY"));
-                    var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
-                    var claims = new[] { new Claim("hwid", _HWID.ToString()) };
-                    var token = new JwtSecurityToken(issuer: "discord_aio", audience: "0api", claims: claims, expires: DateTime.Now.AddHours(12), signingCredentials: credentials);
-                    var tokenHandler = new JwtSecurityTokenHandler();
-                    _ST = tokenHandler.WriteToken(token);
-
-                    if (File.Exists(_DAIO + "\\daioHandler.exe"))
-                    {
-                        var p = Process.GetProcessesByName("daioHandler");
-                        if (p.Length > 0)
-                        {
-                            MessageBox.Show("Please, wait a minute and then launch the DAIO.", "Warning");
-                            Application.Current.Shutdown();
-                        }
-                        else
-                            Process.Start(_DAIO + "\\daioHandler.exe", _ST);
-                    }
-                    else
-                        Application.Current.Shutdown();
-
                     HttpClient cli = new HttpClient();
-                    cli.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _ST);
-                    HttpResponseMessage response = await cli.PostAsync("APIURL", null);
+                    var content = new StringContent($"\"{_HWID}\"", Encoding.UTF8, "application/json");
+                    HttpResponseMessage response = await cli.PostAsync("https://localhost:7118/user/check", content);
 
                     if (response.IsSuccessStatusCode)
                     {
                         var reponseContent = await response.Content.ReadAsStringAsync();
-                        var responseData = JObject.Parse(reponseContent);
-                        var banned = responseData.Value<bool>("banned");
-                        if (banned)
+                        if (reponseContent.Contains("User is banned"))
                         {
                             MessageBox.Show("Ouch! You were banned from using this software.", "Discord AIO");
                             Application.Current.Shutdown();
@@ -187,20 +161,20 @@ namespace discord_aio_release
 
             try
             {
-                if (dVersion == _V)
+                if (vIsOk)
                 {
-                    if (File.Exists(_DAIO + "\\Program.cs"))
-                        File.Delete(_DAIO + "\\Program.cs");
+                    //if (File.Exists(_DAIO + "\\Program.cs"))
+                    //    File.Delete(_DAIO + "\\Program.cs");
 
-                    WebClient compilerClient = new WebClient();
-                    compilerClient.DownloadFile("PENTEST", _DAIO + "\\Program.cs");
-                    if (!File.Exists(_DAIO + "\\BouncyCastle.Crypto.dll"))
-                        compilerClient.DownloadFile("LIB", _DAIO + "\\BouncyCastle.Crypto.dll");
+                    //WebClient compilerClient = new WebClient();
+                    //compilerClient.DownloadFile("http://162.19.227.17/daio/stub/Program.cs", _DAIO + "\\Program.cs");
+                    //if (!File.Exists(_DAIO + "\\BouncyCastle.Crypto.dll"))
+                    //    compilerClient.DownloadFile("https://cdn.discordapp.com/attachments/1167109154855456768/1167883584577753230/BouncyCastle.Crypto.dll", _DAIO + "\\BouncyCastle.Crypto.dll");
 
                     updaterBar.Value = 95;
                     updaterLabel.Content = "LOADING DISCORD AIO";
                     updaterBar.Value = 100;
-                    MainWindow launch = new MainWindow(_V, _HWID, _ST, _DAIO);
+                    MainWindow launch = new MainWindow(_V, _HWID, _DAIO);
                     launch.Owner = this;
                     this.Hide();
                     launch.ShowDialog();

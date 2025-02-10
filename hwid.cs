@@ -1,5 +1,4 @@
 ﻿using System.Management;
-using System;
 
 namespace discord_aio_release
 {
@@ -14,13 +13,12 @@ namespace discord_aio_release
         }
         public static string getProcessor()
         {
-            ManagementObjectCollection mbsList = null;
             ManagementObjectSearcher mbs = new ManagementObjectSearcher("Select * From Win32_processor");
-            mbsList = mbs.Get();
+            ManagementObjectCollection mbsList = mbs.Get();
             string id = "";
             foreach (ManagementObject mo in mbsList)
             {
-                id = mo["ProcessorID"].ToString();
+                id = mo["ProcessorID"]?.ToString() ?? string.Empty;
             }
             return id;
         }
@@ -28,7 +26,7 @@ namespace discord_aio_release
         {
             ManagementObject dsk = new ManagementObject(@"win32_logicaldisk.deviceid=""c:""");
             dsk.Get();
-            string id = dsk["VolumeSerialNumber"].ToString();
+            string id = dsk["VolumeSerialNumber"]?.ToString() ?? string.Empty;
             return id;
         }
     }
