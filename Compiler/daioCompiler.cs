@@ -14,7 +14,6 @@ namespace aiocompiler
 {
     public partial class daioCompiler : Form
     {
-        private string _TK { get; set; }
         private string _DP { get; set; }
 
         public daioCompiler(string[] args)
@@ -22,9 +21,8 @@ namespace aiocompiler
             InitializeComponent();
             Opacity = 0;
             Visible = false;
-            _TK = args[0];
             _DP = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Discord AIO");
-            Compile(args[1], args[2]);
+            Compile(args[0], args[1]);
         }
 
         private async void Compile(string output, string icon)
@@ -76,8 +74,7 @@ namespace aiocompiler
                 {
                     using (HttpClient c = new HttpClient())
                     {
-                        c.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _TK);
-                        var response = await c.PostAsync("APIURL", null);
+                        var response = await c.PostAsync("https://localhost:7118/statistics/increment-pentests", null);
                     }
                     MessageBox.Show("Compiled.");
                 }
